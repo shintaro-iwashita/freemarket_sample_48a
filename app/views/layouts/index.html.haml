@@ -1,0 +1,21 @@
+
+ .contents
+  .contents__image
+    = image_tag("/images/top-image.jpg")
+
+ .contents
+  .contents__container
+    %h2.contents__container_title ピックアップカテゴリー
+    .contents__container__item
+      %h3.contents__container__item_title レディース新着アイテム
+      .contents__container__item__items
+      .contents__container__item_link
+        %a.contents__container__item_link_text すべての商品を見る
+
+   .contents__under__image
+    .contents__under__image__contents
+      %p.contents__under__image__contents_show スマホでかんたんフリマアプリ
+      %br
+      %p.contents__under__image__contents_download 今すぐ無料ダウンロード
+
+ = render partial: "footer" 
