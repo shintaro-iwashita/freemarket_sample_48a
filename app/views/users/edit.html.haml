@@ -1,0 +1,40 @@
+.single-vessel
+  %header.single-vessel__header
+    = image_tag("logo.svg",size: "180x50",alt:"mercari")
+  %main.single-vessel__main
+    .single-vessel__main_login-panel
+      .single-vessel__main_login-panel__account
+        %p アカウントをお持ちでないかたはこちら
+        .login_account_a
+          -# %a{href:""}
+          新規会員登録
+      .single-vessel__main_login-panel__inner
+        %button{id: "facebook-login",class:"btn-default btn-sns-facebook"}
+          %i.fab.fa-facebook-square.facebook-icon
+          Facebookでログイン
+        %button{id: "google-login",class:"btn-default btn-sns-google"}
+          %i.fab.fa-google.google-icon
+          Googleでログイン
+      %form{method:"POST",novalidata: "novalidate"}
+        .single-vessel__main_login-panel__form_inner
+          .single-vessel__main_login-panel__form_inner_group
+            %input{type: "email", name: "email", placeholder:"メールアドレス",class:"login-input-text input-default"}
+          .single-vessel__main_login-panel__form_inner_group
+            %input{type: "password",name: "password",placeholder:"パスワード",class:"login-input-text input-default"}
+          .single-vessel__main_login-panel__form_inner_group
+            .g-recaptcha.login-captcha{data:{callback: "clearcall",sitekey: "6Lfwx6kUAAAAALOfWVZb2LUqoHZGp2E9820kxx3A"}}
+          %button{type:"submit",class:"login-submit btn-default btn-red"}
+            ログイン
+          -# %input{type: "hidden",name:"login_callback",value: "https:"}
+          -# %input{type: "hidden", name: "__csrf_value", value: ""}
+          %a{href:"https://www.mercari.com/jp/password/reset/start/"}パスワードをお忘れの方
+  %footer.single-vessel__footer
+    %nav
+      %ul.clearfix
+        %li プライバシーポリシー
+        %li メルカリ利用規約
+        %li 特定商取引に関する表記
+    .single-vessel__footer_logo
+      = image_tag("logo-gray.svg")
+    %p
+      %small ©︎ 2019 Mercari
