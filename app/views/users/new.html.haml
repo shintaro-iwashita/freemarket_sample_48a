@@ -1,0 +1,34 @@
+.single-vessel
+  %header.single-vessel__header
+    = image_tag("logo.svg",size: "180x50",alt:"mercari")
+  %main.single-vessel__main
+    %section.single-vessel__main__container
+      %h2.single-vessel__main__container_head
+        新規会員登録
+      .single-vessel__main__container__inner
+        .single-vessel__main__container__inner__content
+          .btn-default.btn-mail
+            -# %a{href:"" ,class:""}変更
+            %i.far.fa-envelope.mail-icon
+            メールアドレスで確認
+          %button{id: "facebook-login", class: "btn-default btn-sns-facebook"}
+            %i.fab.fa-facebook-square.facebook-icon
+            Facebookで登録
+          %button{id: "google-login", class:"btn-default btn-sns-google"}
+            %i.fab.fa-google.google-icon
+            Googleで登録
+    -# %form{id: "login_form_facebook",action: "",method: "POST",novalidate: "novalidate"}
+    -# %form{id: "login_form_google",action:"",method:"POST",novalidate: "novalidate"}
+      -# %input{type:"hidden",id:"google", value:""}
+      -# %input{type:"hidden",id:"facebook_app_id", value:""}追加するもの
+  %footer.single-vessel__footer
+    %nav
+      %ul.clearfix
+        %li プライバシーポリシー
+        %li メルカリ利用規約
+        %li 特定商取引に関する表記
+    .single-vessel__footer_logo
+      = image_tag("logo-gray.svg")
+    %p
+      %small ©︎ 2019 Mercari
+      
