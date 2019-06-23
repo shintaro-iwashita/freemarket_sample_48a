@@ -27,5 +27,3 @@
 /config/master.key
 
 config/secrets.yml
-
-images/
