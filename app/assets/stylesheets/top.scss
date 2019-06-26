@@ -1,7 +1,8 @@
 $radius:6px;
 .header{
+  background-color: white;
   z-index:10;
-  width:80%;
+  width:100%;
   margin:0 auto;
   &__row1{
     width:100%;
@@ -15,8 +16,11 @@ $radius:6px;
       display:flex;
       align-items: center;
       width:20%;
+      padding-left: 100px;
+      margin: 0 auto;
     }
     &__forms{
+      margin-right: 150px;
       border-radius: 10px;
       display:flex;
       align-items: center;
@@ -46,6 +50,7 @@ $radius:6px;
     display:flex;
     position:relative;
     &__CategoryLists{
+      padding-left: 115px;
       z-index:1;
       list-style:none;
       &__index:hover + &__lists{
@@ -64,11 +69,10 @@ $radius:6px;
           visibility:visible;
         }
       }
-      
     }
     &__brandlists{
       position:absolute;
-      left:200px;
+      left:325px;
       &__lists{
         visibility:hidden;
       }
@@ -88,15 +92,33 @@ $radius:6px;
       display:flex;
       position:absolute;
       right:0;
-      &__newuser{
+      padding-right: 150px;
+      &__login{
           color:white;
           background-color:red;
           border-radius: $radius;
+          // margin-top:/0px;
+          height:30px;
+          line-height:30px;
+          padding-left:10px;
+          padding-right:10px;
+          margin-right:10px;
+          // vertical-align:middle;
+          // position:absolute;
+          // top:0;
+          // left:0;
+          // right:0;
+          // bottom:0;
+          // margin:auto;
       }
-      &__login{
+      &__newuser{
           color:#1A99E8;
           border:1px #1A99E8 solid;
           border-radius: $radius;
+          height:30px;
+          line-height:30px;
+          padding-left:10px;
+          padding-right:10px;
       }
     }
   }
