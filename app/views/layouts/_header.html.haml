@@ -1,0 +1,49 @@
+.header
+  .header__row1
+    .header__row1__titles
+      = image_tag("m-icon.png",width:'50px',height:'50px',class:"header__row1__forms__mercari __image")
+      mercari
+    .header__row1__forms
+      %input.header__row1__forms__input{placeholder:'何かお探しですか？'}
+      .header__row1__forms__button
+        %i.fas.fa-search
+  .header__row2
+    .header__row2__CategoryLists
+      .header__row2__CategoryLists__index
+        %i.fas.fa-list-ul
+          カテゴリーから探す
+      .header__row2__CategoryLists__lists
+        .header__row2__CategoryLists__lists__list1#list1
+          %p aaaaa
+          %p aaaaaaa
+        .header__row2__CategoryLists__lists__list2#list2
+          %p aaa
+          %p aaaaaaaaa
+        .header__row2__CategoryLists__lists__list3#list3
+          %p  aaa
+          %p  aaaddddddddd
+    .header__row2__brandlists
+      .header__row2__brandlists__index
+        %i.fas.fa-tag.red
+          ブランドから探す
+      .header__row2__brandlists__lists
+        %p ブランド1
+        %p ブランド2
+    .header__row2__lists
+      .header__row2__lists__newuser
+        新規会員登録
+      .header__row2__lists__login
+        ログイン
+    // userサインイン時
+    -# .header__row2__list2
+    -#   %i.far.fa-bell.gray
+    -#   お知らせ
+    -# .header__row2__list2
+    -#   %i.fas.fa-check.gray
+    -#   やることリスト
+    -# .header__row2__list2
+    -#   %i.far.fa-smile-beam.gray
+    -#   マイページ
+
+
+
