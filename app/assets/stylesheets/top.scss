@@ -1,3 +1,157 @@
+$radius:6px;
+.header{
+  z-index:10;
+  width:80%;
+  margin:0 auto;
+  &__row1{
+    width:100%;
+    height:50px;
+    font-size:23px;
+    display:flex;
+    align-items: center;
+    position:relative;
+    margin-bottom:10px;
+    &__titles{
+      display:flex;
+      align-items: center;
+      width:20%;
+    }
+    &__forms{
+      border-radius: 10px;
+      display:flex;
+      align-items: center;
+      height:70%;
+      width:80%;
+      position:relative;
+      &__input{
+        height:82%;
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+        width:94%;
+        font-size:70%;
+      }
+      &__button{
+        color:white;
+        right:0;
+        text-align:center;
+        width:6%;
+        position:absolute;
+        background-color:gray;
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+    }
+  }
+  &__row2{
+    display:flex;
+    position:relative;
+    &__CategoryLists{
+      z-index:1;
+      list-style:none;
+      &__index:hover + &__lists{
+        visibility:visible;
+        color:black;
+        background-color:#ffffff;
+        
+      }
+      &__lists{
+        text-align:left;
+        visibility:hidden;
+        display:flex;
+        list-style:none;
+        z-index:1;
+        &__list1:hover{
+          visibility:visible;
+        }
+      }
+      
+    }
+    &__brandlists{
+      position:absolute;
+      left:200px;
+      &__lists{
+        visibility:hidden;
+      }
+      &__index:hover + &__lists{
+        z-index:-2;
+        background-color:white;
+        color:black;
+      }
+      &__lists li:nth-of-type(n):hover{
+        background-color:red;
+        color:white;
+        visibility:hidden;
+      }
+    }
+    
+    &__lists{
+      display:flex;
+      position:absolute;
+      right:0;
+      &__newuser{
+          color:white;
+          background-color:red;
+          border-radius: $radius;
+      }
+      &__login{
+          color:#1A99E8;
+          border:1px #1A99E8 solid;
+          border-radius: $radius;
+      }
+    }
+  }
+}
+#list1:hover + #list2{
+  visibility:visible;
+  
+}
+#list1 p:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+  visibility:visible;
+}
+#list1 {
+  width:100%;
+  text-align:left;
+  border:  solid gray;
+  // visibility:visible;
+}
+#list2:hover {
+  visibility:visible;
+  
+}
+#list2:hover + #list3{
+  visibility:visible;
+}
+#list2 li:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+}
+#list2{
+  list-style:none;
+  background-color:white;
+  // width:100%;
+  text-align:left;
+  border:  solid gray;
+}
+#list3:hover {
+  visibility:visible;
+}
+#list3 li:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+}
+#list3{
+  list-style:none;
+  background-color:white;
+  // width:100%;
+  text-align:left;
+  border:  solid gray;
+}
+
+
+
+
 .contents {
 	width: 100%;
 	&__top__image-box {
