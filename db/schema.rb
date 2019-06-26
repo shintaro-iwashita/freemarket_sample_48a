@@ -13,11 +13,28 @@
 ActiveRecord::Schema.define(version: 2019_06_23_072446) do
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "pescription", null: false
+    t.integer "profit", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "avatar"
+    t.string "nickname", null: false
+    t.text "email", null: false
+    t.string "password", null: false
+    t.text "self_introduction"
+    t.integer "evaluation", null: false
+    t.string "family_name", null: false
+    t.string "first_name", null: false
+    t.string "family_name_kana", null: false
+    t.string "first_name_kana", null: false
+    t.date "data_of_birth"
+    t.string "how_to_pay", null: false
+    t.string "gender", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
