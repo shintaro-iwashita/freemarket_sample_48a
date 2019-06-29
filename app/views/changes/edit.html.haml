@@ -1,0 +1,13 @@
+/ プロフィール編集ページ
+%mail.mypage-container
+  .mypage-content
+    .mypage-content__setting-profile
+      %h2.mypage-content__setting-profile__title 
+        プロフィール
+        .mypage-content__setting-profile__form__icon
+          %figure
+            = image_tag "pika.png", size: "60x60"
+          %textarea{:name => "user-edit",:dirname => "ltr"} プロフィール編集
+        .mypage-content__setting-profile__form__content
+          = text_area :page, :content, :class => "introduction", :dirname => "ltr"
+        %input.btn-red{:type => "submit", :value => "変更する"}
