@@ -153,3 +153,78 @@ body{
   }
 
 }
+
+/* プロフィール編集 */
+
+.mypage-content{
+  & .introduction {
+    width: 95%;
+    min-height: 216px;
+    text-align: center;
+    margin: 50px auto 10px;
+    font-size: 16px;
+    line-height: 2;
+  }
+  & .btn-red {
+  display: block;
+  width: 95%;
+  line-height: 48px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  transition: all ease-out 0.3s;
+  text-align: center;
+  background: red;
+  border: 1px solid red;
+  color: white;
+  margin: 0 auto;
+
+  }
+  &__setting-profile{
+    background-color: white;
+    width: 700px;
+    &__title{
+      font-size: 24px;
+      padding: 8px 0;
+      text-align: center;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+    &__form{
+      padding: 64px;
+      &__icon{
+        margin-top: 10px;
+        padding: 72px 0  30px;
+        background-image: url("/images/m-user-edit.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        vertical-align: center;
+        width: 100%;
+        & figure{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        & img {
+          border-radius: 50%;
+          margin-bottom: 27px;
+        }
+
+        & textarea{
+          width: 220px;
+          height: 50px;
+          font-size: 13px;
+          line-height: 50px;
+          margin-top: 30px;
+
+        }
+        & input {
+          width: 220px;
+          margin: 0 0 0 8px;
+          vertical-align: middle;
+        }
+
+    }
+    }
+  }
+}
