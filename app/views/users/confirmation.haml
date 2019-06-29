@@ -1,0 +1,102 @@
+.mainframe
+  .mainframe__title
+    %b 本人情報の登録
+  .mainframe__explain
+    %p.contents__explain__one お客さまの本人情報をご登録ください。 
+    %p.contents__explain__one 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+    .mainframe__explain__upload
+      %p 本人確認書類のアップロードについて>
+  .contents
+    .contents__informations
+      .contents__informations__information
+        %b お名前
+        %p 山田　太郎
+      .contents__informations__information
+        %b お名前カナ
+        %p ヤマダ　タロウ
+      .contents__informations__information
+        %b 生年月日
+        %p 1990/01/01
+
+    .contents__inputs
+      .contents__inputs__unit
+        %b 郵便番号
+        %span 任意
+        .contents__inputs__unit__inputbox
+          %input{placeholder:'例)1234567'}
+      .contents__inputs__unit
+        %b 都道府県
+        %span 任意
+        .contents__inputs__unit__inputbox
+          %select{name:"prefecture",class:"contents__inputs__unit__inputbox__list "}
+            %option　北海道
+            %option　青森県
+            %option　岩手県
+            %option　宮城県
+            %option　秋田県
+            %option　福島県
+            %option　東京都
+            %option　神奈川県
+            %option　埼玉県
+            %option　千葉県
+            %option　茨城県
+            %option　栃木県
+            %option　群馬県
+            %option　山梨県
+            %option　新潟県
+            %option　長野県
+            %option　富山県
+            %option　石川県
+            %option　福井県
+            %option　愛知県
+            %option　岐阜県
+            %option　静岡県
+            %option　三重県
+            %option　大阪府
+            %option　兵庫県
+            %option　京都府
+            %option　滋賀県
+            %option　奈良県
+            %option　和歌山県
+            %option　鳥取県
+            %option　島根県
+            %option　岡山県
+            %option　広島県
+            %option　山口県
+            %option　徳島県
+            %option　徳島県
+            %option　香川県
+            %option　愛媛県
+            %option　高知県
+            %option　福岡県
+            %option　佐賀県
+            %option　長崎県
+            %option　熊本県
+            %option　大分県
+            %option　宮崎県
+            %option　鹿児島県
+            %option　沖縄県
+          %i.fas.fa-chevron-down.contents__inputs__unit__inputbox__icon
+      .contents__inputs__unit
+        %b 市区町村
+        %span 任意
+        .contents__inputs__unit__inputbox
+          %input{placeholder:'例)横浜市緑区'}
+      .contents__inputs__unit
+        %b 番地
+        %span 任意
+        .contents__inputs__unit__inputbox
+          %input{placeholder:'例)青山1-1-1'}
+      .contents__inputs__unit
+        %b 建物名
+        %span 任意
+        .contents__inputs__unit__inputbox
+          %input{placeholder:'例)柳ビル103'}
+      .contents__inputs__unit
+        .contents__inputs__unit__inputbox
+          .contents__inputs__unit__inputbox__registerButton
+            登録する
+          .contents__inputs__unit__inputbox__registerLink
+            本人情報の登録について>
+
+    //後々部分テンプレートにする
