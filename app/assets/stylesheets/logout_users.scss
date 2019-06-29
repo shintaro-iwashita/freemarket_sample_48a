@@ -5,7 +5,6 @@
   margin: auto;
   padding: 40px;
 
-
   &__nav {
     width: 280px;
     
@@ -32,20 +31,25 @@
         i {
           color: #ccc;
           position: absolute;
-          right: 10px;
+          right: 16px;
           font-size: 18px;
         }
-      }
-
-      a:hover {
-        background-color: #fafafa;
+      
+        &:hover {
+          background-color: #fafafa;
+          
+          i {
+          color: #343434;
+          right: 12px;
+          transition: padding-right 0.25s;
+          }
+        }
       }
     }
-    
   }
 
   &__content {
-    background-color: #ffffff;
+    background-color: white;
     width: 700px;
     height: 180px;
     
@@ -56,7 +60,7 @@
       margin: 65px auto;
 
       &__link{
-        color: #ffffff;
+        color: white;
         line-height: 50px;
         text-align: center;
       }
