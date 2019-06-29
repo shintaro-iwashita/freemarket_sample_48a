@@ -12,6 +12,10 @@ $radius:6px;
     align-items: center;
     position:relative;
     margin-bottom:10px;
+    .serch-btn{
+      line-height: 40px;
+      height: 40px;
+    }
     &__titles{
       display:flex;
       align-items: center;
@@ -28,7 +32,7 @@ $radius:6px;
       width:80%;
       position:relative;
       &__input{
-        height:82%;
+        height: 40px;
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
         width:94%;
@@ -49,6 +53,9 @@ $radius:6px;
   &__row2{
     display:flex;
     position:relative;
+    .red{
+      color: #EA452E;
+    }
     &__CategoryLists{
       padding-left: 115px;
       z-index:1;
@@ -178,7 +185,8 @@ $radius:6px;
 	width: 100%;
 	&__top__image-box {
 		height: 390px;
-		background-position: center;
+    background-position: center;
+    background-size : cover;
 	}
 	&__container{
 		padding: 40px;
