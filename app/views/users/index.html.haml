@@ -4,9 +4,116 @@
 
   %main.contener
     .contener__content
-      %section.contener__content_mypage-user
-      -#  後に実装
-        -# =link_to ""
+      %section.contener__content_mypage-icon
+        %a
+          %figure
+            = image_tag ""
+          %h2.contener__content_mypage-icon_bold
+            nanashi
+            -# 上の名前はcurrent_user_nameが入ると予想
+          .mypage-evaluation
+            %div 
+              評価
+              %span.bold 6
+            %div
+              出品数
+              %span.bold 0
       %section.contener__content__mypage-tab
-        %ul
+        %ul.contener__content__mypage-tab_notice
+          %li.contener__content__mypage-tab_notice_active
+            %h3
+              = link_to "お知らせ","#mypage-tab-notification" ,data:{toggle: "tab"}
+              %span.mypage-nav-number
+          %li
+            %h3
+              =link_to "やることリスト", "#mypage-tab-todo",data:{toggle: "tab"}
+        .contener__content__mypage-tab__piece
+          %ul{id: "mypage-tab-notification",class: "contener__content__mypage-tab__piece_list tab-pane active"}
+            %li
+              .mypage-item-link
+                %figure
+                  = image_tag "" ,class:"lazyloaded"
+                  -# あとでlink_to追加
+                .mypage-item-body
+                  .mypage-item-text ログイン通知
+                  .time
+                    .icon-time
+                      %span 1日前
+                      -# あとでicon
+                .icon-arrow-right
+                  -# 後でアイコン
+
+            %li
+              .mypage-item-link
+                %figure
+                  = image_tag "" ,class:"lazyloaded"
+                  -# あとでlink_to追加
+                .mypage-item-body
+                  .mypage-item-text ログイン通知
+                  .time
+                    .icon-time
+                      %span 1日前
+                      -# あとでicon
+                .icon-arrow-right
+                  -# 後でアイコン
+
+            %li
+              .mypage-item-link
+                %figure
+                  = image_tag "" ,class:"lazyloaded"
+                  -# あとでlink_to追加
+                .mypage-item-body
+                  .mypage-item-text ログイン通知
+                  .time
+                    .icon-time
+                      %span 1日前
+                      -# あとでicon
+                .icon-arrow-right
+                  -# 後でアイコン
+
+            %li
+              .mypage-item-link
+                %figure
+                  = image_tag "" ,class:"lazyloaded"
+                  -# あとでlink_to追加
+                .mypage-item-body
+                  .mypage-item-text ログイン通知
+                  .time
+                    .icon-time
+                      %span 1日前
+                      -# あとでicon
+                .icon-arrow-right
+                  -# 後でアイコン
+                  
+            %li.mypage-go-list
+              = link_to " 一覧を見る","/jp/mypage/notification"
+
+      %section.mypage-tab-container
+        %h2.mypage-tab-container__head 購入した商品
+        %ul.contener__content__mypage-tab_notice
+          %li.contener__content__mypage-tab_notice_active
+            %h3
+              = link_to "取引中","#mypage-tab-transaction-now" ,data:{toggle: "tab"}
+              %span.mypage-nav-number
+          %li
+            %h3
+              =link_to "過去の取引", "#mypage-tab-transaction-old",data:{toggle: "tab"}
+        .tab-content
+          %ul{id: "mypage-tab-transaction", class: "mypage-item.tab-pane.active"}
+            %li.mypage-item-not-found.bold 取引中の商品がありません
+        .contener__content__mypage-tab__piece
+          %ul{id: "mypage-tab-transaction-now", class:"contener__content__mypage-tab__piece_list tab-pane active"}
+            %li.mypage-item-not-found.bold
+          %ul{id: "mypage-tab-transaction-old",class: "contener__content__mypage-tab__piece_list tab-pane active"}
+            %li.mypage-go-list
+              = link_to " 一覧を見る","/jp/mypage/purchased"
+
+    .l-side.clearfix
+
+
+
+
+  %aside.app-banner
+  %footer.global-footer
+  
       
