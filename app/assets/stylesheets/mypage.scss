@@ -1,12 +1,3 @@
-.sp-header{
-  height: 100px;
-  background-color: black;
-}
-.bread-crumbs{
-  height: 49px;
-  background-color: red;
-}
-
 main{
   display: block;
 }
@@ -15,42 +6,21 @@ main{
 .contener{
   margin: 24px auto 0;
   padding: 0 0 40px;
-
-  @media screen and (min-width: 1068px){
-    margin: 40px auto 0;
-    width: 1020px;
-  }
-
-  @media screen and (min-width: 768px){
-    // margin: 40px;
-  }
+  width: 1020px;
 
   &__content{
     width: 100%;
-
-    @media screen and (min-width: 768px){
-      float: none;
-      width: 700px;
-    }
-
-    @media screen and (min-width: 1068px){
-      float: right;
-    }
+    float: right;
+    width: 700px;
 
     &_mypage-icon{
       position: relative;
       height: 155px;
       padding: 20px;
-      // 下の仮置きした色は画像にする
-      background-color: yellow; 
-
       background-repeat: no-repeat;
       background-size: cover;
       text-align: center;
-      @media screen and (min-width: 768px){
-        // 保留
-        height: 200px;
-      }
+      background-image: url("user-bg.jpg");
 
       >a{
         display: block;
@@ -69,8 +39,8 @@ main{
         height: 60px;
         margin: 0 auto;
         border-radius: 50%;
-        // 下は仮置き
-        background-color: red;
+        // Todo 下は仮置き
+        background: #fff;
       }
 
         &_bold{
@@ -97,7 +67,7 @@ main{
           }
         }
     }
-
+    //お知らせとやることリスト
     &__mypage-tab{
       margin: 0;
       background-color: #fff;
@@ -109,6 +79,10 @@ main{
           background-color: #fff;
           a{
             border-top: 2px solid #ea352d;
+          }
+          .mypage-nav-number{
+            top: 16px;
+            right: 2px;
           }
         }
         li{
@@ -129,8 +103,14 @@ main{
 
       }
 
-      &__piece{
-        &_list{
+      .tab-content{
+        .tab-pane.active{
+          display: block;
+        }
+        .tab-pane{
+          display: none;
+        }
+        .mypage-item-list{
           ul{
             list-style: none;
           }
@@ -142,11 +122,10 @@ main{
           li:first-child{
             border-bottom: 1px solid #eee;
           }
-          
           .mypage-item-link{
             display: block;
             // 保留
-            // min-height: 80px;
+            min-height: 55px;
             padding: 16px;
             color: #333;
 
@@ -157,20 +136,27 @@ main{
               width: 48px;
               height: 48px;
             }
-            .icon-time{
-              margin: 0 8px 0 0;
-            
-              span{
-                vertical-align: middle;
+            .mypage-item-body{
+              margin: 0 40px 0 68px;
+            }
+            time{
+              display: inline-block;
+              color: #888;
+              .icon-time{
+                margin: 0 8px 0 0;
+              
+                span{
+                  vertical-align: middle;
+                }
               }
-            }
-            .icon-arrow-right{
-              position: absolute;
-              top: 50%;
-              right: 16px;
-              -webkit-transform: translate(0, -50%);
-              transform: translate(0, -50%);
-            }
+          }
+          .right-arrow{
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+          }
 
           }
               img{
@@ -196,7 +182,7 @@ main{
       
       }
     }
-
+    // 購入した商品　取引中と過去の取引
     .mypage-tab-container{
       margin: 40px 0 0;
       background-color: #fff;
@@ -206,46 +192,24 @@ main{
         font-size: 16px;
         height: 72px;
         line-height: 72px;
-        @media screen and(min-width: 768px){
-          padding: 0 16px;
-        }
       }
-      .contener__content__mypage-tab__piece_list{
-        li{
-          position: relative;
-          border-bottom: 1px solid #eee;
-        }
-        li.mypage-item-not-found.bold{
-          border:0;
-        }
-        a{
-          display:block;
-          height: 56px;
-          margin: 0 auto;
-          background-color: #eee;
-          color: #333;
-          line-height: 56px;
-          text-align: center;
-        }
-
+      ul{
+        list-style: none;
       }
-
-    }
-  }
-  .l-side{
-    margin: 40px auto 0;
-    background-color: blue;
-    height: 300px;
-    @media screen and (min-width: 1068px){
-      float: left;
-      width: 280px;
-      margin: 0 40px 0 0;
-    }
-    @media screen and (min-width: 768px){
-      // width: 700px;
     }
   }
 
+}
+
+.mypage-item-not-found{
+  padding: 160px 0 60px;
+  background: url(logo-gray-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 78px 85px;
+  background-position: center 40px;
+  font-size: 16px;
+  color: #ccc;
+  text-align: center
 }
 
 
@@ -256,13 +220,12 @@ img{
   font-weight: 600;
 }
 .lazyloaded{
+  position: absolute;
   opacity: 1;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
 }
-.mypage-item-body{
-  margin: 0 40px 0 68px;
-}
+
 .mypage-item-text{
   overflow: hidden;
   display: block;
@@ -272,12 +235,6 @@ img{
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   line-height: 1.5;
-}
-.tab-pane.active{
-  display: block;
-}
-.tab-pane{
-  display: none;
 }
 
 .mypage-go-list{
