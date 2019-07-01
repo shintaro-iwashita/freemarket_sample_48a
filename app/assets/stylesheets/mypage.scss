@@ -75,7 +75,7 @@ main{
         border: 0;
         background-color: #eee;
         font-size: 0;
-        &_active{
+        .active{
           background-color: #fff;
           a{
             border-top: 2px solid #ea352d;
