@@ -1,2 +1,43 @@
-%div
-  Hello world
+.mainframe
+  .mainframe__title
+    %b 会員情報入力
+  .mainframe__contents
+    .mainframe__contents__unit
+      %b ニックネーム
+      %span 必須
+      %input{placeholder:'例)メルカリ太郎'}
+    .mainframe__contents__unit
+      %b メールアドレス
+      %span 必須
+      %input{placeholder:'PC・携帯どちらでも可'}
+    .mainframe__contents__unit
+      %b パスワード
+      %span 必須
+      %input{type:"password",placeholder:'6文字以上'}
+    .mainframe__contents__unit
+      %b パスワード(確認)
+      %span 必須
+      %input{type:"password",placeholder:'6文字以上'}
+    .mainframe__contents__unit
+      %b 本人確認
+      %p 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+    .mainframe__contents__unit
+      %b 姓(全角)
+      %span 必須
+      %input{placeholder:'例(山田'}
+    .mainframe__contents__unit
+      %b 名(全角)
+      %span 必須
+      %input{placeholder:'例(彩'}
+    .mainframe__contents__unit
+      %b 姓カナ(全角)
+      %span 必須
+      %input{placeholder:'例(ヤマダ'}
+    .mainframe__contents__unit
+      %b 名カナ(全角)
+      %span 必須
+      %input{placeholder:'例(アヤ'}
+    .mainframe__contents__unit
+      %b 生年月日
+      %span 必須
+      %input{placeholder:'例(アヤ'}
