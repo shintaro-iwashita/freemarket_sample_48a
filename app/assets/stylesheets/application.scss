@@ -5,4 +5,7 @@
 @import 'login_users';
 @import '_reset';
 @import 'config/colors';
-@import "./links"
+@import "./links";
+@import 'mixins/clearfix.scss';
+@import 'mixins/single-box.scss';
+@import 'config/font.scss'
