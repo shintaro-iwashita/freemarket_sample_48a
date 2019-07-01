@@ -1,10 +1,10 @@
+
 = render partial: "layouts/header" 
 
 .contents
-  .contents__image
-    = image_tag("/images/top-image.jpg")
 
 .contents
+  .contents__top__image-box
   .contents__container
     %h2.contents__container_title ピックアップカテゴリー
     .contents__container__item
@@ -81,8 +81,9 @@
       %p.contents__under__image__contents_download 
         今すぐ無料ダウンロード！
       .contents__under__image__contents_left-icon
-        = image_tag("/images/m-icon.png", :size => "68x68",)
-        = image_tag("/images/app-store.png")
-        = image_tag("/images/google-play.png")
+        = link_to root_path do
+          = image_tag("/images/m-icon.png", :size => "68x68",)
+          = image_tag("/images/app-store.png")
+          = image_tag("/images/google-play.png")
 
 = render partial: "layouts/footer"
