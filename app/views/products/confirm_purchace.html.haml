@@ -1,0 +1,54 @@
+.main
+  %h1 購入内容の確認
+  %section.main__products
+    .main__products__details
+      .main__products__details__image
+        = image_tag("/images/pika.png", :size => "148x148")
+    .main__products__details__product-name
+      %p
+        nezumi
+    .main__products__details__price
+      .main__products__details__price_product-price
+        %p
+          ¥ 3,980
+      .main__products__details__price_send-price
+        %p
+          送料込み
+      .main__products__details__point
+        %p
+          ポイントはありません
+      .main__products__details__total-price
+        .main__products__details__total-price_title
+          %p 
+            支払い金額
+        .main__products__details__total-price_japan-yen
+          %p
+            ¥ 3,980
+    .main__products__btn
+      %button{:type => "button"} 購入する
+  %section.main__deliverly
+    .main__deliverly__details__rows
+      %h3
+        配送先
+    .main__deliverly__details__rows__zipcode
+      %p
+        542-0081
+    .main__deliverly__details__rows__address
+      %p
+        大阪府大阪市中央区南船場２丁目６−２８ ユタカビル7階
+    .main__deliverly__details__rows__name
+      %p
+        HARUKA
+    = link_to "" do
+      %span 変更する>
+
+  %section.main__container
+    .main__container__pay
+      .main__container__pay__acount
+        %h3 支払い方法
+      .main__container__pay__acount_card
+        %p 7/7
+      = image_tag("/images/master-card.jpeg")
+      = link_to "", method:"" do
+        %span 変更する>
+
