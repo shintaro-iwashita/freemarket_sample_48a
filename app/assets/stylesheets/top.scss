@@ -12,16 +12,16 @@ $radius:6px;
     align-items: center;
     position:relative;
     margin-bottom:10px;
-    .serch-btn{
-      line-height: 40px;
-      height: 40px;
-    }
     &__titles{
       display:flex;
       align-items: center;
       width:20%;
       padding-left: 100px;
       margin: 0 auto;
+    }
+    .serch-btn{
+      padding: 9px 0;
+      font-size: 13px;
     }
     &__forms{
       margin-right: 150px;
@@ -32,7 +32,7 @@ $radius:6px;
       width:80%;
       position:relative;
       &__input{
-        height: 40px;
+        height:82%;
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
         width:94%;
@@ -51,15 +51,18 @@ $radius:6px;
     }
   }
   &__row2{
+    height: 45px;
+    font-weight: bold;
     display:flex;
     position:relative;
     .red{
-      color: #EA452E;
+      color: red;
     }
     &__CategoryLists{
       padding-left: 115px;
       z-index:1;
       list-style:none;
+      line-height: 25px;
       &__index:hover + &__lists{
         visibility:visible;
         color:black;
@@ -78,6 +81,7 @@ $radius:6px;
       }
     }
     &__brandlists{
+      line-height: 25px;
       position:absolute;
       left:325px;
       &__lists{
@@ -96,13 +100,14 @@ $radius:6px;
     }
     
     &__lists{
+      height: 70px;
       display:flex;
       position:absolute;
       right:0;
       padding-right: 150px;
       &__login{
-          color:white;
-          background-color:red;
+          color:#1A99E8;
+          border:1px #1A99E8 solid;
           border-radius: $radius;
           // margin-top:/0px;
           height:30px;
@@ -119,8 +124,9 @@ $radius:6px;
           // margin:auto;
       }
       &__newuser{
-          color:#1A99E8;
-          border:1px #1A99E8 solid;
+          margin-right: 10px;
+          color:white;
+          background-color:red;
           border-radius: $radius;
           height:30px;
           line-height:30px;
@@ -182,26 +188,33 @@ $radius:6px;
 
 
 .contents {
-	width: 100%;
+  width: 100%;
 	&__top__image-box {
+    background-image: url("/images/m-banner.jpg");
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 		height: 390px;
     background-position: center;
-    background-size : cover;
+    background-size: cover;
 	}
 	&__container{
-		padding: 40px;
 		text-align: center;
-		background-color: #f5f5f5;
+    background-color: #f5f5f5;
+    width: 70%;
+    margin: 0 auto;
 		&_title{
+      padding-top: 40px;
 			font-size: 28px;
 			font-weight: bold;
 		}
 		&__item{
-		width: 940px;
+		width: 100%;
 		margin: 0 auto;
 		text-align: center;
 			&_title{
-				margin: 26px 0;
+				margin: 30px 0;
 				font-size: 22px;
 				display: block;
 				color: #0099e8;
@@ -236,7 +249,7 @@ $radius:6px;
       margin-right: 300px;
     }
     &__contents{
-      width: 750px;
+      width: 800px;
       height: 260px;
       margin: 0 auto;
       position: relative;
@@ -260,41 +273,60 @@ $radius:6px;
 
 
 .footer {
-  padding: 60px 0;
+  padding: 70px 0 2px;
   background-color: #212121;
   color: #fff;
   text-align: center;
+  width: 100%;
+
   &__contents{
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
     max-width: 1000px;
     &__links {
-      width: 35%;
+      margin: 0 30px;
+      width: 20%;
       &_title{
         font-size: 18px;
-        font-weight: bold;
+        font-weight: normal;
         line-height: 40px;
         text-align: left;
-        padding:0 0 0 40px;
+        padding-bottom: 10px;
         }
       &_link{
         text-decoration: none;
         line-height: 25px;
         list-style: none;
         margin: 2px 0;
-        font-size: 14px;
+        font-size: 11px;
         text-align: left;
         width: 300px;
+        opacity: 0.7;
         }
       }
     }
-  &__logo{
-    margin: 40px 0 0;
+  &__sns-link{
+    float: left;
+    font-size: 35px;
+    margin-right: 30px;
+    &_twitter{
+      padding-left: 100px;
+      color: white;
+    }
+    &_facebook{
+      font-color: white;
+
+    }
+  }
+  
+  &__logo{ 
+    margin: 60px;
 
     &_text{
       font-size: 14px;
       margin: 8px 0 0;
+      margin: 30px;
       }
     }
   }
