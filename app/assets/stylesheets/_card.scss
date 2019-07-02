@@ -13,4 +13,15 @@
 .mypage__content .credit {
   height: 300px;
   background-color: white;
+  &__head{
+    height: 50px;
+    font-size: 24px;
+    border-bottom: 2px solid $background-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content {
+    padding: 64px;
+  }
 }
