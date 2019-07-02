@@ -5,12 +5,14 @@
     = render partial: "/mypage-nav"
     .mypage__content
       .credit 
-        %h2.credit__head クレジットカード一覧
+        %h2.credit__head 支払い方法
         .credit__content
+        %h3.credit__content__head クレジットカード一覧
+        .credit__content__card
           = link_to '#' do
             %i.far.fa-credit-card
             %span クレジットカードを追加する
-      = link_to '#' do
-        %span 支払い方法について
-        %i.fas.fa-chevron-right
+        = link_to '#' do
+          %span 支払い方法について
+          %i.fas.fa-chevron-right
   %footer
