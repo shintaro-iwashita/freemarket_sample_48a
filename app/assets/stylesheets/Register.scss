@@ -1,3 +1,4 @@
+$input-height:40px;
 .mainframe{
   background-color:#ffffff;
   width:100%;
@@ -17,7 +18,10 @@
     &__unit{
       height:100%;
       margin:20px;
-      span{
+      p{
+        margin-top:10px;
+      }
+      &__span{
         background-color:#EA352D;
         color:white;
         line-height:100%;
@@ -28,9 +32,43 @@
       input{
         width:100%;
         margin-top:10px;
-        height:40px;
-        line-height:40px;
+        height:$input-height;
+        line-height:$input-height;
         font-size:1rem;
+      }
+      &__lists{
+        display:flex;
+        margin-top:10px;
+        &__list{
+          width:33%;
+          position:relative;
+          &__span{
+            background-color:#ffffff;
+            position:absolute;
+            right:7%;
+            top:30%;
+
+          }
+          select{
+            height:$input-height;
+            line-height:$input-height;
+            appearance:none;
+            -webkit-appearance:none;
+            -webkit-appearance:none;
+            width:80%;
+            text-align:center;
+            line-height:$input-height;
+            font-size:0.8rem;
+          }
+          i{
+            position:absolute;
+            right:25%;
+            top:30%;
+          }
+        }
+      }
+      &__sentence1{
+        color:#888888;
       }
     }
   }
