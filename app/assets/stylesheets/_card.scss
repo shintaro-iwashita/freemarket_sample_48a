@@ -1,0 +1,16 @@
+.mypage {
+  display: flex;
+  justify-content: space-between;
+  width: 1020px;
+  margin: auto;
+  padding: 40px;
+
+  &__content {
+    width: 700px;
+  }
+}
+
+.mypage__content .credit {
+  height: 300px;
+  background-color: white;
+}
