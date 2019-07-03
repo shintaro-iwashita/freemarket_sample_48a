@@ -78,8 +78,6 @@
       .footer__sns-link_twitter
         = link_to root_path, style: "color:white;" do
           %i.fab.fa-twitter
-
-    .footer__sns-link
       .footer__sns-link_facebook
         = link_to root_path, style: "color:white;" do
           %i.fab.fa-facebook-square
@@ -87,7 +85,7 @@
     .footer__logo
       .footer__logo
         = link_to root_path, style: "color:white;" do
-          = image_tag("logo-white.png", :size => "138x35")
+          = image_tag("logo-white.png", size: "138x35")
         %p.footer__logo_text
         %small ©️2019 Mercari
 
