@@ -16,7 +16,7 @@ $radius:6px;
       display:flex;
       align-items: center;
       width:20%;
-      padding-left: 100px;
+      padding: 8px 0 0 150px;
       margin: 0 auto;
     }
     .serch-btn{
@@ -32,17 +32,23 @@ $radius:6px;
       width:80%;
       position:relative;
       &__input{
-        height:82%;
+        margin-top: 8px;
+        padding-left: 10px;
+        height: 40px;
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
-        width:94%;
+        width:97%;
         font-size:70%;
+        background-color: #F5F5F5;
       }
       &__button{
+        margin: 4px 7px 0 0;
         color:white;
         right:0;
+        height:44px;
+        line-height: 41px;
         text-align:center;
-        width:6%;
+        width:5%;
         position:absolute;
         background-color:gray;
         border-top-right-radius: $radius;
@@ -59,7 +65,7 @@ $radius:6px;
       color: red;
     }
     &__CategoryLists{
-      padding-left: 115px;
+      padding: 4px 0 0 170px;
       z-index:1;
       list-style:none;
       line-height: 25px;
@@ -81,6 +87,7 @@ $radius:6px;
       }
     }
     &__brandlists{
+      margin: 5px 0 10px 0;
       line-height: 25px;
       position:absolute;
       left:325px;
@@ -266,6 +273,14 @@ $radius:6px;
     
       }
     }
+  & .appstore{
+    padding: 0 5px 10px 20px;
+
+  }
+  & .google-play{
+    padding: 0 5px 10px;
+
+  }
   }
 }
 
@@ -307,15 +322,16 @@ $radius:6px;
       }
     }
   &__sns-link{
+    display: flex;
     float: left;
     font-size: 35px;
     margin-right: 30px;
     &_twitter{
-      padding-left: 100px;
+      padding: 0 25px 0 70px;
       color: white;
     }
     &_facebook{
-      font-color: white;
+      color: white;
 
     }
   }
