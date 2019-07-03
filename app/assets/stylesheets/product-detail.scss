@@ -1,0 +1,174 @@
+.item-box-container{
+  background: #fff;
+  margin: 40px auto 0;
+  width: 700px;
+  padding: 24px 16px 55px 16px;
+  // TODO 仮置き
+  height: 1020px;
+  // @media screen and(min-width: 768px){
+  //   padding: 24px 40px 40px;
+  // }
+  &_item-name{
+    font-size: 24px;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 1.4;
+  }
+  &__item-wording{
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #888;
+    line-height: 1.5;
+  }
+  &__content{
+    margin: 16px 0 0;
+    // 仮置き
+    height: 420px;
+    &__photo{
+      position: relative;
+      min-width: 280px;
+      min-height: 280px;
+      margin: 0 auto;
+      background: #fafafa;
+      // 仮定
+      max-width: 320px;
+      // TODO 仮置き
+      float: left;
+      // @media screen and (min-width: 768px){
+      //   min-width: 300px;
+      //   max-width: 300px;
+      //   min-height: 375px;
+      // }
+      &_owl{
+        position: relative;
+        &_outer{
+          position: relative;
+          overflow: hidden;
+          &_stage{
+            position: relative;
+            &_item{
+              min-height: 1px;
+              float: left;
+              // TODO 背面が非表示になり、要素がユーザーに対して反対を向いた時に不可視にする
+              -webkit-backface-visibility: hidden;
+              // TODO スマホなどのタップしたときに色が変化しない
+              -webkit-tap-highlight-color: transparent;
+              // TODO コールアウト表示が無効になる
+              -webkit-touch-callout: none;
+              // TODO テキストを選択できない
+              -webkit-user-select: none;
+              // TODO 対象要素とその子孫要素の文章は範囲選択できない
+              user-select: none;
+              &_inner{
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding: 0 0 100%;
+              }
+            }
+          }
+        }
+    //     &__disabled{
+    //       display: none;
+    //       &_prev{
+    //         display: none;
+    //       }
+    //       &_next{
+    //         display: none;
+    //       }
+    //     }
+    //     &__dots{
+    //       line-height: 0;
+    //       &_dot.active{
+    //         opacity: 1;
+    //         cursor: default;
+    //       }
+    //       &_dot{
+    //         position: relative;
+    //         overflow: hidden;
+    //         display: inline-block;
+    //         width: 20%;
+    //         max-height: 90px;
+    //         opacity:  .4;
+    //         cursor: pointer;
+    //         @media screen and(min-width: 768px){
+    //           width: 60px;
+    //           height: 60px;
+    //           max-height: none;
+    //         }
+    //         span{
+    //           display:none;
+    //         }
+    //         &_in{
+    //           overflow: hidden;
+    //           position: relative;
+    //           width: 100%;
+    //           height: 0;
+    //           padding: 0 0 100%;
+    //           // TODO 要素がポインターイベントのターゲットではないことを示す
+    //           pointer-events: none;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // &__price{
+    //   margin: 24px 0 0;
+    //   text-align: center;
+    //   // @media screen and (min-width: 768px){
+    //   //   display: none;
+    //   // }
+    //   &_bold{
+    //     margin: 0 16px 0 0;
+    //     font-size: 32px;
+    //     font-weight: 600;
+    //     // @media screen and (min-width: 768px){
+    //     //   margin: 0 16px 0 0;
+    //     //   font-size: 50px;
+    //     // }
+    //   }
+    //   &_tax{
+    //     font-size: 10px;
+    //   }
+    //   &_fee{
+    //     display:inline-block;
+    //     font-size: 16px;
+    //   }
+    // }
+    // &__visible{
+    //   // @media screen and (min-width: 768px){
+    //   //   display: none;
+    //   // }
+    //   &_buy{
+    //     display: block;
+    //     height: 56px;
+    //     margin: 16px 0 0;
+    //     background: #ea352d;
+    //     line-height: 56px;
+    //     text-align: center;
+    //     font-weight: 600;
+    //     // 変化するプロパティへの適用
+    //     -webkit-transition: all ease-out .3s;
+    //     transition: all ease-out .3s;
+    //     a{
+    //       color: #fff;
+    //     }
+    //   }
+    // }
+    &__table{
+      width: 100%;
+      max-width: 360px;
+      // margin: 8px auto 0;
+      // 隣接するセルのボーダーを重ねて表示する
+      border-collapse: collapse;
+      border:1px solid #fafafa;
+      float: right;
+      // 仮置き
+      height: 420px;
+      // @media screen and (min-width: 768px){
+      //   max-width: 300px;
+      //   margin: 0 auto;
+      // }
+    }
+  }
+}
