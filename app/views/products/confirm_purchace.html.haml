@@ -4,7 +4,7 @@
     .main__products__details
       .main__products__details__upper
         .main__products__details__upper_image
-          = image_tag("/images/hiyoko.jpg", :size => "65x65")
+          = image_tag("/images/hiyoko.jpg", size: "65x65")
         .main__products__details__upper_product-name
           %p
             HIYOKO
@@ -26,7 +26,7 @@
           %p
             ¥ 3,980
     .main__products__btn
-      = link_to "", method:"", style:"color: white;" do
+      = link_to "#", method:"" do
         %span 購入する
   %section.main__deliverly
     .main__deliverly__rows
@@ -43,7 +43,7 @@
         %p
           HARUKA
       .main__deliverly__rows_link
-        = link_to "" do
+        = link_to "#" do
           %span 変更する >
 
   %section.main__container
@@ -57,6 +57,6 @@
       .main__container__pay_card-image
         = image_tag("/images/master-card.jpeg", :size => "28x20")
       .main__container__pay_link
-        = link_to "", method:"" do
+        = link_to "#", method:"" do
           %span 変更する>
 
