@@ -6,17 +6,22 @@
         名前
       %div
         .user-rank
-          %i.fas.fa-laugh.good
-            %span 0
+          %i.fas.fa-laugh.user-rank_good
+          %span 0
         .user-rank
-          %i.fas.fa-meh.normal
-            %span 0
+          %i.fas.fa-meh.user-rank_normal
+          %span 0
         .user-rank
-          %i.fas.fa-frown.bad
-            %span 0
+          %i.fas.fa-frown.user-rank_bad
+          %span 0
   .tr
     .th カテゴリー
     .td
       = link_to "#" do
         category
-      = link_to ''
+      = link_to '#' do
+        .tab_sub-category
+          %i.fas.fa-chevron-right
+            サブ
+      = link_to '#' do
+        .tab_sub-category_more

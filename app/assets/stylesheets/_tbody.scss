@@ -37,17 +37,17 @@
           font-size: 16px;
           vertical-align: middle;
         }
-        span{
-          vertical-align: middle;
-        }
-        .good{
+        &_good{
           color: #EF5285
         }
-        .normal{
+        &_normal{
           color: #fba933;
         }
-        .bad{
+        &_bad{
           color: #6ab5d8;
+        }
+        span{
+          vertical-align: middle;
         }
       }
       .user-rank:first-child{
