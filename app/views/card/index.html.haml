@@ -7,12 +7,14 @@
       .credit 
         %h2.credit__head 支払い方法
         .credit__content
-        %h3.credit__content__head クレジットカード一覧
-        .credit__content__card
-          = link_to '#' do
-            %i.far.fa-credit-card
-            %span クレジットカードを追加する
-        = link_to '#' do
-          %span 支払い方法について
-          %i.fas.fa-chevron-right
+          %h3.credit__content__head クレジットカード一覧
+          .credit__content__card
+            .credit__content__card__link
+              = link_to '#' do
+                %i.far.fa-credit-card
+                %span クレジットカードを追加する
+          .credit__content__payment
+            = link_to '#' do
+              %span 支払い方法について
+              %i.fas.fa-chevron-right
   %footer
