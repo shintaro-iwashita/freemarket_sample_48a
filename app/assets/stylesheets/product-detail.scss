@@ -68,50 +68,50 @@
             }
           }
         }
-    //     &__disabled{
-    //       display: none;
-    //       &_prev{
-    //         display: none;
-    //       }
-    //       &_next{
-    //         display: none;
-    //       }
-    //     }
-    //     &__dots{
-    //       line-height: 0;
-    //       &_dot.active{
-    //         opacity: 1;
-    //         cursor: default;
-    //       }
-    //       &_dot{
-    //         position: relative;
-    //         overflow: hidden;
-    //         display: inline-block;
-    //         width: 20%;
-    //         max-height: 90px;
-    //         opacity:  .4;
-    //         cursor: pointer;
-    //         @media screen and(min-width: 768px){
-    //           width: 60px;
-    //           height: 60px;
-    //           max-height: none;
-    //         }
-    //         span{
-    //           display:none;
-    //         }
-    //         &_in{
-    //           overflow: hidden;
-    //           position: relative;
-    //           width: 100%;
-    //           height: 0;
-    //           padding: 0 0 100%;
-    //           // TODO 要素がポインターイベントのターゲットではないことを示す
-    //           pointer-events: none;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
+        &__disabled{
+          display: none;
+          &_prev{
+            display: none;
+          }
+          &_next{
+            display: none;
+          }
+        }
+        &__dots{
+          line-height: 0;
+          &_dot.active{
+            opacity: 1;
+            cursor: default;
+          }
+          &_dot{
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 20%;
+            max-height: 90px;
+            opacity:  .4;
+            cursor: pointer;
+            @media screen and(min-width: 768px){
+              width: 60px;
+              height: 60px;
+              max-height: none;
+            }
+            span{
+              display:none;
+            }
+            &_in{
+              overflow: hidden;
+              position: relative;
+              width: 100%;
+              height: 0;
+              padding: 0 0 100%;
+              // TODO 要素がポインターイベントのターゲットではないことを示す
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
     // &__price{
     //   margin: 24px 0 0;
     //   text-align: center;
