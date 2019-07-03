@@ -1,0 +1,51 @@
+.single-vessel
+  %header.single-vessel__header
+    =image_tag "/assets/logo.svg",class:"mercari"
+
+
+
+              
+%main.l-single-container.buy-item-container
+  #sell-container
+    %div{"data-reactroot" => ""}
+      .sell-container-inner
+        %h2.l-single-head 商品の情報を入力
+        %form.sell-form
+          .sell-upload-box
+            %h3.sell-upload-head
+              商品画像
+              %span.form-require 必須
+            %p 最大10枚までアップロードできます
+            .sell-dropbox-container.clearfix.state-image-number-10
+
+              .sell-upload-drop-box.have-item-0
+                %input.sell-upload-file{:multiole => "", :name => "image1", :style => "display:none;", :type => "file"}/
+                %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
+                %i.icon-camera
+                \::after
+      .sell-cntent
+        %div
+          .form-group
+          %label
+            "商品名"
+            %span.form-require 必須
+
+
+
+
+
+
+
+
+
+          %footer.single-vessel__footer
+            %nav
+              %ul.clearfix
+                %li プライバシーポリシー
+                %li メルカリ利用規約
+                %li 特定商取引に関する表記
+              .single-vessel__footer_logo
+                = image_tag "/assets/logo-gray.svg"
+              %p
+                %small ©︎ 2019 Mercari
+                
