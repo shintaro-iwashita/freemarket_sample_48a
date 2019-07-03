@@ -5,7 +5,7 @@
     %p.contents__explain__one お客さまの本人情報をご登録ください。 
     %p.contents__explain__one 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
     .mainframe__explain__upload
-      %p 本人確認書類のアップロードについて>
+      = link_to '本人確認書類のアップロードについて>', "https://www.mercari.com/jp/help_center/article/495/"
   .contents
     .contents__informations
       .contents__informations__information
@@ -95,8 +95,9 @@
       .contents__inputs__unit
         .contents__inputs__unit__inputbox
           .contents__inputs__unit__inputbox__registerButton
-            登録する
+            %a{link:"https://www.mercari.com/jp/help_center/article/423/"}登録する
+
           .contents__inputs__unit__inputbox__registerLink
-            本人情報の登録について>
+            = link_to '本人情報の登録について>', "https://www.mercari.com/jp/help_center/article/423/"
 
     //後々部分テンプレートにする
