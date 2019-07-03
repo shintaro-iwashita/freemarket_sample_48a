@@ -2,18 +2,19 @@
   %h1 購入内容の確認
   %section.main__products
     .main__products__details
-      .main__products__details__image
-        = image_tag("/images/pika.png", :size => "148x148")
-    .main__products__details__product-name
-      %p
-        nezumi
-    .main__products__details__price
-      .main__products__details__price_product-price
-        %p
-          ¥ 3,980
-      .main__products__details__price_send-price
-        %p
-          送料込み
+      .main__products__details__upper
+        .main__products__details__upper_image
+          = image_tag("/images/hiyoko.jpg", :size => "65x65")
+        .main__products__details__upper_product-name
+          %p
+            HIYOKO
+      .main__products__details__price
+        .main__products__details__price_product-price
+          %p
+            ¥ 3,980
+        .main__products__details__price_send-price
+          %p
+            送料込み
       .main__products__details__point
         %p
           ポイントはありません
@@ -25,30 +26,37 @@
           %p
             ¥ 3,980
     .main__products__btn
-      %button{:type => "button"} 購入する
+      = link_to "", method:"", style:"color: white;" do
+        %span 購入する
   %section.main__deliverly
-    .main__deliverly__details__rows
-      %h3
-        配送先
-    .main__deliverly__details__rows__zipcode
-      %p
-        542-0081
-    .main__deliverly__details__rows__address
-      %p
-        大阪府大阪市中央区南船場２丁目６−２８ ユタカビル7階
-    .main__deliverly__details__rows__name
-      %p
-        HARUKA
-    = link_to "" do
-      %span 変更する>
+    .main__deliverly__rows
+      .main__deliverly__rows_title
+        %h3
+          配送先
+      .main__deliverly__rows_zipcode
+        %p
+          〒542-0081
+      .main__deliverly__rows_address
+        %p
+          大阪府大阪市中央区南船場２丁目６−２８ ユタカビル7階
+      .main__deliverly__rows_name
+        %p
+          HARUKA
+      .main__deliverly__rows_link
+        = link_to "" do
+          %span 変更する >
 
   %section.main__container
     .main__container__pay
-      .main__container__pay__acount
+      .main__container__pay_acount
         %h3 支払い方法
-      .main__container__pay__acount_card
+      .main__container__pay_card-cord
+        %p************4303 
+      .main__container__pay_card-date
         %p 7/7
-      = image_tag("/images/master-card.jpeg")
-      = link_to "", method:"" do
-        %span 変更する>
+      .main__container__pay_card-image
+        = image_tag("/images/master-card.jpeg", :size => "28x20")
+      .main__container__pay_link
+        = link_to "", method:"" do
+          %span 変更する>
 
