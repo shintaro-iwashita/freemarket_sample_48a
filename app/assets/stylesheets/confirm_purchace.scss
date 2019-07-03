@@ -1,0 +1,126 @@
+.main{
+  width: 700px;
+  height: 770px;
+  background-color: white;
+  margin: 0 auto;
+  h1{
+    text-align: center;
+    border-bottom: 1px solid $background-gray;
+    height: 70px;
+    line-height: 70px;
+    font-size: 22px;
+  }
+  &__products{
+    text-align: center;
+    &__details{
+      padding: 25px 0 32px;
+      
+      &__upper{
+        display: flex;
+        justify-content: center;
+
+        &_product-name{
+          font-size: 18px;
+          font-weight: bold;
+          text-align: center;
+          margin: 18px 170px 0 18px;
+        }
+      }
+      &__price{
+        display: flex;
+        justify-content: center;
+        padding: 18px 0 25px;
+        &_product-price{
+          font-size: 17px;
+          font-weight: bold;
+        }
+        &_send-price{
+          margin: 3px 0 0 10px;
+
+        }
+      }
+      &__point{
+        background-color: $box-gray2;
+        width: 320px;
+        height: 50px;
+        margin: 0 auto;
+        font-size: 15px;
+        line-height: 50px;
+        font-weight: lighter;
+      }
+      &__total-price{
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px; 
+        &_title{
+          font-size: 17px;
+          height: 25px;
+          line-height: 25px;
+
+        }
+        &_japan-yen{
+          font-size: 21px;
+          margin-left: 143px;
+
+        }
+      }
+      }
+  &__btn{
+    background-color: red;
+    width: 320px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 50px;
+    font-weight: lighter;
+    color: white;
+  }
+      }
+  &__deliverly{
+    border-top: 1px solid $background-gray;
+    margin-top: 40px;
+    &__rows{
+      margin: 40px 0 40px 190px;
+      &_title{
+        font-size: 12px;
+      }
+      &_zipcode{
+        padding: 10px 0;
+        font-size: 11px;
+      }
+      &__address{
+        font-size: 12px;
+      }
+      &_name{
+        padding: 5px 0;
+      }
+      &_link{
+        float: right;
+        margin-right: 180px;
+      }
+    }
+  }
+  &__container{
+    border-top: 1px solid $background-gray;
+    &__pay{
+      margin: 25px 0 40px 190px;
+      &_acount{
+        font-size: 12px;
+      }
+      &_card-cord{
+        padding: 10px 0 5px;
+        font-size: 13px;
+      }
+      &_link{
+        float: right;
+        margin-right: 180px;
+
+
+      }
+
+    }
+
+  }
+    }
+
