@@ -1,0 +1,14 @@
+.Container
+  %header
+  .bread-crumbs
+  .mypage
+    = render partial: "/mypage-nav"
+    .mypage__content
+      .credit 
+        %h2.credit__head クレジットカード情報入力
+        .credit__content
+          .credit__content__card
+            .credit__content__card__link
+              = link_to '#' do
+                %span 追加する
+  %footer
