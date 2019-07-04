@@ -158,13 +158,10 @@
     &__table{
       width: 100%;
       max-width: 360px;
-      margin: 8px auto 0;
       // 隣接するセルのボーダーを重ねて表示する
       border-collapse: collapse;
       border:1px solid #fafafa;
       float: right;
-      // 仮置き
-      height: 420px;
       // @media screen and (min-width: 768px){
       //   max-width: 300px;
       //   margin: 0 auto;
