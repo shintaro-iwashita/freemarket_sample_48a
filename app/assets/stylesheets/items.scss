@@ -28,7 +28,6 @@
     
     .sell-dropbox-container {
         display: block;
-        width: 620px;
         padding: 40px
     }
 
@@ -92,9 +91,84 @@
         vertical-align: top;
     }
     
-    .sell-content {
-        width: 700px;
-        margin: 0 auto;
+    .form-group {
+        margin: 40px 0 0;
+    }
+
+
+.sell-content {
+    height: 275px;
+    padding: 40px;
+    border-top: 1px solid #eee;
+}
+    .input-default {
+        width: 586px;
+        height: 35px;
+        margin: 8px 0 0;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    .textarea-default {
+        display: block;
+        width: 586px;
+        max-width: 100%;
+        min-height: 104px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        background: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    .sell-content-item {
+        height: 275px;
+        padding: 40px;
+        border-top: 1px solid #eee;
+    }
+
+    .sell-sub-head {
+        float: left;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .sell-content-delivery {
+        height: 275px;
+        padding: 40px;
+        border-top: 1px solid #eee;
+    }
+
+    .sell-content-price {
+        height: 275px;
+        padding: 40px;
+        border-top: 1px solid #eee;
+    }
+
+    .sell-content-exhibition {
+        height: 275px;
         padding: 40px;
         border-top: 1px solid #eee;
     }

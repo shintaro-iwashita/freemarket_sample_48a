@@ -23,29 +23,43 @@
                 %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
                 %i.icon-camera
                 \::after
-      .sell-cntent
+
+      .sell-content
         %div
-          .form-group
+        
           %label
-            "商品名"
+            商品名
             %span.form-require 必須
+            %div
+            %input.input-default{placeholder: "商品名（必須 40文字まで)", value: ""}/
+        .form-group
+          %label
+            商品の説明
+            %span.form-require 必須
+            %div
+            %textarea.textarea-default{placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows:""}
+        
+      .sell-content-item
+        %h3.ell-sub-head
+      .sell-content-delivery
+
+
+      .sell-content-price
+
+
+      .sell-content-exhibition
 
 
 
 
-
-
-
-
-
-          %footer.single-vessel__footer
-            %nav
-              %ul.clearfix
-                %li プライバシーポリシー
-                %li メルカリ利用規約
-                %li 特定商取引に関する表記
-              .single-vessel__footer_logo
-                = image_tag "/assets/logo-gray.svg"
-              %p
-                %small ©︎ 2019 Mercari
+%footer.single-vessel__footer
+  %nav
+    %ul.clearfix
+      %li プライバシーポリシー
+      %li メルカリ利用規約
+      %li 特定商取引に関する表記
+    .single-vessel__footer_logo
+      = image_tag "/assets/logo-gray.svg"
+    %p
+      %small ©︎ 2019 Mercari
                 
