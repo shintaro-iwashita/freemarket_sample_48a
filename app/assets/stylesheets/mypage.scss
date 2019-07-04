@@ -2,7 +2,6 @@ main{
   display: block;
 }
 
-
 .contener{
   margin: 24px auto 0;
   padding: 0 0 40px;
@@ -39,14 +38,19 @@ main{
         height: 60px;
         margin: 0 auto;
         border-radius: 50%;
-        // Todo 下は仮置き
+        // Todo 仮置き
         background: #fff;
       }
-
+      .lazyloaded{
+        position: absolute;
+        opacity: 1;
+        -webkit-transition: opacity .3s;
+        transition: opacity .3s;
+      }
         &_bold{
           font-weight: 600;
         }
-
+        
         h2{
           margin: 8px 0 0;
           font-size: 14px;
@@ -130,8 +134,24 @@ main{
               width: 48px;
               height: 48px;
             }
+            .lazyloaded{
+              position: absolute;
+              opacity: 1;
+              -webkit-transition: opacity .3s;
+              transition: opacity .3s;
+            }
             .mypage-item-body{
               margin: 0 40px 0 68px;
+              .mypage-item-text{
+                overflow: hidden;
+                display: block;
+                display: -webkit-box;
+                max-height: 4.4em;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                line-height: 1.5;
+              }
             }
             time{
               display: inline-block;
@@ -191,6 +211,7 @@ main{
             }
             .mypage-item-body{
               margin: 0 40px 0 68px;
+              
             }
             time{
               display: inline-block;
@@ -221,14 +242,17 @@ main{
               width: 100%;
           }
         }
-        a{
-          display: block;
-          height: 56px;
-          margin: 0 auto;
-          background-color: #eee;
-          color: #333;
-          text-align: center;
-          line-height: 56px;
+        .mypage-go-list{
+          padding:16px;
+          a{
+            display: block;
+            height: 56px;
+            margin: 0 auto;
+            background-color: #eee;
+            color: #333;
+            text-align: center;
+            line-height: 56px;
+          }
         }
       }
     }
@@ -308,13 +332,22 @@ main{
             }
             .mypage-item-body{
               margin: 0 40px 0 68px;
+              .mypage-item-text{
+                overflow: hidden;
+                display: block;
+                display: -webkit-box;
+                max-height: 4.4em;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                line-height: 1.5;
+              }
             }
             time{
               display: inline-block;
               color: #888;
               .icon-time{
                 margin: 0 8px 0 0;
-              
                 span{
                   vertical-align: middle;
                 }
@@ -369,19 +402,30 @@ main{
               color: #888;
               .icon-time{
                 margin: 0 8px 0 0;
-              
+
                 span{
                   vertical-align: middle;
                 }
               }
           }
-          .right-arrow{
-            position: absolute;
-            top: 50%;
-            right: 16px;
-            transform: translate(0, -50%);
-            -webkit-transform: translate(0, -50%);
-          }
+            .right-arrow{
+              position: absolute;
+              top: 50%;
+              right: 16px;
+              transform: translate(0, -50%);
+              -webkit-transform: translate(0, -50%);
+            }
+            .mypage-item-status{
+              display: inline-block;
+              margin: 8px 0 0 0;
+              padding: 5px 6px;
+              border-radius: 2px;
+              font-size: 12px;
+              color: #fff;
+            }
+            .mypage-item-status.done{
+              background: #888;
+            }
           }
               img{
               position: absolute;
@@ -393,24 +437,24 @@ main{
               width: 100%;
           }
         }
-
-        a{
-          display: block;
-          height: 56px;
-          margin: 0 auto;
-          background-color: #eee;
-          color: #333;
-          text-align: center;
-          line-height: 56px;
-
+        .mypage-go-list{
+          padding:16px;
+          a{
+            display: block;
+            height: 56px;
+            margin: 0 auto;
+            background-color: #eee;
+            color: #333;
+            text-align: center;
+            line-height: 56px;
+          }
         }
       }
     }
   }
-
 }
 
-  // 現在やることがありません・取引中の商品がありません
+  // TODO 現在やることがありません・取引中の商品がありません
 .mypage-item-not-found{
   padding: 160px 0 60px;
   background: url(logo-gray-icon.svg);
@@ -423,42 +467,7 @@ main{
 }
 
 
-img{
-  vertical-align: middle;
-}
-.bold{
-  font-weight: 600;
-}
-.lazyloaded{
-  position: absolute;
-  opacity: 1;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-}
 
-.mypage-item-text{
-  overflow: hidden;
-  display: block;
-  display: -webkit-box;
-  max-height: 4.4em;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  line-height: 1.5;
-}
 
-.mypage-go-list{
-  padding:16px;
-}
 
-.mypage-item-status{
-  display: inline-block;
-  margin: 8px 0 0 0;
-  padding: 5px 6px;
-  border-radius: 2px;
-  font-size: 12px;
-  color: #fff;
-}
-.mypage-item-status.done{
-  background: #888;
-}
+
