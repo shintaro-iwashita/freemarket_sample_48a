@@ -1,6 +1,15 @@
 // 全体に関するSCSS
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+@import "./top";
+@import 'user';
+@import 'login_users';
+@import '_reset';
+@import 'config/colors';
+@import "./links";
+@import 'mixins/clearfix.scss';
+@import 'mixins/single-box.scss';
+@import 'config/font.scss';
 @import '_reset';
 @import 'config/colors';
 
