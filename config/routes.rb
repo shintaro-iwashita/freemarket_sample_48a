@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'changes/edit'
   root "products#index"
-  resources :users, only: [:new, :edit]
+  resources :users do
+    get 'change', on: :member
+  end
 end
