@@ -46,12 +46,36 @@
             %span
             .item-box-container__content__photo_owl__dots_dot_in
               = image_tag ""
-    -# .item-box-container__content__price
-    -#   %span.item-box-container__content__price_bold
-    -#   %span.item-box-container__content__price_tax
-    -#   %span.item-box-container__content__price_fee
-    -# .item-box-container__content__visible
-    -#   .item-box-container__content__visible_buy
-    -#     = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
     .item-box-container__content__table
       = render partial: "detail/tbody"
+  .item-box-container__price
+    %span.item-box-container__price_bold ¥0,010
+    %span.item-box-container__price_tax (税込)
+    %span.item-box-container__price_fee 送料込み
+  .item-box-containert__visible
+    %button.item-box-container__visible_buy
+      = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
+    .item-box-container__visible_client
+    -# #TODO 仮置き
+      -# = link_to '#'
+    -#   %div{data:{client: "visible"}}
+    -# .item-box-containert__visible_text
+    -#   = link_to 'アプリで購入', data:{toggle: 'open-app'},data:{url:{scheme:"mercari://"}},data:{action: 'item/openDetail'}
+  .item-box-container__description
+    %p.item-box-container__description_inner
+      なになにブランドの何かです。
+      使用感があり、綺麗とはいえません。
+      中古なのでご理解の上ご購入下さい。
+      よろしくお願いします。
+  .item-box-container__button
+    .item-box-container__button_left
+      %button{type: "button",name: "like!",data:{toggele:'like'},data:{id:''},data:{ga:'element'},class:"item-button like",data:{ga:{lable:'like'}} }
+        %i.far.fa-heart
+        %span いいね!
+        %span{data:{num:"like"},class:'fade-in-down'} 0
+      = link_to '','',data:{open:'modal',modal:'report-item'},class:'item-button report'
+  
+
+
+  
+
