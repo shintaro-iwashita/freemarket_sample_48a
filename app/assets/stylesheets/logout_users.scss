@@ -1,0 +1,29 @@
+.mypage {
+  display: flex;
+  justify-content: space-between;
+  width: 1020px;
+  margin: auto;
+  padding: 40px;
+
+  &__content {
+    width: 700px;
+  }
+}
+
+.mypage__content .logout {
+  background-color: white;
+  padding: 64px;
+
+  &__link {
+    width: 320px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: $mercari-red;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
