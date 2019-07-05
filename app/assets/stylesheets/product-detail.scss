@@ -260,6 +260,7 @@
     }
   }
 }
+
 .item-detail{
   margin: 8px auto;
   // 仮置き
@@ -302,6 +303,7 @@
         :focus{
           border-color: #0099e8;
         }
+        // #TODO textareaのまわりの線をはっきりとさせる
         textarea{
           outline: none;
         }
@@ -313,7 +315,6 @@
           background: #aaa;
           border: 1px solid #aaa;
           color: #fff;
-          
         }
         .btn-default{
           display: block;
@@ -332,7 +333,6 @@
 .nav-item-link{
   width: 780px;
   margin: 24px auto 0;
-  display: flow-root;
   list-style: none;
   li{
     position: relative;
@@ -359,6 +359,61 @@
       right: 0;
       position: absolute;
       color: #0099e8;
+    }
+  }
+}
+.nav-item-link.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.item-social{
+  margin: 24px 0 0;
+  background: #fff;
+  padding: 16px 0 8px;
+  @media screen and (min-width: 768px){
+    margin: 24px auto;
+    padding: 32px 0 24px;
+    width: 780px;
+  }
+  &__center{
+    text-align: center;
+    &_iframe{
+      display: inline-block;
+      position: relative;
+    }
+  }
+  &__media{
+    margin: 16px 0 0;
+    text-align: center;
+    font-size: 0;
+    list-style: none;
+    li{
+      display: inline-block;
+      margin: 0 8px 8px 0;
+      vertical-align: middle;
+      text-align: center;
+      a{
+        display: block;
+      }
+      i{
+        font-size: 44px;
+        border-radius: 4px;
+        line-height: 44px;
+      }
+      .face{
+        color: #385185;
+      }
+      .twi{
+        color: #5c9dc9;
+      }
+      .line{
+        color: #03c138;
+      }
+      .pinte{
+        color: #aa262a;
+      }
     }
   }
 }
