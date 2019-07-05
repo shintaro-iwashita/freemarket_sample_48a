@@ -2,25 +2,27 @@
   display: flex;
   justify-content: space-between;
   width: 1020px;
-  margin: auto;
   padding: 40px;
 
   &__content {
-    background-color: white;
     width: 700px;
-    height: 180px;
-    
-    .logout {
-      background-color: $mercari-red;
-      height: 50px;
-      width: 320px;
-      margin: 65px auto;
-
-      &__link{
-        color: white;
-        line-height: 50px;
-        text-align: center;
-      }
-    } 
   }
 }
+
+.mypage__content .logout {
+  background-color: white;
+  padding: 64px;
+
+  &__link {
+    width: 320px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: $mercari-red;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
