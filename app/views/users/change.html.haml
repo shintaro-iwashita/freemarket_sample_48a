@@ -1,0 +1,18 @@
+/ プロフィール編集ページ
+%mail.mypage-container
+  .mypage-content
+    .mypage-content__setting-profile
+      %h2.mypage-content__setting-profile__title 
+        プロフィール
+      .mypage-content__setting-profile__image-box
+        .mypage-content__setting-profile__image-box__form
+          .mypage-content__setting-profile__image-box__form__icon
+            %figure
+              = image_tag "pika.png", size: "60x60"
+          .mypage-content__setting-profile__image-box__form__name
+            %input.input-default{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: "Haruka"}/
+      .mypage-content__setting-profile__content
+        = text_area :page, :content, class: "introduction", dirname: "ltr"
+        .mypage-content__setting-profile__content_btn
+          = link_to "", method:"", class: "btn-red" do
+            %span 変更する
