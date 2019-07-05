@@ -155,11 +155,15 @@ body{
 }
 
 /* プロフィール編集 */
-
+.mypage-container{
+  display: flex;
+  padding: 40px 12% 50px;
+}
 .mypage-content{
   &__setting-profile{
     background-color: white;
     width: 700px;
+    margin-left: 45px;
     &__title{
       font-size: 24px;
       padding: 8px 0;
