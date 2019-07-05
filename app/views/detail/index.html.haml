@@ -94,17 +94,36 @@
         %input{type: 'hidden',name: 'item_id', value: 'm6111673212'}
         %input{type: 'hidden', name: 'redirect_url_key',value: 'item_detail'}
         %textarea.textarea-default{name: 'body', type: 'text',value:""}
-        -# #TODO textareaにあとで使用 disabled: "disabled"
+        -# #TODO textareaにあとで使用 売れたらjqueryで表示を変更 disabled: "disabled"
         %button{type: "submit", class: "item-detail__container__content_form_submit btn-default" }
           %span コメント
-%ul.nav-item-link
-  %li.nav-item-link_prev
-    = link_to '','#'
+%ul.nav-item-link.clearfix
+  %li.nav-item-link_prev 
+    = link_to '#','#'
     %i.fa.fa-chevron-left
   %li.nav-item-link_next
-    = link_to '','#'
+    = link_to '#','#'
     %i.fa.fa-chevron-right
+.item-social
+  .item-social__center
+    -# #TODO あとで使用
+    .item-social__center_iframe{data:{uri: ''},fb:{xfbml:{state:''},iframe:{plugin:{query:''}}}}
+  %ul.item-social__media
+    %li
+      = link_to '','http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F',{target: "_blank",class: "share-btn" ,data:{window:{name:"twitter_window"}}} 
+      %i.fab.fa-facebook-square.face
+    %li
+      = link_to '', 'http://twitter.com/share?count=horizontal&original_referer=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F&text=U.L.%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%82%B7%E2%80%A6%20%28%C2%A5%204%2C900%29%20https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8C%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%80%8D%E3%81%A7%E8%B2%A9%E5%A3%B2%E4%B8%AD%E2%99%AA%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%40mercari_jp%E3%81%95%E3%82%93%E3%81%8B%E3%82%89',{target: "_blank",class: "share-btn",data:{window:{name: "twitter-window"}}}
+      %i.fab.fa-twitter-square.twi
+    %li.item-social__media_item
+      = link_to '', 'http://line.me/R/msg/text/?U.L.コンフォートシステムパッド120 mont-bell%20%7C%20%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%E3%82%B9%E3%83%9E%E3%83%9B%E3%81%A7%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%0D%0Ahttps://item.mercari.com/jp/m51933895609/',{target: "_blank"}
+      %i.fab.fa-line.line
+    %li
+      = link_to '', 'http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F&media=https%3A%2F%2Fstatic.mercdn.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm51933895609_1.jpg%3F1562299671&description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20U.L.%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%91%E3%83%83%E3%83%89120%20mont-bell%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA',{target: "_blank",class: "share-btn",data:{window:{name: "pinterest_window"}}}
+      %i.fab.fa-pinterest-square.pinte
 
 
-  
+
+
+      
 
