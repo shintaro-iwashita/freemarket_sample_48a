@@ -22,7 +22,6 @@
   }
   &__content{
     margin: 16px 0 0;
-    // 仮置き
     height: 420px;
     &__photo{
       position: relative;
@@ -285,8 +284,6 @@
 
 .item-detail{
   margin: 8px auto;
-  // 仮置き
-  height: 279px;
   @media screen and(min-width: 768px){
     width: 780px;
   }
@@ -294,7 +291,6 @@
     &__content{
       padding: 24px 7.5%;
       background: #fff;
-      // 仮置き
       height: 220px;
       @media screen and (min-width: 768px){
         padding: 24px;
