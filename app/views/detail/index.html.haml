@@ -1,6 +1,6 @@
 %section.item-box-container
   %h1.item-box-container_item-name
-    dfs
+    題名
   %p.item-box-container__item-wording
     -# = link_to '#' do
     -# = link_to '#' do
@@ -9,10 +9,10 @@
     .item-box-container__content__photo
       .item-box-container__content__photo_owl
         .item-box-container__content__photo_owl_outer
-          .item-box-container__content__photo_owl_outer_stage{style: 'left: 0px; width: 1500px;'}
-            .item-box-container__content__photo_owl_outer_stage_item.active{style: 'width: 300px;'}
+          .item-box-container__content__photo_owl_outer_stage
+            .item-box-container__content__photo_owl_outer_stage_item.active
               .item-box-container__content__photo_owl_outer_stage_item_inner
-                = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
+                = image_tag "1965_image_1.jpeg", alt:"", class: "owl-lazy",style:"",data:{src:""}
             .item-box-container__content__photo_owl_outer_stage_item
               .item-box-container__content__photo_owl_outer_stage_item_inner
                 = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
@@ -29,7 +29,7 @@
           .item-box-container__content__photo_owl__dots_dot.active
             %span
             .item-box-container__content__photo_owl__dots_dot_in
-              = image_tag ""
+              = image_tag "6875fda9.png",class:"item-box-container__content__photo_owl__dots_dot_in_higer"
           .item-box-container__content__photo_owl__dots_dot
             %span
             .item-box-container__content__photo_owl__dots_dot_in
@@ -121,5 +121,5 @@
     %li
       = link_to '', 'http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F&media=https%3A%2F%2Fstatic.mercdn.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm51933895609_1.jpg%3F1562299671&description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20U.L.%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%91%E3%83%83%E3%83%89120%20mont-bell%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA',{target: "_blank",class: "share-btn",data:{window:{name: "pinterest_window"}}}
       %i.fab.fa-pinterest-square.pinte
-.item-profile
-  = render partial: "detail/other-box"
+-# .item-profile
+= render partial: "detail/other-box"
