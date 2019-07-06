@@ -4,6 +4,8 @@
   // 仮置き
   height: 1524px;
   &__box{
+    margin: 0 auto;
+    display: table;
     // #TODO はみ出た要素の表示方法を指定する
     overflow: hidden;
     &_head{
@@ -98,9 +100,11 @@
         }
       }
     }
-    .items-container{
-      margin-bottom: 40px;
-      overflow: hidden;
-    }
   }
+}
+.items-container{
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: table;
+  margin: 0 auto;
 }
