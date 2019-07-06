@@ -21,6 +21,7 @@
 @import 'mypage';
 @import 'logout_users';
 @import '_mypage-nav';
-@import 'product-detail';
-@import '_tbody.scss';
+@import 'detail/product-detail';
+@import 'detail/_tbody.scss';
 @import "./confirm_purchace";
+@import "detail/_other.scss";
