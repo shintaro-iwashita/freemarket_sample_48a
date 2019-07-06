@@ -28,13 +28,44 @@
       margin: 0 auto;
     }
     &__card {
-      padding: 24px 0;
       border-bottom: 2px solid $background-gray;
+      &__group{
+        width: 320px;
+        margin: 0 auto;
+        padding: 24px 0;
+        position: relative;
+        img {
+          max-width: 49px;
+          height: 20px;
+        }
+        &__no {
+          margin-top: 8px;
+          font-size: 16px;
+        }
+        &__date {
+          margin-top: 8px;
+          font-size: 16px;
+        }
+        &__remove {
+          position: absolute;
+          top: 24px;
+          right: 0;
+          width: 70px;
+          height: 25px;
+          background-color: white;
+          border-radius: 3px;
+          border: 1px solid $mercari-red;
+          color: $mercari-red;
+          font-size: 14px;
+          line-height: 1;
+          cursor: pointer;
+        }
+      }
       &__link {
         width: 320px;
         height: 50px;
         background-color: $mercari-red;
-        margin: 0 auto 8px;
+        margin: 24px auto 32px;
         display: flex;
         justify-content: center;
         align-items: center;
