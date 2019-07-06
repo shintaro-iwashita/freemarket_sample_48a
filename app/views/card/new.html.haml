@@ -7,7 +7,6 @@
       .credit 
         %h2.credit__head クレジットカード情報入力
         .credit__content
-          -# = form_tag("/card", method: :POST) do
           .credit__content__form
             .credit__content__form__group
               %label.credit__content__form__group__no カード番号
@@ -45,8 +44,7 @@
                   %option{value: "10"} 10
                   %option{value: "11"} 11
                   %option{value: "12"} 12
-                %i.fas.fa-chevron-down
-                　月
+                %span 月
                 %select.credit__content__form__group__select__year>
                   %option{value: "19"} 19
                   %option{value: "20"} 20
@@ -59,7 +57,7 @@
                   %option{value: "27"} 27
                   %option{value: "28"} 28
                   %option{value: "29"} 29
-                　年
+                %span 年
 
             .credit__content__form__group
               %label.credit__content__form__security セキュリティコード
