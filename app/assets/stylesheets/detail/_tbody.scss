@@ -1,0 +1,55 @@
+// #TODO 出品者から発送日の目安まで
+.tbody{
+  .tr{
+    display: flex;
+    .th{
+      width: 39%;
+      text-align: left;
+      font-weight: 400;
+      background: #fafafa;
+      border: 1px solid #f5f5f5;
+      padding: 16px 8px;
+    }
+    .td{
+      width: 61%;
+      background: #fff;
+      border: 1px solid #f5f5f5;
+      @media screen and (min-width: 768px){
+        padding: 8px;
+      }
+      a{
+        display: block;
+        margin: 16px 0 0;
+        @media screen and (min-width: 768px){
+          margin:0;
+        }
+      }
+      a:first-child{
+        margin:0;
+      }
+      .user-rank{
+        display: inline-block;
+        margin: 8px 0 0 16px;
+        i{
+          font-size: 16px;
+          vertical-align: middle;
+        }
+        &_good{
+          color: #EF5285
+        }
+        &_normal{
+          color: #fba933;
+        }
+        &_bad{
+          color: #6ab5d8;
+        }
+        span{
+          vertical-align: middle;
+        }
+      }
+      .user-rank:first-child{
+        margin: 0;
+      }
+    }
+  }
+}
