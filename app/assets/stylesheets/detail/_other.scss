@@ -1,3 +1,4 @@
+// #TODO 出品者のその他の出品商品
 .item-profile{
   width: 700px;
   margin: 0 auto;
@@ -50,15 +51,27 @@
           position: relative;
           width: 100%;
           height: 0;
-          // padding: 0 0 100%;
           @media screen and (min-width: 768px){
             width: 220px;
             height: 220px;
+          }
+          img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            @media screen and (min-width: 768px){
+              width: 220px;
+            }
           }
         }
         &_body{
           padding: 8px;
           height: 110px;
+          box-sizing: border-box;
           @media screen and (min-width: 768px){
             padding: 16px;
           }
@@ -97,6 +110,7 @@
     }
   }
 }
+// #TODO 出品した商品と同じカテゴリーの商品
 .items-container{
   margin-bottom: 40px;
   overflow: hidden;
