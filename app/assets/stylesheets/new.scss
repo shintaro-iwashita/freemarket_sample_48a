@@ -3,6 +3,8 @@ $input-height:40px;
   background-color:#ffffff;
   width:700px;
   height:100%;
+  margin:0 auto;
+  
   &__title{
     background-color:#ffffff;
     color:#333333;
@@ -17,11 +19,11 @@ $input-height:40px;
     margin:0 auto;
     width:60%;
     height:100%;
-    
+    box-sizing:border-box;
     background-color:#ffffff;
     &__unit{
       height:100%;
-      margin:20px;
+      margin:20px 0;
       width:100%;
       position:relative;
       p{

@@ -1,0 +1,97 @@
+*{
+  // background-color:#ccc;
+}
+.header{
+  box-sizing:border-box;
+  display:flex;
+  height:100px;
+  width:700px;
+  margin:0 0 0 10%;
+  position:relative;
+
+  &__icons{
+    background-color:yellow;
+    width:200px;
+    height:100%;
+  }
+  &__stepmeter{
+    box-sizing:border-box;
+    width:490px;
+    text-align:center;
+    height:100%;
+    font-size:0.8rem;
+    display:flex;
+    color:#888888;
+    position:absolute;
+    right:0;
+    // background-color:red;
+    
+    &__step{
+      height:100%;
+      width:100%;
+      box-sizing:border-box;
+      // background-color:red;
+      &__up{
+        height:50%;
+        position:relative;
+        p{
+          bottom:0;
+          right:0;
+          left:0;
+          margin:auto;
+          position:absolute;
+        }
+        span{
+          bottom:0;
+          right:0;
+          position:absolute;
+        }
+      }
+      &__statusbar{
+        height:50%;
+        width:100%;
+        display:flex;
+        position:relative;
+        margin:0;
+        // background-color:green;
+        &-Bef{
+          width:50%;
+          height:20%;
+          box-sizing:border-box;
+          border-bottom: none solid #ffffff;
+        }
+        &-Af{
+          border-bottom: medium solid #cccccc;
+          width:50%;
+          height:20%;
+        }
+        &-BefAf{
+          width:50%;
+          height:20%;
+          // background-color:green;
+          // box-sizing:border-box;
+          padding-left:30px;
+          padding-right:30px;
+          border-bottom: medium solid #cccccc;
+        }
+        &-middle{
+          color:#cccccc;
+          position:absolute;
+          height:20%;
+          left:40%;
+          top:12%;
+        }
+        &-end{
+          color:#cccccc;
+          position:absolute;
+          height:20%;
+          top:12%;
+          right:0;
+
+        }
+        // background-color:blue;
+
+      }
+    }
+  }
+}
