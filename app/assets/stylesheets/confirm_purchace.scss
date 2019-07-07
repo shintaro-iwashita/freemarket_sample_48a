@@ -1,3 +1,40 @@
+/*サブヘッダーサブフッターcss*/
+.confirm-info__header{
+  height: 128px;
+  width:100%;
+  text-align: center;
+  .mercari-icon{
+    margin-top: 40px;
+    width:185px;
+    height: 49px;
+    line-height:49px;
+  }
+}
+
+.confirm-info__footer{
+  height: 220px;
+  width:100%;
+  text-align: center;
+  padding: 20px;
+    li {
+      font-size: 12px;
+      display: inline-block;
+      padding: 0 5px;
+      a{
+       text-decoration: none;
+      }
+    }
+    &__icon{
+      margin: 30px auto 10px;
+      width: 80px;
+      height: 65px;
+    }
+    small {
+      margin: 0 auto;
+      font-size: 12px;
+    }
+}
+
 .main{
   width: 700px;
   height: 770px;

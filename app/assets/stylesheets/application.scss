@@ -4,24 +4,21 @@
 @import "./top";
 @import 'user';
 @import 'login_users';
-@import '_reset';
+@import 'reset';
 @import 'config/colors';
 @import "./links";
 @import 'mixins/clearfix.scss';
 @import 'mixins/single-box.scss';
 @import 'config/font.scss';
-@import '_reset';
-@import 'config/colors';
 
 // 個別ビューに関するSCSS
 @import 'user';
 @import 'login_users';
-@import '_reset';
-@import 'config/colors';
 @import 'mypage';
 @import 'logout_users';
 @import '_mypage-nav';
 @import 'detail/product-detail';
 @import 'detail/_tbody.scss';
+@import 'mypage-nav';
 @import "./confirm_purchace";
 @import "detail/_other.scss";
