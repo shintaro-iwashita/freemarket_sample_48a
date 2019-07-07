@@ -4,13 +4,15 @@ main{
 
 .contener{
   margin: 24px auto 0;
-  padding: 0 0 40px;
+  padding: 40px 0 40px;
   width: 1020px;
+  display: flex;
 
   &__content{
     width: 100%;
     float: right;
     width: 700px;
+    padding-left: 40px;
 
     &_mypage-icon{
       position: relative;
