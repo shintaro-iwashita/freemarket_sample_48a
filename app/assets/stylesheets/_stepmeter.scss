@@ -5,18 +5,23 @@
   box-sizing:border-box;
   display:flex;
   height:100px;
-  width:700px;
-  margin:0 0 0 10%;
-  position:relative;
+  width:880px;
 
+  position:relative;
   &__icons{
-    background-color:yellow;
-    width:200px;
+    // background-color:yellow;
+    width:30%;
     height:100%;
+    position:relative;
+    #titleIcon{
+      top:15px;
+      left:120px;
+      position:absolute;
+    }
   }
   &__stepmeter{
     box-sizing:border-box;
-    width:490px;
+    width:60%;
     text-align:center;
     height:100%;
     font-size:0.8rem;
