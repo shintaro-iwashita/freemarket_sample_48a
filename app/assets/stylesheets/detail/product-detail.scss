@@ -143,18 +143,11 @@
       border-collapse: collapse;
       border:1px solid #fafafa;
       float: right;
-      // @media screen and (min-width: 768px){
-      //   max-width: 300px;
-      //   margin: 0 auto;
-      // }
     }
   }
   &__price{
       margin: 24px 0 0;
       text-align: center;
-      // @media screen and (min-width: 768px){
-      //   display: none;
-      // }
       &_bold{
         margin: 0 16px 0 0;
         font-size: 32px;
@@ -173,9 +166,6 @@
       }
   }
   &__visible{
-    // @media screen and (min-width: 768px){
-    //   display: none;
-    // }
     &_buy{
       display: block;
       height: 60px;
@@ -201,9 +191,6 @@
     padding: 24px 0 0;
     line-height: 1.5;
     font-size: 18px;
-    // @media screen and (min-width: 768px){
-    //   padding: 32px 0 0;
-    // }
     &_inner{
       white-space: pre-wrap;
     }
