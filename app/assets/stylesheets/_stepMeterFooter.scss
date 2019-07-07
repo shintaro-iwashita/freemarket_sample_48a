@@ -1,0 +1,23 @@
+.footer{
+  height:200px;
+  width:700px;
+  box-sizing:border-box;
+  position:relative;
+  // background-color:blue;
+  margin:0 auto;
+  &__links{
+    margin:0 auto;
+    width:70%;
+    height:40%;
+    line-height:80px;
+    // backgr3ound-color:#dddddd;
+    font-size:0.8rem;
+    text-align:center;
+    span{
+      margin:5px;
+    }
+  }
+
+  // background-color:blue;
+
+}

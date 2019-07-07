@@ -6,7 +6,6 @@
   display:flex;
   height:100px;
   width:880px;
-
   position:relative;
   &__icons{
     // background-color:yellow;
@@ -30,7 +29,13 @@
     position:absolute;
     right:0;
     // background-color:red;
-    
+    &__step:nth-of-type(1){
+      color:red;
+      #circle{
+        color:red;
+
+      }
+    }
     &__step{
       height:100%;
       width:100%;
