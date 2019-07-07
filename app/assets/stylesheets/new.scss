@@ -132,7 +132,6 @@ $input-height:40px;
       }
     }
     &__registerLink{
-      color:#1A99E8;
       text-align:right;
       width:100%;
       margin-top:30px;
@@ -142,4 +141,11 @@ $input-height:40px;
       // background-color:red;
     }
   }
+}
+.linkblue{
+  color:#0099E8;
+}
+.linkblue:hover{
+  opacity:0.7;
+  text-decoration:underline;
 }
