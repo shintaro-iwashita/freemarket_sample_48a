@@ -7,8 +7,10 @@
   height:100px;
   width:880px;
   position:relative;
+  // background-color:yellow;
+  margin:0 0 0 10%;
   &__icons{
-    // background-color:yellow;
+    // 
     width:30%;
     height:100%;
     position:relative;
@@ -31,7 +33,7 @@
     color:#888888;
     position:absolute;
     right:0;
-    // background-color:red;
+    // background-color:yellow;
     &__step:nth-of-type(1){
       color:red;
       #circle{
