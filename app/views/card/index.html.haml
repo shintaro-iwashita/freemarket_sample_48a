@@ -1,0 +1,29 @@
+.Container
+  %header
+  .bread-crumbs
+  .mypage
+    = render partial: "/mypage-nav"
+    .mypage__content
+      .credit 
+        %h2.credit__head 支払い方法
+        .credit__content
+          %h3.credit__content__head クレジットカード一覧
+          -# クレジットカード登録済みの場合
+          -# .credit__content__card
+          -#   .credit__content__card__group
+          -#     = image_tag "/images/card/visa.svg"
+          -#     .credit__content__card__group__no ************1234
+          -#     .credit__content__card__group__date 01/21
+          -#     %button.credit__content__card__group__remove 削除する
+
+          -# クレジットカード未登録の場合
+          .credit__content__card
+            .credit__content__card__link
+              = link_to new_card_path do
+                %i.far.fa-credit-card
+                %span クレジットカードを追加する
+          .credit__content__payment
+            = link_to '#' do
+              %span 支払い方法について
+              %i.fas.fa-chevron-right
+  %footer

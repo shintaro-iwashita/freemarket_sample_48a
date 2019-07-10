@@ -1,11 +1,15 @@
+= render partial: "layouts/header" 
+
 .Container
   %header
-  .bread-crumbs
   .mypage
     = render partial: "/mypage-nav"
     .mypage__content
-      .logout 
+      .logout
         .logout__link ログアウト
+        -# あとでlink_to追加
   %footer
+
+= render partial: "layouts/footer"
 
 

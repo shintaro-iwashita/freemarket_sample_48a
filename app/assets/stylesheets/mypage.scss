@@ -1,0 +1,475 @@
+main{
+  display: block;
+}
+
+.contener{
+  margin: 24px auto 0;
+  padding: 40px 0 40px;
+  width: 1020px;
+  display: flex;
+
+  &__content{
+    width: 100%;
+    float: right;
+    width: 700px;
+    padding-left: 40px;
+
+    &_mypage-icon{
+      position: relative;
+      height: 155px;
+      padding: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      background-image: url("user-bg.jpg");
+
+      >a{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        color: #333;
+      }
+
+      figure{
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        border-radius: 50%;
+        // Todo 仮置き
+        background: #fff;
+      }
+      .lazyloaded{
+        position: absolute;
+        opacity: 1;
+        -webkit-transition: opacity .3s;
+        transition: opacity .3s;
+      }
+        &_bold{
+          font-weight: 600;
+        }
+        
+        h2{
+          margin: 8px 0 0;
+          font-size: 14px;
+        }
+        .mypage-evaluation{
+          margin: 8px 0 0;
+          font-size: 0;
+          div{
+            display: inline-block;
+            font-size: 14px;
+            +div{
+              margin: 0 0 0 16px;
+            }
+          }
+          span{
+            margin: 0 0 0 8px;
+          }
+        }
+    }
+    //お知らせ・やることリスト
+    &__mypage-tab{
+      margin: 0;
+      background-color: #fff;
+      &_notice{
+        border: 0;
+        background-color: #eee;
+        font-size: 0;
+        .active{
+          background-color: #fff;
+          a{
+            border-top: 2px solid #ea352d;
+          }
+        }
+        li{
+          width: 50%;
+        }
+        a{
+          position: relative;
+          display: block;
+          color: #333;
+          font-size: 16px;
+          line-height: 72px;
+        }
+        li{
+          display: inline-block;
+          text-align: center;
+          vertical-align: top;
+        }
+
+      }
+
+      .tab-content{
+        .tab-pane.active{
+          display: block;
+        }
+        .tab-pane{
+          display: none;
+        }
+        .mypage-item-list{
+          ul{
+            list-style: none;
+          }
+          li{
+            position: relative;
+            border-bottom: 1px solid #eee;
+            list-style: none;
+          }
+          li:first-child{
+            border-bottom: 1px solid #eee;
+          }
+          .mypage-item-link{
+            display: block;
+            min-height: 55px;
+            padding: 16px;
+            color: #333;
+
+            figure{
+              position: relative;
+              overflow: hidden;
+              float: left;
+              width: 48px;
+              height: 48px;
+            }
+            .lazyloaded{
+              position: absolute;
+              opacity: 1;
+              -webkit-transition: opacity .3s;
+              transition: opacity .3s;
+            }
+            .mypage-item-body{
+              margin: 0 40px 0 68px;
+              .mypage-item-text{
+                overflow: hidden;
+                display: block;
+                display: -webkit-box;
+                max-height: 4.4em;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                line-height: 1.5;
+              }
+            }
+            time{
+              display: inline-block;
+              color: #888;
+              .icon-time{
+                margin: 0 8px 0 0;
+              
+                span{
+                  vertical-align: middle;
+                }
+              }
+          }
+          .right-arrow{
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+          }
+
+          }
+              img{
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 0;
+              width: 100%;
+          }
+        }
+
+        .mypage-item-belong{
+          ul{
+            list-style: none;
+          }
+          li{
+            position: relative;
+            border-bottom: 1px solid #eee;
+            list-style: none;
+          }
+          li:first-child{
+            border-bottom: 1px solid #eee;
+          }
+          .mypage-item-link{
+            display: block;
+            min-height: 55px;
+            padding: 16px;
+            color: #333;
+
+            figure{
+              position: relative;
+              overflow: hidden;
+              float: left;
+              width: 48px;
+              height: 48px;
+            }
+            .mypage-item-body{
+              margin: 0 40px 0 68px;
+              
+            }
+            time{
+              display: inline-block;
+              color: #888;
+              .icon-time{
+                margin: 0 8px 0 0;
+                span{
+                  vertical-align: middle;
+                }
+              }
+          }
+          .right-arrow{
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+          }
+
+          }
+              img{
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 0;
+              width: 100%;
+          }
+        }
+        .mypage-go-list{
+          padding:16px;
+          a{
+            display: block;
+            height: 56px;
+            margin: 0 auto;
+            background-color: #eee;
+            color: #333;
+            text-align: center;
+            line-height: 56px;
+          }
+        }
+      }
+    }
+
+    // 購入した商品・取引中と過去の取引
+    .mypage-tab-container{
+      margin: 40px 0 0;
+      background-color: #fff;
+      &__head{
+        padding: 0 4%;
+        background-color: #fafafa;
+        font-size: 16px;
+        height: 72px;
+        line-height: 72px;
+      }
+        &__transaction{
+          border: 0;
+          background-color: #eee;
+          font-size: 0;
+          .active{
+            background-color: #fff;
+            a{
+              border-top: 2px solid #ea352d;
+            }
+          }
+          li{
+            width: 50%;
+          }
+          a{
+            position: relative;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            line-height: 72px;
+          }
+          li{
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+          }
+        ul{
+          list-style: none;
+        }
+      }
+      .tab-content{
+        .tab-pane.active{
+          display: block;
+        }
+        .tab-pane{
+          display: none;
+        }
+
+        // TODO 上のタブ
+        .mypage-item-list{
+          ul{
+            list-style: none;
+          }
+          li{
+            position: relative;
+            border-bottom: 1px solid #eee;
+          }
+          li:first-child{
+            border-bottom: 1px solid #eee;
+          }
+          .mypage-item-link{
+            display: block;
+            min-height: 55px;
+            padding: 16px;
+            color: #333;
+
+            figure{
+              position: relative;
+              overflow: hidden;
+              float: left;
+              width: 48px;
+              height: 48px;
+            }
+            .mypage-item-body{
+              margin: 0 40px 0 68px;
+              .mypage-item-text{
+                overflow: hidden;
+                display: block;
+                display: -webkit-box;
+                max-height: 4.4em;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                line-height: 1.5;
+              }
+            }
+            time{
+              display: inline-block;
+              color: #888;
+              .icon-time{
+                margin: 0 8px 0 0;
+                span{
+                  vertical-align: middle;
+                }
+              }
+          }
+          .right-arrow{
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+          }
+          }
+              img{
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 0;
+              width: 100%;
+          }
+        }
+        // TODO 下のタブ
+        .mypage-item-belong{
+          list-style:none;
+          li{
+            position: relative;
+            border-bottom: 1px solid #eee;
+          }
+          li:first-child{
+            border-bottom: 1px solid #eee;
+          }
+          .mypage-item-link{
+            display: block;
+            min-height: 55px;
+            padding: 16px;
+            color: #333;
+
+            figure{
+              position: relative;
+              overflow: hidden;
+              float: left;
+              width: 48px;
+              height: 48px;
+            }
+            .mypage-item-body{
+              margin: 0 40px 0 68px;
+            }
+            time{
+              display: inline-block;
+              color: #888;
+              .icon-time{
+                margin: 0 8px 0 0;
+
+                span{
+                  vertical-align: middle;
+                }
+              }
+          }
+            .right-arrow{
+              position: absolute;
+              top: 50%;
+              right: 16px;
+              transform: translate(0, -50%);
+              -webkit-transform: translate(0, -50%);
+            }
+            .mypage-item-status{
+              display: inline-block;
+              margin: 8px 0 0 0;
+              padding: 5px 6px;
+              border-radius: 2px;
+              font-size: 12px;
+              color: #fff;
+            }
+            .mypage-item-status.done{
+              background: #888;
+            }
+          }
+              img{
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 0;
+              width: 100%;
+          }
+        }
+        .mypage-go-list{
+          padding:16px;
+          a{
+            display: block;
+            height: 56px;
+            margin: 0 auto;
+            background-color: #eee;
+            color: #333;
+            text-align: center;
+            line-height: 56px;
+          }
+        }
+      }
+    }
+  }
+}
+
+  // TODO 現在やることがありません・取引中の商品がありません
+.mypage-item-not-found{
+  padding: 160px 0 60px;
+  background: url(logo-gray-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 78px 85px;
+  background-position: center 40px;
+  font-size: 16px;
+  color: #ccc;
+  text-align: center
+}
+
+
+
+
+
+

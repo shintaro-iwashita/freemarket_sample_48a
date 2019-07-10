@@ -1,0 +1,75 @@
+= render partial: "layouts/header"
+.Container
+  %header
+  %main.contener
+    = render partial: "/mypage-nav"
+    .contener__content
+      %section.contener__content_mypage-icon
+        = link_to "#" do
+          %figure
+            = image_tag ""
+          %h2.contener__content_mypage-icon_bold
+            名前
+            -# #TODO current_user.nameが入ると予測
+          .mypage-evaluation
+            %div
+              評価
+              %span.bold 0
+            %div
+              出品数
+              %span.bold 0
+      %section.contener__content__mypage-tab
+        %ul.contener__content__mypage-tab_notice
+          %li.active
+            %h3
+              = link_to "お知らせ","#mypage-tab-notification" ,data:{toggle: "tab"}
+          %li
+            %h3
+              =link_to "やることリスト", "#mypage-tab-todo",data:{toggle: "tab"}
+
+        .tab-content
+          %ul{id: "mypage-tab-notification", class: "mypage-item-list tab-pane active"}
+            %li
+              .mypage-item-link
+                %figure
+                  = image_tag "mercari_profile.png",class: "lazyloaded"
+                .mypage-item-body
+                  .mypage-item-text ログイン通知
+                  %time
+                    %i.far.fa-clock
+                      %span 0日前
+                  %i.fa.fa-chevron-right.right-arrow
+            %li.mypage-go-list
+              = link_to " 一覧を見る","/jp/mypage/notification"
+              
+          %ul{id: "mypage-tab-todo", class: "mypage-item-list tab-pane"}
+            %li.mypage-item-not-found.bold 現在、やることリストはありません
+
+      %section.mypage-tab-container
+        %h2.mypage-tab-container__head 購入した商品
+        %ul.mypage-tab-container__transaction
+          %li.active
+            %h3
+              = link_to "取引中","#mypage-tab-transaction-now" ,data:{toggle: "tab"}
+          %li
+            %h3
+              =link_to "過去の取引", "#mypage-tab-transaction-old",data:{toggle: "tab"}
+        .tab-content
+          %ul{id: "mypage-tab-transaction-now", class: "mypage-item-belong tab-pane active"}
+            %li.mypage-item-not-found.bold 取引中の商品がありません
+          %ul{id: "mypage-tab-transaction-old", class: "mypage-item-belong tab-pane"}
+            %li
+              .mypage-item-link
+                %figure
+                  = image_tag "mercari_profile.png",class: "lazyloaded"
+                .mypage-item-body
+                  .mypage-item-text 
+                    「 」を購入しました。
+                    %span 取引が完了しました。
+                  .mypage-item-status.bold.done
+                    取引完了
+                  %i.fa.fa-chevron-right.right-arrow
+            %li.mypage-go-list
+              = link_to " 一覧を見る","/jp/mypage/purchased"
+  %footer
+= render partial: "layouts/footer"
