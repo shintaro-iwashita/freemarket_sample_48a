@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'changes/edit'
   root "products#index"
+  resources :products, only: [:index, :show]
   resources :users, only: [:new, :edit, :index]
   resources :logouts, only: [:index]
   resources :cards, only: [:index, :new, :create, :destroy]
