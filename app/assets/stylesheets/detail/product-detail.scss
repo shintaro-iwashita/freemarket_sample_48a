@@ -9,7 +9,7 @@
   @media screen and(min-width: 768px){
     padding: 24px 40px 40px;
   }
-  &_item-name{
+  &__item-name{
     font-size: 24px;
     text-align: center;
     word-wrap: break-word;
@@ -38,16 +38,16 @@
         max-width: 300px;
         min-height: 375px;
       }
-      &_owl{
+      &__owl{
         position: relative;
-        &_outer{
+        &__outer{
           position: relative;
           overflow: hidden;
-          &_stage{
+          &__stage{
             position: relative;
             width: 1500px;
             left: 0px;
-            &_item{
+            &__item{
               min-height: 1px;
               float: left;
               width: 300px;
@@ -61,7 +61,7 @@
               -webkit-user-select: none;
               // TODO 対象要素とその子孫要素の文章は範囲選択できない
               user-select: none;
-              &_inner{
+              &__inner{
                 overflow: hidden;
                 position: relative;
                 width: 100%;
@@ -84,10 +84,10 @@
         }
         &__disabled{
           display: none;
-          &_prev{
+          &__prev{
             display: none;
           }
-          &_next{
+          &__next{
             display: none;
           }
         }
@@ -97,7 +97,7 @@
             opacity: 1;
             cursor: default;
           }
-          &_dot{
+          &__dot{
             position: relative;
             overflow: hidden;
             display: inline-block;
@@ -113,7 +113,7 @@
             span{
               display:none;
             }
-            &_in{
+            &__in{
               overflow: hidden;
               position: relative;
               width: 100%;
@@ -146,27 +146,27 @@
     }
   }
   &__price{
-      margin: 24px 0 0;
-      text-align: center;
-      &_bold{
+    margin: 24px 0 0;
+    text-align: center;
+    &__bold{
+      margin: 0 16px 0 0;
+      font-size: 32px;
+      font-weight: 600;
+      @media screen and (min-width: 768px){
         margin: 0 16px 0 0;
-        font-size: 32px;
-        font-weight: 600;
-        @media screen and (min-width: 768px){
-          margin: 0 16px 0 0;
-          font-size: 50px;
-        }
+        font-size: 50px;
       }
-      &_tax{
-        font-size: 10px;
-      }
-      &_fee{
-        display:inline-block;
-        font-size: 16px;
-      }
+    }
+    &__tax{
+      font-size: 10px;
+    }
+    &__fee{
+      display:inline-block;
+      font-size: 16px;
+    }
   }
   &__visible{
-    &_buy{
+    &__buy{
       display: block;
       height: 60px;
       margin: 16px 0 0;
@@ -183,7 +183,7 @@
         color: #fff;
       }
     }
-    &_client{
+    &__client{
       margin: 24px 0 0;
     }
   }
@@ -191,14 +191,14 @@
     padding: 24px 0 0;
     line-height: 1.5;
     font-size: 18px;
-    &_inner{
+    &__inner{
       white-space: pre-wrap;
     }
   }
   &__button{
     margin: 16px 0 0;
     font-size: 0;
-    &_left{
+    &__left{
       float: left;
       .item-button{
         display: inline-block;
@@ -247,7 +247,7 @@
         clear: both;
       }
     }
-    &_right{
+    &__right{
       margin: 8px 0 0;
       color: #0099e8;
       @media screen and (min-width: 768px){
@@ -285,7 +285,7 @@
       @media screen and (min-width: 768px){
         padding: 24px;
       }
-      &_form{
+      &__form{
         p{
           padding: 8px;
           font-size: 14px;
@@ -315,7 +315,7 @@
         textarea{
           outline: none;
         }
-        &_submit{
+        &__submit{
           width: 100%;
           margin: 8px 0 0;
           font-size: 0px;
@@ -348,7 +348,7 @@
     width: 43%;
     word-wrap: break-word;
   }
-  &_prev{
+  &__prev{
     float: left;
     padding: 0 0 0 14px;
     i{
@@ -357,7 +357,7 @@
       color: #0099e8;
     }
   }
-  &_next{
+  &__next{
     float: right;
     padding: 0 14px 0 0;
     text-align: right;
@@ -388,7 +388,7 @@
   }
   &__center{
     text-align: center;
-    &_iframe{
+    &__iframe{
       display: inline-block;
       position: relative;
     }
