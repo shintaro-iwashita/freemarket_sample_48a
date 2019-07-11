@@ -4,11 +4,11 @@
   %main.contener
     = render partial: "/mypage-nav"
     .contener__content
-      %section.contener__content_mypage-icon
+      %section.contener__content__mypage-icon
         = link_to "#" do
           %figure
             = image_tag ""
-          %h2.contener__content_mypage-icon_bold
+          %h2.contener__content__mypage-icon__bold
             名前
             -# #TODO current_user.nameが入ると予測
           .mypage-evaluation
@@ -19,7 +19,7 @@
               出品数
               %span.bold 0
       %section.contener__content__mypage-tab
-        %ul.contener__content__mypage-tab_notice
+        %ul.contener__content__mypage-tab__notice
           %li.active
             %h3
               = link_to "お知らせ","#mypage-tab-notification" ,data:{toggle: "tab"}
