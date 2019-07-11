@@ -2,10 +2,10 @@ class UsersController < ApplicationController
   def index
   end
   
-  def edit
+  def new
   end
 
-  def new
+  def create
   end
   
 end
