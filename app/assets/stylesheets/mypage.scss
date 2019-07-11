@@ -7,14 +7,12 @@ main{
   padding: 40px 0 40px;
   width: 1020px;
   display: flex;
-
   &__content{
     width: 100%;
     float: right;
     width: 700px;
     padding-left: 40px;
-
-    &_mypage-icon{
+    &__mypage-icon{
       position: relative;
       height: 155px;
       padding: 20px;
@@ -22,7 +20,6 @@ main{
       background-size: cover;
       text-align: center;
       background-image: url("user-bg.jpg");
-
       >a{
         display: block;
         position: absolute;
@@ -33,7 +30,6 @@ main{
         transform: translate(0, -50%);
         color: #333;
       }
-
       figure{
         overflow: hidden;
         width: 60px;
@@ -49,34 +45,33 @@ main{
         -webkit-transition: opacity .3s;
         transition: opacity .3s;
       }
-        &_bold{
+        &__bold{
           font-weight: 600;
         }
-        
         h2{
           margin: 8px 0 0;
           font-size: 14px;
         }
-        .mypage-evaluation{
-          margin: 8px 0 0;
-          font-size: 0;
-          div{
-            display: inline-block;
-            font-size: 14px;
-            +div{
-              margin: 0 0 0 16px;
-            }
-          }
-          span{
-            margin: 0 0 0 8px;
+      .mypage-evaluation{
+        margin: 8px 0 0;
+        font-size: 0;
+        div{
+          display: inline-block;
+          font-size: 14px;
+          +div{
+            margin: 0 0 0 16px;
           }
         }
+        span{
+          margin: 0 0 0 8px;
+        }
+      }
     }
     //お知らせ・やることリスト
     &__mypage-tab{
       margin: 0;
       background-color: #fff;
-      &_notice{
+      &__notice{
         border: 0;
         background-color: #eee;
         font-size: 0;
@@ -101,9 +96,7 @@ main{
           text-align: center;
           vertical-align: top;
         }
-
       }
-
       .tab-content{
         .tab-pane.active{
           display: block;
@@ -165,27 +158,25 @@ main{
                   vertical-align: middle;
                 }
               }
-          }
-          .right-arrow{
-            position: absolute;
-            top: 50%;
-            right: 16px;
-            transform: translate(0, -50%);
-            -webkit-transform: translate(0, -50%);
-          }
-
-          }
-              img{
+            }
+            .right-arrow{
               position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              z-index: 0;
-              width: 100%;
+              top: 50%;
+              right: 16px;
+              transform: translate(0, -50%);
+              -webkit-transform: translate(0, -50%);
+            }
+          }
+          img{
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 0;
+          width: 100%;
           }
         }
-
         .mypage-item-belong{
           ul{
             list-style: none;
@@ -213,7 +204,6 @@ main{
             }
             .mypage-item-body{
               margin: 0 40px 0 68px;
-              
             }
             time{
               display: inline-block;
@@ -224,24 +214,23 @@ main{
                   vertical-align: middle;
                 }
               }
-          }
-          .right-arrow{
-            position: absolute;
-            top: 50%;
-            right: 16px;
-            transform: translate(0, -50%);
-            -webkit-transform: translate(0, -50%);
-          }
-
-          }
-              img{
+            }
+            .right-arrow{
               position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              z-index: 0;
-              width: 100%;
+              top: 50%;
+              right: 16px;
+              transform: translate(0, -50%);
+              -webkit-transform: translate(0, -50%);
+            }
+          }
+          img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
           }
         }
         .mypage-go-list{
@@ -306,7 +295,6 @@ main{
         .tab-pane{
           display: none;
         }
-
         // TODO 上のタブ
         .mypage-item-list{
           ul{
@@ -354,23 +342,23 @@ main{
                   vertical-align: middle;
                 }
               }
-          }
-          .right-arrow{
-            position: absolute;
-            top: 50%;
-            right: 16px;
-            transform: translate(0, -50%);
-            -webkit-transform: translate(0, -50%);
-          }
-          }
-              img{
+            }
+            .right-arrow{
               position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              z-index: 0;
-              width: 100%;
+              top: 50%;
+              right: 16px;
+              transform: translate(0, -50%);
+              -webkit-transform: translate(0, -50%);
+            }
+          }
+          img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
           }
         }
         // TODO 下のタブ
@@ -409,7 +397,7 @@ main{
                   vertical-align: middle;
                 }
               }
-          }
+            }
             .right-arrow{
               position: absolute;
               top: 50%;
