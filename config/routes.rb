@@ -13,4 +13,3 @@ Rails.application.routes.draw do
   resources :users do
     get 'change', on: :member
 end
-
