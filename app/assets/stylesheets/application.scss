@@ -14,13 +14,7 @@
 // 個別ビューに関するSCSS
 @import 'user';
 @import 'login_users';
-<<<<<<< HEAD
-@import '_reset';
-@import 'config/colors';
-@import 'users/confirm';
-=======
 @import 'mypage';
->>>>>>> master
 @import 'logout_users';
 @import 'detail/product-detail';
 @import 'detail/_tbody.scss';
@@ -28,3 +22,4 @@
 @import 'card';
 @import "./confirm_purchace";
 @import "detail/_other.scss";
+@import "confirms/edit.scss";
