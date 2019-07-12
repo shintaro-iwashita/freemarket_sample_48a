@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
-  def edit
+  def index
+  end
+  
+  def new
   end
 
-  def new
+  def create
   end
   
   def confirm

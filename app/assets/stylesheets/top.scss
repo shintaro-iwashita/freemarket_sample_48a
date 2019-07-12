@@ -1,0 +1,380 @@
+$radius:6px;
+.header{
+  background-color: white;
+  z-index:10;
+  width:100%;
+  margin:0 auto;
+  &__row1{
+    width:100%;
+    height:50px;
+    font-size:23px;
+    display:flex;
+    align-items: center;
+    position:relative;
+    margin-bottom:10px;
+    &__titles{
+      display:flex;
+      align-items: center;
+      width:20%;
+      padding: 8px 0 0 150px;
+      margin: 0 auto;
+    }
+    .serch-btn{
+      padding: 9px 0;
+      font-size: 13px;
+    }
+    &__forms{
+      margin-right: 150px;
+      border-radius: 10px;
+      display:flex;
+      align-items: center;
+      height:70%;
+      width:80%;
+      position:relative;
+      &__input{
+        margin-top: 8px;
+        padding-left: 10px;
+        height: 40px;
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+        width:97%;
+        font-size:70%;
+        background-color: #F5F5F5;
+      }
+      &__button{
+        margin: 4px 7px 0 0;
+        color:white;
+        right:0;
+        height:44px;
+        line-height: 41px;
+        text-align:center;
+        width:5%;
+        position:absolute;
+        background-color:gray;
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+    }
+  }
+  &__row2{
+    height: 45px;
+    font-weight: bold;
+    display:flex;
+    position:relative;
+    .red{
+      color: red;
+    }
+    &__CategoryLists{
+      padding: 4px 0 0 170px;
+      z-index:1;
+      list-style:none;
+      line-height: 25px;
+      &__index:hover + &__lists{
+        visibility:visible;
+        color:black;
+        background-color:#ffffff;
+        
+      }
+      &__lists{
+        text-align:left;
+        visibility:hidden;
+        display:flex;
+        list-style:none;
+        z-index:1;
+        &__list1:hover{
+          visibility:visible;
+        }
+      }
+    }
+    &__brandlists{
+      margin: 5px 0 10px 0;
+      line-height: 25px;
+      position:absolute;
+      left:325px;
+      &__lists{
+        visibility:hidden;
+      }
+      &__index:hover + &__lists{
+        z-index:-2;
+        background-color:white;
+        color:black;
+      }
+      &__lists li:nth-of-type(n):hover{
+        background-color:red;
+        color:white;
+        visibility:hidden;
+      }
+    }
+    
+    &__lists{
+      height: 70px;
+      display:flex;
+      position:absolute;
+      right:0;
+      padding-right: 150px;
+      &__login{
+          color:#1A99E8;
+          border:1px #1A99E8 solid;
+          border-radius: $radius;
+          // margin-top:/0px;
+          height:30px;
+          line-height:30px;
+          padding-left:10px;
+          padding-right:10px;
+          margin-right:10px;
+      }
+      &__newuser{
+          margin-right: 10px;
+          color:white;
+          background-color:red;
+          border-radius: $radius;
+          height:30px;
+          line-height:30px;
+          padding-left:10px;
+          padding-right:10px;
+      }
+    }
+  }
+}
+#list1:hover + #list2{
+  visibility:visible;
+  
+}
+#list1 p:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+  visibility:visible;
+}
+#list1 {
+  width:100%;
+  text-align:left;
+  border:  solid gray;
+  // visibility:visible;
+}
+#list2:hover {
+  visibility:visible;
+  
+}
+#list2:hover + #list3{
+  visibility:visible;
+}
+#list2 li:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+}
+#list2{
+  list-style:none;
+  background-color:white;
+  // width:100%;
+  text-align:left;
+  border:  solid gray;
+}
+#list3:hover {
+  visibility:visible;
+}
+#list3 li:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+}
+#list3{
+  list-style:none;
+  background-color:white;
+  // width:100%;
+  text-align:left;
+  border:  solid gray;
+}
+
+
+
+
+.contents {
+  width: 100%;
+  & .top-images{
+    vertical-align: bottom;
+  }
+	&__top__image-box {
+    background-image: url("/images/m-banner.jpg");
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+		height: 390px;
+    background-position: center;
+    background-size: cover;
+	}
+	&__container{
+		text-align: center;
+    background-color: #f5f5f5;
+    width: 70%;
+    margin: 0 auto;
+    
+		&_title{
+      padding-top: 40px;
+			font-size: 28px;
+			font-weight: bold;
+    }
+		&__item{
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+			&_title{
+				margin: 30px 0;
+				font-size: 22px;
+				display: block;
+				color: #0099e8;
+        font-weight: bold;
+        &_itembox{
+          width: 950px;
+          margin: 0 auto;
+          display: flex;
+          padding-top: 30px;
+          &_images{
+            margin: 0 auto;
+            vertical-align: bottom;
+          }
+            &_image-title{
+              background-color: white;
+              height: 90px;
+              width: 215px;
+              color: black;
+              padding-top: 20px;
+            }
+        }
+      }
+      &_link{
+        display: block;
+        padding: 20px 0 30px;
+        text-align: right;
+        color: #0099e8;
+        &_text{
+          text-decoration: none;
+        }
+      }
+
+
+
+    }
+  }
+  &__under__image{
+    height: 260px;
+    background-image: url(/images/under-image2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_imagesub{
+      float: right;
+      margin-right: 300px;
+    }
+    &__contents{
+      width: 800px;
+      height: 260px;
+      margin: 0 auto;
+      position: relative;
+      &_show{
+        position: absolute;
+        font-size: 24px;
+        color: #fff;
+        padding-top: 40px;
+      }
+      &_download{
+        font-size: 35px;
+        color: #fff;
+        padding: 70px 0 30px 0;
+    
+      }
+    }
+  & .appstore{
+    padding: 0 5px 10px 20px;
+
+  }
+  & .google-play{
+    padding: 0 5px 10px;
+
+  }
+  }
+}
+
+
+
+
+.footer {
+  padding: 70px 0 2px;
+  background-color: #212121;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+
+  &__contents{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 1000px;
+    &__links {
+      margin: 0 30px;
+      width: 20%;
+      &_title{
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 40px;
+        text-align: left;
+        padding-bottom: 10px;
+        }
+      &_link{
+        text-decoration: none;
+        line-height: 25px;
+        list-style: none;
+        margin: 2px 0;
+        font-size: 11px;
+        text-align: left;
+        width: 300px;
+        opacity: 0.7;
+        }
+      }
+    }
+  &__sns-link{
+    display: flex;
+    float: left;
+    font-size: 35px;
+    margin-right: 30px;
+    &_twitter{
+      padding: 0 25px 0 70px;
+      color: white;
+    }
+    &_facebook{
+      color: white;
+
+    }
+  }
+  
+  &__logo{ 
+    margin: 60px;
+
+    &_text{
+      font-size: 14px;
+      margin: 8px 0 0;
+      margin: 30px;
+      }
+    }
+  }
+  .camera{
+    height: 160px;
+    width: 160px;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    border-radius: 50%;
+    background-color: #ea352d;
+    text-align: center;
+    .camera-icon{
+      display: block;
+      color: #fff;
+      font-size: 70px;
+      margin: 30px auto 0;
+    }
+      .text{
+        display: block;
+        color: #fff;
+        font-size: 23px;
+        margin: 10px auto 0;
+      }
+  }

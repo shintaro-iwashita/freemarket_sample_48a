@@ -1,0 +1,120 @@
+// #TODO 出品者のその他の出品商品
+.item-profile{
+  width: 700px;
+  margin: 0 auto;
+  &__box{
+    margin: 0 auto;
+    display: table;
+    // #TODO はみ出た要素の表示方法を指定する
+    overflow: hidden;
+    &_head{
+      font-size: 22px;
+      margin: 24px 4% 8px;
+      line-height: 1.4;
+      @media screen and(min-width: 768px){
+        margin: 24px 0 8px;
+      }
+    }
+    &__content{
+      @include clearfix();
+      width: 720px;
+      margin: 0 auto;
+      // #TODO はみ出た要素の左右の表示方法を指定する ボックスに収まらない内容はユーザーエージェントに依存
+      overflow-x: auto;
+      // #TODO はみ出た要素の上下の表示方法を指定する 収まらい部分はボックスからはみ出さない
+      overflow-y: hidden;
+      padding: 0 10px;
+      // #TODO 自動改行するかなどを改行やスペース、タブ扱いを指定 半角スペースにまとめて表示
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0;
+      margin-bottom: 40px;
+      @media screen and(min-width: 768px){
+        padding: 0;
+      }
+      &_box{
+        float: none;
+        display: inline-block;
+        width: 55%;
+        max-width: 220px;
+        vertical-align: top;
+        background: #fff;
+        margin: 0 0 20px 20px;
+        height: 330px;
+        @media screen and (min-width: 768px){
+          width: 220px;
+          float: left;
+          display: block;
+          vertical-align: inherit;
+        }
+        &_photo{
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          height: 0;
+          @media screen and (min-width: 768px){
+            width: 220px;
+            height: 220px;
+          }
+          img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            @media screen and (min-width: 768px){
+              width: 220px;
+            }
+          }
+        }
+        &_body{
+          padding: 8px;
+          height: 110px;
+          box-sizing: border-box;
+          @media screen and (min-width: 768px){
+            padding: 16px;
+          }
+          &_name{
+            overflow: hidden;
+            position: relative;
+            // #TODO 1文字分の高さ
+            height: 3em;
+            line-height: 1.5;
+            word-break: break-word;
+            white-space: normal;
+            font-size: 16px;
+            color: #333;
+            font-weight: 400;
+          }
+          &_num{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            margin: 8px 0 0;
+            &_price{
+              font-size: 20px;
+              font-weight: 600;
+              color: #333;
+              @media screen and (min-width: 768px){
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// #TODO 出品した商品と同じカテゴリーの商品
+.items-container{
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: table;
+  margin: 0 auto;
+}
