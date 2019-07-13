@@ -1,0 +1,46 @@
+
+.header
+  .header__icons
+    = link_to root_path, class:'hovering' do
+      = image_tag("m-logo.png",width:'250px',height:'80px',id:"titleIcon")
+  .header__stepmeter
+    .header__stepmeter__step
+      .header__stepmeter__step__up
+        %p 会員情報
+      .header__stepmeter__step__statusbar
+        .header__stepmeter__step__statusbar-Bef
+        .header__stepmeter__step__statusbar-middle#circle
+          ●
+        .header__stepmeter__step__statusbar-Af
+    .header__stepmeter__step
+      .header__stepmeter__step__up
+        %p 電話番号認証
+      .header__stepmeter__step__statusbar
+        .header__stepmeter__step__statusbar-BefAf
+        .header__stepmeter__step__statusbar-middle
+          ●
+        .header__stepmeter__step__statusbar-BefAf
+    .header__stepmeter__step
+      .header__stepmeter__step__up
+        %p お届先住所入力
+      .header__stepmeter__step__statusbar
+        .header__stepmeter__step__statusbar-BefAf
+        .header__stepmeter__step__statusbar-middle
+          ●
+        .header__stepmeter__step__statusbar-BefAf
+    .header__stepmeter__step
+      .header__stepmeter__step__up
+        %p お支払い方法
+      .header__stepmeter__step__statusbar
+        .header__stepmeter__step__statusbar-BefAf
+        .header__stepmeter__step__statusbar-middle
+          ●
+        .header__stepmeter__step__statusbar-BefAf
+    .header__stepmeter__step
+      .header__stepmeter__step__up
+        %span 完了
+      .header__stepmeter__step__statusbar
+        .header__stepmeter__step__statusbar-BefAf
+        .header__stepmeter__step__statusbar-end
+          ●        
+
