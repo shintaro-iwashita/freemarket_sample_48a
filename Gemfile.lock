@@ -104,6 +104,8 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
+    erb2haml (0.1.5)
+      html2haml
     erubi (1.8.0)
     erubis (2.7.0)
     excon (0.64.0)
@@ -312,6 +314,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  erb2haml
   fog-aws
   font-awesome-sass
   gretel
