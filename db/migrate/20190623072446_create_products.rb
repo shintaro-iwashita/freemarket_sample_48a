@@ -7,7 +7,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer   :profit, null: false
       t.references  :user, null:false
 
-      t.timestamps null:true
+      t.timestamps null: true
     end
   end
 end
