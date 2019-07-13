@@ -1,6 +1,5 @@
-.Container
-  %header
-  .bread-crumbs
+.container
+  = render partial: "layouts/header" 
   .mypage
     = render partial: "/mypage-nav"
     .mypage__content
@@ -70,4 +69,5 @@
             .credit__content__card__link
               = link_to '#' do
                 %span 追加する
-  %footer
+
+= render partial: "layouts/footer"
