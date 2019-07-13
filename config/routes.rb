@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   end
   resources :users do
     get 'change', on: :member
-end
+  end
 end
