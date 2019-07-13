@@ -1,6 +1,5 @@
-.Container
-  %header
-  .bread-crumbs
+.container
+  = render partial: "layouts/header" 
   .mypage
     = render partial: "/mypage-nav"
     .mypage__content
@@ -26,4 +25,5 @@
             = link_to '#' do
               %span 支払い方法について
               %i.fas.fa-chevron-right
-  %footer
+
+= render partial: "layouts/footer"
