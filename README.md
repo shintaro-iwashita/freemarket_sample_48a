@@ -152,8 +152,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|parent_id|reference|null: false|
-|product_id|reference|null: false|
+|parent_id|references|null: false|
+|product_id|references|null: false|
 
 ### Association
 - belongs_to :product
@@ -165,8 +165,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|parent_id|reference|null: false|
-|product_id|reference|null: false|
+|parent_id|references|null: false|
+|product_id|references|null: false|
 
 ### Association
 - belongs_to :product
