@@ -1,5 +1,4 @@
 *{
-  // background-color:#ccc;
 }
 .header{
   box-sizing:border-box;
@@ -10,7 +9,6 @@
   background-color:#f5f5f5;
   margin:0 0 0 10%;
   &__icons{
-    // 
     width:30%;
     height:100%;
     position:relative;
@@ -33,7 +31,6 @@
     color:#888888;
     position:absolute;
     right:0;
-    // background-color:yellow;
     &__step:nth-of-type(1){
       color:red;
       #circle{
@@ -45,7 +42,6 @@
       height:100%;
       width:100%;
       box-sizing:border-box;
-      // background-color:red;
       &__up{
         height:50%;
         position:relative;
@@ -68,7 +64,6 @@
         display:flex;
         position:relative;
         margin:0;
-        // background-color:green;
         &-Bef{
           width:50%;
           height:20%;
@@ -83,8 +78,6 @@
         &-BefAf{
           width:50%;
           height:20%;
-          // background-color:green;
-          // box-sizing:border-box;
           padding-left:30px;
           padding-right:30px;
           border-bottom: medium solid #cccccc;
@@ -102,10 +95,7 @@
           height:20%;
           top:12%;
           right:0;
-
         }
-        // background-color:blue;
-
       }
     }
   }

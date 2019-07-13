@@ -76,8 +76,6 @@ $input-height:40px;
             line-height:$input-height;
             font-size:0.8rem;
             text-indent:10%;
-            // color:red;
-            // margin:20px;
             option{
               margin:20px;
               text-indent:1em;
@@ -101,12 +99,9 @@ $input-height:40px;
       .g-recaptcha{
         width:100%;
         height:100%;
-        // position:absolute;
         right:0;
         left:0;
         margin:30px 15%;
-        // top:0;
-        // bottom:0;
       }
     }
     #a{
@@ -138,7 +133,6 @@ $input-height:40px;
       margin-left:20px;
       margin-right:20px;
       margin-bottom:50px;
-      // background-color:red;
     }
   }
 }
