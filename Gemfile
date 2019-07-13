@@ -74,4 +74,4 @@ gem 'haml-rails'
 gem 'font-awesome-sass'
 gem 'payjp'
 gem "gretel"
-
+gem 'devise'
