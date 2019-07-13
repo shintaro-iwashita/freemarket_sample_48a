@@ -20,7 +20,7 @@
 
 ### Association
 - has_many :products, dependent: :destroy
-- has_many :comments  
+- has_many :comments
 - has_many :likes
 - has_many :delivery_address, dependent: :destroy
 - has_one :user_address, dependent: :destroy
