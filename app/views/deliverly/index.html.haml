@@ -1,0 +1,44 @@
+= render partial:"deliverly/stepMeter"
+.mainframe
+  .mainframe__title 
+    %b 発送元・お届け先住所入力
+  .mainframe__contents
+    .mainframe__contents__unit
+      %b お名前
+      %span.mainframe__contents__unit__span 必須
+      %input{placeholder:'例）山田'}
+      %input{placeholder:'例）彩'}
+    .mainframe__contents__unit
+      %b お名前カナ
+      %span.mainframe__contents__unit__span 必須
+      %input{placeholder:'例）ヤマダ'}
+      %input{placeholder:'例）マヤ'}
+    .mainframe__contents__unit
+      %b 郵便番号
+      %span.mainframe__contents__unit__span 必須
+      %input{placeholder:'例）123-4567'}
+    .mainframe__contents__unit
+      %b 都道府県
+      %span.mainframe__contents__unit__span 必須
+      %input{placeholder:'北海道'}
+    .mainframe__contents__unit
+      %b 市区町村 
+      %span.mainframe__contents__unit__span 必須
+      %input{placeholder:'例）横浜市緑区'}
+    .mainframe__contents__unit
+      %b 番地
+      %span.mainframe__contents__unit__span 必須
+      %input{placeholder:'例(彩'}
+    .mainframe__contents__unit
+      %b 建物名
+      %span.mainframe__contents__unit__span-gray 必須
+      %input{placeholder:'例(ヤマダ'}
+    .mainframe__contents__unit
+      %b 電話
+      %span.mainframe__contents__unit__span-gray 必須
+      %input{placeholder:'例(アヤ'}
+
+    .mainframe__contents__proceedbutton
+      = link_to '次へ進む', ""
+
+= render partial:"layouts/sub-footer"

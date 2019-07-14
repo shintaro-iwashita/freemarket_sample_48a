@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'deliverly/index'
+  resources :deliverly 
   root "products#index"
   resources :products, only: [:index, :show] do
     resources :purchases, only: [:index]
