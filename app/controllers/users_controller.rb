@@ -4,8 +4,8 @@ class UsersController < ApplicationController
   
   def new
   end
-  
-  def confirm
+
+  def create
   end
   
   def confirm
