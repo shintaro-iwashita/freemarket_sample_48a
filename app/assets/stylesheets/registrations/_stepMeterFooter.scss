@@ -1,0 +1,42 @@
+.footers{
+  height:200px;
+  width:700px;
+  box-sizing:border-box;
+  position:relative;
+  margin:0 auto;
+  background-color:#f5f5f5;
+  &__links{
+    margin:0 auto;
+    width:70%;
+    height:40%;
+    line-height:80px;
+    font-size:0.7rem;
+    text-align:center;
+    &__span{
+      color:black;
+      margin:5px;
+    }
+    &__span:hover{
+      text-decoration: underline;
+      opacity:0.7;
+    }
+  }
+  &__icons{
+    width:20%; 
+    margin:0 auto;
+    height:40%;
+    &__icon{
+      width:90%;
+      margin:0 0 0 15%;
+      height:90%;
+    }
+    &__string{
+      text-align:center;
+      font-size:0.7rem;
+      height:10%;
+    }
+  }
+}
+.hovering:hover{
+  opacity:0.7;
+}

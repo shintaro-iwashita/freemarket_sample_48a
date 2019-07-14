@@ -76,3 +76,4 @@ gem 'font-awesome-sass'
 gem 'payjp'
 gem "gretel"
 gem 'devise'
+gem 'jquery-rails'
