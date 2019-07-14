@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :products do
-    get 'confirm_purchace', on: :member
+  root "products#index"
+  resources :products, only: [:index, :show] do
+    resources :purchases, only: [:index]
   end
-  resources :logout, only: [:index]
-  resources :confirms, only: [:edit]
-  resources :users do
-    get 'change', on: :member
+  resources :users, only: [:index, :new, :edit,] do
+    resources :confirms, only: [:edit]
   end
+  resources :logouts, only: [:index]
+  resources :cards, only: [:index, :new, :create, :destroy]
+  resources :registrations, only: [:new]
 end
