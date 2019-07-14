@@ -8,7 +8,7 @@ class AddColumnUsers < ActiveRecord::Migration[5.2]
     add_column :users, :first_name, :string,null:false
     add_column :users, :family_name_kana, :string,null:false
     add_column :users, :first_name_kana, :string,null:false
-    add_column :users, :birthday, :date,null:false
+    add_column :users, :data_of_birth, :date,null:false
     add_column :users, :how_to_pay, :string,null:false
     add_column :users, :gender, :string,null:false,foreign_key:true
   end
