@@ -8,4 +8,7 @@ class UsersController < ApplicationController
   def confirm
   end
   
+  def confirm
+
+  end
 end

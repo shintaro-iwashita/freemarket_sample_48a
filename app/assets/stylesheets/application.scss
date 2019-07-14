@@ -16,6 +16,10 @@
 @import 'login_users';
 @import 'mypage';
 @import 'logout_users';
+
+@import 'registrations/_new';
+@import 'registrations/_stepMeter';
+@import 'registrations/_stepMeterFooter';
 @import 'detail/product-detail';
 @import 'detail/_tbody.scss';
 @import 'mypage-nav';

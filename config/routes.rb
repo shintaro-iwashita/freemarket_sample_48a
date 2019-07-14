@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :confirms, only: [:edit]
   resources :users do
     get 'change', on: :member
-end
+  end
 end
