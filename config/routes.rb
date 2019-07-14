@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   # 新規会員登録画面お届け先住所
-  resources :adresses, only: [:new, :create] 
+  resources :addresses, only: [:new, :create] 
   # 新規会員登録完了画面
   resources :completions, only: [:index]
 
