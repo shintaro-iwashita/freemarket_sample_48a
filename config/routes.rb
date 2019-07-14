@@ -1,14 +1,10 @@
 Rails.application.routes.draw do
-  
-  root "products#index"
-  resources :products, only: [:index, :show] do
-    resources :purchases, only: [:index]
+  resources :products do
+    get 'confirm_purchace', on: :member
   end
-  resources :users, only: [:index, :new, :edit,] do
-    resources :confirms, only: [:edit]
+  resources :logout, only: [:index]
+  resources :confirms, only: [:edit]
+  resources :users do
+    get 'change', on: :member
   end
-  resources :logouts, only: [:index]
-  resources :cards, only: [:index, :new, :create, :destroy]
-  resources :registrations, only: [:new]
-
 end
