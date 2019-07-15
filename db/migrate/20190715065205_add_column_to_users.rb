@@ -1,4 +1,4 @@
-class AddColumnUsers < ActiveRecord::Migration[5.2]
+class AddColumnToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :avatar, :text
     add_column :users, :nickname, :string,null:false,length:{maximum:20}
