@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :addresses, only: [:new, :create] 
   # 新規会員登録完了画面
   resources :completions, only: [:index]
+  # 新規会員登録お支払い情報画面
+  resources :payments, only: [:new, :create]
 
   resources :logouts, only: [:index]
   resources :cards, only: [:index, :new, :create, :destroy]
