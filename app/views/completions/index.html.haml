@@ -1,0 +1,13 @@
+= render partial:"/registrations/stepMeter"
+.mainframe
+  .mainframe__title 
+    %b 会員登録完了
+  .mainframe__contents
+    .mainframe__contents__message
+      %p ありがとうございます。
+      %br 会員登録が完了しました。
+    
+    .mainframe__contents__proceedbutton
+      = link_to 'メルカリをはじめる', root_path, id:"linkbutton"
+    
+= render partial:"/registrations/stepMeterFooter"
