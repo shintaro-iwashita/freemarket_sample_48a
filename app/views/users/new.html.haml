@@ -1,9 +1,9 @@
 .single-vessel
   %header.single-vessel__header
-    = image_tag "/assets/logo.svg",class:"mercari"
+    = image_tag "/images/logo.svg",class:"mercari"
   %main.single-vessel__main
     %section.single-vessel__main__container
-      %h2.single-vessel__main__container_head
+      %h2.single-vessel__main__container__head
         新規会員登録
       .single-vessel__main__container__inner
         .single-vessel__main__container__inner__content
@@ -16,7 +16,7 @@
             %i.fab.fa-facebook-square.facebook-icon
             Facebookで登録
           %button{id: "google-login", class:"btn-default btn-sns-google"}
-            = image_tag "/assets/1492616990-1-google-search-logo-engine-service-suits_83412.png",class:"google-niji"
+            = image_tag "/images/google.png",class:"google-niji"
             Googleで登録
     -# TODO:あとに実装する
     -# %form{id: "login_form_facebook",action: "",method: "POST",novalidate: "novalidate"}
@@ -29,8 +29,8 @@
         %li プライバシーポリシー
         %li メルカリ利用規約
         %li 特定商取引に関する表記
-    .single-vessel__footer_logo
-      = image_tag "/assets/logo-gray.svg"
+    .single-vessel__footer__logo
+      = image_tag "/images/logo-gray.svg"
     %p
       %small ©︎ 2019 Mercari
       
