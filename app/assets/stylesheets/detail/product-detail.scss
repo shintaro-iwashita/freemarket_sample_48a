@@ -277,6 +277,74 @@
   @media screen and(min-width: 768px){
     width: 780px;
   }
+  &__message{
+    background: #fff;
+    height: 300px;
+    @media screen and (min-width: 768px){
+      padding: 24px;
+    }
+    ul{
+      list-style: none;
+    }
+    &__items{
+      margin: 0;
+      li{
+        margin: 60px 0 0;
+        li:first-child{
+          margin: 1.5em 0 0;
+        }
+      }
+      &__user{
+        float: left;
+        position: relative;
+        top: 20px;
+        display: inline-block;
+        color: #333;
+        figure>div{
+          width: 40px;
+          height: 40px;
+          // #TODO はみ出た要素の表示方法を指定する
+          overflow: hidden;
+          border-radius: 50%;
+        }
+        img{
+          width: 100%;
+          vertical-align: middle;
+        }
+        figcaption{
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 56px;
+          max-width: 100%;
+          min-width: 214px;
+          height: 1.2em;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          &__bold{
+            font-weight: 600;
+            @media screen and (min-width: 768px){
+              width: 600px;
+            }
+          }
+        }
+      }
+      &__body{
+        float: right;
+        position: relative;
+        width: calc(100%-56px);
+        padding: 16px;
+        background: #eef0f4;
+        border-radius: 15px;
+        line-height: 1.5;
+        // #TODO CJK以外のテキストにおいて、単語中などでの文字の改行に関する禁則処理を解除し、どの文字の間でも改行できるようにする
+        word-break: break-all;
+        @media screen and (min-width: 768px){
+          width: 600px;
+        }
+      }
+    }
+  }
   &__container{
     &__content{
       padding: 24px 7.5%;
@@ -338,6 +406,7 @@
     }
   }
 }
+
 // #TODO ソーシャルアプリボタン類
 .nav-item-link{
   width: 780px;
@@ -426,3 +495,4 @@
     }
   }
 }
+

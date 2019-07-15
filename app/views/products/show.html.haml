@@ -84,6 +84,17 @@
       %i.fa.fa-lock
       %span あんしん・あんぜんへの取り組み
 .item-detail
+  .item-detail__message
+    %ul.item-detail__message__items
+      %li.clearfix
+        .item-detail__message__items__user
+          = link_to '', '/users/:id/edit'
+          %figure
+            %div
+              = image_tag "6875fda9.png"
+            %figcaption.item-detail__message__items__user__bold
+              名無し
+        .item-detail__message__items__body
   .item-detail__container
     .item-detail__container__content
       %form{action: "#",method: "POST",class: "item-detail__container__content__form"}
