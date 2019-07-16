@@ -15,8 +15,6 @@ body{
 
 .single-vessel{
   padding: 0 0 250px;
-
-
   &__header{
     text-align:center;
     line-height: 12;
@@ -24,95 +22,88 @@ body{
       height: 128px;
     }
   }
-
   &__main{
     display: block;
-
     &__container{
       background-color:#fff;
       width: 700px;
       margin: 0 auto;
-
-    &_head{
-      padding: 24px 8px;
-      font-size: 18px;
-      text-align: center;
-      line-height: 1.5;
-    }
-
-    &__inner{
-      border-top: 1px solid #f5f5f5;
-      padding: 40px;
-
-
-      &__content{
-        max-width: 320px;
-        margin: 0 auto;
-
-      .btn-default{
-        display:block;
-        height: 48px;
+      &__head{
+        padding: 24px 8px;
+        font-size: 18px;
         text-align: center;
-        font-size: 14px;
-        width: 100%;
-        border: 1px solid transparent;
-        cursor: pointer;
-        line-height: 3.2;
+        line-height: 1.5;
       }
+        &__inner{
+          border-top: 1px solid #f5f5f5;
+          padding: 40px;
+          &__content{
+            max-width: 320px;
+            margin: 0 auto;
 
+          .btn-default{
+            display:block;
+            height: 48px;
+            text-align: center;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            cursor: pointer;
+            line-height: 3.2;
+          }
 
-      .btn-sns{
-        position: relative;
+          .btn-sns{
+            position: relative;
+          }
+
+          .btn-mail{
+            position: relative;
+            background-color: #eee;
+            color: #000;
+          }
+
+          .mail-icon{
+            color:#ccc;
+            position: absolute;
+            left: 16px;
+            top: 15px;
+            font-size: 16px;
+          }
+
+          .btn-sns-facebook{
+            margin: 16px 0 0;
+            background-color: #385185;
+            color: #fff;
+            position: relative;
+          }
+
+          .facebook-icon{
+            font-size: 20px;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+          }
+
+          .btn-sns-google{
+            margin: 16px 0 0;
+            background-color: #fff;
+            border: #979797 solid 1px;
+            color: #333;
+            position:relative;
+          }
+
+          .google-niji{
+            size: 4px;
+            height: 25px;
+            width: 20px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+          }
+        }
       }
-
-      .btn-mail{
-        position: relative;
-        background-color: #eee;
-        color: #000;
-      }
-
-      .mail-icon{
-        color:#ccc;
-        position: absolute;
-        left: 16px;
-        top: 15px;
-        font-size: 16px;
-      }
-
-      .btn-sns-facebook{
-        margin: 16px 0 0;
-        background-color: #385185;
-        color: #fff;
-        position: relative;
-      }
-
-      .facebook-icon{
-        font-size: 20px;
-        position: absolute;
-        left: 15px;
-        top: 15px;
-      }
-
-      .btn-sns-google{
-        margin: 16px 0 0;
-        background-color: #fff;
-        border: #979797 solid 1px;
-        color: #333;
-        position:relative;
-      }
-      .google-niji{
-        size: 4px;
-        height: 25px;
-        width: 20px;
-        position: absolute;
-        left: 10px;
-        top: 10px;
-      }
-
-     }
     }
   }
-}
 
   &__footer{
     position: absolute;
@@ -126,30 +117,112 @@ body{
       margin: 0 auto;
       position: inherit;
     }
-
     ul{
       list-style: none;
       display: flex;
     }
-    
     li{
       margin-left:15px;
       font-size: 12px;
     }
-
-    &_logo{
+    &__logo{
       width: 80px;
       height: 65px;
       margin: 40px auto 0;
     }
-    
     p{
       margin: 8px 0 0;
     }
-
     small{
       font-size:12px;
     }
   }
+}
 
+/* プロフィール編集 */
+.mypage-container{
+  display: flex;
+  padding: 40px 12% 50px;
+}
+.mypage-content{
+  &__setting-profile{
+    background-color: white;
+    width: 700px;
+    margin-left: 45px;
+    &__title{
+      font-size: 24px;
+      padding: 8px 0;
+      text-align: center;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+    &__image-box{
+      width: 100%;
+      background-image: url("/images/m-user-edit.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      &__form{
+        display: flex;
+        justify-content: center;
+        &__icon{
+          margin-top: 10px;
+          padding: 72px 0  30px;
+          text-align: right;
+          vertical-align: center;
+          width: 100%;
+        }
+        &__name{
+          margin: 15px 180px 0 0;
+          padding: 72px 0 30px;
+          text-align: center;
+          vertical-align: center;
+        }
+      }
+      figure{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      img {
+        border-radius: 50%;
+        margin-bottom: 27px;
+      }
+
+      textarea{
+        width: 220px;
+        height: 50px;
+        font-size: 13px;
+        line-height: 50px;
+        margin-top: 30px;
+      }
+      input {
+        width: 220px;
+        height: 30px;
+        margin: 0 0 0 8px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .introduction {
+    width: 95%;
+    min-height: 216px;
+    margin: 50px 0px 10px 17px;
+    font-size: 16px;
+    line-height: 2;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .btn-red {
+    display: block;
+    width: 95%;
+    line-height: 48px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    transition: all ease-out 0.3s;
+    text-align: center;
+    background: red;
+    border: 1px solid red;
+    color: white;
+    margin: 0 auto;
+  }
 }
