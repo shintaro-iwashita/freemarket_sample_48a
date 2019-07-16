@@ -113,19 +113,19 @@ $radius:6px;
       right:0;
       padding-right: 150px;
       &__login{
+        border:1px #1A99E8 solid;
+        border-radius: $radius;
+        height:30px;
+        line-height:30px;
+        padding-left:10px;
+        padding-right:10px;
+        margin-right:10px;
+        p{
           color:#1A99E8;
-          border:1px #1A99E8 solid;
-          border-radius: $radius;
-          // margin-top:/0px;
-          height:30px;
-          line-height:30px;
-          padding-left:10px;
-          padding-right:10px;
-          margin-right:10px;
+        }
       }
       &__newuser{
           margin-right: 10px;
-          color:white;
           background-color:red;
           border-radius: $radius;
           height:30px;
