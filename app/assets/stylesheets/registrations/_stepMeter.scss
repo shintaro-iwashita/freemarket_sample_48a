@@ -32,12 +32,12 @@
     color:#888888;
     // position:absolute;
     right:0;
-    // &__step:nth-of-type(1){
-    //   color:$mercari-red;
+    &__step:nth-of-type(1){
+      color:$mercari-red;
       #red{
         color:$mercari-red;
       }
-    // }
+    }
     &__step{
       height:100%;
       width:100%;
@@ -64,14 +64,20 @@
         display:flex;
         position:relative;
         margin:0;
+        &__line {
+          width:50%;
+          height:20%;
+          box-sizing:border-box;
+          border-bottom: none solid #cccccc;
+        }
         &-Bef{
           width:50%;
           height:20%;
           box-sizing:border-box;
-          border-bottom: none solid #ffffff;
+          border-bottom: none solid #cccccc;
         }
         &-Af{
-          border-bottom: medium solid red;
+          border-bottom: medium solid #cccccc;
           width:50%;
           height:20%;
         }
