@@ -112,6 +112,28 @@ $radius:6px;
       position:absolute;
       right:0;
       padding-right: 150px;
+      &__general{
+        height:30px;
+        line-height:30px;
+        padding-left:10px;
+        padding-right:10px;
+        margin-right:10px;
+        span{
+          color:black;
+          font-weight:100;
+          padding-left:5px;
+        }
+        i{
+          font-size:1.2rem;
+          color:#cccccc;
+        }
+      }
+      &__general:hover i {
+        color:#1A99E8;
+      }
+      &__general:hover span {
+        color:#1A99E8;
+      }
       &__login{
         border:1px #1A99E8 solid;
         border-radius: $radius;
