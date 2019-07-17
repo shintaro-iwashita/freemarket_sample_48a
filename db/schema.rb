@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_15_065205) do
+ActiveRecord::Schema.define(version: 2019_07_15_084555) do
+
+  create_table "product_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "image", null: false
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["product_id"], name: "index_product_images_on_product_id"
+    t.index ["user_id"], name: "index_product_images_on_user_id"
+  end
+
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "pescription", null: false
+    t.integer "profit", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["user_id"], name: "index_products_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,4 +56,7 @@ ActiveRecord::Schema.define(version: 2019_07_15_065205) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "product_images", "products"
+  add_foreign_key "product_images", "users"
+  add_foreign_key "products", "users"
 end
