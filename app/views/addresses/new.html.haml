@@ -1,4 +1,10 @@
-= render partial:"registrations/stepMeter"
+.headernew
+  .headernew__icons
+    = link_to root_path, class:'hovering' do
+      = image_tag("/images/m-logo.png",width:'250px',height:'80px',id:"titleIcon")
+  .headernew__stepmeter
+    = image_tag("/images/registration_address.png",width:'450px',height:'90px')
+
 .mainframe
   .mainframe__title 
     %b 発送元・お届け先住所入力
