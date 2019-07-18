@@ -1,0 +1,149 @@
+= render partial: "layouts/header"
+// #TODO 商品写真・購入ボタン・説明
+%section.item-box-container
+  %h1.item-box-container__item-name
+    題名
+  %p.item-box-container__item-wording
+  .item-box-container__content.clearfix
+    .item-box-container__content__photo
+      .item-box-container__content__photo__owl
+        .item-box-container__content__photo__owl__outer
+          .item-box-container__content__photo__owl__outer__stage
+            .item-box-container__content__photo__owl__outer__stage__item.active
+              .item-box-container__content__photo__owl__outer__stage__item__inner
+                = image_tag "1965_image_1.jpeg", alt:"", class: "owl-lazy",style:"",data:{src:""}
+            .item-box-container__content__photo__owl__outer__stage__item
+              .item-box-container__content__photo__owl__outer__stage__item__inner
+                = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
+            .item-box-container__content__photo__owl__outer__stage__item
+              .item-box-container__content__photo__owl__outer__stage__item__inner
+                = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
+            .item-box-container__content__photo__owl__outer__stage__item
+              .item-box-container__content__photo__owl__outer__stage__item__inner
+                = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
+        .item-box-container__content__photo__owl__disabled
+          .item-box-container__content__photo__owl__disabled__prev
+          .item-box-container__content__photo__owl__disabled__next
+        .item-box-container__content__photo__owl__dots
+          .item-box-container__content__photo__owl__dots__dot.active
+            %span
+            .item-box-container__content__photo__owl__dots__dot__in
+              = image_tag "6875fda9.png",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
+          .item-box-container__content__photo__owl__dots__dot
+            %span
+            .item-box-container__content__photo__owl__dots__dot__in
+              = image_tag "",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
+          .item-box-container__content__photo__owl__dots__dot
+            %span
+            .item-box-container__content__photo__owl__dots__dot__in
+              = image_tag "",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
+          .item-box-container__content__photo__owl__dots__dot
+            %span
+            .item-box-container__content__photo__owl__dots__dot__in
+              = image_tag "",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
+          .item-box-container__content__photo__owl___dots__dot
+            %span
+            .item-box-container__content__photo__owl__dots__dot__in
+              = image_tag "",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
+    .item-box-container__content__table
+      = render partial: "products/tbody"
+  .item-box-container__price
+    %span.item-box-container__price__bold ¥0,010
+    %span.item-box-container__price__tax (税込)
+    %span.item-box-container__price__fee 送料込み
+  .item-box-containert__visible
+    %button.item-box-container__visible__buy
+      = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
+    .item-box-container__visible__client
+    -# #TODO アプリ機能実装時に使用
+    -#   %div{data:{client: "visible"}}
+    -# .item-box-containert__visible_text
+    -#   = link_to 'アプリで購入', data:{toggle: 'open-app'},data:{url:{scheme:"mercari://"}},data:{action: 'item/openDetail'}
+  .item-box-container__description
+    %p.item-box-container__description__inner
+      匿名ブランドの何かです。
+      使用感があります。
+      中古なのでご理解の上ご購入下さい。
+      よろしくお願いします。
+  .item-box-container__button
+    .item-box-container__button__left
+      %button{type: "button",name: "like!",data:{toggele:'like'},data:{id:''},data:{ga:'element'},class:"item-button like",data:{ga:{lable:'like'}} }
+        %i.far.fa-heart
+        %span いいね!
+        %span{data:{num:"like"},class:'fade-in-down'} 0
+      .item-button.report.clearfix
+        = link_to '',data:{open:'modal',modal:'report-item'}
+        %i.far.fa-flag
+        %span 不適切な商品の報告
+      -# #TODO 仮置き
+      %input{type: 'hidden',name: 'like_add_url',value: '#'}
+      %input{type: 'hidden', name: 'like_del_url', value: '#'}
+      %input{type: 'hidden', name: '__csrf_value', value: '#'}
+    .item-box-container__button__right
+      = link_to '', '#', target: '_blank'
+      %i.fa.fa-lock
+      %span あんしん・あんぜんへの取り組み
+.item-detail
+  .item-detail__message
+    %ul.item-detail__message__items
+      %li.clearfix
+        .item-detail__message__items__user
+          = link_to '', '/users/:id/edit'
+          %figure
+            %div
+              = image_tag "6875fda9.png"
+            %figcaption.item-detail__message__items__user__bold
+              名無し
+        .item-detail__message__items__body
+          .item-detail__message__items__body__text
+            はじめまして
+          .item-detail__message__items__body__icons.clearfix
+            %time.item-detail__message__items__body__icons__left
+              %i.far.fa-clock
+              %span 時間前
+            .item-detail__message__items__body__icons__right
+              %form{action:"", method:"POST"}
+                %button{type: "submit"}
+                  %i.far.fa-flag
+                %input{type: "hidden", name: "redirect_url_key", value:"item_detail"}
+  .item-detail__container
+    .item-detail__container__content
+      %form{action: "#",method: "POST",class: "item-detail__container__content__form"}
+        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        -# #TODO inputは仮置き
+        %input{type: 'hidden',name: 'item_id', value: 'm6111673212'}
+        %input{type: 'hidden', name: 'redirect_url_key',value: 'item_detail'}
+        %textarea.textarea-default{name: 'body', type: 'text',value:""}
+        -# #TODO textareaにあとで使用 売れたらjqueryで表示を変更 disabled: "disabled"
+        %button{type: "submit", class: "item-detail__container__content__form__submit btn-default" }
+          %span コメント
+
+// #TODO ソーシャルアプリボタン類
+%ul.nav-item-link.clearfix
+  %li.nav-item-link__prev 
+    = link_to '#','#'
+    %i.fa.fa-chevron-left
+  %li.nav-item-link__next
+    = link_to '#','#'
+    %i.fa.fa-chevron-right
+.item-social
+  .item-social__center
+    -# #TODO あとで使用
+    .item-social__center__iframe{data:{uri: ''},fb:{xfbml:{state:''},iframe:{plugin:{query:''}}}}
+  %ul.item-social__media
+    %li
+      = link_to '','http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F',{target: "_blank",class: "share-btn" ,data:{window:{name:"twitter_window"}}} 
+      %i.fab.fa-facebook-square.face
+    %li
+      = link_to '', 'http://twitter.com/share?count=horizontal&original_referer=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F&text=U.L.%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%82%B7%E2%80%A6%20%28%C2%A5%204%2C900%29%20https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8C%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%80%8D%E3%81%A7%E8%B2%A9%E5%A3%B2%E4%B8%AD%E2%99%AA%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%40mercari_jp%E3%81%95%E3%82%93%E3%81%8B%E3%82%89',{target: "_blank",class: "share-btn",data:{window:{name: "twitter-window"}}}
+      %i.fab.fa-twitter-square.twi
+    %li.item-social__media__item
+      = link_to '', 'http://line.me/R/msg/text/?U.L.コンフォートシステムパッド120 mont-bell%20%7C%20%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%E3%82%B9%E3%83%9E%E3%83%9B%E3%81%A7%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%0D%0Ahttps://item.mercari.com/jp/m51933895609/',{target: "_blank"}
+      %i.fab.fa-line.line
+    %li
+      = link_to '', 'http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm51933895609%2F&media=https%3A%2F%2Fstatic.mercdn.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm51933895609_1.jpg%3F1562299671&description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20U.L.%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%91%E3%83%83%E3%83%89120%20mont-bell%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA',{target: "_blank",class: "share-btn",data:{window:{name: "pinterest_window"}}}
+      %i.fab.fa-pinterest-square.pinte
+.item-profile
+  = render partial: "products/other-box"
+  
+= render partial: "layouts/footer"

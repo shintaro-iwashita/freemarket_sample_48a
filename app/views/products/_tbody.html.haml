@@ -1,0 +1,56 @@
+// #TODO 出品者から発送日の目安まで
+.tbody
+  .tr
+    .th 出品者
+    .td
+      = link_to "#" do
+        名前
+      %div
+        .user-rank
+          %i.fas.fa-laugh.user-rank_good
+          %span 0
+        .user-rank
+          %i.fas.fa-meh.user-rank_normal
+          %span 0
+        .user-rank
+          %i.fas.fa-frown.user-rank_bad
+          %span 0
+  .tr
+    .th カテゴリー
+    .td
+      = link_to "#" do
+        category
+      = link_to '#' do
+        .tab_sub-category
+          %i.fas.fa-chevron-right
+            サブ
+      = link_to '#' do
+        .tab_sub-category_more
+          %i.fas.fa-chevron-right
+            さぶ/さーぶ
+  .tr
+    .th ブランド
+    .td
+      = link_to '#' do
+        %div
+          マルク
+  -# .tr
+  -#   .th サイズ
+  -#   .td
+  .tr
+    .th 商品の状態
+    .td 悪い
+  .tr
+    .th 配送料の負担
+    .td 送料込み(出品者負担)
+  .tr
+    .th 配送の方法
+    .td らくらくメルカリ便
+  .tr
+    .th 配送元地域
+    .td
+      = link_to '大阪府', '#' 
+  .tr
+    .th 発送日の目安
+    .td 1~7日で発送
+

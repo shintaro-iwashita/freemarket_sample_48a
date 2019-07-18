@@ -60,7 +60,7 @@
 |------|----|-------|
 |name|string|null: false, length: { maximum: 40 }|
 |price|integer|null:false|
-|pescription|text|null: false, length: { maximum: 1000 }|
+|prescription|text|null: false, length: { maximum: 1000 }|
 |profit|integer||null:false|
 |user_id|references|null: false, foreign_key: true|
 
@@ -73,19 +73,6 @@
 - has_one :products_details, dependent: :destroy
 - has_one :product_brand, dependent: :destroy
 - has_many :likes
-
-## commentsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|comment|string|
-|user_id|references|null: false, foreign_key: true|
-|product_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :product
-
 
 ## commentsテーブル
 

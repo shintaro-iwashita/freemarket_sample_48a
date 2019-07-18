@@ -1,0 +1,526 @@
+// #TODO 商品写真・購入ボタン・説明
+.item-box-container{
+  background: #fff;
+  margin: 40px auto 0;
+  width: 700px;
+  padding: 24px 16px 55px 16px;
+  // #TODO cloarfixに変わるプロパティ
+  display: flow-root;
+  @media screen and(min-width: 768px){
+    padding: 24px 40px 40px;
+  }
+  &__item-name{
+    font-size: 24px;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 1.4;
+  }
+  &__item-wording{
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #888;
+    line-height: 1.5;
+  }
+  &__content{
+    margin: 16px 0 0;
+    height: 420px;
+    &__photo{
+      position: relative;
+      min-width: 280px;
+      min-height: 280px;
+      max-width: 360px;
+      margin: 0 auto;
+      background: #fafafa;
+      // TODO 仮置き
+      float: left;
+      @media screen and (min-width: 768px){
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 375px;
+      }
+      &__owl{
+        position: relative;
+        &__outer{
+          position: relative;
+          overflow: hidden;
+          &__stage{
+            position: relative;
+            width: 1500px;
+            left: 0px;
+            &__item{
+              min-height: 1px;
+              float: left;
+              width: 300px;
+              // TODO 背面が非表示になり、要素がユーザーに対して反対を向いた時に不可視にする
+              -webkit-backface-visibility: hidden;
+              // TODO スマホなどのタップしたときに色が変化しない
+              -webkit-tap-highlight-color: transparent;
+              // TODO コールアウト表示が無効になる
+              -webkit-touch-callout: none;
+              // TODO テキストを選択できない
+              -webkit-user-select: none;
+              // TODO 対象要素とその子孫要素の文章は範囲選択できない
+              user-select: none;
+              &__inner{
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding: 0 0 100%;
+                @media screen and (min-width: 768px){
+                  position: static;
+                  width: auto;
+                  height: auto;
+                  padding: 0;
+                }
+                .owl-lazy{
+                  width: 100%;
+                  vertical-align: bottom;
+
+                }
+              }
+            }
+          }
+        }
+        &__disabled{
+          display: none;
+          &__prev{
+            display: none;
+          }
+          &__next{
+            display: none;
+          }
+        }
+        &__dots{
+          line-height: 0;
+          &_dot.active{
+            opacity: 1;
+            cursor: default;
+          }
+          &__dot{
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 20%;
+            max-height: 90px;
+            opacity:  .4;
+            cursor: pointer;
+            @media screen and(min-width: 768px){
+              width: 60px;
+              height: 60px;
+              max-height: none;
+            }
+            span{
+              display:none;
+            }
+            &__in{
+              overflow: hidden;
+              position: relative;
+              width: 100%;
+              height: 0;
+              padding: 0 0 100%;
+              // TODO 要素がポインターイベントのターゲットではないことを示す
+              pointer-events: none;
+              @media screen and (min-width: 768px){
+                position: static;
+                width: auto;
+                height: auto;
+                padding: 0;
+              }
+              img{
+                width: 100%;
+                vertical-align: bottom;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__table{
+      width: 100%;
+      max-width: 360px;
+      // 隣接するセルのボーダーを重ねて表示する
+      border-collapse: collapse;
+      border:1px solid #fafafa;
+      float: right;
+    }
+  }
+  &__price{
+    margin: 24px 0 0;
+    text-align: center;
+    &__bold{
+      margin: 0 16px 0 0;
+      font-size: 32px;
+      font-weight: 600;
+      @media screen and (min-width: 768px){
+        margin: 0 16px 0 0;
+        font-size: 50px;
+      }
+    }
+    &__tax{
+      font-size: 10px;
+    }
+    &__fee{
+      display:inline-block;
+      font-size: 16px;
+    }
+  }
+  &__visible{
+    &__buy{
+      display: block;
+      height: 60px;
+      margin: 16px 0 0;
+      background: #ea352d;
+      line-height: 56px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+      // #TODO 変化するプロパティへの適用
+      -webkit-transition: all ease-out .3s;
+      transition: all ease-out .3s;
+      width: 100%;
+      a{
+        color: #fff;
+      }
+    }
+    &__client{
+      margin: 24px 0 0;
+    }
+  }
+  &__description{
+    padding: 24px 0 0;
+    line-height: 1.5;
+    font-size: 18px;
+    &__inner{
+      white-space: pre-wrap;
+    }
+  }
+  &__button{
+    margin: 16px 0 0;
+    font-size: 0;
+    &__left{
+      float: left;
+      .item-button{
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 40px;
+        // 変化するプロパティへの適用
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+      }
+      .like{
+        color: #333;
+        border: 1px solid #f5f5f5;
+        background: #f5f5f5;
+        i{
+          font-size: 14px;
+          vertical-align: middle;
+        }
+        span{
+          display: inline-block;
+          margin: 1px 0 0 8px;
+          font-size: 14px;
+        }
+      }
+      .report{
+        margin: 0 0 0 8px;
+        color: #333;
+        background: #f5f5f5;
+        @media screen and (min-width: 768px){
+          margin: 0 0 0 16px;
+        }
+        a{
+          display: inline-block;
+        }
+        i{
+          font-size: 14px;
+        }
+        span{
+          display: inline-block;
+          margin: 1px 0 0 8px;
+          font-size: 14px;
+        }
+      }
+      .clearfix:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+    &__right{
+      margin: 8px 0 0;
+      color: #0099e8;
+      @media screen and (min-width: 768px){
+        float: right;
+        margin: 8px 0 0
+      }
+      a{
+        display: inline-block;
+      }
+      i{
+        font-size: 14px;
+      }
+      span{
+        display: inline-block;
+        margin: 1px 0 0 8px;
+        font-size: 12px; 
+        @media screen and (min-width: 768px){
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+// #TODO コメント画面・コメントボタン
+.item-detail{
+  margin: 8px auto;
+  @media screen and(min-width: 768px){
+    width: 780px;
+  }
+  &__message{
+    background: #fff;
+    @media screen and (min-width: 768px){
+      padding: 24px;
+    }
+    ul{
+      list-style: none;
+    }
+    &__items{
+      margin: 0;
+      li{
+        @include clearfix();
+        margin: 60px 0 0;
+      }
+      li:first-child{
+        margin: 1.5em 0 0;
+      }
+      &__user{
+        float: left;
+        position: relative;
+        top: -20px;
+        display: inline-block;
+        color: #333;
+        figure>div{
+          width: 40px;
+          height: 40px;
+          // #TODO はみ出た要素の表示方法を指定する
+          overflow: hidden;
+          border-radius: 50%;
+        }
+        img{
+          width: 100%;
+          vertical-align: middle;
+        }
+        figcaption{
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 56px;
+          max-width: 100%;
+          min-width: 214px;
+          height: 1.2em;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          &__bold{
+            font-weight: 600;
+            @media screen and (min-width: 768px){
+              width: 600px;
+              min-width: 600px;
+            }
+          }
+        }
+      }
+      &__body{
+        float: right;
+        position: relative;
+        width: 650px;
+        padding: 16px;
+        background: #eef0f4;
+        border-radius: 15px;
+        line-height: 1.5;
+        // #TODO CJK以外のテキストにおいて、単語中などでの文字の改行に関する禁則処理を解除し、どの文字の間でも改行できるようにする
+        word-break: break-all;
+        &__icons{
+          @include clearfix();
+          margin: 8px 0 0;
+          time{
+            display: block;
+            color: #aaa;
+          }
+          &__left{
+            float: left;
+            i{
+              vertical-align: middle;
+            }
+            span{
+              vertical-align: middle;
+            }
+          }
+          &__right{
+            cursor: pointer;
+            display: inline-block;
+            color: #aaa;
+            text-decoration: none;
+            float: right;
+            form{
+              display: inline;
+              i{
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__container{
+    &__content{
+      padding: 24px 7.5%;
+      background: #fff;
+      height: 220px;
+      @media screen and (min-width: 768px){
+        padding: 24px;
+      }
+      &__form{
+        p{
+          padding: 8px;
+          font-size: 14px;
+          background: #fff6de;
+        }
+        .textarea-default{
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          min-height: 104px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 16px;
+          line-height: 1.5;
+          margin: 8px 0 0;
+          padding: 10px;
+          // #TODO widht:100%とpaddingが同じ要素にあるとき widthで指定するサイズがborderまで含めたものを指すため
+          box-sizing: border-box;
+        }
+        :disabled{
+          background: #f5f5f5;
+        }
+        :focus{
+          border-color: #0099e8;
+        }
+        // #TODO textareaのまわりの線をはっきりとさせる
+        textarea{
+          outline: none;
+        }
+        &__submit{
+          width: 100%;
+          margin: 8px 0 0;
+          font-size: 0px;
+          text-align: center;
+          background: #aaa;
+          border: 1px solid #aaa;
+          color: #fff;
+        }
+        .btn-default{
+          display: block;
+          height: 48px;
+          font-size: 14px;
+          border: 1px solid transparent;
+          -webkit-transition: all ease out .3s;
+          transition: all ease-out .3s;
+          cursor: pointer;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// #TODO ソーシャルアプリボタン類
+.nav-item-link{
+  width: 780px;
+  margin: 24px auto 0;
+  list-style: none;
+  li{
+    position: relative;
+    width: 43%;
+    word-wrap: break-word;
+  }
+  &__prev{
+    float: left;
+    padding: 0 0 0 14px;
+    i{
+      left: 0;
+      position: absolute;
+      color: #0099e8;
+    }
+  }
+  &__next{
+    float: right;
+    padding: 0 14px 0 0;
+    text-align: right;
+    @media screen and(min-width: 768px){
+      width: 45%;
+    }
+    i{
+      right: 0;
+      position: absolute;
+      color: #0099e8;
+    }
+  }
+}
+.nav-item-link.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.item-social{
+  margin: 24px 0 0;
+  background: #fff;
+  padding: 16px 0 8px;
+  @media screen and (min-width: 768px){
+    margin: 24px auto;
+    padding: 32px 0 24px;
+    width: 780px;
+  }
+  &__center{
+    text-align: center;
+    &__iframe{
+      display: inline-block;
+      position: relative;
+    }
+  }
+  &__media{
+    margin: 16px 0 0;
+    text-align: center;
+    font-size: 0;
+    list-style: none;
+    li{
+      display: inline-block;
+      margin: 0 8px 8px 0;
+      vertical-align: middle;
+      text-align: center;
+      a{
+        display: block;
+      }
+      i{
+        font-size: 44px;
+        border-radius: 4px;
+        line-height: 44px;
+      }
+      .face{
+        color: #385185;
+      }
+      .twi{
+        color: #5c9dc9;
+      }
+      .line{
+        color: #03c138;
+      }
+      .pinte{
+        color: #aa262a;
+      }
+    }
+  }
+}
+
