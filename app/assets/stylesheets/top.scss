@@ -1,111 +1,90 @@
-$radius:6px;
 .header{
   background-color: white;
   z-index:10;
   width:100%;
-  margin:0 auto;
+  &__inter{
+    width: 700px;
+    margin: 0 auto;
+    padding: 8px 0 0;
+  }
   &__row1{
-    width:100%;
-    height:50px;
-    font-size:23px;
-    display:flex;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    position:relative;
-    margin-bottom:10px;
-    &__titles{
-      display:flex;
-      align-items: center;
-      width:20%;
-      padding: 8px 0 0 150px;
-      margin: 0 auto;
-    }
-    .serch-btn{
-      padding: 9px 0;
-      font-size: 13px;
-    }
     &__forms{
-      margin-right: 150px;
-      border-radius: 10px;
+      height: 40px;
+      margin-left: 45px;
       display:flex;
-      align-items: center;
-      height:70%;
-      width:80%;
       position:relative;
+      width: 100%;
+      // #TODO フレックスアイテムをフレックスコンテナーの領域に収めるために伸長・収縮させるかを指定する
+      flex: 1;
       &__input{
-        margin-top: 8px;
-        padding-left: 10px;
+        padding: 0 42px 0 10px;
         height: 40px;
-        border-top-left-radius: $radius;
-        border-bottom-left-radius: $radius;
-        width:97%;
-        font-size:70%;
+        width: 100%;
         background-color: #F5F5F5;
+        border-radius: 4px;
+        transition: all ease-out .3s;
+        border: 1px solid #ccc;
+        font-size: 16px;
       }
-      &__button{
-        margin: 4px 7px 0 0;
-        color:white;
-        right:0;
-        height:44px;
-        line-height: 41px;
-        text-align:center;
-        width:5%;
-        position:absolute;
-        background-color:gray;
-        border-top-right-radius: $radius;
-        border-bottom-right-radius: $radius;
+      &__search{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
       }
     }
   }
   &__row2{
-    height: 45px;
-    font-weight: bold;
-    display:flex;
-    position:relative;
-    .red{
-      color: red;
-    }
-    &__CategoryLists{
-      padding: 4px 0 0 170px;
-      z-index:1;
-      list-style:none;
-      line-height: 25px;
-      &__index:hover + &__lists{
-        visibility:visible;
-        color:black;
-        background-color:#ffffff;
-        
+    height: 44px;
+    margin: 8px 0 0;
+    &__left{
+       float: left;
+       ul{
+         list-style: none;
+       }
+       .header__row2__left__category>li:first-child{
+        padding-left: 0;
       }
-      &__lists{
-        text-align:left;
-        visibility:hidden;
-        display:flex;
-        list-style:none;
-        z-index:1;
-        &__list1:hover{
-          visibility:visible;
+      .header__row2__left__category>li{
+        position: relative;
+        display: inline-block;
+        padding: 0 11px;
+        cursor: pointer;
+      }
+      &__category{
+        font-size: 0;
+        h2{
+          font-size: 14px;
+          line-height: 30px;
+        }
+        &__parent{
+          font-weight: bold;
+        }
+        &__red{
+          color: #ea352d;
+          font-size: 12px;
+          margin-right: 4px;
+        }
+        span{
+          vertical-align: middle;
+        }
+        &__cat{
+          color: #ea352d;
+          font-size: 12px;
+          margin-right: 4px;
         }
       }
-    }
-    &__brandlists{
-      margin: 5px 0 10px 0;
-      line-height: 25px;
-      position:absolute;
-      left:325px;
-      &__lists{
-        visibility:hidden;
-      }
-      &__index:hover + &__lists{
-        z-index:-2;
-        background-color:white;
-        color:black;
-      }
-      &__lists li:nth-of-type(n):hover{
-        background-color:red;
-        color:white;
-        visibility:hidden;
+      .header__row2__left__category> li:last-child{
+        padding-right: 0;
       }
     }
-    
     &__lists{
       height: 70px;
       display:flex;
@@ -115,7 +94,6 @@ $radius:6px;
       &__login{
           color:#1A99E8;
           border:1px #1A99E8 solid;
-          border-radius: $radius;
           // margin-top:/0px;
           height:30px;
           line-height:30px;
@@ -123,66 +101,63 @@ $radius:6px;
           padding-right:10px;
           margin-right:10px;
       }
-      &__newuser{
-          margin-right: 10px;
-          color:white;
-          background-color:red;
-          border-radius: $radius;
-          height:30px;
-          line-height:30px;
-          padding-left:10px;
-          padding-right:10px;
+      &__right{
+         float: right;
+         ul{
+           list-style: none;
+         }
+         .header__row2__lists__right__nav>li{
+          position: relative;
+          display: inline-block;
+          padding: 0 7px;
+          cursor: pointer;
+        }
+        .header__row2__lists__right__nav>li:first-child{
+          padding-left: 0;
+        }
+
+        &__nav{
+          &__liked{
+            display:none;
+            &__menu{
+              position: relative;
+              display: block;
+              font-size: 0;
+              color: #333;
+              line-height: 32px;
+            }
+            &__heart{
+              font-size: 18px;
+              color: #ccc;
+            }
+            &__bell{
+              font-size: 20px;
+              color: #ccc;
+            }
+            &__check{
+              font-size: 16px;
+              color: #ccc;
+            }
+            span{
+              margin-left: 10px;
+              font-size: 14px;
+            }
+          }
+          figure{
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+          }
+        }
+        .header__row2__lists__right__nav>li:last-child{
+          padding-right: 0;
+        }
       }
     }
   }
 }
-#list1:hover + #list2{
-  visibility:visible;
-  
-}
-#list1 p:nth-of-type(n):hover{
-  background-color:red;
-  color:white;
-  visibility:visible;
-}
-#list1 {
-  width:100%;
-  text-align:left;
-  border:  solid gray;
-  // visibility:visible;
-}
-#list2:hover {
-  visibility:visible;
-  
-}
-#list2:hover + #list3{
-  visibility:visible;
-}
-#list2 li:nth-of-type(n):hover{
-  background-color:red;
-  color:white;
-}
-#list2{
-  list-style:none;
-  background-color:white;
-  // width:100%;
-  text-align:left;
-  border:  solid gray;
-}
-#list3:hover {
-  visibility:visible;
-}
-#list3 li:nth-of-type(n):hover{
-  background-color:red;
-  color:white;
-}
-#list3{
-  list-style:none;
-  background-color:white;
-  // width:100%;
-  text-align:left;
-  border:  solid gray;
-}
+
+
 
 
 
