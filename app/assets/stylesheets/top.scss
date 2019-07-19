@@ -59,9 +59,18 @@
        }
       &__category{
         font-size: 0;
+        a{
+          color: black;
+          display: block;
+        }
+        a:hover{
+          opacity: 1;
+          text-decoration: none;
+        }
         h2{
           font-size: 14px;
           line-height: 30px;
+          height: 45px;
         }
         &__parent{
           font-weight: bold;
@@ -92,6 +101,9 @@
       .header__row2__left__category> li:last-child{
         padding-right: 0;
       }
+      h2:hover{
+        color: #0099e8;
+      }
     }
       // #TODO ヘッダー右部分
       &__right{
@@ -99,7 +111,6 @@
          ul{
            list-style: none;
          }
-         
         .header__row2__right__nav>li:first-child{
           padding-left: 0;
         }
@@ -181,7 +192,6 @@
     }
   }
 }
-
 
 .contents {
   width: 100%;

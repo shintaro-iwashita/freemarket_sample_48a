@@ -1,9 +1,6 @@
 // 全体に関するSCSS
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-@import "./top";
-@import 'user';
-@import 'login_users';
 @import 'reset';
 @import 'config/colors';
 @import "./links";
@@ -27,3 +24,4 @@
 @import "./confirm_purchace";
 @import "detail/_other.scss";
 @import "confirms/edit.scss";
+@import "./top";
