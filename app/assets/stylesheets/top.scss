@@ -80,6 +80,58 @@
           font-size: 12px;
           margin-right: 4px;
         }
+        &__wrap{
+          width: auto;
+          height: 616px;
+          position: absolute;
+          top: 44px;
+          left: -34px;
+          z-index: 1000;
+          background: #fff;
+          box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+          &__stick{
+            display: none;
+            width: 224px;
+            h3{
+              font-weight: 400;
+              font-size: 14px;
+            }
+           h3 a{
+              padding: 0 16px;
+              line-height: 44px;
+            }
+            h3 a:hover{
+              background: #ea352d;
+              color: #fff;
+            }
+            a{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 14px;
+            }
+            &__child{
+              position: absolute;
+              top: 0;
+              left: 224px;
+              bottom: 0;
+              background: #fff;
+              box-shadow: 1px 0 0 0 #eee inset;
+              &__candidate{
+                display: none;
+                width: 224px;
+              }
+              .header__row2__left__category__wrap__stick__child__candidate >a{
+                padding: 8px 16px;
+                line-height: unset;
+              }
+            }
+          }
+          
+        }
+        .header__row2__left__category__wrap:hover > ul .header__row2__left__category__wrap__stick{
+          display: block;
+        }
         span{
           vertical-align: middle;
         }
