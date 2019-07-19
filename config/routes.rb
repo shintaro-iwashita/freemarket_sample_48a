@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :brands
+  resources :categories
   devise_for :users
   root "products#index"
   resources :products, only: [:index, :show] do
