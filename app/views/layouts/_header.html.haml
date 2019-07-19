@@ -1,55 +1,107 @@
 .header
-  .header__row1
-    .header__row1__titles
-      = link_to root_path, class:'links' do
-        = image_tag("/images/m-logo.png",width:'170px',height:'50px',class:"header__row1__forms__mercari __image")
-    .header__row1__forms
-      %input.header__row1__forms__input{placeholder:'何かお探しですか？'}
-      .header__row1__forms__button
+  .header__inter
+    .header__row1
+      .header__row1__titles
         = link_to root_path, class:'links' do
-          %i.fas.fa-search.serch-btn
-  .header__row2
-    .header__row2__CategoryLists
-      .header__row2__CategoryLists__index
-        %i.fas.fa-list-ul.red
-        = link_to root_path, class: 'links-black' do
-          カテゴリーから探す
-      .header__row2__CategoryLists__lists
-        .header__row2__CategoryLists__lists__list1#list1
-          %p aaaaa
-          %p aaaaaaa
-        .header__row2__CategoryLists__lists__list2#list2
-          %p aaa
-          %p aaaaaaaaa
-        .header__row2__CategoryLists__lists__list3#list3
-          %p  aaa
-          %p  aaaddddddddd
-    .header__row2__brandlists
-      .header__row2__brandlists__index
-        %i.fas.fa-tag.red
-          = link_to root_path, class: 'links-black' do
-            ブランドから探す
-      .header__row2__brandlists__lists
-        %p ブランド1
-        %p ブランド2
-    .header__row2__lists
-      .header__row2__lists__newuser
-        = link_to root_path, class: 'links' do
-          新規会員登録
-      .header__row2__lists__login
-        = link_to root_path do
-          ログイン
-      
-    // userサインイン時
-    -# .header__row2__list2
-    -#   %i.far.fa-bell.gray
-    -#   お知らせ
-    -# .header__row2__list2
-    -#   %i.fas.fa-check.gray
-    -#   やることリスト
-    -# .header__row2__list2
-    -#   %i.far.fa-smile-beam.gray
-    -#   マイページ
+          = image_tag("/images/m-logo.png",width:'170px',height:'50px',class:"header__row1__forms__mercari __image")
+      .header__row1__forms
+        %input{type:"search",name: "keyword", placeholder:'何かお探しですか？',class: "header__row1__forms__input"}
+        %i.fas.fa-search.header__row1__forms__search
+    .header__row2.clearfix
+      %nav.header__row2__left
+        %ul.header__row2__left__category
+          %li
+            %h2
+              = link_to "", "#", class: "header__row2__left__category__parent"
+              %i.fas.fa-list-ul.header__row2__left__category__red
+              %span カテゴリーから探す
+            -# #TODO カテゴリー一覧
+            %ul.header__row2__left__category__wrap{data:{mega:"1"}}
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'レディース','#'
+                  %ul.header__row2__left__category__wrap__stick__child{data:{mega:"2"}}
+                    %li.header__row2__left__category__wrap__stick__child__candidate
+                      = link_to 'トップス','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'メンズ','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'ベビー・キッズ','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'インテリア・住まい・小物','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to '本・音楽・ゲーム','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'おもちゃ・ホビー・グッズ','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'コスメ・香水・美容','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to '家電・スマホ・カメラ','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'スポーツ・レジャー','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'ハンドメイド','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'チケット','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to '自転車・オートバイ','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'その他','#'
+              %li.header__row2__left__category__wrap__stick
+                %h3
+                  = link_to 'カテゴリー一覧','#'
 
+
+          %li
+            %h2
+              = link_to "", "#", class: "header__row2__left__category__brand"
+              %i.fas.fa-tag.header__row2__left__category__cat
+              %span ブランドから探す
+      .header__row2__right
+        -# %ul.header__row2__right__nav
+        -#   -# #TODO いいね一覧を入れると崩れるので修正する必要あり
+        -#   -# %li.header__row2__right__nav__liked
+        -#   -#   = link_to "","#",class: "header__row2__right__nav__liked__menu"
+        -#   -#   %i.far.fa-heart.header__row2__right__nav__liked__heart
+        -#   -#   %span いいね!一覧
+        -#   -# #TODO お知らせ一覧
+        -#   %li.header__row2__right__nav__liked{data:{id: "pc-header-user-nav",key: "notification_list",url: ""}}
+        -#     = link_to "","", class: "header__row2__right__nav__liked__menu"
+        -#     %i.far.fa-bell.header__row2__right__nav__liked__bell
+        -#     %span お知らせ
+        -#     -# #TODO お知らせ一覧の右上の通知数
+        -#     .header__row2__right__nav__liked__count
+        -#     %ul.header__row2__right__nav__liked__notification.mypage-item-list{data:{id:"pc-header-user-items"}}
+        -#   -# #TODO やることリスト
+        -#   %li{data:{id:"pc-header-user-nav",key:"todo_list",url:""}}
+        -#     = link_to "", "", class: "header__row2__right__nav__liked__menu"
+        -#     %i.fas.fa-check.header__row2__right__nav__liked__check
+        -#     %span やることリスト
+        -#     %ul.header__row2__right__nav__liked__todo.mypage-item-list
+        -#   -# #TODO マイページ一覧
+        -#   %li
+        -#     = link_to "","", class: "header__row2__right__nav__liked__menu"
+        -#     %figure
+        -#       %div
+        -#         = image_tag "/assets/6875fda9.png",width:"32"
+        -#     %span マイページ
+        -# -# #TODO 新規会員登録・ログインボタン
+        %ul.header__row2__right__login
+          %li
+            = link_to '新規会員登録','#', class: "header__row2__right__login__new"
+          %li
+            = link_to 'ログイン','#', class: "header__row2__right__login__as"
 
 
