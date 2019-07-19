@@ -20,36 +20,39 @@
               = link_to "", "#", class: "header__row2__left__category__brand"
               %i.fas.fa-tag.header__row2__left__category__cat
               %span ブランドから探す
-      .header__row2__lists__right
-        %ul.header__row2__lists__right__nav
+      .header__row2__right
+        %ul.header__row2__right__nav
           -# #TODO いいね一覧
-          -# %li.header__row2__lists__right__nav__liked
-          -#   = link_to "","#",class: "header__row2__lists__right__nav__liked__menu"
-          -#   %i.far.fa-heart.header__row2__lists__right__nav__liked__heart
+          -# %li.header__row2__right__nav__liked
+          -#   = link_to "","#",class: "header__row2__right__nav__liked__menu"
+          -#   %i.far.fa-heart.header__row2__right__nav__liked__heart
           -#   %span いいね!一覧
-          %li.header__row2__lists__right__nav__liked{data:{id: "pc-header-user-nav",key: "notification_list",url: ""}}
-            = link_to "","", class: "header__row2__lists__right__nav__liked__menu"
-            %i.far.fa-bell.header__row2__lists__right__nav__liked__bell
+          -# #TODO お知らせ一覧
+          %li.header__row2__right__nav__liked{data:{id: "pc-header-user-nav",key: "notification_list",url: ""}}
+            = link_to "","", class: "header__row2__right__nav__liked__menu"
+            %i.far.fa-bell.header__row2__right__nav__liked__bell
             %span お知らせ
-            .header__row2__lists__right__nav__liked__count
-            %ul.header__row2__lists__right__nav__liked__notification.mypage-item-list{data:{id:"pc-header-user-items"}}
+            -# #TODO お知らせ一覧の右上の通知数
+            .header__row2__right__nav__liked__count
+            %ul.header__row2__right__nav__liked__notification.mypage-item-list{data:{id:"pc-header-user-items"}}
+          -# #TODO やることリスト
           %li{data:{id:"pc-header-user-nav",key:"todo_list",url:""}}
-            = link_to "", "", class: "header__row2__lists__right__nav__liked__menu"
-            %i.fas.fa-check.header__row2__lists__right__nav__liked__check
+            = link_to "", "", class: "header__row2__right__nav__liked__menu"
+            %i.fas.fa-check.header__row2__right__nav__liked__check
             %span やることリスト
-            %ul.header__row2__lists__right__nav__liked__todo.mypage-item-list
+            %ul.header__row2__right__nav__liked__todo.mypage-item-list
+          -# #TODO マイページ一覧
           %li
-            = link_to "","", class: "header__row2__lists__right__nav__liked__menu"
+            = link_to "","", class: "header__row2__right__nav__liked__menu"
             %figure
               %div
                 = image_tag "/assets/6875fda9.png",width:"32"
             %span マイページ
-
-
-        -#   = link_to root_path, class: 'links' do
-        -#     新規会員登録
-        -# .header__row2__lists__login
-        -#   = link_to root_path do
-        -#     ログイン
+        -# -# #TODO 新規会員登録・ログインボタン
+        -# %ul.header__row2__right__login
+        -#   %li
+        -#     = link_to '新規会員登録','#', class: "header__row2__right__login__new"
+        -#   %li
+        -#     = link_to 'ログイン','#', class: "header__row2__right__login__as"
 
 

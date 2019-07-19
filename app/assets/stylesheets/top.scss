@@ -6,6 +6,9 @@
     width: 700px;
     margin: 0 auto;
     padding: 8px 0 0;
+    @media screen and (min-width: 1068px){
+      width: 1020px;
+    }
   }
   &__row1{
     display: flex;
@@ -45,6 +48,7 @@
       }
     }
   }
+  // #TODO カテゴリーから探す・ブランドから探す
   &__row2{
     height: 44px;
     margin: 8px 0 0;
@@ -53,15 +57,6 @@
        ul{
          list-style: none;
        }
-       .header__row2__left__category>li:first-child{
-        padding-left: 0;
-      }
-      .header__row2__left__category>li{
-        position: relative;
-        display: inline-block;
-        padding: 0 11px;
-        cursor: pointer;
-      }
       &__category{
         font-size: 0;
         h2{
@@ -85,41 +80,30 @@
           margin-right: 4px;
         }
       }
+      .header__row2__left__category>li:first-child{
+        padding-left: 0;
+      }
+      .header__row2__left__category>li{
+        position: relative;
+        display: inline-block;
+        padding: 0 11px;
+        cursor: pointer;
+      }
       .header__row2__left__category> li:last-child{
         padding-right: 0;
       }
     }
-    &__lists{
-      height: 70px;
-      display:flex;
-      position:absolute;
-      right:0;
-      padding-right: 150px;
-      &__login{
-          color:#1A99E8;
-          border:1px #1A99E8 solid;
-          // margin-top:/0px;
-          height:30px;
-          line-height:30px;
-          padding-left:10px;
-          padding-right:10px;
-          margin-right:10px;
-      }
+      // #TODO ヘッダー右部分
       &__right{
          float: right;
          ul{
            list-style: none;
          }
-         .header__row2__lists__right__nav>li{
-          position: relative;
-          display: inline-block;
-          padding: 0 7px;
-          cursor: pointer;
-        }
-        .header__row2__lists__right__nav>li:first-child{
+         
+        .header__row2__right__nav>li:first-child{
           padding-left: 0;
         }
-
+        // #TODO いいね一覧・お知らせ・やることリスト・マイページ
         &__nav{
           &__liked{
             display:none;
@@ -153,17 +137,50 @@
             vertical-align: middle;
           }
         }
-        .header__row2__lists__right__nav>li:last-child{
-          padding-right: 0;
+        .header__row2__right__nav>li{
+          position: relative;
+          display: inline-block;
+          padding: 0 7px;
+          cursor: pointer;
         }
+        // #TODO 新規会員登録とログインボタン
+      &__login{
+        &__new{
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          padding: 5px 10px;
+          line-height: 30px;
+          border-radius: 4px;
+        }
+        &__as{
+          display: block;
+          border: 1px solid #0099e8;
+          background: #fff;
+          color: #0099e8;
+          margin: 0;
+          padding: 0px 10px;
+          line-height: 30px;
+          border-radius: 4px;
+        }
+      }
+      .header__row2__right__nav>li:last-child{
+        padding-right: 0;
+      }
+      .header__row2__right__login>li:first-child{
+        margin: 0;
+      }
+      .header__row2__right__login>li{
+        display: inline-block;
+        margin: 0 0 0 8px;
+      }
+      .header__row2__right__login__as:hover{
+        background: #0099e8;
+        color: #fff;
       }
     }
   }
 }
-
-
-
-
 
 
 .contents {
@@ -258,7 +275,6 @@
         font-size: 35px;
         color: #fff;
         padding: 70px 0 30px 0;
-    
       }
     }
   & .appstore{
@@ -267,7 +283,6 @@
   }
   & .google-play{
     padding: 0 5px 10px;
-
   }
   }
 }
