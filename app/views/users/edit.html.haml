@@ -1,6 +1,8 @@
  
 / プロフィール編集ページ
 = render partial: "layouts/header" 
+- breadcrumb :profile
+= breadcrumbs separator: " &rsaquo; ", link_current: true
 
 %mail.mypage-container
   = render partial: "/mypage-nav"
