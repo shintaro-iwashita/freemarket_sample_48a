@@ -13,6 +13,13 @@ body{
   height: 49px;
 }
 
+a {
+  color: #222;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .single-vessel{
   padding: 0 0 250px;
   &__header{
