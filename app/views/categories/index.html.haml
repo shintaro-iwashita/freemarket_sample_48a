@@ -1,0 +1,22 @@
+= render partial: "layouts/header"
+- breadcrumb :categories
+= breadcrumbs separator: " &rsaquo; ", link_current: true
+.category
+  .category-nav
+    %h1 カテゴリー一覧
+    .category-nav__box
+      .category-nav__box__title
+        = link_to "カテゴリ名", "#"
+
+  .category-box
+    .category-box__list
+      .category-box__list__large
+        = link_to "カテゴリ名", "#"
+      .category-box__list__middle
+        %p.category-box__list__middle__name
+          = link_to "カテゴリ名", "#"
+          .category-box__list__small
+            %p
+              = link_to "カテゴリ名", "#"
+
+= render partial: "layouts/footer"
