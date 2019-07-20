@@ -26,6 +26,9 @@ $input-height:40px;
       margin:20px 0;
       width:100%;
       position:relative;
+      &__label{
+        font-weight:bold;
+      }
       p{
         margin-top:10px;
       }
@@ -123,7 +126,9 @@ $input-height:40px;
         text-decoration:none;
         height:100%;
         width:100%;
+        background-color:red;
         display:block;
+        font-size:0.9rem;
       }
     }
     &__registerLink{
