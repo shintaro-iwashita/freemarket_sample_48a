@@ -1,0 +1,57 @@
+.headernew
+  .headernew__icons
+    = link_to root_path, class:'hovering' do
+      = image_tag("/images/m-logo.png",width:'250px',height:'80px',id:"titleIcon")
+  .headernew__stepmeter
+    = image_tag("/images/registration_payment.png",width:'450px',height:'90px')
+.mainframe
+  .mainframe__title 
+    %b 支払い方法
+  .mainframe__contents
+    .mainframe__contents__unit
+      %b カード番号
+      %span.mainframe__contents__unit__span 必須
+      %input{maxlength: "16", type: "text", class: "number", id: "payment_card_no", placeholder: "半角数字のみ"}
+      %ul.mainframe__contents__unit__cards
+        %li.card
+          = image_tag "/images/card/visa.svg", width: "49", height: "20"
+        %li.card
+          = image_tag "/images/card/mastercard.svg", width: "34", height: "20"
+        %li.card
+          = image_tag "/images/card/saison.svg", width: "30", height: "20"
+        %li.card
+          = image_tag "/images/card/jcb.svg", width: "32", height: "20"
+        %li.card
+          = image_tag "/images/card/americanexpress.svg", width: "21", height: "20"
+        %li.card
+          = image_tag "/images/card/dinersclub.svg", width: "32", height: "20"
+        %li.card
+          = image_tag "/images/card/discover.svg", width: "32", height: "20"
+    .mainframe__contents__unit
+      %b 有効期限
+      %span.mainframe__contents__unit__span 必須
+      .mainframe__contents__unit__lists
+        .mainframe__contents__unit__lists__list
+          %select{name:"month",id:"monthlist"}
+            %option{selected:"selected"}--
+            -1.step(12,1) do |i|
+              %option #{i}
+            end
+          %i.fas.fa-chevron-down
+          %span.mainframe__contents__unit__lists__list__span 月
+        .mainframe__contents__unit__lists__list
+          %select{name:"year",id:"yearlist",style:"text-align:-webkit-center"}
+            %option{selected:"selected"}--
+            -2019.step(1900,-1) do |i|
+              %option #{i}
+            end
+          %i.fas.fa-chevron-down
+          %span.mainframe__contents__unit__lists__list__span 年
+    .mainframe__contents__unit
+      %b セキュリティコード
+      %span.mainframe__contents__unit__span 必須
+      %input{type: "text", class: "cvc", id: "payment_card_security_code", name: "cvc", placeholder: "カード背面4桁もしくは3桁の番号"}
+    .mainframe__contents__proceedbutton
+      = link_to '次へ進む', completions_path, id:"linkbutton"
+
+= render partial:"/devise/registrations/stepMeterFooter"
