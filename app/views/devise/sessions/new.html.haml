@@ -7,8 +7,7 @@
         %p アカウントをお持ちでないかたはこちら
         .login-account-a
           -# TODO: 上の１行をあとに変更
-          -# = link_to ""
-          新規会員登録
+          = link_to "新規会員登録", new_user_path
       .single-vessel__main__login-panel__inner
         %button{id: "facebook-login",class:"btn-default btn-sns-facebook"}
           %i.fab.fa-facebook-square.facebook-icon
