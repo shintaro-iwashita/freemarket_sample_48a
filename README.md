@@ -60,7 +60,7 @@
 |------|----|-------|
 |name|string|null: false, length: { maximum: 40 }|
 |price|integer|null:false|
-|pescription|text|null: false, length: { maximum: 1000 }|
+|prescription|text|null: false, length: { maximum: 1000 }|
 |profit|integer||null:false|
 |user_id|references|null: false, foreign_key: true|
 

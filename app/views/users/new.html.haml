@@ -1,6 +1,7 @@
 .single-vessel
   %header.single-vessel__header
-    = image_tag "/images/logo.svg",class:"mercari"
+    = link_to root_path, class:'links' do
+      = image_tag "/images/logo.svg",class:"mercari"
   %main.single-vessel__main
     %section.single-vessel__main__container
       %h2.single-vessel__main__container__head
@@ -9,9 +10,9 @@
         .single-vessel__main__container__inner__content
           .btn-default.btn-mail
             -# TODO: 上の１行を後に変更
-            -# =link_to  ""
-            %i.far.fa-envelope.mail-icon
-            メールアドレスで確認
+            =link_to new_user_registration_path do
+              %i.far.fa-envelope.mail-icon
+              メールアドレスで確認
           %button{id: "facebook-login", class: "btn-default btn-sns-facebook"}
             %i.fab.fa-facebook-square.facebook-icon
             Facebookで登録
