@@ -1,4 +1,5 @@
--# = render partial:"stepMeter"
+= render partial:"stepMeter"
+ 
 .mainframe
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     .mainframe__title 
@@ -85,3 +86,5 @@
         = f.submit "暫定ログイン",id:"linkbutton"
       .mainframe__contents__registerLink
         = link_to '本人情報の登録について>', "https://www.mercari.com/jp/help_center/article/423/",class:"linkblue"
+
+= render partial:"stepMeterFooter"
