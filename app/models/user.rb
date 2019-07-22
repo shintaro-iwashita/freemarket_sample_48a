@@ -15,6 +15,12 @@ class User < ApplicationRecord
         provider: auth.provider,
         email:    auth.info.email,
         password: Devise.friendly_token[0, 20],
+        avatar:auth.info.image,
+        nickname:auth.info.name,
+        first_name:"a",
+        first_name_kana:"a",
+        family_name:"a",
+        family_name_kana:"a",
       )
     end
 

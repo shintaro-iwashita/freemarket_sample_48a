@@ -15,14 +15,14 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.datetime :remember_created_at
 
     # あとでこれらを適用
-      # t.text :avatar, :text
-      # t.string :nickname, null:false,length:{maximum:20}
+      t.text :avatar
+      t.string :nickname, null:false,length:{maximum:20}
       # t.text :self_introduction
       # t.integer :evaluation,null:false
-      # t.string :family_name,null:false
-      # t.string :first_name, null:false
-      # t.string  :family_name_kana, null:false
-      # t.string  :first_name_kana, null:false
+      t.string :family_name,null:false
+      t.string :first_name, null:false
+      t.string  :family_name_kana, null:false
+      t.string  :first_name_kana, null:false
       # t.date  :data_of_birth, null:false
       # t.string  :how_to_pay, null:false
       # t.string  :gender, null:false,foreign_key:true
