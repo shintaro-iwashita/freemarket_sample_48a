@@ -56,10 +56,12 @@
                 %option{value:"10"} その他
               %div
             .form-group 
+              -# = form_for @detail do |d|
               %label
                 商品の状態
               %span.form-require 必須
               %div
+              -# = f.select :condition, Product.conditions.keys, {}, class: "select-default"
               %select.select-default
                 %option{value: ""} ---
                 %option{value: "1"} 新品、未使用
@@ -147,44 +149,45 @@
                 %option{value: "1"} 1~2日で発送
                 %option{value: "2"} 2~3日で発送
                 %option{value:"3"} 4~7日で発送
-      .sell-content-price
-        %h3.sell-sub-head 販売価格(300〜9,999,999)
-        %cliafix
-          %a.form-question{href:"#", target: "_blank"} ?
-        .sell-form-box
-          %ul.sell-price
-            %form-group   
-              %label.l-left
-                価格
-                %span.form-require 必須
-              .l-right.sell-price-input
-                ¥
-                %input.input-price{placeholder: "例）300", value: ""}
-            %li.clearfix
-              .l-left
-                販売手数料 (10%) -
-            %li.clearfix.bold
-              .l-left.price 
-                販売利益 (10%)
-              .l-right.price -
-      .sell-content.sell-btn-box
-        %div
-          %p
-            %a{href: "/jp/help_center/getting_started/prohibited_items/", target: "_blank"} 禁止されている出品、
-            %a{href: "/jp/help_center/getting_started/prohibited_conduct/", target: "_blank"} 行為
-            を必ずご確認ください。
-          %p
-            またブランド品でシリアルナンバー等がある場合はご記載ください。
-            %a{href:"/jp/help_center/getting_started/counterfeit_goods/", target: "_blank"} 偽ブランドの販売
-            は犯罪であり処罰される可能性があります。
-          %p
-            また、出品をもちまして
-            %a{href: "/jp/seller_terms/"} 加盟店規約
-            に同意したことになります。
-            %div
-        %button.btn-default.btn-red{type: "submit"}
-          出品する
-        %a.btn-default.btn-gray もどる
+        .sell-content-price
+          %h3.sell-sub-head 販売価格(300〜9,999,999)
+          %cliafix
+            %a.form-question{href:"#", target: "_blank"} ?
+          .sell-form-box
+            %ul.sell-price
+              %form-group   
+                %label.l-left
+                  価格
+                  %span.form-require 必須
+                .l-right.sell-price-input
+                  ¥
+                  = f.text_field :price, placeholder: "例）300", class: "input-price"
+                  -# %input.input-price{placeholder: "例）300", value: ""}
+              %li.clearfix
+                .l-left
+                  販売手数料 (10%) -
+              %li.clearfix.bold
+                .l-left.price 
+                  販売利益 (10%)
+                .l-right.price -
+        .sell-content.sell-btn-box
+          %div
+            %p
+              %a{href: "/jp/help_center/getting_started/prohibited_items/", target: "_blank"} 禁止されている出品、
+              %a{href: "/jp/help_center/getting_started/prohibited_conduct/", target: "_blank"} 行為
+              を必ずご確認ください。
+            %p
+              またブランド品でシリアルナンバー等がある場合はご記載ください。
+              %a{href:"/jp/help_center/getting_started/counterfeit_goods/", target: "_blank"} 偽ブランドの販売
+              は犯罪であり処罰される可能性があります。
+            %p
+              また、出品をもちまして
+              %a{href: "/jp/seller_terms/"} 加盟店規約
+              に同意したことになります。
+              %div
+          %button.btn-default.btn-red{type: "submit"}
+            出品する
+          %a.btn-default.btn-gray もどる
 
 
 = render partial: "layouts/sub-footer"
