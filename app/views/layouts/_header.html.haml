@@ -33,23 +33,28 @@
         %p ブランド1
         %p ブランド2
     .header__row2__lists
-      .header__row2__lists__newuser
-        = link_to new_user_path, class: 'links' do
-          新規会員登録
-      .header__row2__lists__login
-        = link_to new_user_session_path do
-          ログイン
+      - if user_signed_in?
+        .header__row2__lists__general
+          %i.far.fa-bell
+          = link_to "https://www.mercari.com/jp/mypage/notification/",class: 'links' do
+            %span お知らせ
+        .header__row2__lists__general
+          %i.fas.fa-check.gray
+          = link_to "https://www.mercari.com/jp/mypage/todo/",class: 'links' do
+            %span やることリスト
+        .header__row2__lists__general
+          %i.far.fa-smile-beam.gray
+          = link_to "users/index", class: 'links' do
+            %span マイページ
+      - else
+        .header__row2__lists__newuser
+          = link_to new_user_registration_path, class: 'links' do
+            %p 新規会員登録
+        .header__row2__lists__login
+          = link_to new_user_session_path,class: 'links' do
+            %p ログイン
       
-    // userサインイン時
-    -# .header__row2__list2
-    -#   %i.far.fa-bell.gray
-    -#   お知らせ
-    -# .header__row2__list2
-    -#   %i.fas.fa-check.gray
-    -#   やることリスト
-    -# .header__row2__list2
-    -#   %i.far.fa-smile-beam.gray
-    -#   マイページ
+
 
 
 
