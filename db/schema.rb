@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 2019_07_15_124939) do
     t.string "first_name", null: false
     t.string "family_name_kana", null: false
     t.string "first_name_kana", null: false
+    t.string "provider"
+    t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

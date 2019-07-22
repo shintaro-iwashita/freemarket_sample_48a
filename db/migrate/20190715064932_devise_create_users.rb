@@ -27,8 +27,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # t.string  :how_to_pay, null:false
       # t.string  :gender, null:false,foreign_key:true
       # # facebookでログイン時
-      # t.string  :provider
-      # t.string  :uid
+      t.string  :provider
+      t.string  :uid
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
