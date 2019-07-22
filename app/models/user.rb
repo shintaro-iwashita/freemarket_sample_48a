@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:omniauthable
 
-  validates :nickname, :family_name,:family_name_kana,:first_name,:first_name_kana,presence: true;
+  # validates :nickname, :family_name,:family_name_kana,:first_name,:first_name_kana,presence: true;
 
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first

@@ -68,11 +68,6 @@ ActiveRecord::Schema.define(version: 2019_07_15_124939) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "nickname", null: false
-    t.string "family_name", null: false
-    t.string "first_name", null: false
-    t.string "family_name_kana", null: false
-    t.string "first_name_kana", null: false
     t.string "provider"
     t.string "uid"
     t.datetime "created_at", null: false
