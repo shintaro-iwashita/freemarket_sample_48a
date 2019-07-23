@@ -24,10 +24,8 @@ ActiveRecord::Schema.define(version: 2019_07_15_124939) do
 
   create_table "product_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.bigint "parent_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["parent_id"], name: "index_product_categories_on_parent_id"
   end
 
   create_table "product_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
