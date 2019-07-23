@@ -25,7 +25,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string  :first_name_kana, null:false
       # t.date  :data_of_birth, null:false
       # t.string  :how_to_pay, null:false
-      # t.string  :gender, null:false,foreign_key:true
+      t.string  :gender, null:false,foreign_key:true
       # # facebookでログイン時
       t.string  :provider
       t.string  :uid
