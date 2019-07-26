@@ -32,15 +32,6 @@ ActiveRecord::Schema.define(version: 2019_07_15_124939) do
     t.index ["product_id"], name: "index_product_categories_on_product_id"
   end
 
-  create_table "product_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "size", null: false
-    t.integer "condition", null: false
-    t.bigint "product_id", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["product_id"], name: "index_product_details_on_product_id"
-  end
-
   create_table "product_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
     t.bigint "user_id", null: false
@@ -56,6 +47,8 @@ ActiveRecord::Schema.define(version: 2019_07_15_124939) do
     t.integer "price", null: false
     t.text "prescription", null: false
     t.integer "profit", null: false
+    t.integer "size", null: false
+    t.integer "condition", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -79,7 +72,6 @@ ActiveRecord::Schema.define(version: 2019_07_15_124939) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "product_details", "products"
   add_foreign_key "product_images", "products"
   add_foreign_key "product_images", "users"
   add_foreign_key "products", "users"

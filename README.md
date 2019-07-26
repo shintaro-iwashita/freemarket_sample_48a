@@ -123,16 +123,6 @@
 ### Association
 - belongs_to :product
 
-## products_detailsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|size|integer|null:false|
-|condition|integer|null: false|
-|product_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :product
 
 ## product_categoriesテーブル
 
