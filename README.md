@@ -139,13 +139,11 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|parent_id|reference|null: false|
-|product_id|reference|null: false|
+|ansestry|string|
 
 ### Association
 - belongs_to :product
-- belongs_to :parent, class_name: :product_categorie
-- has_many :children, class_name: product_categorie :, foreign_key: :parent_id
+- has_many :ancestry
 
 ## product_brandテーブル
 
