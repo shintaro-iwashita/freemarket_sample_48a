@@ -1,12 +1,16 @@
 class Product < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+
+  belongs_to_active_hash :prefecture
+
+  enum condition_id: [:unused, :like_new, :invisibly_damaged, :slightly_damaged, :damaged, :bad]
+
+  enum shipping_responsibility: [:including_postage, :cash_on_delivery]
+
+  enum shipping_method: [:undecided, :easy_mercari, :yu_mail, :letter_pack, :regular_mail, :kuronekoyamato, :yu_pack, :click_post, :yu_pakcet]
+
+  enum shipping_day: [:in_two_days, :in_three_days, :in_seven_days]
 
 
-  enum condition: [['---',""],['新品、未使用',"1"],['未使用に近い',"2"],['目立った傷や汚れなし',"3"],['やや傷や汚れあり',"4"],['傷や汚れあり',"5"],['全体的に状態が悪い',"6"]]
-
-  enum shipping_responsibility: [['---',""],['送料込み(出品者負担)',"1"],['着払い(購入者負担)',"2"]]
-
-  enum shipping_method: [['---',""],['未定',"1"],['らくらくメルカリ便',"2"],['ゆうメール',"3"],['レターパック',"4"],['普通郵便(定形、定形外)',"5"],['クロネコヤマト',"6"],['ゆうパック',"7"],['クリックポスト',"8"],['ゆうパケット',"9"]]
-
-  enum shipping_day: [['---',""],['１〜２日で発送',"1"],['２〜３日で発送',"2"],['４〜７日で発送']]
 
 end
