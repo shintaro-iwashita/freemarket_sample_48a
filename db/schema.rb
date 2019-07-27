@@ -14,12 +14,10 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
 
   create_table "product_brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.bigint "parent_id", null: false
-    t.bigint "product_id", null: false
+    t.integer "parent_id", null: false
+    t.integer "product_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["parent_id"], name: "index_product_brands_on_parent_id"
-    t.index ["product_id"], name: "index_product_brands_on_product_id"
   end
 
   create_table "product_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -32,25 +30,27 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
 
   create_table "product_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
-    t.bigint "user_id", null: false
-    t.bigint "product_id", null: false
+    t.bigint "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["product_id"], name: "index_product_images_on_product_id"
-    t.index ["user_id"], name: "index_product_images_on_user_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.text "description", null: false
+    t.integer "size_id"
+    t.integer "condition_id", null: false
     t.integer "price", null: false
-    t.text "prescription", null: false
     t.integer "profit", null: false
-    t.integer "size", null: false
-    t.integer "condition", null: false
-    t.bigint "user_id", null: false
+    t.bigint "product_category_id"
+    t.integer "delivery_responsibility", null: false
+    t.integer "delivery_method", null: false
+    t.integer "delivery_area", null: false
+    t.integer "delivery_day", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["user_id"], name: "index_products_on_user_id"
+    t.index ["product_category_id"], name: "index_products_on_product_category_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -70,7 +70,4 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "product_images", "products"
-  add_foreign_key "product_images", "users"
-  add_foreign_key "products", "users"
 end
