@@ -59,18 +59,24 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, length: { maximum: 40 }|
+|description|text|null: false, length: { maximum: 1000 }|
+|size_id|integer|
+|condition_id|integer|null:false|
 |price|integer|null:false|
-|prescription|text|null: false, length: { maximum: 1000 }|
 |profit|integer||null:false|
-|user_id|references|null: false, foreign_key: true|
+|product_category_id|references|
+|delivery_responsibility|integer||null:false|
+|delivery_method|integer||null:false|
+|delivery_area|integer||null:false|
+|delivery_day|integer||null:false|
+|seller_id|references|
+|buyer_id|references|
 
 ### Association
 - belongs_to :user
 - has_many :comments, dependent: :destroy
 - has_many :product_images, dependent: :destroy
-- has_one :shipping, dependent: :destroy
-- has_one :product_categories, dependent: :destroy
-- has_one :products_details, dependent: :destroy
+- belongs_to :product_category
 - has_one :product_brand, dependent: :destroy
 - has_many :likes
 
@@ -105,8 +111,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null:false|
-|user_id|references|null: false, foreign_key: true|
-|product_id|references|null: false, foreign_key: true|
+|product_id|references|
 
 ### Association
 - belongs_to :product
@@ -123,29 +128,17 @@
 ### Association
 - belongs_to :product
 
-## products_detailsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|size|integer|null:false|
-|condition|integer|null: false|
-|product_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :product
 
 ## product_categoriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|parent_id|reference|null: false|
-|product_id|reference|null: false|
+|ansestry|string|
 
 ### Association
-- belongs_to :product
-- belongs_to :parent, class_name: :product_categorie
-- has_many :children, class_name: product_categorie :, foreign_key: :parent_id
+- has_many :products
+
 
 ## product_brandテーブル
 

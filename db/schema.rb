@@ -10,27 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_15_084555) do
+ActiveRecord::Schema.define(version: 2019_07_22_102901) do
+
+  create_table "product_brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "parent_id", null: false
+    t.integer "product_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "product_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_product_categories_on_ancestry"
+  end
 
   create_table "product_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
-    t.bigint "user_id", null: false
-    t.bigint "product_id", null: false
+    t.bigint "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["product_id"], name: "index_product_images_on_product_id"
-    t.index ["user_id"], name: "index_product_images_on_user_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.text "description", null: false
+    t.integer "size_id"
+    t.integer "condition_id", null: false
     t.integer "price", null: false
-    t.text "pescription", null: false
     t.integer "profit", null: false
-    t.bigint "user_id", null: false
+    t.bigint "product_category_id"
+    t.integer "delivery_responsibility", null: false
+    t.integer "delivery_method", null: false
+    t.integer "delivery_area", null: false
+    t.integer "delivery_day", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["user_id"], name: "index_products_on_user_id"
+    t.index ["product_category_id"], name: "index_products_on_product_category_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -39,24 +59,15 @@ ActiveRecord::Schema.define(version: 2019_07_15_084555) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text "avatar"
     t.string "nickname", null: false
-    t.text "self_introduction"
-    t.integer "evaluation", null: false
     t.string "family_name", null: false
     t.string "first_name", null: false
     t.string "family_name_kana", null: false
     t.string "first_name_kana", null: false
-    t.date "data_of_birth", null: false
-    t.string "how_to_pay", null: false
-    t.string "gender", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "product_images", "products"
-  add_foreign_key "product_images", "users"
-  add_foreign_key "products", "users"
 end
