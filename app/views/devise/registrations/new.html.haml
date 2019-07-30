@@ -18,7 +18,7 @@
             = link_to "Facebookで登録", user_facebook_omniauth_authorize_path
           %button{id: "google-login", class:"btn-default btn-sns-google"}
             = image_tag "/images/google.png",class:"google-niji"
-            Googleで登録
+            = link_to "Googleで登録", user_google_omniauth_authorize_path
     -# TODO:あとに実装する
     -# %form{id: "login_form_facebook",action: "",method: "POST",novalidate: "novalidate"}
     -# %form{id: "login_form_google",action:"",method:"POST",novalidate: "novalidate"}
