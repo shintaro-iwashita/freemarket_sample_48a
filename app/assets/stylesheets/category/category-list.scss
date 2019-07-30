@@ -15,8 +15,8 @@
       }
     }
     &__list{
+      @include clearfix();
       text-align: center;
-      display: flow-root;
       &__name{
         border-radius: 4px;
         min-width: 4px;
@@ -41,6 +41,7 @@
     &__box{
       margin: 30px auto;
       &__white{
+        @include clearfix();
         border-radius: 4px;
         margin-bottom: 40px;
         background: #fff;
@@ -57,6 +58,31 @@
         }
         &__inner{
           padding: 24px 30px 10px 30px;
+          p{
+            font-size: 16px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+          }
+          &__name{
+            padding-top: 15px;
+            padding-bottom: 5px;
+          }
+          &__box{
+            @include clearfix();
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            &__sub{
+              float: left;
+              width: 45%;
+              padding: 0 20px 0 0;
+              p{
+                font-size: 16px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+              }
+            }
+          }
         }
       }
     }
