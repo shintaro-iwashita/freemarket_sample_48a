@@ -1,0 +1,87 @@
+.categoryindex__pc__box__white__name
+  %h3{id: "root_category-8"}
+    家電・スマホ・カメラ
+.categoryindex__pc__box__white__inner
+  %p
+    - ProductCategory.find(984).children.limit(1).each do |child|
+      = link_to child.name, 'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      スマートフォン/携帯電話
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(984).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      スマホアクセサリー
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(991).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      PC/タブレット
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1001).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      カメラ
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1011).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      テレビ/映像機器
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1020).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      オーディオ機器
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1030).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      美容/健康
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1040).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      冷暖房/空調
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1048).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      生活家電
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1063).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      その他
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1076).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
