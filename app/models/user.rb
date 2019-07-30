@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:omniauthable,
-         omniauth_providers: [:facebook]
+         omniauth_providers: [:facebook, :google_oauth2]
 
   # validates :nickname, :family_name,:family_name_kana,:first_name,:first_name_kana,presence: true;
   def self.from_omniauth(auth)

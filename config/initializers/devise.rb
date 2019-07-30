@@ -12,11 +12,16 @@ Devise.setup do |config|
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
   config.scoped_views = true
-  
+
+# facebook
   config.omniauth :facebook,
   Rails.application.secrets.facebook_client_id,
   Rails.application.secrets.facebook_client_secret
-
+  
+# google
+  config.omniauth :google_oauth2,
+  Rails.application.secrets.google_client_id,
+  Rails.application.secrets.google_client_secret
 
 
 end
