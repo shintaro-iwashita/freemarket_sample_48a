@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users,
+      controllers: {
+        omniauth_callbacks: 'users/omniauth_callbacks'
+  }
+  
   root "products#index"
   resources :products, only: [:index, :show ,:new] do
     resources :purchases, only: [:index]
   end
-  # resources :users, only: [:index, :new, :edit,] do
-  #   resources :confirms, only: [:edit]
-  # end
+  resources :users, only: [:index, :new, :edit,] do
+    resources :confirms, only: [:edit]
+  end
 
   # 新規会員登録画面お届け先住所
   resources :addresses, only: [:new, :create] 

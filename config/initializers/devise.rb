@@ -12,6 +12,11 @@ Devise.setup do |config|
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
   config.scoped_views = true
-  config.omniauth :facebook, '866168363764565', '1dee036317fc78be52176fc12a0a94c8'
+  
+  config.omniauth :facebook,
+  Rails.application.secrets.facebook_client_id,
+  Rails.application.secrets.facebook_client_secret
+
+
 
 end

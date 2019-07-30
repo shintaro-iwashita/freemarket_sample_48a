@@ -12,13 +12,13 @@
             -# TODO: 上の１行を後に変更
             =link_to new_user_registration_path do
               %i.far.fa-envelope.mail-icon
-              メールアドレスで確認
+              メールアドレスで登録
           %button{id: "facebook-login", class: "btn-default btn-sns-facebook"}
             %i.fab.fa-facebook-square.facebook-icon
-            = link_to "Facebookで登録", user_facebook_omniauth_authorize_path
+            = link_to "Facebookで登録", user_facebook_omniauth_authorize_path,class:"links"
           %button{id: "google-login", class:"btn-default btn-sns-google"}
             = image_tag "/images/google.png",class:"google-niji"
-            = link_to "Googleで登録", user_google_omniauth_authorize_path
+            = link_to "Googleで登録",class:"links"
     -# TODO:あとに実装する
     -# %form{id: "login_form_facebook",action: "",method: "POST",novalidate: "novalidate"}
     -# %form{id: "login_form_google",action:"",method:"POST",novalidate: "novalidate"}
