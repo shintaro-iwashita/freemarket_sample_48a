@@ -8,7 +8,7 @@
         カテゴリー一覧
     .categoryindex__pc__list.clearfix
       -@product_categories.each do |category|
-        = link_to category.name, 'url', class:"categoryindex__pc__list__name"
+        = link_to category.name, '#root_category', class:"categoryindex__pc__list__name"
     .categoryindex__pc__box
       -# #TODO レディース
       .categoryindex__pc__box__white.clearfix
