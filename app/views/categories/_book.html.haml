@@ -1,0 +1,62 @@
+.categoryindex__pc__box__white__name
+  %h3{id: "root_category-5"}
+    本・音楽・ゲーム
+.categoryindex__pc__box__white__inner
+  %p
+    = link_to ProductCategory.find(681).name, 'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      本
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(683).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      漫画
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(699).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      雑誌
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(708).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      CD
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(715).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      DVD/ブルーレイ
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(724).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      レコード
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(735).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      テレビゲーム
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(740).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'

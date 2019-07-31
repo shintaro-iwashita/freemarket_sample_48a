@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :edit,] do
     resources :confirms, only: [:edit]
   end
+  resources :categories, only: [:index]
 
   # 新規会員登録画面お届け先住所
   resources :addresses, only: [:new, :create] 
