@@ -3,8 +3,7 @@
     ハンドメイド
 .categoryindex__pc__box__white__inner
   %p
-    - ProductCategory.find(1201).children.limit(1).each do |child|
-      = link_to child.name, 'url'
+    = link_to ProductCategory.find(1202).name, 'url'
   .categoryindex__pc__box__white__inner__name
     %h4
       アクセサリー(女性用)

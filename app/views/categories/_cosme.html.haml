@@ -3,8 +3,7 @@
     コスメ・香水・美容
 .categoryindex__pc__box__white__inner
   %p
-    - ProductCategory.find(873).children.limit(1).each do |child|
-      = link_to child.name, 'url'
+    = link_to ProductCategory.find(874).name, 'url'
   .categoryindex__pc__box__white__inner__name
     %h4
       ベースメイク
