@@ -78,6 +78,7 @@ gem 'payjp'
 gem "gretel"
 gem 'devise'
 gem 'jquery-rails'
+gem 'ancestry'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'

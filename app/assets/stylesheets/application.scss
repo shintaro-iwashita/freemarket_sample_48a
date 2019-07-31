@@ -1,12 +1,12 @@
 // 全体に関するSCSS
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-@import "./top";
+@import './top';
 @import 'user';
 @import 'login_users';
 @import 'reset';
 @import 'config/colors';
-@import "./links";
+@import './links';
 @import 'mixins/clearfix.scss';
 @import 'mixins/single-box.scss';
 @import 'config/font.scss';
@@ -24,7 +24,8 @@
 @import 'detail/_tbody.scss';
 @import 'mypage-nav';
 @import 'card';
-@import "./confirm_purchace";
-@import "detail/_other.scss";
-@import "confirms/edit.scss";
+@import './confirm_purchace';
+@import 'detail/_other.scss';
+@import 'confirms/edit.scss';
 @import 'noveus';
+@import 'category/category-list';
