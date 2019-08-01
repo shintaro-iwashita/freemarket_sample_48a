@@ -1,4 +1,4 @@
 class Product < ApplicationRecord
-  belongs_to :ProductCategory
-  has_many :product_images, dependent: :destory
+  belongs_to :product_category
+  has_many :product_images
 end
