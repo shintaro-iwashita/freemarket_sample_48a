@@ -250,16 +250,25 @@ $radius:6px;
           margin: 0 auto;
           display: flex;
           padding-top: 30px;
+          &_price{
+            display: flex;
+            font-size: 18px;
+            font-weight: bolder;
+            margin: 35px 0 0 20px;
+          }
           &_images{
             margin: 0 auto;
             vertical-align: bottom;
+            
           }
             &_image-title{
               background-color: white;
               height: 90px;
               width: 215px;
               color: black;
-              padding-top: 20px;
+              padding-top: 30px;
+              font-size: 17px;
+              font-weight: lighter;
             }
         }
       }
