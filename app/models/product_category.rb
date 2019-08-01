@@ -1,5 +1,4 @@
 class ProductCategory < ApplicationRecord
-
-  has_ancestry
   has_many :products
+  has_ancestry
 end
