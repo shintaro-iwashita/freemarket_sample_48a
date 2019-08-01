@@ -3,9 +3,11 @@ class ProductsController < ApplicationController
   end
   
   def show
+    @products = Product.all
+    binding.pry
   end
 
   def new
   end
-  
+
 end
