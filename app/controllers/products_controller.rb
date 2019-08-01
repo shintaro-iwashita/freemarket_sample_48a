@@ -3,8 +3,8 @@ class ProductsController < ApplicationController
   end
   
   def show
-    @products = Product.all
-    binding.pry
+    @products = Product.find(params[:id])
+    # binding.pry
   end
 
   def new
