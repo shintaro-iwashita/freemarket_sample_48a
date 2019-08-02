@@ -83,7 +83,8 @@
         =link_to "利用規約","https://www.mercari.com/jp/tos_list/",class:"linkblue"
         %span に同意したものとみなします。
       .mainframe__contents__proceedbutton
-        = f.submit "暫定ログイン",id:"linkbutton"
+        = link_to '次へ進む',new_address_path,class:"link",id:"linkbutton"
+        -# = f.submit "次へ進む",id:"linkbutton"
       .mainframe__contents__registerLink
         = link_to '本人情報の登録について>', "https://www.mercari.com/jp/help_center/article/423/",class:"linkblue"
 
