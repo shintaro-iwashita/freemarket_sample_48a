@@ -39,18 +39,23 @@
   -#   .td
   .tr
     .th 商品の状態
-    .td 悪い
+    .td
+      = @products.description
   .tr
     .th 配送料の負担
-    .td 送料込み(出品者負担)
+    .td
+      = @products.delivery_responsibility
+
   .tr
     .th 配送の方法
-    .td らくらくメルカリ便
+    .td
+      = @products.delivery_method
   .tr
     .th 配送元地域
     .td
-      = link_to '大阪府', '#' 
+      = @products.delivery_area
   .tr
     .th 発送日の目安
-    .td 1~7日で発送
+    .td
+      = @products.delivery_day
 
