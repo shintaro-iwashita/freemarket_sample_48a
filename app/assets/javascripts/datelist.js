@@ -1,4 +1,5 @@
-$(function() {
+
+$(document).on('turbolinks:load',function() {
   function appendDays(){
   // その月の日数を決める
     year = $("#yearlist").val();
