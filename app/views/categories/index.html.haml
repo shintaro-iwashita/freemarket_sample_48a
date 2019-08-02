@@ -1,22 +1,56 @@
-= render partial: "layouts/header"
 - breadcrumb :categories
 = breadcrumbs separator: " &rsaquo; ", link_current: true
-.category
-  .category-nav
-    %h1 カテゴリー一覧
-    .category-nav__box
-      .category-nav__box__title
-        = link_to "カテゴリ名", "#"
+-# #TODO ヘッダー
+= render partial: "layouts/header"
 
-  .category-box
-    .category-box__list
-      .category-box__list__large
-        = link_to "カテゴリ名", "#"
-      .category-box__list__middle
-        %p.category-box__list__middle__name
-          = link_to "カテゴリ名", "#"
-          .category-box__list__small
-            %p
-              = link_to "カテゴリ名", "#"
+.categoryindex
+  .categoryindex__pc
+    .categoryindex__pc__gray
+      %h2
+        カテゴリー一覧
+    .categoryindex__pc__list.clearfix
+      -@product_categories.each do |category|
+        = link_to category.name, "#root category", class:"categoryindex__pc__list__name"
+    .categoryindex__pc__box
+      -# #TODO レディース
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/ladies"
+      -# #TODO メンズ
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/mens"
+      -# #TODO ベビー・キッズ
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/baby"
+      -# #TODO インテリア・住まい・小物
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/interior"
+      -# #TODO 本・音楽・ゲーム
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/book"
+      -# #TODO おもちゃ・ホビー・グッズ
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/toy"
+      -# #TODO コスメ・香水・美容
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/cosme"
+      -# #TODO 家電・スマホ・カメラ
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/appliance"
+      -# #TODO スポーツ・レジャー
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/sports"
+      -# #TODO ハンドメイド
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/handmade"
+      -# #TODO チケット
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/ticket"
+      -# #TODO 自転車・オートバイ
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/bike"
+      -# #TODO その他
+      .categoryindex__pc__box__white.clearfix
+        = render partial: "categories/others"
 
+-# #TODO フッター
 = render partial: "layouts/footer"

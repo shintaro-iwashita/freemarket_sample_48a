@@ -65,12 +65,15 @@ a {
 
           .btn-mail{
             position: relative;
-            background-color: #eee;
+            background-color: #EA452E;
             color: #000;
+            a {
+              color: white;
+            }
           }
 
           .mail-icon{
-            color:#ccc;
+            color: white;
             position: absolute;
             left: 16px;
             top: 15px;

@@ -1,0 +1,18 @@
+.headernew
+  .headernew__icons
+    = link_to root_path, class:'hovering' do
+      = image_tag("/images/m-logo.png",width:'250px',height:'80px',id:"titleIcon")
+  .headernew__stepmeter
+    = image_tag("/images/registration_completion.png",width:'450px',height:'90px')
+.mainframe
+  .mainframe__title 
+    %b 会員登録完了
+  .mainframe__contents
+    .mainframe__contents__message
+      %p ありがとうございます。
+      %br 会員登録が完了しました。
+    
+    .mainframe__contents__proceedbutton
+      = link_to 'メルカリをはじめる', root_path, id:"linkbutton"
+    
+= render partial:"/devise/registrations/stepMeterFooter"

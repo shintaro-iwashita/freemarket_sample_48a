@@ -1,0 +1,102 @@
+.categoryindex__pc__box__white__name
+  %h3{id: "root_category-8"}
+    スポーツ・レジャー
+.categoryindex__pc__box__white__inner
+  %p
+    = link_to ProductCategory.find(1081).name, 'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      ゴルフ
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1080).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      フィッシング
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1090).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      自転車
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1098).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      トレーニング/エクササイズ
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1107).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      野球
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1114).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      サッカー/フットサル
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1126).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      テニス
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1135).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      スノーボード
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1146).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      スキー
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1159).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      その他スポーツ
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1171).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      アウトドア
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1185).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      その他
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1196).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'

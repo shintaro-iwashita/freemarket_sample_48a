@@ -1,0 +1,78 @@
+.categoryindex__pc__box__white__name
+  %h3{id: "root_category-9"}
+    ハンドメイド
+.categoryindex__pc__box__white__inner
+  %p
+    = link_to ProductCategory.find(1202).name, 'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      アクセサリー(女性用)
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1201).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      ファッション/小物
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1212).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      アクセサリー/時計
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1220).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      日用品/インテリア
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1226).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      趣味/おもちゃ
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1235).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      キッズ/ベビー
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1240).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      素材/材料
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1247).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      二次創作物
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1253).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
+  .categoryindex__pc__box__white__inner__name
+    %h4
+      その他
+  .clearfix.categoryindex__pc__box__white__inner__box
+    - ProductCategory.find(1257).children.each do |child|
+      .categoryindex__pc__box__white__inner__box__sub
+        %p
+          = link_to child.name,'url'
