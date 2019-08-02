@@ -19,11 +19,6 @@
           %button{id: "google-login", class:"btn-default btn-sns-google"}
             = image_tag "/images/google.png",class:"google-niji"
             = link_to "Googleで登録する",user_google_oauth2_omniauth_authorize_path,class:"links-black"
-    -# TODO:あとに実装する
-    -# %form{id: "login_form_facebook",action: "",method: "POST",novalidate: "novalidate"}
-    -# %form{id: "login_form_google",action:"",method:"POST",novalidate: "novalidate"}
-      -# %input{type:"hidden",id:"google", value:""}
-      -# %input{type:"hidden",id:"facebook_app_id", value:""}
   %footer.single-vessel__footer
     %nav
       %ul.clearfix
