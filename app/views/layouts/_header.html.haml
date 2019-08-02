@@ -35,6 +35,10 @@
     .header__row2__lists
       - if user_signed_in?
         .header__row2__lists__general
+          %i.far.fa-heart
+          = link_to "",class: 'links' do
+            %span いいね！一覧
+        .header__row2__lists__general
           %i.far.fa-bell
           = link_to "https://www.mercari.com/jp/mypage/notification/",class: 'links' do
             %span お知らせ
@@ -44,12 +48,11 @@
             %span やることリスト
         .header__row2__lists__general
           %i.far.fa-smile-beam.gray
-          = link_to "users/index", class: 'links' do
+          = link_to users_path, class: 'links' do
             %span マイページ
-          = link_to "ログアウト",destroy_user_session_path,method:"Delete"
       - else
         .header__row2__lists__newuser
-          = link_to "users/new", class: 'links' do
+          = link_to new_user_registration_path, class: 'links' do
             %p 新規会員登録
         .header__row2__lists__login
           = link_to new_user_session_path,class: 'links' do
