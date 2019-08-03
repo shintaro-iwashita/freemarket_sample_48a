@@ -6,7 +6,7 @@
     condition_id: "#{index}",
     price: "#{index}00",
     profit: "#{index}00",
-    product_category_id: "#{index}",
+    product_category_id: "1",
     delivery_responsibility: "responsibility#{index}",
     delivery_method: "method#{index}",
     delivery_area: "area#{index}",
