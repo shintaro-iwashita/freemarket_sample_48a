@@ -2,30 +2,51 @@ crumb :root do
   link "メルカリ", root_path
 end
 
-crumb :logout do
-  link "ログアウト", logout_index_path
+# カテゴリ個別ページ実装後にビューに記述
+crumb :category do |category|
+  link category.name, category
+  parent :categories
 end
-# crumb :projects do
-#   link "Projects", projects_path
-# end
 
-# crumb :project do |project|
-#   link project.name, project_path(project)
-#   parent :projects
-# end
+crumb :categories do
+  link "カテゴリー一覧", categories_path
+  parent :root
+end
 
-# crumb :project_issues do |project|
-#   link "Issues", project_issues_path(project)
-#   parent :project, project
-# end
+crumb :brands do
+  link "ブランド一覧", brands_path
+  parent :root
+end
 
-# crumb :issue do |issue|
-#   link issue.title, issue_path(issue)
-#   parent :project_issues, issue.project
-# end
+crumb :mypage do
+  link "マイページ", users_path
+  parent :root
+end
 
-# If you want to split your breadcrumbs configuration over multiple files, you
-# can create a folder named `config/breadcrumbs` and put your configuration
-# files there. All *.rb files (e.g. `frontend.rb` or `products.rb`) in that
-# folder are loaded and reloaded automatically when you change them, just like
-# this file (`config/breadcrumbs.rb`).
+# 商品個別ページ実装後にビューに記述
+crumb :product do |product|
+  link product.name, product_path(product)
+  parent :root
+end
+
+# 商品名仮置き
+crumb :product do
+  link "商品名", product_path
+  parent :root
+end
+
+crumb :profile do
+  link "プロフィール編集", edit_user_path
+  parent :mypage
+end
+
+crumb :confirm do
+  link "本人情報の登録", edit_user_confirm_path
+  parent :mypage
+end
+
+crumb :logout do
+  link "ログアウト"
+  parent :mypage
+end
+
