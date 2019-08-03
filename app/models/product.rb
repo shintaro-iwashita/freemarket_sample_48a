@@ -11,6 +11,6 @@ class Product < ApplicationRecord
 
 
   belongs_to_active_hash :prefecture
-  belongs_to :ProductCategory
+  belongs_to :product_category, optional: true
   has_many :product_images, dependent: :destroy
 end

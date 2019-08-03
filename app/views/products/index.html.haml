@@ -1,4 +1,6 @@
 = render partial: "layouts/header" 
+= breadcrumbs separator: " &rsaquo; ", link_current: true
+
 
 .contents
   .contents__top__image-box
@@ -9,21 +11,41 @@
         レディース新着アイテム
         .contents__container__item_title_itembox
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.first.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.first.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.first.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.second.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.second.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.second.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.third.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.third.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.third.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.fourth.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.fourth.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.fourth.price
 
       .contents__container__item_link
         %a.contents__container__item_link_text 
@@ -35,21 +57,41 @@
         メンズ新着アイテム
         .contents__container__item_title_itembox
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.first.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.first.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.first.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.second.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.second.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.second.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.third.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.third.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.third.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.fourth.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.fourth.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.fourth.price
 
       
       .contents__container__item_link
@@ -61,21 +103,41 @@
         ベビー・キッズ新着アイテム
         .contents__container__item_title_itembox
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.first.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.first.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.first.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.second.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.second.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.second.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.third.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.third.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.third.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.fourth.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.fourth.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.fourth.price
 
       
       .contents__container__item_link
@@ -87,122 +149,45 @@
         コスメ・香水・美容 新着アイテム
         .contents__container__item_title_itembox
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.first.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.first.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.first.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.second.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.second.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.second.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.third.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.third.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.third.price
           .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
+            = image_tag @product_images.fourth.image, size: "215x250"
             .contents__container__item_title_itembox_image-title
-              null
+              %p
+                =@products.fourth.name
+              .contents__container__item_title_itembox_price
+                ¥
+                %p
+                  =@products.fourth.price
       
       .contents__container__item_link
         %a.contents__container__item_link_text
           = link_to "すべての商品を見る",{}, class: 'links-blue'
-    
-    %h2.contents__container_title ピックアップブランド
-    .contents__container__item
-      %h3.contents__container__item_title 
-        シャネル新着アイテム
-        .contents__container__item_title_itembox
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
 
-      .contents__container__item_link
-        %a.contents__container__item_link_text
-          = link_to "すべての商品を見る",{}, class: 'links-blue'
-      
-      %h3.contents__container__item_title 
-        ルイ ヴィトン 新着アイテム
-        .contents__container__item_title_itembox
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-
-      .contents__container__item_link
-        %a.contents__container__item_link_text
-          = link_to "すべての商品を見る",{}, class: 'links-blue'
-
-      %h3.contents__container__item_title 
-        シュプリーム 新着アイテム
-        .contents__container__item_title_itembox
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-
-      .contents__container__item_link
-        %a.contents__container__item_link_text
-          = link_to "すべての商品を見る",{}, class: 'links-blue'
-      
-      %h3.contents__container__item_title 
-        ナイキ 新着アイテム
-        .contents__container__item_title_itembox
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-          .contents__container__item_title_itembox_images
-            = image_tag("null.png", size: "215x250", class:"top-images")
-            .contents__container__item_title_itembox_image-title
-              null
-
-      .contents__container__item_link
-        %a.contents__container__item_link_text
-          = link_to "すべての商品を見る",{}, class: 'links-blue'
 
 = render partial: "layouts/footer"

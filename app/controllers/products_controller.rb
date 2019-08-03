@@ -1,7 +1,10 @@
 class ProductsController < ApplicationController
   def index
+    @product_images = ProductImage.all
+    @products = Product.all
+
   end
-  
+
   def show
   end
 
@@ -20,5 +23,5 @@ class ProductsController < ApplicationController
   def get_category_grandchildren
     @category_grandchildren = ProductCategory.find("#{params[:child_id]}").children
   end
-  
+
 end
