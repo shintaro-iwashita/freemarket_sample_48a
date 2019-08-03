@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,:omniauthable,
          omniauth_providers: [:facebook, :google_oauth2]
 
-  validates :nickname, :family_name,:family_name_kana,:first_name,:first_name_kana,presence: true;
+  validates :nickname, :family_name,:family_name_kana,:first_name,:first_name_kana,:birthday_year,:birthday_month,:birthday_day,presence: true;
 
 
   def self.from_omniauth(auth)

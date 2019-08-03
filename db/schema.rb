@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
     t.string "first_name", null: false
     t.string "family_name_kana", null: false
     t.string "first_name_kana", null: false
-    t.integer "birthday_year", null: false
+    t.string "birthday_year"
     t.integer "birthday_month", null: false
     t.integer "birthday_day", null: false
     t.string "provider"

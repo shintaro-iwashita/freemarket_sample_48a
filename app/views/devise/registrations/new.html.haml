@@ -45,30 +45,28 @@
         %b 生年月日
         %span.mainframe__contents__unit__span 必須
         .mainframe__contents__unit__lists
-          .mainframe__contents__unit__lists__list
-          = f.text_field :first_name_kana ,placeholder:'例(アヤ'
-
-            %select{name:"year",id:"yearlist",style:"text-align:-webkit-center"}
-              %option{selected:"selected"}--
-              -2019.step(1900,-1) do |i|
-                %option #{i}
-              end
+          .mainframe__contents__unit__lists__list#yearlist
+            - choices = ["--"]
+            - 2019.step(1900,-1) do |i|
+              - choices << i
+            = f.select :birthday_year,choices
             %i.fas.fa-chevron-down
             %span.mainframe__contents__unit__lists__list__span 年
-          .mainframe__contents__unit__lists__list
-            %select{name:"month",id:"monthlist"}
-              %option{selected:"selected"}--
-              -1.step(12,1) do |i|
-                %option #{i}
-              end
+          .mainframe__contents__unit__lists__list#monthlist
+            - monthlist = ["--"]
+            - 1.step(12,1) do |i|
+              - monthlist << i
+            = f.select :birthday_month,monthlist
             %i.fas.fa-chevron-down
             %span.mainframe__contents__unit__lists__list__span 月
-          .mainframe__contents__unit__lists__list
-
+          .mainframe__contents__unit__lists__list#datelist-hidden
+            - daylist = ["--"]
+            - 1.step(5,1) do |i|
+              - daylist << i
+            = f.hidden_field :birthday_day
             %select{name:"day",id:"datelist"}
               %option{selected:"selected"}--
             %i.fas.fa-chevron-down
-
       .mainframe__contents__unit
         %p.mainframe__contents__unit__sentence1 
           ※本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
