@@ -1,8 +1,9 @@
-100.times do |index|
+10.times do |index|
   Product.create!( 
     id: "#{index}",
     name: "substitute#{index}",
     description: "description#{index}",
+    size_id: "#{index}",
     condition_id: "#{index}",
     price: "#{index}00",
     profit: "#{index}00",
