@@ -1,5 +1,7 @@
 = render partial: "layouts/header"
 // #TODO 商品写真・購入ボタン・説明
+- breadcrumb :product
+= breadcrumbs separator: " &rsaquo; ", link_current: true
 %section.item-box-container
   %h1.item-box-container__item-name
     = @products.name
