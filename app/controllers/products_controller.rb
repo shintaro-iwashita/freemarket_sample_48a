@@ -10,18 +10,24 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @category_parent_array = []
-    ProductCategory.where(ancestry: nil).each do |parent|
-      @category_parent_array << parent.name
-    end
+    @category_parent_array = ProductCategory.where(ancestry: nil)
+  end
+
+  def create
+    Product.create(product_params)
+    redirect_to controller: :products, action: :index
   end
 
   def get_category_children
-    @category_children = ProductCategory.find_by(name: "#{params[:parent_name]}", ancestry: nil).children
+    @category_children = ProductCategory.find_by(id: "#{params[:parent_id]}", ancestry: nil).children
   end
 
   def get_category_grandchildren
     @category_grandchildren = ProductCategory.find("#{params[:child_id]}").children
+  end
+
+  def product_params
+    params.require(:product).permit(:name, :description, :size_id, :condition_id, :price, :product_category_id, :delivery_responsibility, :delivery_method, :delivery_area, :delivery_day ).merge( profit: 1212312)
   end
 
 end
