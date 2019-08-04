@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
+  has_many :buyer_products, class_name: 'Production', :foreign_key => 'buyer_id'
+  has_many :seller_products, class_name: 'Production', :foreign_key => 'seller_id'
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:omniauthable
 
