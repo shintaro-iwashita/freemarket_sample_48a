@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  
   def index
     @product_images = ProductImage.all
     @products = Product.all
@@ -27,7 +28,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :size_id, :condition_id, :price, :product_category_id, :delivery_responsibility, :delivery_method, :delivery_area, :delivery_day ).merge( profit: 1212312)
+    params.require(:product).permit(:name, :description, :size_id, :condition_id, :price, :product_category_id, :delivery_responsibility, :delivery_method, :delivery_area, :delivery_day).merge(seller_id: current_user.id)
   end
 
 end
