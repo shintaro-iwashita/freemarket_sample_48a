@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     @products = Product.find(params[:id])
-    # binding.pry
+    binding.pry
   end
 
   def new
