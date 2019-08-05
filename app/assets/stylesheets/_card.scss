@@ -70,6 +70,7 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        color: white;
         i {
           color: white;
           margin-right: 16px;
@@ -133,17 +134,20 @@
             margin-left: 8px;
           }
         }
-        select {
-          width: 120px;
-          height: 48px;
-          border-radius: 4px;
-          border: 1px solid $box-gray2;
-          background-color: white;
-          font-size: 14px;
-          padding: 0 16px;
-          margin-top: 8px;
-          cursor: pointer;
+        &__date{
+          display: flex;
         }
+          select {
+            width: 120px;
+            height: 48px;
+            border-radius: 4px;
+            border: 1px solid $box-gray2;
+            background-color: white;
+            font-size: 14px;
+            padding: 0 16px;
+            margin-top: 8px;
+            cursor: pointer;
+          }
 
         .cvc {
           width: 288px;
@@ -175,4 +179,3 @@
     }
   }
 }
-
