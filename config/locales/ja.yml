@@ -1,0 +1,30 @@
+ja:
+  enums:
+    product:
+      condition_id:
+        unused: "新品、未使用"
+        like_new: "未使用に近い"
+        invisibly_damaged: "目立った傷や汚れなし"
+        slightly_damaged: "やや傷や汚れあり"
+        damaged: "傷や汚れあり"
+        bad: "全体的に状態が悪い"
+
+      delivery_responsibility:
+        including_postage: "送料込み(出品者負担)"
+        cash_on_delivery: "着払い(購入者負担)"
+
+      delivery_method:
+        undecided: "未定"
+        easy_mercari: "らくらくメルカリ便"
+        yu_mail: "ゆうメール"
+        letter_pack: "レターパック"
+        regular_mail: "普通郵便(定形、定形外)"
+        kuronekoyamato: "クロネコヤマト"
+        yu_pack: "ゆうパック"
+        click_post: "クリックポスト"
+        yu_pakcet: "ゆうパケット"
+
+      delivery_day:
+        in_two_days: "1~2日で発送"
+        in_three_days: "2~3日で発送"
+        in_seven_days: "4~7日で発送"
