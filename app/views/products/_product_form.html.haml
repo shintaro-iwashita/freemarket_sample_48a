@@ -53,7 +53,7 @@
         .sell-content
           %div
             %h3.sell-sub-head 配送について
-            %a.form-question{:href => "#", target: "_blank"} ?
+            = link_to '?', "#" ,class: "form-question"
           .sell-form-box
             .form-group
               %label
@@ -86,7 +86,7 @@
         .sell-content
           %div
             %h3.sell-sub-head 販売価格(300〜9,999,999)
-            %a.form-question{href:"#", target: "_blank"} ?
+            = link_to '?', "#" ,class: "form-question"
           .sell-form-box
             %ul.sell-price
               .form-group 
@@ -106,17 +106,18 @@
         .sell-btn-box
           %div
             %p
-              %a{href: "/jp/help_center/getting_started/prohibited_items/", target: "_blank"} 禁止されている出品、
-              %a{href: "/jp/help_center/getting_started/prohibited_conduct/", target: "_blank"} 行為
+              = link_to '禁止されている出品、', "/jp/help_center/getting_started/prohibited_items/"
+              = link_to '行為', "/jp/help_center/getting_started/prohibited_conduct/"
               を必ずご確認ください。
             %p
               またブランド品でシリアルナンバー等がある場合はご記載ください。
-              %a{href:"/jp/help_center/getting_started/counterfeit_goods/", target: "_blank"} 偽ブランドの販売
+              = link_to '偽ブランドの販売', "/jp/help_center/getting_started/counterfeit_goods/"
               は犯罪であり処罰される可能性があります。
             %p
               また、出品をもちまして
-              %a{href: "/jp/seller_terms/"} 加盟店規約
+              = link_to '加盟店規約', "/jp/seller_terms/"
               に同意したことになります。
               %div
           = f.submit '出品する', class: 'btn-default btn-red'
-          %a.btn-default.btn-gray もどる
+          = link_to 'もどる', "#", class: "btn-default btn-gray"
+
