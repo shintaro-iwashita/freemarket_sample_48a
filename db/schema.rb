@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
     t.datetime "remember_created_at"
     t.text "avatar"
     t.string "nickname", null: false
+    t.text "self_introduction"
+    t.integer "evaluation", null: false
     t.string "family_name", null: false
     t.string "first_name", null: false
     t.string "family_name_kana", null: false
@@ -68,6 +70,8 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
     t.string "birthday_year"
     t.integer "birthday_month", null: false
     t.integer "birthday_day", null: false
+    t.string "how_to_pay", null: false
+    t.string "gender"
     t.string "provider"
     t.string "uid"
     t.datetime "created_at", null: false

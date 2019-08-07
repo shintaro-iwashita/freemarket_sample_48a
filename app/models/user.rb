@@ -14,14 +14,15 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.avatar = auth.info.image
       user.nickname = auth.info.name
-      user.birthday_year = 2019
-      user.birthday_month = 01
-      user.birthday_day = 01
-      user.first_name = auth.extra.raw_info.first_name
-      binding.pry
-      user.first_name_kana = "a"
-      user.family_name = "a"
-      user.family_name_kana = "a"
+      user.birthday_year = ""
+      user.birthday_month = ""
+      user.birthday_day = ""
+      user.gender = ""
+      user.first_name_kana = ""
+      user.family_name = ""
+      user.first_name = ""
+      user.family_name_kana = ""
+      user.evaluation = ""
     end
   end
 

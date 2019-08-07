@@ -17,18 +17,18 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
     # あとでこれらを適用
       t.text :avatar
       t.string :nickname, null:false,length:{maximum:20}
-      # t.text :self_introduction
-      # t.integer :evaluation,null:false
+      t.text :self_introduction
+      t.integer :evaluation,null:false
       t.string :family_name,null:false
       t.string :first_name, null:false
-      t.string  :family_name_kana, null:false
-      t.string  :first_name_kana, null:false
-      t.string :birthday_year
+      t.string  :family_name_kana,null:false
+      t.string  :first_name_kana,null:false
+      t.string :birthday_year,null:false
       t.integer :birthday_month,null:false
       t.integer :birthday_day,null:false
-      # t.date  :data_of_birth, null:false
-      # t.string  :how_to_pay, null:false
-      # t.string  :gender, null:false,foreign_key:true
+      t.string  :how_to_pay
+      t.string  :gender
+
       # # facebookでログイン時
       t.string  :provider
       t.string  :uid
