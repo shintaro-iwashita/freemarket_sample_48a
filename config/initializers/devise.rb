@@ -16,8 +16,8 @@ Devise.setup do |config|
 # facebook
   config.omniauth :facebook,
   Rails.application.secrets.facebook_client_id,
-  Rails.application.secrets.facebook_client_secret
-
+  Rails.application.secrets.facebook_client_secret,
+  info_fields: 'first_name'
 # google
   
   config.omniauth :google_oauth2,

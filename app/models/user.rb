@@ -17,7 +17,8 @@ class User < ApplicationRecord
       user.birthday_year = 2019
       user.birthday_month = 01
       user.birthday_day = 01
-      user.first_name = "a"
+      user.first_name = auth.extra.raw_info.first_name
+      binding.pry
       user.first_name_kana = "a"
       user.family_name = "a"
       user.family_name_kana = "a"
