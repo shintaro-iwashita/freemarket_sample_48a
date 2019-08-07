@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   def show
     @products = Product.find(params[:id])
     @product_images = ProductImage.find(params[:id])
-    binding.pry
+    # binding.pry
   end
 
   def new
