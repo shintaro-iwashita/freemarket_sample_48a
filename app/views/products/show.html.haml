@@ -13,7 +13,7 @@
           .item-box-container__content__photo__owl__outer__stage
             .item-box-container__content__photo__owl__outer__stage__item.active
               .item-box-container__content__photo__owl__outer__stage__item__inner
-                = image_tag "1965_image_1.jpeg", alt:"", class: "owl-lazy",style:"",data:{src:""}
+                = image_tag(@product_images.image)
             .item-box-container__content__photo__owl__outer__stage__item
               .item-box-container__content__photo__owl__outer__stage__item__inner
                 = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
@@ -50,9 +50,12 @@
     .item-box-container__content__table
       = render partial: "products/tbody"
   .item-box-container__price
-    %span.item-box-container__price__bold ¥0,010
-    %span.item-box-container__price__tax (税込)
-    %span.item-box-container__price__fee 送料込み
+    %span.item-box-container__price__bold
+      = @products.price
+    %span.item-box-container__price__tax
+      (税込)
+    %span.item-box-container__price__fee
+      送料込み
   .item-box-containert__visible
     %button.item-box-container__visible__buy
       = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
