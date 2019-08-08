@@ -1,21 +1,25 @@
 class CardsController < ApplicationController
-
-  def index
-  end
-
-  class CardsController < ApplicationController
-    require "payjp"
-    before_action :set_card
+ 
+    # before_action :set_card
 
   def new # カードの登録画面。送信ボタンを押すとcreateアクションへ。
-    card = Card.where(user_id: current_user.id).first
-    redirect_to action: "index" if card.present?
-    @card = Card.new
+    # card = Card.where(user_id: current_user.id).first
+    # redirect_to action: "index" if card.present?
+    @card = CreditCard.new
   end
 
 
   def create #PayjpとCardのデータベースを作成
-    Payjp.api_key = 'sk_test_7841bdccba9b357aa48f99c7'
+    respond_to do |format|
+      format.json {
+        require 'payjp'
+        Payjp.api_key = "sk_test_7841bdccba9b357aa48f99c7"
+        current_user.update(token_id: params[:token])
+      }
+    end
+
+
+
 
     if params['payjp-token'].blank?
       redirect_to action: "new"
@@ -38,10 +42,10 @@ class CardsController < ApplicationController
 
   private
 
-  def set_card
-    @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
-  end
-end
+  # def set_card
+  #   @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
+  # end
+
 
   def destroy
   end

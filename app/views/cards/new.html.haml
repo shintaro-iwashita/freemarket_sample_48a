@@ -10,7 +10,7 @@
             .credit__content__form__group
               %label.credit__content__form__group__no カード番号
               %span.credit__content__form__group__require 必須
-              =f.text_field :name, class:  "number",maxlength: "16", type: "text",  placeholder: "半角数字のみ"
+              =f.text_field :number, class:  "number", maxlength: "16", type: "text",  placeholder: "半角数字のみ"
               %ul.credit__content__form__group__list
                 %li.card
                   = image_tag "/images/card/visa.svg", width: "49", height: "20"
@@ -31,15 +31,15 @@
               %span.credit__content__form__group__require 必須
               .credit__content__form__group__date
                 .credit__content__form__group__date__select
-                = f.collection_select :prefecture_id, Month.all, :id, :name, {}, {class: 'credit__content__form__group__select__month'}
+                = f.collection_select :exp_month, Month.all, :id, :name, {}, {class: 'credit__content__form__group__select__month'}
                 %span 月
                 .credit__content__form__group__date__select 
-                = f.collection_select :prefecture_id, Year.all, :id, :name, {}, {class: 'credit__content__form__group__select__year'}
+                = f.collection_select :exp_year, Year.all, :id, :name, {}, {class: 'credit__content__form__group__select__year'}
                 %span 年
             .credit__content__form__group
               %label.credit__content__form__security セキュリティコード
               %span.credit__content__form__group__require 必須
-              %input{type: "text", class: "cvc", id: "payment_card_security_code", name: "cvc", placeholder: "カード背面4桁もしくは3桁の番号"}
+              =f.text_field :number, class: "cvc", type: "text",  placeholder: "カード背面4桁もしくは3桁の番号"
               .credit__content__form__group__help
                 %span.credit__content__form__group__help__icon ?
                 %span カード裏面の番号とは？
