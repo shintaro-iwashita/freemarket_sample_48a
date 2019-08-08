@@ -1,2 +1,18 @@
+%button{name: "button4",class: "btn-default btn-gray"} この商品を削除する
 
-= link_to("削除", "/products/#{@product.id}/destroy", {method: "post"})
+.delete-form
+  .delete-form__confirm
+    確認
+  .delete-form__text
+    %p 削除すると二度と復活できません。
+  .delete-form__text
+    %p 削除する代わりに停止することもできます。
+  .delete-form__text
+    %br
+    %p 本当に削除しますか？
+  .delete-form__btn
+    .delete-form__btn__cancel
+      = link_to "キャンセル","/products/#{@product.id}/edit"
+  .delete-form__btn 
+    .delete-form__btn__delete
+      = link_to "削除する", product_path(@product.id), method: :delete
