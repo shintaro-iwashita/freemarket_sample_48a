@@ -9,7 +9,6 @@ class ProductsController < ApplicationController
     @products = Product.find(params[:id])
     @product_images = ProductImage.find(params[:id])
     @category_parent_array = ProductCategory.find(params[:id])
-    # binding.pry
   end
 
   def new
