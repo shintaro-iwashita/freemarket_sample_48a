@@ -42,7 +42,9 @@
       = render partial: "products/tbody"
   .item-box-container__price
     %span.item-box-container__price__bold
-      = @product.price
+      ¥
+      %p
+        = @product.price
     %span.item-box-container__price__tax
       (税込)
     %span.item-box-container__price__fee

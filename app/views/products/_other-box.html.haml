@@ -10,9 +10,10 @@
       .item-profile__box__content_box_body
         %h3.item-profile__box__content_box_body_name
           何か
-        .item-profile__box__content_box_body_num
-        .item-profile__box__content_box_body_num_price
-          = @product.price
+        .itemxxxx-profile__box__content_box_body_num_price
+          ¥
+          %p
+            = @product.price
 %section.items-container
   %h2.item-profile__box_head
     = link_to @product.name + "その他の商品", '#'
