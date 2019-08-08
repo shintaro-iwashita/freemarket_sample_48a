@@ -1,6 +1,6 @@
 = render partial: "layouts/header" 
-
-
+- breadcrumb :logout
+= breadcrumbs separator: " &rsaquo; ", link_current: true
 .Container
   %header
   .mypage
@@ -8,8 +8,8 @@
     .mypage__content
       .logout
         .logout__link
-          = link_to destroy_user_session_path ,class:'links',method:"Delete" do
-            ログアウト
+          = link_to "ログアウト", destroy_user_session_path, method: :delete 
+
   %footer
 
 = render partial: "layouts/footer"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_22_102901) do
+ActiveRecord::Schema.define(version: 2019_08_04_085952) do
 
   create_table "product_brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
     t.integer "size_id"
     t.integer "condition_id", null: false
     t.integer "price", null: false
-    t.integer "profit", null: false
     t.bigint "product_category_id"
     t.integer "delivery_responsibility", null: false
     t.integer "delivery_method", null: false
@@ -50,7 +49,19 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
     t.integer "delivery_day", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer "seller_id"
+    t.integer "buyer_id"
     t.index ["product_category_id"], name: "index_products_on_product_category_id"
+  end
+
+  create_table "shippings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "shipping_charges", null: false
+    t.string "delivery_source_area", null: false
+    t.string "days_to_delivery", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["product_id"], name: "index_shippings_on_product_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -77,4 +88,5 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "shippings", "products"
 end

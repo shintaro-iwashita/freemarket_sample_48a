@@ -3,7 +3,7 @@
 }
 .sell-form {
     width: 700px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid $box-gray;
 }
 
     .l-single-head {
@@ -33,8 +33,8 @@
         padding: 40px;
         position: relative;
         min-height: 162px;
-        background: #f5f5f5;
-        border: 1px dashed #ccc;
+        background: $background-gray;
+        border: 1px dashed $box-gray;
         font-size: 0;
         text-align: center;
         -webkit-transition: -webkit-box-shadow ease-out .3s;
@@ -53,8 +53,6 @@
     b.product-title {
         margin-left: 55px
     }
-
-    
 
     .sell-upload-drop-box.have-item-0 {
         width: 70%;
@@ -84,7 +82,7 @@
 
 
     .form-require {
-        background: #ea352d;
+        background: $mercari-red;
         margin: 0 0 0 8px;
         padding: 2px 4px;
         border-radius: 2px;
@@ -95,19 +93,13 @@
     
 
 
-    .sell-content-i{
-    height: 275px;
-    padding: 40px;
-    border-top: 1px solid #eee;
-   
-}
     .input-default {
         width: 586px;
         height: 35px;
         margin: 8px 0 0;
         padding: 10px 16px 8px;
         border-radius: 4px;
-        border: 1px solid #ccc;
+        border: 1px solid $box-gray2;
         background: #fff;
         line-height: 1.5;
         font-size: 16px;
@@ -119,21 +111,13 @@
         min-height: 104px;
         padding: 10px;
         margin-top: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid $box-gray2;
         background: #fff;
         font-size: 16px;
         line-height: 1.5;
     }
 
-
-.sell-content-item {
-    height: 275px;
-    padding: 40px;
-    border-top: 1px solid #eee;
-}
-
     .sell-form-box {
-        float: right;
         width: 400px;
         margin: 0;
     }
@@ -150,7 +134,7 @@
         height: 48px;
         padding: 0 16px;
         border-radius: 4px;
-        border: 1px solid #ccc;
+        border: 1px solid $box-gray2;
         background: 0;
         font-size: 16px;
         line-height: 1.5;
@@ -158,18 +142,12 @@
         margin-top: 5px
     }
 
-
-.sell-content-delivery {
-    height: 275px;
-    padding: 40px;
-    border-top: 1px solid #eee;
-}
 .form-question {
     display: inline-block;
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: #0099e8;
+    background: $font-blue;
     color: #fff;
     line-height: 14px;
     font-size: 12px;
@@ -180,12 +158,13 @@
     background: #fff;
 }
 
-.form-group {
-    margin: 40px 0 0;
+.form-group+.form-group {
+    margin-top: 40px;
 }
 
+
+
 .sell-form-box {
-    float: right;
     width: 400px;
     margin: 0;
 }
@@ -194,30 +173,19 @@ div {
     display: block;
 }
 
-    .sell-content-price {
-        height: 275px;
-        padding: 40px;
-        border-top: 1px solid #eee;
-    }
-
-
     .input-price {
         height: 30px;
         width: 150px;
         padding: 10px 16px 8px;
         border-radius: 4px;
-        border: 1px solid #ccc;
+        border: 1px solid $box-gray2;
         background: #fff;
         line-height: 1.5;
         font-size: 16px;
-
-    }
-    .input-price{
-        float: right;
+        text-align: right;
     }
     .sell-price-input{
-        width: 50%;
-        float: right;
+        margin-right: 10px;
         line-height: 50px
     }
 
@@ -227,15 +195,10 @@ div {
         margin: 0 0 0 5%;
     }
     
-    .price_bloc {
-        height: 218px;
+    .form-price {
         display: flex;
-    }
-
-    .form_price_title{
-        width: 200px;
-        height: 100px;
-        
+        justify-content: flex-end;
+        margin-bottom: 20px;
     }
 
     .price_form {
@@ -246,7 +209,7 @@ div {
 
     .sell-price>li {
         padding: 0 0 24px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid $box-gray2;
         border-style: none;
     }
     .l-left {
@@ -254,13 +217,10 @@ div {
         line-height: 50px;
         display: inline-block;
     }
-.l-hanbai{
-    line-height: 90px;
-}
 
 .sell-price>li {
     padding: 5px 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $box-gray2;
 }
 
     ul, ol {
@@ -268,36 +228,48 @@ div {
     }
 
 
-
-    .sell-price .bold .l-left {
-        font-size: 16px;
-    }
+.price-box {
+    display: flex;
+    justify-content: space-between;
+}
 
     .l-right.price {
         height: 100%;
-        margin:auto 0;
-        float: right;
+        width: 50px;
         line-height: 50px;
         font-size: 26px;
+        text-align: right;
+    }
+
+    .l-right.price.bold {
         font-weight: bold;
     }
 
     .l-left.price {
         font-weight: bold;
+        font-size: 16px;
     }
 
-
-
-
-.sell-content.sell-btn-box {
-    height: 275px;
+.sell-content {
+    display: flex;
     padding: 40px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid $box-gray;
+    justify-content: space-between;
+}
+
+.sell-content-i {
+    padding: 40px;
+    border-top: 1px solid $box-gray;
+}
+
+.sell-btn-box {
+    padding: 40px;
+    border-top: 1px solid $box-gray;
 }
 
     .btn-red {
-        background: #ea352d;
-        border: 1px solid #ea352d;
+        background: $mercari-red;
+        border: 1px solid $mercari-red;
         color: #fff;
     }
     .btn-default {
