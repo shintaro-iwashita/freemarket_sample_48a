@@ -61,11 +61,14 @@ ActiveRecord::Schema.define(version: 2019_07_22_102901) do
     t.datetime "remember_created_at"
     t.text "avatar"
     t.string "nickname", null: false
-    t.string "family_name", null: false
-    t.string "first_name", null: false
-    t.string "family_name_kana", null: false
-    t.string "first_name_kana", null: false
-    t.string "gender", null: false
+    t.text "self_introduction"
+    t.integer "evaluation"
+    t.string "family_name"
+    t.string "first_name"
+    t.string "family_name_kana"
+    t.string "first_name_kana"
+    t.string "how_to_pay"
+    t.string "gender"
     t.string "provider"
     t.string "uid"
     t.datetime "created_at", null: false

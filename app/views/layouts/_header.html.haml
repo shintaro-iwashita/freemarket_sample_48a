@@ -52,7 +52,7 @@
             %span マイページ
       - else
         .header__row2__lists__newuser
-          = link_to new_user_registration_path, class: 'links' do
+          = link_to new_user_path, class: 'links' do
             %p 新規会員登録
         .header__row2__lists__login
           = link_to new_user_session_path,class: 'links' do

@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe User do
   describe '#create' do
-    it "is valid with a nickname, email, password, password_confirmation,family_name,family_name_kana,first_name,first_name_kana" do
+    it "is valid with a nickname, email, password, password_confirmation" do
       user = build(:user)
       expect(user).to be_valid
     end
@@ -43,28 +43,5 @@ describe User do
       expect(another_user.errors[:email]).to include("has already been taken")
     end
 
-    it "is invalid without a family_name" do
-      user = build(:user, family_name: nil)
-      user.valid?
-      expect(user.errors[:family_name]).to include("can't be blank")
-    end
-
-    it "is invalid without a family_name_kana" do
-      user = build(:user, family_name_kana: nil)
-      user.valid?
-      expect(user.errors[:family_name_kana]).to include("can't be blank")
-    end
-
-    it "is invalid without a first_name" do
-      user = build(:user, first_name: nil)
-      user.valid?
-      expect(user.errors[:first_name]).to include("can't be blank")
-    end
-
-    it "is invalid without a first_name_kana" do
-      user = build(:user, first_name_kana: nil)
-      user.valid?
-      expect(user.errors[:first_name_kana]).to include("can't be blank")
-    end
   end
 end

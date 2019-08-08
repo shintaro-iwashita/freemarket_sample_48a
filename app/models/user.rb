@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,:omniauthable,
          omniauth_providers: [:facebook, :google_oauth2]
 
-  validates :nickname, :family_name,:family_name_kana,:first_name,:first_name_kana,presence: true;
+  validates :nickname,presence: true;
 
 
   def self.from_omniauth(auth)
@@ -14,11 +14,6 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.avatar = auth.info.image
       user.nickname = auth.info.name
-      user.gender = "a"
-      user.first_name = "a"
-      user.first_name_kana = "a"
-      user.family_name = "a"
-      user.family_name_kana = "a"
     end
   end
 
