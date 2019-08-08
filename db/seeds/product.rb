@@ -1,5 +1,5 @@
 10.times do |index|
-  Product.create!(
+  Product.create!( 
     id: "#{index+1}",
     name: "substitute#{index+1}",
     description: "description#{index+1}",

@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  
   def index
     @product_images = ProductImage.all
     @products = Product.all
