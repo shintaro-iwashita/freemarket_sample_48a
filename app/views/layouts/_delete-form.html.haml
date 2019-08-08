@@ -12,7 +12,7 @@
     %p 本当に削除しますか？
   .delete-form__btn
     .delete-form__btn__cancel
-      = link_to "キャンセル","/products/#{@product.id}/edit"
+      = link_to "キャンセル",product_path(@product.id)
   .delete-form__btn 
     .delete-form__btn__delete
       = link_to "削除する", product_path(@product.id), method: :delete
