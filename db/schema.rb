@@ -54,16 +54,6 @@ ActiveRecord::Schema.define(version: 2019_08_04_085952) do
     t.index ["product_category_id"], name: "index_products_on_product_category_id"
   end
 
-  create_table "shippings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "shipping_charges", null: false
-    t.string "delivery_source_area", null: false
-    t.string "days_to_delivery", null: false
-    t.bigint "product_id", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["product_id"], name: "index_shippings_on_product_id"
-  end
-
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -81,5 +71,4 @@ ActiveRecord::Schema.define(version: 2019_08_04_085952) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "shippings", "products"
 end
