@@ -4,7 +4,7 @@
 = breadcrumbs separator: " &rsaquo; ", link_current: true
 %section.item-box-container
   %h1.item-box-container__item-name
-    = @products.name
+    = @product.name
   %p.item-box-container__item-wording
   .item-box-container__content.clearfix
     .item-box-container__content__photo
@@ -42,7 +42,7 @@
       = render partial: "products/tbody"
   .item-box-container__price
     %span.item-box-container__price__bold
-      = @products.price
+      = @product.price
     %span.item-box-container__price__tax
       (税込)
     %span.item-box-container__price__fee

@@ -3,7 +3,7 @@
   .tr
     .th 出品者
     .td
-      = link_to @products.name, ""
+      = link_to @product.name, ""
       %div
         .user-rank
           %i.fas.fa-laugh.user-rank_good
@@ -32,22 +32,22 @@
   .tr
     .th 商品の状態
     .td
-      = @products.condition_id_i18n
+      = @product.condition_id_i18n
   .tr
     .th 配送料の負担
     .td
-      = @products.delivery_responsibility_i18n
+      = @product.delivery_responsibility_i18n
   .tr
     .th 配送の方法
     .td
-      = @products.delivery_method_i18n
+      = @product.delivery_method_i18n
   .tr
     .th 配送元地域
     .td
-      - prefecture_id = @products.delivery_area
+      - prefecture_id = @product.delivery_area
       = Prefecture.find(prefecture_id).name
   .tr
     .th 発送日の目安
     .td
-      = @products.delivery_day_i18n
+      = @product.delivery_day_i18n
 

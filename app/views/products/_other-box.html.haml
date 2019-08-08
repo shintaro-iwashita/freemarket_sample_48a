@@ -1,7 +1,7 @@
 // #TODO 出品者のその他の出品商品
 %section.item-profile__box
   %h2.item-profile__box_head
-    = link_to @products.name + "さんのその他の出品" , '#'
+    = link_to @product.name + "さんのその他の出品" , '#'
   .item-profile__box__content.clearfix
     %section.item-profile__box__content_box
       = link_to '', ''
@@ -12,10 +12,10 @@
           何か
         .item-profile__box__content_box_body_num
         .item-profile__box__content_box_body_num_price
-          = @products.price
+          = @product.price
 %section.items-container
   %h2.item-profile__box_head
-    = link_to @products.name + "その他の商品", '#'
+    = link_to @product.name + "その他の商品", '#'
   .item-profile__box__content.clearfix
     %section.item-profile__box__content_box
       = link_to '', ''
