@@ -9,6 +9,16 @@ class ProductsController < ApplicationController
   def show
   end
 
+  def edit
+    @product = Product.find_by(id: params[:id])
+  end
+
+  def destroy
+    @product = Product.find_by(id: params[:id])
+    @product.destroy
+    redirect_to("/")
+  end
+
   def new
     @product = Product.new
     @category_parent_array = ProductCategory.where(ancestry: nil)
