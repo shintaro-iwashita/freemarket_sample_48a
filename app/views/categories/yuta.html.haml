@@ -1,0 +1,20 @@
+= render partial: "layouts/header"
+- breadcrumb :categories
+= breadcrumbs separator: " &rsaquo; ", link_current: true
+
+.categoryPage
+  .categoryPage__title
+    %p バッテリー/充電器の商品一覧
+  .categoryPage__lists
+    .categoryPage__lists__list
+      .categoryPage__lists__list__image
+        = image_tag "/images/T-shirt.jpg",class:"categoryPage__lists__list__image__tag"
+      .categoryPage__lists__list__texts
+        .categoryPage__lists__list__texts__name
+          %p タンクトップ
+        .categoryPage__lists__list__texts__details
+          .categoryPage__lists__list__texts__details__price
+            ￥400
+          .categoryPage__lists__list__texts__details__favorite
+            %i.far.fa-heart
+            %span 0

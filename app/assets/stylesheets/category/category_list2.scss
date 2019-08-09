@@ -1,0 +1,60 @@
+.categoryPage{
+  box-sizing:border-box;
+  width:80%;
+  height:100%;
+  margin:0 auto;
+  // background-color:red;
+  &__title{
+    font-size:1.3rem;
+    font-weight:bold;
+    margin:2% 0;
+  }
+  &__lists{
+    display:flex;
+    margin-bottom:50px;
+    &__list{
+      font-size:1.05rem;
+      background-color:white;
+      width:200px;
+      height:300px;
+      margin:20px;
+      &__image{
+        height:80%;
+        width:100%;
+        &__tag{
+          height:95%;
+        }
+      }
+      &__texts{
+        word-wrap: break-word;
+        $padding:10%;
+        width:100%;
+        position:relative;
+        height:100%;
+        &__name{
+          height:70px;
+          padding-left:$padding;
+          padding-right:$padding;
+          background-color:white;
+        }
+        &__details{
+          display:flex;
+          font-weight:bold;
+          position:relative;
+          height:30px;
+          background-color:white;
+          &__price{
+            position:absolute;
+            left:$padding;
+          }
+          &__favorite{
+            text-align:right;
+            position:absolute;
+            right:$padding;
+          }
+        }
+      }
+    }
+  }
+}
+
