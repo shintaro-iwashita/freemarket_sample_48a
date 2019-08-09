@@ -21,7 +21,7 @@
           .item-box-container__content__photo__owl__dots__dot.active
             %span
             .item-box-container__content__photo__owl__dots__dot__in
-              = image_tag "6875fda9.png",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
+  
     .item-box-container__content__table
       = render partial: "products/tbody"
   .item-box-container__price
@@ -43,10 +43,7 @@
     -#   = link_to 'アプリで購入', data:{toggle: 'open-app'},data:{url:{scheme:"mercari://"}},data:{action: 'item/openDetail'}
   .item-box-container__description
     %p.item-box-container__description__inner
-      匿名ブランドの何かです。
-      使用感があります。
-      中古なのでご理解の上ご購入下さい。
-      よろしくお願いします。
+      = @products.description
   .item-box-container__button
     .item-box-container__button__left
       %button{type: "button",name: "like!",data:{toggele:'like'},data:{id:''},data:{ga:'element'},class:"item-button like",data:{ga:{lable:'like'}} }

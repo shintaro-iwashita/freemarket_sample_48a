@@ -6,7 +6,7 @@
     size_id: 1,
     condition_id: 1,
     price: "#{index+1}00",
-    product_category_id: 2,
+    product_category_id: ProductCategory.
     delivery_responsibility: 1,
     delivery_method: 1,
     delivery_area: 1,
