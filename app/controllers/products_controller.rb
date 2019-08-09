@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   def index
     @product_images = ProductImage.all
     @products = Product.all
-
+    @product = Product.find_by(id: params[:id])
   end
 
   def show
