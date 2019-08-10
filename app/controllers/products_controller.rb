@@ -1,14 +1,12 @@
 class ProductsController < ApplicationController
-  
+
   def index
     @product_images = ProductImage.all
     @products = Product.all
-
   end
 
   def show
     @product = Product.find(params[:id])
-    @product_image = ProductImage.find(params[:id])
     grandchild_category_id = @product.product_category_id
     @grandchild_name = ProductCategory.find(grandchild_category_id)
     @child_name = @grandchild_name.parent

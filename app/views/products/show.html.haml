@@ -13,7 +13,7 @@
           .item-box-container__content__photo__owl__outer__stage
             .item-box-container__content__photo__owl__outer__stage__item.active
               .item-box-container__content__photo__owl__outer__stage__item__inner
-                = image_tag(@product_image.image)
+                = image_tag @product.product_images.first.image
         .item-box-container__content__photo__owl__disabled
           .item-box-container__content__photo__owl__disabled__prev
           .item-box-container__content__photo__owl__disabled__next
@@ -21,7 +21,7 @@
           .item-box-container__content__photo__owl__dots__dot.active
             %span
             .item-box-container__content__photo__owl__dots__dot__in
-  
+
     .item-box-container__content__table
       = render partial: "products/tbody"
   .item-box-container__price
