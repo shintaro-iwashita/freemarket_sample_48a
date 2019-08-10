@@ -43,15 +43,17 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry-rails'
 end
-gem 'fog-aws'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
@@ -59,6 +61,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'rspec-rails'
 end
 
 group :production do
@@ -77,5 +80,12 @@ gem 'payjp'
 gem "gretel"
 gem 'devise'
 gem 'jquery-rails'
-gem 'active_hash'
 gem 'pry-rails'
+gem 'ancestry'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'active_hash'
+gem 'enum_help'
+gem 'rails-i18n'
+gem 'fog-aws'
+gem 'pry-byebug'

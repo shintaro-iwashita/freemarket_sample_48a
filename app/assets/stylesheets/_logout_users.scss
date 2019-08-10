@@ -21,11 +21,14 @@
       height: 50px;
       margin: 0 auto;
       background-color: $mercari-red;
-      color: white;
       font-size: 14px;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      a {
+        color: white;
+      }
     }
   }
 }
