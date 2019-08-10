@@ -80,6 +80,24 @@
         line-height: 48px;
     }
 
+    .upload__image {
+        width: 120px;
+        height: 160px;
+        margin: 0 0 10px;
+        &__btn {
+            height: 50px;
+            line-height: 50px;
+            background-color: #fff;
+            font-size: 12px;
+        }
+    }
+
+    #preview-image {
+        width: 120px;
+        height: 116px;
+    }
+
+    
 
     .form-require {
         background: $mercari-red;

@@ -3,23 +3,19 @@ $(document).on('turbolinks:load', function() {
   $(function(){
     $('#pic_upload').change(function(e){
       var files = e.target.files[0];
-      var reader = new FileReader();
-      $preview = $(".preview");
-      t = this;
+      var blobUrl = window.URL.createObjectURL(files);
+
+      var img = $(`<li class="upload__image">
+                  <img id="preview-image">
+                  <div class="upload__image__btn">
+                    <a class="remove-btn" data-id="">削除</a>
+                  </div> 
+                </li>`);
+      
+      $('#preview-image').attr('src', blobUrl);
     })
 
-    reader.onload = (function(files){
-      return function(e){
-      $preview.append($('img')).attr({
-        src: e.target.result,
-        width: "150px",
-        class: "preview",
-        title: file.name
-        });
-      };
-    })(files);
 
-    reader.readAsDataURL(files);
   });
 
 });
