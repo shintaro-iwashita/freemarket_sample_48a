@@ -37,10 +37,6 @@
     %button.item-box-container__visible__buy
       = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
     .item-box-container__visible__client
-    -# #TODO アプリ機能実装時に使用
-    -#   %div{data:{client: "visible"}}
-    -# .item-box-containert__visible_text
-    -#   = link_to 'アプリで購入', data:{toggle: 'open-app'},data:{url:{scheme:"mercari://"}},data:{action: 'item/openDetail'}
   .item-box-container__description
     %p.item-box-container__description__inner
       = @product.description
