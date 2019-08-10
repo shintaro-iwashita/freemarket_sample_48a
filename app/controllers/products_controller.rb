@@ -7,10 +7,10 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    grandchild_category_id = @product.product_category_id
-    @grandchild_name = ProductCategory.find(grandchild_category_id)
-    @child_name = @grandchild_name.parent
-    @parent_name = @child_name.parent
+    grandchild_category = @product.product_category_id
+    @grandchild = ProductCategory.find(grandchild_category)
+    @child = @grandchild.parent
+    @parent = @child.parent
   end
 
   def new

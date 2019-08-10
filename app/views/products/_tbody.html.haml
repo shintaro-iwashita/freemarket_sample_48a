@@ -17,11 +17,11 @@
   .tr
     .th カテゴリー
     .td
-      = link_to @parent_name.name, ""
+      = link_to @parent.name, ""
       %i.fas.fa-chevron-right
-        =link_to @child_name.name, ""
+        =link_to @child.name, ""
       %i.fas.fa-chevron-right
-        =link_to @grandchild_name.name, ""
+        =link_to @grandchild.name, ""
   .tr
     .th ブランド
     .td
