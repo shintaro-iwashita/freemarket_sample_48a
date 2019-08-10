@@ -4,13 +4,9 @@ class User < ApplicationRecord
 
   has_many :buyer_products, class_name: 'Product', :foreign_key => 'buyer_id'
   has_many :seller_products, class_name: 'Product', :foreign_key => 'seller_id'
-
-  devise :database_authenticatable, :registerable,
-
-
   has_many :creditCards
 
-  :recoverable, :rememberable, :validatable,:omniauthable
+  devise :database_authenticatable, :registerable,:recoverable, :rememberable, :validatable,:omniauthable
 
   validates :nickname, :family_name,:family_name_kana,:first_name,:first_name_kana,presence: true;
 

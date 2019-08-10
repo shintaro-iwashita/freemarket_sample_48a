@@ -16,7 +16,7 @@ class CardsController < ApplicationController
         Payjp.api_key = "sk_test_7841bdccba9b357aa48f99c7"
         # current_user.update(token_id: params[:token])
         if current_user.creditCards == []
-          response_customer = Payjp::Customer.create(card: payjp_params[:token])
+          response_customer = Payjp::Customer.create(card: params[:token])
           current_user.creditCards.create(token_id: response_customer.id, user_id: current_user.id)
         end
       }
