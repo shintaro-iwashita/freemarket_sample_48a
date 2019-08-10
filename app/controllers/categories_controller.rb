@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    # // あとでproduct_categoriesのID
     @products = Product.order("id ASC").limit(100)
   end
 end
