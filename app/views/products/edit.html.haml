@@ -38,11 +38,11 @@
                 カテゴリー
               %span.form-require 必須
               %div.product_category_list
-                = f.collection_select :product_category_id, @category_parent_array, :id, :name, {prompt: '---', selected: ProductCategory.find("#{@selected_grandchild_category}").parent.parent}, class: "select-default", id: "parent_category",name: ''
-              %div.product_category_list
-                = f.collection_select :product_category_id, @category_children_array, :id, :name, {prompt: '---', selected: ProductCategory.find("#{@selected_grandchild_category}").parent}, class: "select-default", id: "parent_category",name: ''
-              %div.product_category_list
-                = f.collection_select :product_category_id, @category_grandchildren_array, :id, :name, {prompt: '---'}, class: "select-default", id: "parent_category",name: 'product[product_category_id]'
+                = f.collection_select :product_category_id, @category_parent_array, :id, :name, {prompt: '---', selected: ProductCategory.find(@selected_grandchild_category).root_id}, class: "select-default", id: "parent_category",name: ''
+              %div#children_wrapper
+                = f.collection_select :product_category_id, @category_children_array, :id, :name, {prompt: '---', selected: ProductCategory.find(@selected_grandchild_category).parent_id}, class: "select-default", id: "child_category",name: ''
+              %div#grandchildren_wrapper
+                = f.collection_select :product_category_id, @category_grandchildren_array, :id, :name, {prompt: '---'}, class: "select-default", id: "grandchild_category",name: 'product[product_category_id]'
             .form-group 
               %label
                 サイズ
