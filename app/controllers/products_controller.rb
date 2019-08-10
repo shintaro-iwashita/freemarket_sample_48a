@@ -19,6 +19,23 @@ class ProductsController < ApplicationController
     redirect_to controller: :products, action: :index
   end
 
+  def edit
+    @product = Product.find(params[:id])
+    @selected_grandchild_category = @product.product_category_id
+    @category_grandchildren_array = ProductCategory.find("#{@selected_grandchild_category}").siblings
+    @category_children_array = ProductCategory.find("#{@selected_grandchild_category}").parent.siblings
+    @category_parent_array = ProductCategory.find("#{@selected_grandchild_category}").parent.parent.siblings
+  end
+
+  def update
+    product = Product.find(params[:id])
+    if product.seller_id == current_user.id
+      product.update(product_params)
+    end
+    redirect_to controller: :products, action: :index
+    
+  end
+
   def get_category_children
     @category_children = ProductCategory.find_by(id: "#{params[:parent_id]}", ancestry: nil).children
   end
