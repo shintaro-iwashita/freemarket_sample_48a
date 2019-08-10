@@ -1,17 +1,17 @@
 class Year < ActiveHash::Base
   self.data = [
-    {id: 1, name: '01'}, 
-    {id: 2, name: '02'}, 
-    {id: 3, name: '03'},
-    {id: 4, name: '04'}, 
-    {id: 5, name: '05'}, 
-    {id: 6, name: '06'},
-    {id: 7, name: '07'}, 
-    {id: 8, name: '08'},
-    {id: 9, name: '09'},
-    {id: 10, name: '10'},
-    {id: 11, name: '11'}, 
-    {id: 12, name: '12'},
+    {id: 2019, name: '19'}, 
+    {id: 2020, name: '20'}, 
+    {id: 2021, name: '21'},
+    {id: 2022, name: '22'}, 
+    {id: 2023, name: '23'}, 
+    {id: 2024, name: '24'},
+    {id: 2025, name: '25'}, 
+    {id: 2026, name: '26'},
+    {id: 2027, name: '27'},
+    {id: 2028, name: '28'},
+    {id: 2029, name: '29'}, 
+    {id: 2030, name: '30'},
   ]
 end
 
