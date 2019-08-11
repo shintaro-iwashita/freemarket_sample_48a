@@ -10,13 +10,10 @@
             %span.form-require 必須
             %p.product　最大10枚までアップロードできます
             .sell-upload-drop-box.have-item-0{onclick: "$('#pic_upload').click()"}
-              .upload__image
-                %img#preview-image
-                .upload__image__btn 
-                  =link_to "削除", '', class: "remove-btn"
+              .upload__images
               -# %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
-              %i.icon-camera
-              \::after
+              -# %i.icon-camera
+              -# \::after
             = f.file_field :images, multiple: true, id: 'pic_upload', style: "display: none;"
 
         .sell-content-i
