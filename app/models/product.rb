@@ -10,9 +10,12 @@ class Product < ApplicationRecord
   enum delivery_day: [:in_two_days, :in_three_days, :in_seven_days]
 
 
-  belongs_to_active_hash :prefecture
-  belongs_to :product_category, optional: true
+  belongs_to_active_hash :prefecture, optional: true
+  # has_many :product_categories, through: :product_middle_categories
+  # has_many :product_middle_categories
+  belongs_to :product_category
+  # accepts_nested_attributes_for :product_middle_categories
   has_many :product_images, dependent: :destroy
   belongs_to :buyer, class_name: 'User', :foreign_key => 'buyer_id', optional: true
-  belongs_to :seller, class_name: 'User', :foreign_key => 'seller_id'
+  belongs_to :seller, class_name: 'User', :foreign_key => 'seller_id', optional: true
 end
