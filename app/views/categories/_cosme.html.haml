@@ -11,7 +11,7 @@
     - ProductCategory.find(873).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       メイクアップ
@@ -19,7 +19,7 @@
     - ProductCategory.find(884).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       ネイルケア
@@ -27,7 +27,7 @@
     - ProductCategory.find(902).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       香水
@@ -35,7 +35,7 @@
     - ProductCategory.find(913).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       スキンケア/基礎化粧品
@@ -43,7 +43,7 @@
     - ProductCategory.find(920).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       ヘアケア
@@ -51,7 +51,7 @@
     - ProductCategory.find(936).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       ボディケア
@@ -59,7 +59,7 @@
     - ProductCategory.find(946).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       オーラルケア
@@ -67,7 +67,7 @@
     - ProductCategory.find(957).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       リラクゼーション
@@ -75,7 +75,7 @@
     - ProductCategory.find(962).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       ダイエット
@@ -83,7 +83,7 @@
     - ProductCategory.find(970).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       その他
@@ -91,4 +91,4 @@
     - ProductCategory.find(977).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)

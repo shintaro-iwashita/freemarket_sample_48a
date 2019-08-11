@@ -11,7 +11,7 @@
     - ProductCategory.find(1327).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       自転車タイヤ/ホイール
@@ -19,7 +19,7 @@
     - ProductCategory.find(1331).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       自転車パーツ
@@ -27,7 +27,7 @@
     - ProductCategory.find(1337).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       自転車アクセサリー
@@ -35,7 +35,7 @@
     - ProductCategory.find(1353).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       オートバイ車体
@@ -43,7 +43,7 @@
     - ProductCategory.find(1367).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       オートバイパーツ
@@ -51,7 +51,7 @@
     - ProductCategory.find(1369).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       オートバイアクセサリー
@@ -59,4 +59,4 @@
     - ProductCategory.find(1387).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)

@@ -11,7 +11,7 @@
     - ProductCategory.find(683).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       漫画
@@ -19,7 +19,7 @@
     - ProductCategory.find(699).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       雑誌
@@ -27,7 +27,7 @@
     - ProductCategory.find(708).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       CD
@@ -35,7 +35,7 @@
     - ProductCategory.find(715).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       DVD/ブルーレイ
@@ -43,7 +43,7 @@
     - ProductCategory.find(724).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       レコード
@@ -51,7 +51,7 @@
     - ProductCategory.find(735).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       テレビゲーム
@@ -59,4 +59,4 @@
     - ProductCategory.find(740).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)

@@ -4,22 +4,23 @@
 
 .categoryPage
   .categoryPage__title
-    %p バッテリー/充電器の商品一覧
-- @products.each do |p|
-  .categoryPage__lists
-    .categoryPage__lists__list
-      .categoryPage__lists__list__image
-        = image_tag "/images/T-shirt.jpg",class:"categoryPage__lists__list__image__tag"
-      .categoryPage__lists__list__texts
-        .categoryPage__lists__list__texts__name
-          %p
-            = p.name
-            
-        .categoryPage__lists__list__texts__details
-          .categoryPage__lists__list__texts__details__price
-            %span{lang:"en"} ￥
-            = p.price
-          .categoryPage__lists__list__texts__details__favorite
-            %i.far.fa-heart
-            %span 0
+    %span 
+    = @category.name
+    の商品一覧
+    %ul
+    - @products.zip(@images) do |p,image|
+      %li.categoryPage__list
+        .categoryPage__list__image
+          = image_tag image.image,class:"categoryPage__list__image__tag"
+        .categoryPage__list__texts
+          .categoryPage__list__texts__name
+            %p
+              = p.name
+          .categoryPage__list__texts__details
+            .categoryPage__list__texts__details__price
+              %span{lang:"en"} ￥
+              = p.price
+            .categoryPage__list__texts__details__favorite
+              %i.far.fa-heart
+              %span 0
   

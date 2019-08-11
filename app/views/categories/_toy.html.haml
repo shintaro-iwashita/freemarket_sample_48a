@@ -11,7 +11,7 @@
     - ProductCategory.find(749).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       タレントグッズ
@@ -19,7 +19,7 @@
     - ProductCategory.find(761).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       コミック/アニメグッズ
@@ -27,7 +27,7 @@
     - ProductCategory.find(768).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       トレーディングカード
@@ -35,7 +35,7 @@
     - ProductCategory.find(778).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       フィギュア
@@ -43,7 +43,7 @@
     - ProductCategory.find(794).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       楽器/器材
@@ -51,7 +51,7 @@
     - ProductCategory.find(804).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       コレクション
@@ -59,7 +59,7 @@
     - ProductCategory.find(821).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       ミリタリー
@@ -67,7 +67,7 @@
     - ProductCategory.find(829).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       美術品
@@ -75,7 +75,7 @@
     - ProductCategory.find(834).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       アート用品
@@ -83,7 +83,7 @@
     - ProductCategory.find(846).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
   .categoryindex__pc__box__white__inner__name
     %h4
       その他
@@ -91,4 +91,4 @@
     - ProductCategory.find(851).children.each do |child|
       .categoryindex__pc__box__white__inner__box__sub
         %p
-          = link_to child.name,'url'
+          = link_to child.name,category_path(child.id)
