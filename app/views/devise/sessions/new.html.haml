@@ -16,15 +16,15 @@
           Googleでログイン
       %form{method:"POST",novalidata: "novalidate"}
         .single-vessel__main__login-panel__form-inner
-          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-            .single-vessel__main__login-panel__form-inner__group
-              = f.email_field :email, class: 'login-input-text input-default', placeholder: 'メールアドレス'
-            .single-vessel__main__login-panel__form-inner__group
-              = f.password_field :password, class: 'login-input-text input-default', placeholder: 'パスワード', autocomplete: "off"
-            .single-vessel__main__login-panel__form-inner__group
-              .g-recaptcha.login-captcha{data:{callback: "clearcall",sitekey: "6Lfwx6kUAAAAALOfWVZb2LUqoHZGp2E9820kxx3A"}}
-            = f.submit "ログイン", class:"login-submit btn-default btn-red"
-            = link_to "パスワードをお忘れの方", "https://www.mercari.com/jp/password/reset/start/"
+          -# = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          -#   .single-vessel__main__login-panel__form-inner__group
+          -#     = f.email_field :email, class: 'login-input-text input-default', placeholder: 'メールアドレス'
+          -#   .single-vessel__main__login-panel__form-inner__group
+          -#     = f.password_field :password, class: 'login-input-text input-default', placeholder: 'パスワード', autocomplete: "off"
+          -#   .single-vessel__main__login-panel__form-inner__group
+          -#     .g-recaptcha.login-captcha{data:{callback: "clearcall",sitekey: "6Lfwx6kUAAAAALOfWVZb2LUqoHZGp2E9820kxx3A"}}
+          -#   = f.submit "ログイン", class:"login-submit btn-default btn-red"
+          -#   = link_to "パスワードをお忘れの方", "https://www.mercari.com/jp/password/reset/start/"
   %footer.single-vessel__footer
     %nav
       %ul.clearfix
