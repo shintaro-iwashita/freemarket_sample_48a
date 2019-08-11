@@ -3,7 +3,14 @@ class ProductsController < ApplicationController
   def index
     @product_images = ProductImage.all
     @products = Product.all
-    @product = Product.find_by(id: params[:id])
+    @ladycategory = ProductCategory.find(1)
+    @mencategory = ProductCategory.find(219)
+    @kidscategory = ProductCategory.find(378)
+    @cosmecategory = ProductCategory.find(872)
+    @ladies = Product.where(product_category_id: @ladycategory.subtree).order('id DESC').limit(4)
+    @men = Product.where(product_category_id: @mencategory.subtree).order('id DESC').limit(4)
+    @kids = Product.where(product_category_id: @kidscategory.subtree).order('id DESC').limit(4)
+    @cosme = Product.where(product_category_id: @cosmecategory.subtree).order('id DESC').limit(4)
   end
 
   def show
