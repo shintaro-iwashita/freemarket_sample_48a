@@ -1,7 +1,5 @@
 = render partial: "layouts/header" 
 = breadcrumbs separator: " &rsaquo; ", link_current: true
-
-
 .contents
   .contents__top__image-box
   .contents__container
@@ -9,22 +7,23 @@
     .contents__container__item
       %h3.contents__container__item_title 
         レディース新着アイテム
-        = render partial: "layouts/index_images" 
-
+        = render partial: "layouts/ladies_images" 
 
     .contents__container__item
       %h3.contents__container__item_title
         メンズ新着アイテム
-        = render partial: "layouts/index_images"
+        = render partial: "layouts/men_images" 
     
     .contents__container__item
       %h3.contents__container__item_title 
         ベビー・キッズ新着アイテム
-        = render partial: "layouts/index_images"
+        = render partial: "layouts/kids_images"
+
     .contents__container__item
       %h3.contents__container__item_title 
         コスメ・香水・美容 新着アイテム
-        = render partial: "layouts/index_images"
+        = render partial: "layouts/cosme_images"
+
 
 
 = render partial: "layouts/footer"
