@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def Pay
-    Payjp.api_key = "sk_test_7841bdccba9b357aa48f99c7"
+    Payjp.api_key = ENV["PAYJP_SECRET_ACCESS_KEY"]   
     charge = Payjp::Charge.create(
       amount: 3000,
       customer: current_user.creditCards.token_id,

@@ -13,7 +13,7 @@ class CardsController < ApplicationController
     respond_to do |format|
       format.json {
         require 'payjp'
-        Payjp.api_key = "sk_test_7841bdccba9b357aa48f99c7"
+        Payjp.api_key = ENV["PAYJP_SECRET_ACCESS_KEY"]  
         # current_user.update(token_id: params[:token])
         if current_user.creditCards == []
           response_customer = Payjp::Customer.create(card: params[:token])
