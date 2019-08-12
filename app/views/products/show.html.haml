@@ -4,7 +4,7 @@
 = breadcrumbs separator: " &rsaquo; ", link_current: true
 %section.item-box-container
   %h1.item-box-container__item-name
-    題名
+    = @product.name
   %p.item-box-container__item-wording
   .item-box-container__content.clearfix
     .item-box-container__content__photo
@@ -13,16 +13,7 @@
           .item-box-container__content__photo__owl__outer__stage
             .item-box-container__content__photo__owl__outer__stage__item.active
               .item-box-container__content__photo__owl__outer__stage__item__inner
-                = image_tag "1965_image_1.jpeg", alt:"", class: "owl-lazy",style:"",data:{src:""}
-            .item-box-container__content__photo__owl__outer__stage__item
-              .item-box-container__content__photo__owl__outer__stage__item__inner
-                = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
-            .item-box-container__content__photo__owl__outer__stage__item
-              .item-box-container__content__photo__owl__outer__stage__item__inner
-                = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
-            .item-box-container__content__photo__owl__outer__stage__item
-              .item-box-container__content__photo__owl__outer__stage__item__inner
-                = image_tag "", alt:"", class: "owl-lazy",style:"",data:{src:""}
+                = image_tag @product.product_images.first.image
         .item-box-container__content__photo__owl__disabled
           .item-box-container__content__photo__owl__disabled__prev
           .item-box-container__content__photo__owl__disabled__next
@@ -30,43 +21,25 @@
           .item-box-container__content__photo__owl__dots__dot.active
             %span
             .item-box-container__content__photo__owl__dots__dot__in
-              = image_tag "6875fda9.png",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
-          .item-box-container__content__photo__owl__dots__dot
-            %span
-            .item-box-container__content__photo__owl__dots__dot__in
-              = image_tag "",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
-          .item-box-container__content__photo__owl__dots__dot
-            %span
-            .item-box-container__content__photo__owl__dots__dot__in
-              = image_tag "",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
-          .item-box-container__content__photo__owl__dots__dot
-            %span
-            .item-box-container__content__photo__owl__dots__dot__in
-              = image_tag "",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
-          .item-box-container__content__photo__owl___dots__dot
-            %span
-            .item-box-container__content__photo__owl__dots__dot__in
-              = image_tag "",class:"item-box-container__content__photo__owl__dots__dot__in__higer"
+
     .item-box-container__content__table
       = render partial: "products/tbody"
   .item-box-container__price
-    %span.item-box-container__price__bold ¥0,010
-    %span.item-box-container__price__tax (税込)
-    %span.item-box-container__price__fee 送料込み
+    %span.item-box-container__price__bold
+      ¥
+      %p
+        = @product.price
+    %span.item-box-container__price__tax
+      (税込)
+    %span.item-box-container__price__fee
+      送料込み
   .item-box-containert__visible
     %button.item-box-container__visible__buy
       = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
     .item-box-container__visible__client
-    -# #TODO アプリ機能実装時に使用
-    -#   %div{data:{client: "visible"}}
-    -# .item-box-containert__visible_text
-    -#   = link_to 'アプリで購入', data:{toggle: 'open-app'},data:{url:{scheme:"mercari://"}},data:{action: 'item/openDetail'}
   .item-box-container__description
     %p.item-box-container__description__inner
-      匿名ブランドの何かです。
-      使用感があります。
-      中古なのでご理解の上ご購入下さい。
-      よろしくお願いします。
+      = @product.description
   .item-box-container__button
     .item-box-container__button__left
       %button{type: "button",name: "like!",data:{toggele:'like'},data:{id:''},data:{ga:'element'},class:"item-button like",data:{ga:{lable:'like'}} }

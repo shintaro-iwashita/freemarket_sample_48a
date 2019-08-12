@@ -8,12 +8,36 @@
           .sell-dropbox-container.clearfix.state-image-number-10
             %b.product-title 商品画像
             %span.form-require 必須
-            %p.product　最大10枚までアップロードできます
-            .sell-upload-drop-box.have-item-0
-              %input.sell-upload-file{multiple: "", name:"image1", style: "display:none;", type: "file"}/
-              %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
-              %i.icon-camera
-              \::after
+            %p.product 最大10枚までアップロードできます
+            .select-large-box
+              .sell-upload-drop-box.have-item-0{onclick: "$('#pic_upload').click()"}
+              -# プレビュー画面作成のため暫定的にコメントアウト
+              -# %div.upload__images
+              -#   %li.upload__image
+              -#     %img#preview-image
+              -#     .upload__image__btn
+              -#       %a.remove-btn 削除
+              -#   %li.upload__image
+              -#     %img#preview-image
+              -#     .upload__image__btn
+              -#       %a.remove-btn 削除
+              -#   %li.upload__image
+              -#     %img#preview-image
+              -#     .upload__image__btn
+              -#       %a.remove-btn 削除
+              -#   %li.upload__image
+              -#     %img#preview-image
+              -#     .upload__image__btn
+              -#       %a.remove-btn 削除
+              -#   %li.upload__image
+              -#     %img#preview-image
+              -#     .upload__image__btn
+              -#       %a.remove-btn 削除
+              -# %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
+              -# %i.icon-camera
+              -# \::after
+            = f.file_field :images, multiple: true, id: 'pic_upload', style: "display: none;"
+
         .sell-content-i
           .form-group
             %label 
