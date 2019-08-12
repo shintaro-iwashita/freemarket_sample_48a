@@ -23,14 +23,16 @@
 
     
     .sell-dropbox-container {
-        height: 300px;
         padding: 40px
     }
 
+    .select-large-box {
+        display: flex;
+        width: 620px;
+    }
 
     .sell-upload-drop-box {
-        width: 620px;
-        padding: 40px;
+        width: 100%;
         position: relative;
         min-height: 162px;
         background: $background-gray;
@@ -46,44 +48,51 @@
     }
 
     p.product {
-        margin: 8px 0 0 40px;
+        margin-top: 8px;
         line-height: 1.5;
         font-weight: normal;
     }
-    b.product-title {
-        margin-left: 55px
-    }
+
+    
 
     .sell-upload-drop-box.have-item-0 {
-        width: 70%;
+        width: 620px;
         margin: 0 auto;
     }
 
+    // .sell-upload-drop-box pre {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 16px;
+    //     right: 16px;
+    //     text-align: center;
+    //     font-size: 14px;
+    //     line-height: 1.5;
+    //     -webkit-transform: translate(0, -50%);
+    //     transform: translate(0, -50%);
+    //     pointer-events: none;
+    //     white-space: pre-wrap;
+    //     word-wrap: break-word;
+    // }
 
-    .sell-upload-drop-box pre {
-        position: absolute;
-        top: 50%;
-        left: 16px;
-        right: 16px;
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.5;
-        -webkit-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-        pointer-events: none;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-    }
+
 
     .l-left{
         width: 50%;
         line-height: 48px;
     }
 
+    .upload__images {
+        display: flex;
+        // width: 700px;
+        background: $background-gray;
+        border: 1px dashed $box-gray;
+    }
+
     .upload__image {
         width: 120px;
         height: 160px;
-        margin: 0 0 10px;
+        margin: 0 2px 12px;
         &__btn {
             height: 50px;
             line-height: 50px;
