@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
 
   def destroy
     if @product.destroy
-      redirect_to("/")
+      redirect_to root_path
     else
       flash[:notice] = "削除に失敗しました"
     end
