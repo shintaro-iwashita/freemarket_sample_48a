@@ -171,6 +171,29 @@
       font-size: 16px;
     }
   }
+  &__change{
+    margin: 24px auto;
+    width: 780px;
+    background: #fff;
+    padding: 8px 16px 8px 16px;
+    box-sizing: border-box;
+    &__edit{
+      display: block;
+      width: 100%;
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      text-align: center;
+      line-height: 48px;
+      font-size: 14px;
+      margin: 16px 0 16px 0;
+      cursor: pointer;
+    }
+    &__center{
+      font-size: 16px;
+      text-align: center;
+    }
+  }
   &__visible{
     &__buy{
       display: block;

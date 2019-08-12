@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
     @grandchild = ProductCategory.find(grandchild_category_id)
     @child = @grandchild.parent
     @parent = @child.parent
+    # binding.pry
   end
 
   def new

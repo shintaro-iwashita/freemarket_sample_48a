@@ -13,7 +13,7 @@
           .item-box-container__content__photo__owl__outer__stage
             .item-box-container__content__photo__owl__outer__stage__item.active
               .item-box-container__content__photo__owl__outer__stage__item__inner
-                = image_tag @product.product_images.first.image
+                -# = image_tag @product.product_images.first.image
         .item-box-container__content__photo__owl__disabled
           .item-box-container__content__photo__owl__disabled__prev
           .item-box-container__content__photo__owl__disabled__next
@@ -33,13 +33,20 @@
       (税込)
     %span.item-box-container__price__fee
       送料込み
-  .item-box-containert__visible
-    %button.item-box-container__visible__buy
-      = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
-    .item-box-container__visible__client
-  .item-box-container__description
-    %p.item-box-container__description__inner
-      = @product.description
+  
+  - if current_user.id? == @product.seller.id?
+    .item-box-container__change
+      = link_to '商品の編集', '', class: "item-box-container__change__edit"
+      %p.item-box-container__change__center
+        or
+  - else
+    .item-box-containert__visible
+      %button.item-box-container__visible__buy
+        = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
+      .item-box-container__visible__client
+    .item-box-container__description
+      %p.item-box-container__description__inner
+        = @product.description
   .item-box-container__button
     .item-box-container__button__left
       %button{type: "button",name: "like!",data:{toggele:'like'},data:{id:''},data:{ga:'element'},class:"item-button like",data:{ga:{lable:'like'}} }
