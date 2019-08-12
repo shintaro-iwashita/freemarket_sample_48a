@@ -60,22 +60,6 @@
         margin: 0 auto;
     }
 
-    // .sell-upload-drop-box pre {
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 16px;
-    //     right: 16px;
-    //     text-align: center;
-    //     font-size: 14px;
-    //     line-height: 1.5;
-    //     -webkit-transform: translate(0, -50%);
-    //     transform: translate(0, -50%);
-    //     pointer-events: none;
-    //     white-space: pre-wrap;
-    //     word-wrap: break-word;
-    // }
-
-
 
     .l-left{
         width: 50%;
@@ -84,7 +68,6 @@
 
     .upload__images {
         display: flex;
-        // width: 700px;
         background: $background-gray;
         border: 1px dashed $box-gray;
     }
