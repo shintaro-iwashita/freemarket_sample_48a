@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
 
+
   def index
     @product_images = ProductImage.all
     @products = Product.all
@@ -14,6 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def new
+    redirect_to new_user_session_path unless user_signed_in?
     @product = Product.new
     @category_parent_array = ProductCategory.where(ancestry: nil)
   end
