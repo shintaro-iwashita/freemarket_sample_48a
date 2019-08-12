@@ -1,12 +1,16 @@
 class ProductsController < ApplicationController
-  
+
   def index
     @product_images = ProductImage.all
     @products = Product.all
-
   end
 
   def show
+    @product = Product.find(params[:id])
+    grandchild_category_id = @product.product_category_id
+    @grandchild = ProductCategory.find(grandchild_category_id)
+    @child = @grandchild.parent
+    @parent = @child.parent
   end
 
   def new
@@ -28,7 +32,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :size_id, :condition_id, :price, :product_category_id, :delivery_responsibility, :delivery_method, :delivery_area, :delivery_day).merge(seller_id: current_user.id)
+    params.require(:product).permit(:name, :description, :size_id, :condition_id, :price, :product_category_id, :delivery_responsibility, :delivery_method, :delivery_area, :delivery_day, images: []).merge(seller_id: current_user.id)
   end
 
 end
