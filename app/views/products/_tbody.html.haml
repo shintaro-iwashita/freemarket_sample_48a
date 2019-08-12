@@ -3,8 +3,7 @@
   .tr
     .th 出品者
     .td
-      = link_to "#" do
-        名前
+      = link_to @product.name, ""
       %div
         .user-rank
           %i.fas.fa-laugh.user-rank_good
@@ -18,39 +17,39 @@
   .tr
     .th カテゴリー
     .td
-      = link_to "#" do
-        category
-      = link_to '#' do
-        .tab_sub-category
-          %i.fas.fa-chevron-right
-            サブ
-      = link_to '#' do
-        .tab_sub-category_more
-          %i.fas.fa-chevron-right
-            さぶ/さーぶ
+      = link_to @parent.name, ""
+      %i.fas.fa-chevron-right
+        =link_to @child.name, ""
+      %i.fas.fa-chevron-right
+        =link_to @grandchild.name, ""
   .tr
     .th ブランド
     .td
       = link_to '#' do
         %div
-          マルク
+          ブランド名(仮)
   -# .tr
   -#   .th サイズ
   -#   .td
   .tr
     .th 商品の状態
-    .td 悪い
+    .td
+      = @product.condition_id_i18n
   .tr
     .th 配送料の負担
-    .td 送料込み(出品者負担)
+    .td
+      = @product.delivery_responsibility_i18n
   .tr
     .th 配送の方法
-    .td らくらくメルカリ便
+    .td
+      = @product.delivery_method_i18n
   .tr
     .th 配送元地域
     .td
-      = link_to '大阪府', '#' 
+      - prefecture_id = @product.delivery_area
+      = Prefecture.find(prefecture_id).name
   .tr
     .th 発送日の目安
-    .td 1~7日で発送
+    .td
+      = @product.delivery_day_i18n
 
