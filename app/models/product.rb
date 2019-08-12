@@ -13,6 +13,7 @@ class Product < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to :product_category
   has_many_attached :images
+  # 画像投稿機能完成後、以下のコメントアウト削除
   # has_many :product_images, dependent: :destroy
   belongs_to :buyer, class_name: 'User', :foreign_key => 'buyer_id', optional: true
   belongs_to :seller, class_name: 'User', :foreign_key => 'seller_id'
