@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function() {
         imagePreviewHtlm = `<div class="upload__image">
                               ${insertImg}
                               <div class="upload__image__btn">
-                                <a class="remove-btn">削除</a></div></div>
+                                <p class="remove-btn">削除</a></div></div>
                             <input multiple= "multiple" name="product[images][]" class="upload-image" data-image= "${itemNum}" type="file" id="pic_upload" style= "display: none;">
                             <div class="sell-upload-drop-box" onclick= "$('[data-image= ${itemNum}]').click()"></div>`
         $(imagePreviewHtlm).appendTo('#firstbox');
@@ -23,7 +23,7 @@ $(document).on('turbolinks:load', function() {
         imagePreviewHtlm = `<div class="upload__image">
                               ${insertImg}
                               <div class="upload__image__btn">
-                                <a class="remove-btn">削除</a></div>
+                                <p class="remove-btn">削除</a></div>
                             </div>`
         newDropBox = `<input multiple= "multiple" name="product[images][]" class="upload-image" 
         data-image="${itemNum}" type="file" id="pic_upload" style= "display: none">
@@ -34,7 +34,7 @@ $(document).on('turbolinks:load', function() {
         imagePreviewHtlm = `<div class="upload__image">
                               ${insertImg}
                               <div class="upload__image__btn">
-                                <a class="remove-btn">削除</a></div></div>
+                                <p class="remove-btn">削除</a></div></div>
                             <input multiple= "multiple" name="product[images][]" class="upload-image" data-image="${itemNum}" type="file" id="pic_upload" style= "display: none;">
                             <div class="sell-upload-drop-box" onclick= "$('[data-image= ${itemNum}]').click()"></div>`
       $(imagePreviewHtlm).appendTo('#secondbox');
@@ -42,7 +42,7 @@ $(document).on('turbolinks:load', function() {
         imagePreviewHtlm = `<div class="upload__image">
                               ${insertImg}
                               <div class="upload__image__btn">
-                                <a class="remove-btn">削除</a></div></div>`
+                                <p class="remove-btn">削除</a></div></div>`
       $(imagePreviewHtlm).appendTo('#secondbox');
       }
       itemNum += 1;
