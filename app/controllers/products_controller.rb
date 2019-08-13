@@ -25,6 +25,8 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @pic1 = @product.images.slice(0, 5)
+    @pic2 = @product.images.slice(5, 5)
     @selected_grandchild_category = @product.product_category_id
     @category_grandchildren_array = ProductCategory.find("#{@selected_grandchild_category}").siblings
     @category_children_array = ProductCategory.find("#{@selected_grandchild_category}").parent.siblings

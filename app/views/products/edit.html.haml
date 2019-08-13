@@ -10,12 +10,28 @@
           .sell-dropbox-container.clearfix.state-image-number-10
             %b.product-title 商品画像
             %span.form-require 必須
-            %p.product　最大10枚までアップロードできます
-            .sell-upload-drop-box.have-item-0
-              %input.sell-upload-file{multiple: "", name:"image1", style: "display:none;", type: "file"}/
-              %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
-              %i.icon-camera
-              \::after
+            %p.product 最大10枚までアップロードできます
+            .select-large-box#firstbox
+              -# .sell-upload-drop-box.have-item-0{onclick: "$('#pic_upload').click()"}
+              - @pic1.each_with_index do |image, index|
+                .upload__image{data: {image: index}}
+                  = image_tag image, size: '115x115'
+                  .upload__image__btn
+                    %p.remove-btn 削除
+              .sell-upload-drop-box{onclick: "$('#pic_upload').click()"}
+            -if @pic2.present?
+              .select-large-box#secondbox
+                - @pic2.each_with_index do |image, index|
+                  .upload__image{data: {image: index}}
+                    = image_tag image, size: '115x115'
+                    .upload__image__btn
+                      %p.remove-btn 削除
+                .sell-upload-drop-box{onclick: "$('#pic_upload').click()"}
+              -# %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
+              -# %i.icon-camera
+              -# \::after
+            = f.file_field :images, multiple: true, id: 'pic_upload', style: "display: none;"
+
         .sell-content-i
           .form-group
             %label 
