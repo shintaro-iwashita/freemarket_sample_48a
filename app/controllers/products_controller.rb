@@ -5,6 +5,14 @@ class ProductsController < ApplicationController
   def index
     @product_images = ProductImage.all
     @products = Product.all
+    @ladycategory = ProductCategory.find_by(name: 'レディース')
+    @mencategory = ProductCategory.find_by(name: 'メンズ')
+    @kidscategory = ProductCategory.find_by(name: 'ベビー・キッズ')
+    @cosmecategory = ProductCategory.find_by(name: 'コスメ・香水・美容')
+    @ladies = Product.recent(@ladycategory.subtree)
+    @men = Product.recent(@mencategory.subtree)
+    @kids = Product.recent(@kidscategory.subtree)
+    @cosme = Product.recent(@cosmecategory.subtree)
   end
 
   def show

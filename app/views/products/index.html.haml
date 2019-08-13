@@ -1,7 +1,5 @@
 = render partial: "layouts/header" 
 = breadcrumbs separator: " &rsaquo; ", link_current: true
-
-
 .contents
   .contents__top__image-box
   .contents__container
@@ -9,185 +7,23 @@
     .contents__container__item
       %h3.contents__container__item_title 
         レディース新着アイテム
-        .contents__container__item_title_itembox
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.first.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.first.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.first.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.second.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.second.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.second.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.third.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.third.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.third.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.fourth.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.fourth.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.fourth.price
-
-      .contents__container__item_link
-        %a.contents__container__item_link_text 
-          = link_to "すべての商品を見る",{}, class: 'links-blue'
-
+        = render partial: "layouts/ladies_images" 
 
     .contents__container__item
       %h3.contents__container__item_title
         メンズ新着アイテム
-        .contents__container__item_title_itembox
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.first.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.first.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.first.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.second.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.second.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.second.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.third.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.third.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.third.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.fourth.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.fourth.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.fourth.price
-
-      
-      .contents__container__item_link
-        %a.contents__container__item_link_text
-          = link_to "すべての商品を見る",{}, class: 'links-blue'
+        = render partial: "layouts/men_images" 
     
     .contents__container__item
       %h3.contents__container__item_title 
         ベビー・キッズ新着アイテム
-        .contents__container__item_title_itembox
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.first.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.first.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.first.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.second.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.second.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.second.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.third.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.third.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.third.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.fourth.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.fourth.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.fourth.price
-
-      
-      .contents__container__item_link
-        %a.contents__container__item_link_text
-          = link_to "すべての商品を見る",{}, class: 'links-blue'
+        = render partial: "layouts/kids_images"
 
     .contents__container__item
       %h3.contents__container__item_title 
         コスメ・香水・美容 新着アイテム
-        .contents__container__item_title_itembox
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.first.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.first.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.first.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.second.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.second.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.second.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.third.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.third.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.third.price
-          .contents__container__item_title_itembox_images
-            = image_tag @product_images.fourth.image, size: "215x250"
-            .contents__container__item_title_itembox_image-title
-              %p
-                =@products.fourth.name
-              .contents__container__item_title_itembox_price
-                ¥
-                %p
-                  =@products.fourth.price
-      
-      .contents__container__item_link
-        %a.contents__container__item_link_text
-          = link_to "すべての商品を見る",{}, class: 'links-blue'
+        = render partial: "layouts/cosme_images"
+
 
 
 = render partial: "layouts/footer"
