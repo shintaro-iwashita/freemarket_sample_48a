@@ -3,10 +3,10 @@ class ProductsController < ApplicationController
   def index
     @product_images = ProductImage.all
     @products = Product.all
-    @ladycategory = ProductCategory.find(1)
-    @mencategory = ProductCategory.find(219)
-    @kidscategory = ProductCategory.find(378)
-    @cosmecategory = ProductCategory.find(872)
+    @ladycategory = ProductCategory.find_by(name: 'レディース')
+    @mencategory = ProductCategory.find_by(name: 'メンズ')
+    @kidscategory = ProductCategory.find_by(name: 'ベビー・キッズ')
+    @cosmecategory = ProductCategory.find_by(name: 'コスメ・香水・美容')
     @ladies = Product.where(product_category_id: @ladycategory.subtree).order('id DESC').limit(4)
     @men = Product.where(product_category_id: @mencategory.subtree).order('id DESC').limit(4)
     @kids = Product.where(product_category_id: @kidscategory.subtree).order('id DESC').limit(4)
