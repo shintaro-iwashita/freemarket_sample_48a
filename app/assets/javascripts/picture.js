@@ -1,5 +1,8 @@
 $(function(){
-  var itemNum = 1;
+
+  // 選択中のファイル数を取得
+  var itemNum = $('.select-large-box').children('.upload__image').length;
+
   // 画像URLをセッティング
   function buildImgHtml(blobUrl){
     var image = `<img src="${blobUrl}" id="preview-image">`;
@@ -9,7 +12,7 @@ $(function(){
   // 画像+ボタンのひとかたまりを作る
   function appendImgBox(insertImg){
     var imagePreviewHtlm = '';
-    if (itemNum <= 4) {
+    if (itemNum <= (4 - 1)) {
       imagePreviewHtlm = `<div class="upload__image">
                             ${insertImg}
                             <div class="upload__image__btn">
@@ -17,7 +20,7 @@ $(function(){
                           <input multiple= "multiple" name="product[images][]" class="upload-image" data-image= "${itemNum}" type="file" id="pic_upload" style= "display: none;">
                           <div class="sell-upload-drop-box" onclick= "$('[data-image= ${itemNum}]').click()"></div>`
       $(imagePreviewHtlm).appendTo('#firstbox');
-    } else if (itemNum == 5) {
+    } else if (itemNum == 4) {
       imagePreviewHtlm = `<div class="upload__image">
                             ${insertImg}
                             <div class="upload__image__btn">
@@ -28,7 +31,7 @@ $(function(){
                     <div class="sell-upload-drop-box" onclick= "$('[data-image= ${itemNum}]').click()"></div>`
       $(imagePreviewHtlm).appendTo('#firstbox');
       $(newDropBox).appendTo('#secondbox');
-    } else if (itemNum < 10) {
+    } else if (itemNum < 9) {
       imagePreviewHtlm = `<div class="upload__image">
                             ${insertImg}
                             <div class="upload__image__btn">

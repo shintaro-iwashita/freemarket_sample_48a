@@ -12,24 +12,22 @@
             %span.form-require 必須
             %p.product 最大10枚までアップロードできます
             .select-large-box#firstbox
-              -# .sell-upload-drop-box.have-item-0{onclick: "$('#pic_upload').click()"}
               - @pic1.each_with_index do |image, index|
                 .upload__image{data: {image: index}}
                   = image_tag image, size: '115x115'
                   .upload__image__btn
                     %p.remove-btn 削除
-              .sell-upload-drop-box{onclick: "$('#pic_upload').click()"}
-            -if @pic2.present?
-              .select-large-box#secondbox
+              - if @pic1.length < 5
+                .sell-upload-drop-box{onclick: "$('#pic_upload').click()"}
+            .select-large-box#secondbox
+              -if @pic1.length == 5 || @pic2.present?
                 - @pic2.each_with_index do |image, index|
                   .upload__image{data: {image: index}}
                     = image_tag image, size: '115x115'
                     .upload__image__btn
                       %p.remove-btn 削除
-                .sell-upload-drop-box{onclick: "$('#pic_upload').click()"}
-              -# %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
-              -# %i.icon-camera
-              -# \::after
+                - if @pic2.length < 5
+                  .sell-upload-drop-box{onclick: "$('#pic_upload').click()"}
             = f.file_field :images, multiple: true, id: 'pic_upload', style: "display: none;"
 
         .sell-content-i
@@ -141,7 +139,8 @@
               に同意したことになります。
               %div
           = f.submit '編集する', class: 'btn-default btn-red'
-          = render partial: "layouts/delete-form" 
+          -# TODO 詳細ページ完了後に移動予定
+          -# = render partial: "layouts/delete-form" 
 
           = link_to 'もどる', "#", class: "btn-default btn-gray"
 
