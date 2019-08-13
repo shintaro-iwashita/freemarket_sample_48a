@@ -7,10 +7,10 @@ class ProductsController < ApplicationController
     @mencategory = ProductCategory.find_by(name: 'メンズ')
     @kidscategory = ProductCategory.find_by(name: 'ベビー・キッズ')
     @cosmecategory = ProductCategory.find_by(name: 'コスメ・香水・美容')
-    @ladies = Product.where(product_category_id: @ladycategory.subtree).order('id DESC').limit(4)
-    @men = Product.where(product_category_id: @mencategory.subtree).order('id DESC').limit(4)
-    @kids = Product.where(product_category_id: @kidscategory.subtree).order('id DESC').limit(4)
-    @cosme = Product.where(product_category_id: @cosmecategory.subtree).order('id DESC').limit(4)
+    @ladies = Product.where(product_category_id: @ladycategory.subtree).recent
+    @men = Product.where(product_category_id: @mencategory.subtree).recent
+    @kids = Product.where(product_category_id: @kidscategory.subtree).recent
+    @cosme = Product.where(product_category_id: @cosmecategory.subtree).recent
   end
 
   def show
