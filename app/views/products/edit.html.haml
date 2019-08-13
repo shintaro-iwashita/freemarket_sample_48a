@@ -141,6 +141,9 @@
               に同意したことになります。
               %div
           = f.submit '編集する', class: 'btn-default btn-red'
+          = render partial: "layouts/delete-form" 
+
           = link_to 'もどる', "#", class: "btn-default btn-gray"
 
 = render partial: "layouts/sub-footer"
+
