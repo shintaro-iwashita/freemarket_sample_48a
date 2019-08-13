@@ -1,5 +1,4 @@
 = render partial: "layouts/sub-header"
-
 .main
   %h1 購入内容の確認
   %section.main__products
@@ -28,7 +27,7 @@
           %p
             ¥ 3,980
     .main__products__btn
-      = link_to "", method:"", class: "purchace-btn" do
+      = link_to product_purchases_path(@product), method: "post", class: "purchace-btn" do
         %span 購入する
   %section.main__deliverly
     .main__deliverly__rows

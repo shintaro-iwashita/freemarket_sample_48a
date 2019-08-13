@@ -18,12 +18,11 @@ $(function(){
           dataType: 'json',
         })
         .done(function(){
-          //非同期通信成功時の処理
-          console.log("成功です")
+          alert("登録が完了しました"); //確認用
         })
         .fail(function(){
-          //非同期通信失敗時の処理
-          console.log("失敗です")
+          alert("カード情報が正しくありません。"); //確認用
+          
 
         })
         console.log("うわああああああああああああ")
