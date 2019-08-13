@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :set_product, except:[:index, :new, :create, :show, :get_category_children, :get_category_grandchildren]
+  
 
   def index
     @product_images = ProductImage.all
@@ -12,6 +14,17 @@ class ProductsController < ApplicationController
     @child = @grandchild.parent
     @parent = @child.parent
     # binding.pry
+  end
+
+  def edit
+  end
+
+  def destroy
+    if @product.destroy
+      redirect_to root_path
+    else
+      flash[:notice] = "削除に失敗しました"
+    end
   end
 
   def new
@@ -33,7 +46,12 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :size_id, :condition_id, :price, :product_category_id, :delivery_responsibility, :delivery_method, :delivery_area, :delivery_day).merge(seller_id: current_user.id)
+    params.require(:product).permit(:name, :description, :size_id, :condition_id, :price, :product_category_id, :delivery_responsibility, :delivery_method, :delivery_area, :delivery_day, images: []).merge(seller_id: current_user.id)
+  end
+
+private
+  def set_product
+    @product = Product.find(params[:id])
   end
 
 end
