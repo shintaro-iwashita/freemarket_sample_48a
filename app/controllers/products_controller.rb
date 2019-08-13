@@ -19,11 +19,14 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    if @product.destroy
-      redirect_to root_path
-    else
-      flash[:notice] = "削除に失敗しました"
+    if product.seller_id == current_user.id
+      if @product.destroy
+        redirect_to root_path
+      else
+        flash[:notice] = "削除に失敗しました"
+      end
     end
+    redirect_to controller: :products, action: :index
   end
 
   def new
@@ -38,12 +41,15 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @pic1 = @product.images.slice(0, 5)
-    @pic2 = @product.images.slice(5, 5)
-    @selected_grandchild_category = @product.product_category_id
-    @category_grandchildren_array = ProductCategory.find("#{@selected_grandchild_category}").siblings
-    @category_children_array = ProductCategory.find("#{@selected_grandchild_category}").parent.siblings
-    @category_parent_array = ProductCategory.find("#{@selected_grandchild_category}").parent.parent.siblings
+    if @product.seller_id == current_user.id
+      @pic1 = @product.images.slice(0, 5)
+      @pic2 = @product.images.slice(5, 5)
+      @selected_grandchild_category = @product.product_category_id
+      @category_grandchildren_array = ProductCategory.find("#{@selected_grandchild_category}").siblings
+      @category_children_array = ProductCategory.find("#{@selected_grandchild_category}").parent.siblings
+      @category_parent_array = ProductCategory.find("#{@selected_grandchild_category}").parent.parent.siblings
+    end
+    redirect_to controller: :products, action: :index
   end
 
   def update
