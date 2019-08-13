@@ -1,7 +1,6 @@
 class Product < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  scope :active, -> (category) { where(product_category_id: category) }
-  scope :sorted, -> { order('id DESC').limit(4) }
+  scope :recent, -> (category) { where(product_category_id: category).order('id DESC').limit(4) }
   
   enum condition_id: [:unused, :like_new, :invisibly_damaged, :slightly_damaged, :damaged, :bad]
 
