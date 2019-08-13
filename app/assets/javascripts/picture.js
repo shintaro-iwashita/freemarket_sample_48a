@@ -31,7 +31,7 @@ $(function(){
                     <div class="sell-upload-drop-box" onclick= "$('[data-image= ${itemNum}]').click()"></div>`
       $(imagePreviewHtlm).appendTo('#firstbox');
       $(newDropBox).appendTo('#secondbox');
-    } else if (itemNum < 9) {
+    } else if (itemNum < (10 - 1)) {
       imagePreviewHtlm = `<div class="upload__image">
                             ${insertImg}
                             <div class="upload__image__btn">
