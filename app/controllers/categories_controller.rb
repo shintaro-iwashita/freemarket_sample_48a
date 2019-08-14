@@ -7,23 +7,25 @@ class CategoriesController < ApplicationController
   def show
     @images = []
     @products = Product.where(product_category_id:params[:id])
-    @cat = ProductCategory.find(params[:id])
-    if @cat.name == "すべて" then
-      @category_children = ProductCategory.find(params[:id]).parent.children
-      min = @category_children.minimum(:id)
-      max = @category_children.maximum(:id)
+    cat = ProductCategory.find(params[:id])
+    if cat.parent == nil then
+      category_children = cat.children
+      min = category_children.minimum(:id)
+      max = category_children.maximum(:id)
       @products = Product.where(product_category_id:min..max)
-      @category = @cat.parent
+      @categoryname = cat.name
+    elsif cat.name == "すべて" then
+      category_children = cat.parent.children
+      min = category_children.minimum(:id)
+      max = category_children.maximum(:id)
+      @products = Product.where(product_category_id:min..max)
+      @categoryname = cat.parent.name
     else
-      @category = @cat
+      @categoryname = cat.name
     end
     @products.each do |p|
       @images << ProductImage.find(p.id)
     end
   end
 
-  def show2
-    # // あとでproduct_categoriesのID
-    @products = Product.order("id ASC").limit(100)
-  end
 end
