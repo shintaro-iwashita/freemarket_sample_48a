@@ -35,6 +35,10 @@ class ProductsController < ApplicationController
   end
 
   def new
+    unless user_signed_in?
+      redirect_to controller: :products, action: :index
+    end
+    
     @product = Product.new
     @category_parent_array = ProductCategory.where(ancestry: nil)
   end
