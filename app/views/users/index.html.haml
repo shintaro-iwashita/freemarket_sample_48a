@@ -11,8 +11,7 @@
           %figure
             = image_tag ""
           %h2.contener__content__mypage-icon__bold
-            名前
-            -# #TODO current_user.nameが入ると予測
+            = current_user.nickname
           .mypage-evaluation
             %div
               評価

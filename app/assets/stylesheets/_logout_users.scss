@@ -25,10 +25,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      .links{
+        display:block;
+        width:100%;
+        text-align:center;
       a {
         color: white;
       }
     }
   }
+}
 }
