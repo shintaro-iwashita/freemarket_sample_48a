@@ -41,15 +41,16 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    if @product.seller_id == current_user.id
-      @pic1 = @product.images.slice(0, 5)
-      @pic2 = @product.images.slice(5, 5)
-      @selected_grandchild_category = @product.product_category_id
-      @category_grandchildren_array = ProductCategory.find("#{@selected_grandchild_category}").siblings
-      @category_children_array = ProductCategory.find("#{@selected_grandchild_category}").parent.siblings
-      @category_parent_array = ProductCategory.find("#{@selected_grandchild_category}").parent.parent.siblings
+    if @product.seller_id != current_user.id
+      redirect_to controller: :products, action: :index
     end
-    redirect_to controller: :products, action: :index
+
+    @pic1 = @product.images.slice(0, 5)
+    @pic2 = @product.images.slice(5, 5)
+    @selected_grandchild_category = @product.product_category_id
+    @category_grandchildren_array = ProductCategory.find("#{@selected_grandchild_category}").siblings
+    @category_children_array = ProductCategory.find("#{@selected_grandchild_category}").parent.siblings
+    @category_parent_array = ProductCategory.find("#{@selected_grandchild_category}").parent.parent.siblings
   end
 
   def update
