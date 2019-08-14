@@ -79,10 +79,13 @@
         &__btn {
             height: 50px;
             line-height: 50px;
-            background-color: #fff;
+            text-align: center;
+            background-color: $background-gray;
             font-size: 12px;
         }
     }
+
+
 
     #preview-image {
         width: 120px;
