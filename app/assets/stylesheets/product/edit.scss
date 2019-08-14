@@ -1,0 +1,47 @@
+.delete-btn{
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.delete-form{
+  display: none;
+  background: white;
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+  &__confirm{
+    font-weight: bold;
+    padding: 60px 0 6px;
+  }
+  &__text{
+    font-size: 14px;
+    padding: 4px 0;
+  }
+  &__btn{
+    &__cancel{
+      position: absolute;
+      bottom: 0;
+      width: 300px;
+      float: left;
+      height: 60px;
+      line-height: 60px;
+      border-top:solid 0.5px #cccccc;
+    }
+    &__delete{
+      position: absolute;
+      width: 300px;
+      height: 60px;
+      line-height: 60px;
+      right: 0;
+      bottom: 0;
+      border-top:solid 0.5px #cccccc;
+      border-left:solid 0.5px #cccccc;
+    }
+  }
+}

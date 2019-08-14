@@ -239,6 +239,9 @@ $radius:6px;
       width: 100%;
       margin: 0 auto;
       text-align: center;
+      &_link{
+        padding-left: 20px;
+      }
 			&_title{
 				margin: 30px 0;
 				font-size: 22px;
@@ -273,6 +276,7 @@ $radius:6px;
         }
       }
       &_link{
+        width: 959px;
         display: block;
         padding: 20px 0 30px;
         text-align: right;
