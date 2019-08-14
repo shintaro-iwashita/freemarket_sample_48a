@@ -9,7 +9,14 @@ class CategoriesController < ApplicationController
     @products.each do |p|
       @images << ProductImage.find(p.id)
     end
-    @category = ProductCategory.find(params[:id])
+    @cat = ProductCategory.find(params[:id])
+    if @cat.name == "すべて" then
+      @category = @cat.parent
+    else
+      @category = @cat
+    end
+
+
   end
 
   def show2
