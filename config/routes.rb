@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users,
+      controllers: {
+        omniauth_callbacks: 'users/omniauth_callbacks'
+  }
+  
   root "products#index"
+
   resources :products, only: [:index, :show, :new, :create] do
     resources :purchases, only: [:index, :create]
       member do
         post 'pay'
       end
+
+  
+   
     collection do
       get 'get_category_children', defaults: {format: 'json'}
       get 'get_category_grandchildren', defaults: {format: 'json'}
@@ -14,8 +22,9 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :edit,] do
     resources :confirms, only: [:edit]
   end
+  
   resources :categories, only: [:index]
-
+  
   # 新規会員登録画面お届け先住所
   resources :addresses, only: [:new, :create] 
   # 新規会員登録完了画面

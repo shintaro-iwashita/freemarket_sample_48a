@@ -15,20 +15,19 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.datetime :remember_created_at
 
     # あとでこれらを適用
-      # t.text :avatar, :text
+      t.text :avatar
       t.string :nickname, null:false,length:{maximum:20}
-      # t.text :self_introduction
-      # t.integer :evaluation,null:false
-      t.string :family_name,null:false
-      t.string :first_name, null:false
-      t.string  :family_name_kana, null:false
-      t.string  :first_name_kana, null:false
-      # t.date  :data_of_birth, null:false
-      # t.string  :how_to_pay, null:false
-      # t.string  :gender, null:false,foreign_key:true
+      t.text :self_introduction
+      t.integer :evaluation
+      t.string :family_name
+      t.string :first_name
+      t.string  :family_name_kana
+      t.string  :first_name_kana
+      t.string  :how_to_pay
+      t.string  :gender,foreign_key:true
       # # facebookでログイン時
-      # t.string  :provider
-      # t.string  :uid
+      t.string  :provider
+      t.string  :uid
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
