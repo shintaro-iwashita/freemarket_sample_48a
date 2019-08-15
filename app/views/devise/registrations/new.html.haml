@@ -2,7 +2,7 @@
  
 .mainframe
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-    .mainframe__title 
+    .mainframe__title
       %b 会員情報入力
     .mainframe__contents
       .mainframe__contents__unit
@@ -71,7 +71,6 @@
         %p.mainframe__contents__unit__sentence1 
           ※本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
       .mainframe__contents__unit
-        .g-recaptcha{id:"a","data-callback":"clearcall", "data-sitekey":"6Le5RqwUAAAAACG3p4y8vw8NLi-lfZ5fYf9YB1Yq"}
         :javascript
           function clearcall(code) {
             if(code !== ""){
@@ -80,11 +79,11 @@
           }    
       .mainframe__contents__unit#rule
         %span 「次へ進む」のボタンを押すことにより、
-        =link_to "利用規約","#",class:"linkblue"
+        =link_to "利用規約","https://www.mercari.com/jp/tos_list/",class:"linkblue"
         %span に同意したものとみなします。
       .mainframe__contents__proceedbutton
-        = f.submit "新規登録",id:"linkbutton"
+        = f.submit "暫定ログイン",id:"linkbutton"
       .mainframe__contents__registerLink
-        = link_to '本人情報の登録について>', "#",class:"linkblue"
+        = link_to '本人情報の登録について>', "https://www.mercari.com/jp/help_center/article/423/",class:"linkblue"
 
 = render partial:"stepMeterFooter"

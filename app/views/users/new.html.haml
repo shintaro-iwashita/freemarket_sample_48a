@@ -12,13 +12,18 @@
             -# TODO: 上の１行を後に変更
             =link_to new_user_registration_path do
               %i.far.fa-envelope.mail-icon
-              メールアドレスで登録する
+              メールアドレスで確認
           %button{id: "facebook-login", class: "btn-default btn-sns-facebook"}
             %i.fab.fa-facebook-square.facebook-icon
-            = link_to "Facebookで登録する", user_facebook_omniauth_authorize_path,class:"links"
+            Facebookで登録
           %button{id: "google-login", class:"btn-default btn-sns-google"}
             = image_tag "/images/google.png",class:"google-niji"
-            = link_to "Googleで登録する",user_google_oauth2_omniauth_authorize_path,class:"links-black"
+            Googleで登録
+    -# TODO:あとに実装する
+    -# %form{id: "login_form_facebook",action: "",method: "POST",novalidate: "novalidate"}
+    -# %form{id: "login_form_google",action:"",method:"POST",novalidate: "novalidate"}
+      -# %input{type:"hidden",id:"google", value:""}
+      -# %input{type:"hidden",id:"facebook_app_id", value:""}
   %footer.single-vessel__footer
     %nav
       %ul.clearfix
@@ -29,4 +34,4 @@
       = image_tag "/images/logo-gray.svg"
     %p
       %small ©︎ 2019 Mercari
-    
+      

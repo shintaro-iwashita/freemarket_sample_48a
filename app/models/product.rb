@@ -3,6 +3,8 @@ class Product < ApplicationRecord
   scope :active, -> (category) { where(product_category_id: category) }
   scope :sorted, -> { order('id DESC').limit(4) }
   
+  enum size_id: [:sitei, :s, :m, :l]
+
   enum condition_id: [:unused, :like_new, :invisibly_damaged, :slightly_damaged, :damaged, :bad]
 
   enum delivery_responsibility: [:including_postage, :cash_on_delivery]

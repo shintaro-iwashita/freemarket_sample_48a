@@ -2,8 +2,8 @@
 $(document).on('turbolinks:load',function() {
   function appendDays(){
   // その月の日数を決める
-    year = $('#user_birthday_year').val(); // form_forは、変換される
-    month = $("#user_birthday_month").val();
+    year = $("#yearlist").val();
+    month = $("#monthlist").val();
     if (month == 2) { // うるう年を計算する。
       if(year == "--"){
         days = 0;
@@ -23,41 +23,26 @@ $(document).on('turbolinks:load',function() {
     } else {
       days = 30;
     }
-    // 一旦、リストをリセットする(全削除)
-    $('#datelist option').remove();
-    // 上記で決めた日数を、リストに追加する。
-      insert="";
-      for (var i=0; i<=days; i++) {
-        if (i==0){
-          j="--"
-        } else {
-          j=i
-        }
-        insert = insert  + "<option>" + j + "</option>";
+  // 一旦、リストをリセットする(全削除)
+  $('#datelist option').remove();
+  // 上記で決めた日数を、リストに追加する。
+    insert="";
+    for (var i=0; i<=days; i++) {
+      if (i==0){
+        j="--"
+      } else {
+        j=i
       }
-    $("#datelist").append(insert);
-    
-    // $("#user_birthday_day").text(insert);
-    // te= $("#user_birthday_day").text();
-    // console.log(te);
+      insert = insert + "<option>" + j + "</option>";
     }
-  
+  $("#datelist").append(insert);
+  }
 
-// ここより先、別関数
+
   $("#monthlist").change(function() {
     appendDays();
   })
   $("#yearlist").change(function() {
     appendDays();
   })
-
-  function appendToFormFor(){
-    insertedDay=$("#datelist").val();
-    $("#user_birthday_day").val(insertedDay);
-  };
-
-  $("#datelist").change(function() {
-    appendToFormFor();
-  })
-
-});
+ });

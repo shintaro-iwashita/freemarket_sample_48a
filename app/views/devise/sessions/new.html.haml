@@ -1,6 +1,6 @@
 .single-vessel
   %header.single-vessel__header
-    = link_to image_tag("/images/logo.svg", class:"mercari"), root_path
+    =image_tag "/images/logo.svg",class:"mercari"
   %main.single-vessel__main
     .single-vessel__main__login-panel
       .single-vessel__main__login-panel__account
@@ -10,10 +10,10 @@
       .single-vessel__main__login-panel__inner
         %button{id: "facebook-login",class:"btn-default btn-sns-facebook"}
           %i.fab.fa-facebook-square.facebook-icon
-          = link_to "Facebookでログイン", user_facebook_omniauth_authorize_path,class:"links"
+          Facebookでログイン
         %button{id: "google-login",class:"btn-default btn-sns-google"}
           = image_tag "/images/google.png",class: "google-niji"
-          = link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path,class:"links-black"
+          Googleでログイン
       %form{method:"POST",novalidata: "novalidate"}
         .single-vessel__main__login-panel__form-inner
           = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -22,9 +22,8 @@
             .single-vessel__main__login-panel__form-inner__group
               = f.password_field :password, class: 'login-input-text input-default', placeholder: 'パスワード', autocomplete: "off"
             .single-vessel__main__login-panel__form-inner__group
-              .g-recaptcha.login-captcha{data:{callback: "clearcall",sitekey: "6Lfwx6kUAAAAALOfWVZb2LUqoHZGp2E9820kxx3A"}}
             = f.submit "ログイン", class:"login-submit btn-default btn-red"
-            = link_to "パスワードをお忘れの方", "#"
+            = link_to "パスワードをお忘れの方", "https://www.mercari.com/jp/password/reset/start/"
   %footer.single-vessel__footer
     %nav
       %ul.clearfix
