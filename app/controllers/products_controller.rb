@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_product, except:[:index, :new, :create, :show, :get_category_children, :get_category_grandchildren]
   
 
@@ -35,10 +36,6 @@ class ProductsController < ApplicationController
   end
 
   def new
-    unless user_signed_in?
-      redirect_to controller: :products, action: :index
-    end
-    
     @product = Product.new
     @category_parent_array = ProductCategory.where(ancestry: nil)
   end
