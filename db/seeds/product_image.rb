@@ -37,3 +37,21 @@ end
     updated_at: '2019-01-01',
   )
 end
+
+array_testimage =
+        ["https://shop.r10s.jp/f-odekake/cabinet/03321897/19ss/1000270-72_1_0218.jpg",
+         "https://image.rakuten.co.jp/rtm-select/cabinet/apparel/ladys/polo/302_adp_wm_mainvis.jpg",
+         "https://im.belluna.jp/belluna/ph/O/2357/1006842357/DLARGE.JPG",
+         "https://tshop.r10s.jp/milky-way/cabinet/05772246/05772247/mc16118.jpg?fitin=275:275",
+         "https://cdn.thumb.shop-list.com/res/up/shoplist/shp/__basethum900__/jiggysshop/roshell4/200170-main.jpg",
+         "https://shop.r10s.jp/jiggys-shop/cabinet/sp00/201735_m01fl.jpg"]
+
+6.times do |index|
+  ProductImage.create!(
+    id: "#{index+17}",
+    image:array_testimage[index],
+    product_id: "#{index+17}",
+    created_at: '2019-01-01', 
+    updated_at: '2019-01-01',
+  )
+end
