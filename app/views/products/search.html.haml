@@ -1,0 +1,14 @@
+= render partial: "layouts/header" 
+.contents__container__item_title_itembox
+  - @search_products.each do |product|
+    .contents__container__item_title_itembox_images
+      - product.images.each do |image|
+        =image_tag image, size: "215x250"
+      .contents__container__item_title_itembox_image-title
+        = product.name
+        .contents__container__item_title_itembox_price
+          ¥
+          %p
+            = product.price
+
+= render partial: "layouts/footer"
