@@ -1,6 +1,7 @@
 .contents__container__item_title_itembox
   - @cosme.each do |product|
     .contents__container__item_title_itembox_images
+      =link_to " ",product_path(product.id),class:"contents__container__item_title_itembox_images__link"
       = image_tag product.product_images.first.image, size: "215x250"
       .contents__container__item_title_itembox_image-title
         = product.name

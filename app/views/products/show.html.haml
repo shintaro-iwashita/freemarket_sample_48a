@@ -35,7 +35,7 @@
       送料込み
   .item-box-containert__visible
     %button.item-box-container__visible__buy
-      = link_to '購入画面に進む', "#",class: ".buy-btn",data:{client: "hidden"}
+      = link_to '購入画面に進む', product_purchases_path(@product.id),class: ".buy-btn",data:{client: "hidden"}
     .item-box-container__visible__client
   .item-box-container__description
     %p.item-box-container__description__inner

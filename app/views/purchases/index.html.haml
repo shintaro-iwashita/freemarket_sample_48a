@@ -6,17 +6,16 @@
     .main__products__details
       .main__products__details__upper
         .main__products__details__upper_image
-          = image_tag("/images/hiyoko.jpg", size: "65x65")
+          = image_tag(@image.image, size: "65x65")
         .main__products__details__upper_product-name
-          %p
-            HIYOKO
+          %span 
+          = @product.name
       .main__products__details__price
         .main__products__details__price_product-price
-          %p
-            ¥ 3,980
+          %span ¥
+          = @product.price
         .main__products__details__price_send-price
-          %p
-            送料込み
+          %p 送料込み
       .main__products__details__point
         %p
           ポイントはありません
@@ -25,8 +24,8 @@
           %p 
             支払い金額
         .main__products__details__total-price_japan-yen
-          %p
-            ¥ 3,980
+          %span  ¥
+          = @product.price
     .main__products__btn
       = link_to "", method:"", class: "purchace-btn" do
         %span 購入する
@@ -43,7 +42,7 @@
           大阪府大阪市中央区南船場２丁目６−２８ ユタカビル7階
       .main__deliverly__rows_name
         %p
-          HARUKA
+          = current_user.nickname
       .main__deliverly__rows_link
         = link_to "#" do
           %span 変更する >
