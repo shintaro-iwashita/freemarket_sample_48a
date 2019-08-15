@@ -3,11 +3,10 @@
     .header__row1__titles
       = link_to root_path, class:'links' do
         = image_tag("/images/m-logo.png",width:'170px',height:'50px',class:"header__row1__forms__mercari __image")
-    .header__row1__forms
-      %input.header__row1__forms__input{placeholder:'何かお探しですか？'}
-      .header__row1__forms__button
-        = link_to root_path, class:'links' do
-          %i.fas.fa-search.serch-btn
+    %dl.searchbox
+      = search_form_for(@search, url:search_path) do |f|
+        %dt= f.text_field :name_cont ,placeholder: '何かお探しですか？'
+        %dd= f.submit ("検索") , class: 'search-btn'
   .header__row2
     .header__row2__CategoryLists
       .header__row2__CategoryLists__index
