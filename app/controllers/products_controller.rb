@@ -64,7 +64,7 @@ class ProductsController < ApplicationController
         redirect_to controller: :products, action: :index
       else
         flash[:alert] = "商品情報の編集に失敗しました"
-        redirect_to controller: :products, action: :edit
+        redirect_to controller: :products, action: :index
       end
     end
   end
