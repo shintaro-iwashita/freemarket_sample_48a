@@ -38,7 +38,6 @@ class ProductsController < ApplicationController
 
 
   def edit
-    @product = Product.find(params[:id])
     if @product.seller_id != current_user.id
       redirect_to controller: :products, action: :index
     end
@@ -53,9 +52,8 @@ class ProductsController < ApplicationController
 
 
   def update
-    product = Product.find(params[:id])
-    if product.seller_id == current_user.id
-      product.update(product_params)
+    if @product.seller_id == current_user.id
+      @product.update(product_params)
     end
     redirect_to controller: :products, action: :index
   end
@@ -87,7 +85,7 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :size_id, :condition_id, :price, :product_category_id, :delivery_responsibility, :delivery_method, :delivery_area, :delivery_day, images: []).merge(seller_id: current_user.id)
   end
 
-  
+
 private
   def set_product
     @product = Product.find(params[:id])
