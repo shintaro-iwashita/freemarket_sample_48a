@@ -13,7 +13,9 @@
           .item-box-container__content__photo__owl__outer__stage
             .item-box-container__content__photo__owl__outer__stage__item.active
               .item-box-container__content__photo__owl__outer__stage__item__inner
-                = image_tag @product.product_images.first.image
+                - @product.images.each do |image|
+                  = image_tag image
+
         .item-box-container__content__photo__owl__disabled
           .item-box-container__content__photo__owl__disabled__prev
           .item-box-container__content__photo__owl__disabled__next
