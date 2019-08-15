@@ -44,8 +44,12 @@ class ProductsController < ApplicationController
   end
 
   def create
-    Product.create(product_params)
-    redirect_to controller: :products, action: :index
+    @product = Product.new(product_params)
+    if @product.save
+      redirect_to controller: :products, action: :index
+    else
+      redirect_to controller: :products, action: :new
+    end
   end
 
   def get_category_children
