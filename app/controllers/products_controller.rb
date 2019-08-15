@@ -53,9 +53,14 @@ class ProductsController < ApplicationController
 
   def update
     if @product.seller_id == current_user.id
-      @product.update(product_params)
+      if @product.update(product_params)
+        flash[:notice] = "商品情報を編集しました"
+        redirect_to controller: :products, action: :index
+      else
+        flash[:alert] = "商品情報の編集に失敗しました"
+        redirect_to controller: :products, action: :edit
+      end
     end
-    redirect_to controller: :products, action: :index
   end
 
 
@@ -85,6 +90,7 @@ class ProductsController < ApplicationController
   end
 
 
+  
 private
   def set_product
     @product = Product.find(params[:id])
