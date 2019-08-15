@@ -1,12 +1,12 @@
 = render partial: "layouts/header" 
-.contents__container__item_title_itembox
+.search
   - @search_products.each do |product|
-    .contents__container__item_title_itembox_images
+    .search__images
       - product.images.each do |image|
         =image_tag image, size: "215x250"
-      .contents__container__item_title_itembox_image-title
+      .search__images__name
         = product.name
-        .contents__container__item_title_itembox_price
+        .search__images__name__price
           ¥
           %p
             = product.price
