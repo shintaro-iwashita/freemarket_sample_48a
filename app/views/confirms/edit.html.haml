@@ -16,10 +16,12 @@
         .contents__informations
           .contents__informations__information
             %b お名前
-            %p 山田　太郎
+            %p
+            = current_user.nickname
           .contents__informations__information
             %b お名前カナ
-            %p ヤマダ　タロウ
+            %p 
+            = current_user.family_name_kana + " " + current_user.first_name_kana
           .contents__informations__information
             %b 生年月日
             %p 1990/01/01

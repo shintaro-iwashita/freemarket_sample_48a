@@ -69,7 +69,7 @@
   %h3.mypage__nav__head 設定
   %ul.mypage__nav__list
     %list
-      = link_to '#' do
+      = link_to edit_user_path(current_user.id) do
         プロフィール
         %i.fas.fa-chevron-right
     %list
@@ -85,7 +85,7 @@
         メール/パスワード
         %i.fas.fa-chevron-right
     %list
-      = link_to '#' do
+      = link_to edit_user_confirm_path(current_user.id,current_user.id) do
         本人情報
         %i.fas.fa-chevron-right
     %list
