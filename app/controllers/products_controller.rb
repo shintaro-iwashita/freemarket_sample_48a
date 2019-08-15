@@ -32,8 +32,14 @@ class ProductsController < ApplicationController
 
 
   def create
-    Product.create(product_params)
-    redirect_to controller: :products, action: :index
+    @product = Product.create(product_params)
+      if @product.save()
+        flash[:notice] = "出品が完了しました！"
+        redirect_to controller: :products, action: :index
+      else
+        flash[:alert] = "出品に失敗しました"
+        redirect_to controller: :products, action: :index
+      end
   end
 
 
@@ -54,7 +60,7 @@ class ProductsController < ApplicationController
   def update
     if @product.seller_id == current_user.id
       if @product.update(product_params)
-        flash[:notice] = "商品情報を編集しました"
+        flash[:notice] = "商品情報を編集しました！"
         redirect_to controller: :products, action: :index
       else
         flash[:alert] = "商品情報の編集に失敗しました"
@@ -69,7 +75,7 @@ class ProductsController < ApplicationController
       if @product.destroy
         redirect_to root_path
       else
-        flash[:notice] = "削除に失敗しました"
+        flash[:alert] = "削除に失敗しました"
       end
     end
   end
