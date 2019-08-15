@@ -1,7 +1,7 @@
 .contents__container__item_title_itembox
   - @men.each do |product|
     .contents__container__item_title_itembox_images
-      = image_tag product.images[0], size: "215x250"
+      = image_tag url_for(product.images.slice(0)), size: "215x250"
       .contents__container__item_title_itembox_image-title
         = product.name
         .contents__container__item_title_itembox_price
