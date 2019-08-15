@@ -67,7 +67,6 @@ class ProductsController < ApplicationController
         flash[:notice] = "削除に失敗しました"
       end
     end
-    redirect_to controller: :products, action: :index
   end
 
 
