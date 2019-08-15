@@ -10,10 +10,10 @@
       .single-vessel__main__login-panel__inner
         %button{id: "facebook-login",class:"btn-default btn-sns-facebook"}
           %i.fab.fa-facebook-square.facebook-icon
-          Facebookでログイン
+          = link_to "Facebookでログイン", user_facebook_omniauth_authorize_path,class:"links"
         %button{id: "google-login",class:"btn-default btn-sns-google"}
           = image_tag "/images/google.png",class: "google-niji"
-          Googleでログイン
+          = link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path,class:"links-black"
       %form{method:"POST",novalidata: "novalidate"}
         .single-vessel__main__login-panel__form-inner
           = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
