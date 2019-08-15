@@ -6,7 +6,10 @@
     %dl.searchbox
       = search_form_for(@search, url:search_path) do |f|
         %dt= f.text_field :name_cont ,placeholder: '何かお探しですか？'
-        %dd= f.submit ("検索") , class: 'search-btn'
+        %dd
+          = button_tag type: "submit", class: "seach-btn" do
+            %i.fa.fa-search
+
   .header__row2
     .header__row2__CategoryLists
       .header__row2__CategoryLists__index
