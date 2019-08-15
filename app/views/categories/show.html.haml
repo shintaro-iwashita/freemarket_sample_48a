@@ -10,6 +10,7 @@
     %ul
     - @products.zip(@images) do |p,image|
       %li.categoryPage__list
+        = link_to " ", product_path(p.id),class:"categoryPage__list__link"
         .categoryPage__list__image
           = image_tag image.image,class:"categoryPage__list__image__tag"
         .categoryPage__list__texts
@@ -23,4 +24,4 @@
             .categoryPage__list__texts__details__favorite
               %i.far.fa-heart
               %span 0
-  
+
