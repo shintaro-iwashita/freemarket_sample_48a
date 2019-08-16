@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @seller =  User.find_by(id: @product.seller_id).nickname
     grandchild_category_id = @product.product_category_id
     @grandchild = ProductCategory.find(grandchild_category_id)
     @child = @grandchild.parent
