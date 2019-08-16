@@ -10,14 +10,18 @@
               .item__content__container__main__photo__carousel__outer__stage
                 .item__content__container__main__photo__carousel__outer__stage__owl.active
                   .item__content__container__main__photo__carousel__outer__stage__owl__inner
-                    -# =image_tag @product.product_images.first.image
+                    =image_tag @product.images.slice(0)
+            .item__content__container__main__photo__carousel__dots
+              - @product.images.each do |product|
+                .item__content__container__main__photo__carousel__dots__dot
+                  = image_tag product
         %table.item__content__container__main__detail
           %tbody
             %tr
               %th
                 出品者
               %td
-                = link_to @product.seller_id, ""
+                = link_to @seller, ""
                 %div
                   .item__content__container__main__detail__rank
                     %i.fas.fa-laugh.item__content__container__main__detail__rank__good
@@ -46,7 +50,7 @@
               %th
                 商品のサイズ
               %td
-                = @product.size_id
+                = @product.size_id_i18n
             %tr
               %th
                 商品の状態
@@ -76,7 +80,7 @@
 
     -# #TODO 出品者の時
   -# - if true
-  - if current_user.id == @product.seller.id
+  - if user_signed_in? && current_user.id == @product.seller_id
     .interim
       .interim__put
         .item__content__container__price
@@ -112,7 +116,7 @@
                 コメントする
 
     -# #TODO 出品者ではない時
-  - else
+  - else 
     .interim
       .interim__put
         .item__content__container__price
@@ -181,7 +185,7 @@
     .item__content__profile
       %section.item__content__profile__column.clearfix
         %h2.item__content__profile__column__head
-          = link_to "名前" + "さんのその他の出品", ""
+          = link_to  @seller + "さんのその他の出品", ""
         .item__content__profile__column__content.clearfix
           %section.item__content__profile__column__content__box
             = link_to "", ""
@@ -203,4 +207,5 @@
               %h3.item__content__profile__item__content__box__body__name
               .item__content__profile__item__content__box__body__num
               .item__content__profile__item__content__box__body__num__price
+              
 = render partial: "layouts/footer"
