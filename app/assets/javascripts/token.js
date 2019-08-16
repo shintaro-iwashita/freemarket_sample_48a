@@ -22,7 +22,6 @@ $(function(){
           
         })
         .fail(function(){
-          console.log(response)
           alert("カード情報が正しくありません。"); //確認用
         })
     });
