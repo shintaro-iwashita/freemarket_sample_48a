@@ -6,8 +6,7 @@ class User < ApplicationRecord
   has_many :seller_products, class_name: 'Product', :foreign_key => 'seller_id'
   has_many :creditCards
 
-  devise :database_authenticatable, :registerable,:recoverable, :rememberable, :validatable,:omniauthable
-
+  devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :validatable,:omniauthable,
         omniauth_providers: [:facebook, :google_oauth2]
 
