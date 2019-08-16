@@ -2,7 +2,7 @@ class PurchasesController < ApplicationController
 
   def index
     @product = Product.find(params[:product_id])
-   
+
   end
   def create
     @product = Product.find(params[:product_id])
@@ -11,6 +11,9 @@ class PurchasesController < ApplicationController
     redirect_to product_path(@product)
   end
 
+
+  private
+  
   def pay(product)
     card = CreditCard.where(user_id: current_user.id).first
     Payjp.api_key = ENV["PAYJP_SECRET_ACCESS_KEY"]
@@ -21,4 +24,5 @@ class PurchasesController < ApplicationController
   )
   end
 end
+
 

@@ -8,12 +8,6 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show, :new, :create] do
     resources :purchases, only: [:index, :create]
-      member do
-        post 'pay'
-      end
-
-  
-   
     collection do
       get 'get_category_children', defaults: {format: 'json'}
       get 'get_category_grandchildren', defaults: {format: 'json'}

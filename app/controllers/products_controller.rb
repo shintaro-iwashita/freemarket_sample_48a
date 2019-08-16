@@ -15,19 +15,6 @@ class ProductsController < ApplicationController
     @cosme = Product.active(@cosmecategory.subtree).sorted
   end
 
-  def Pay
-    Payjp.api_key = ENV["PAYJP_SECRET_ACCESS_KEY"]   
-    charge = Payjp::Charge.create(
-      amount: 3000,
-      customer: current_user.creditCards.token_id,
-      currency: 'jpy',
-    )
-    redirect_to root_path
-  end
-
-
-
-
   def show
     @product = Product.find(params[:id])
     grandchild_category_id = @product.product_category_id

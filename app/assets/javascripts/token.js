@@ -10,7 +10,6 @@ $(function(){
     };
     Payjp.createToken(card, function(status, response) {
         var token = response.id;
-        console.log(response.id)  
         $.ajax({
           url: '/cards',
           type: "POST",
@@ -19,13 +18,13 @@ $(function(){
         })
         .done(function(){
           alert("登録が完了しました"); //確認用
+          $('.credit__content__form')[0].reset();
+          
         })
         .fail(function(){
+          console.log(response)
           alert("カード情報が正しくありません。"); //確認用
-          
-
         })
-        console.log("うわああああああああああああ")
     });
   });
 });
