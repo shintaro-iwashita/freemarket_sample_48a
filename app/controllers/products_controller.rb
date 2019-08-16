@@ -3,8 +3,6 @@ class ProductsController < ApplicationController
   
 
   def index
-    @product_images = ProductImage.all
-    @products = Product.all
     @ladycategory = ProductCategory.find_by(name: 'レディース')
     @mencategory = ProductCategory.find_by(name: 'メンズ')
     @kidscategory = ProductCategory.find_by(name: 'ベビー・キッズ')
