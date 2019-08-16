@@ -57,7 +57,9 @@
         .header__row2__lists__login
           = link_to new_user_session_path,class: 'links' do
             %p ログイン
-    
+  .notifications
+    - flash.each do |key, value|
+      = content_tag(:div, value, class: key)
 
 
 

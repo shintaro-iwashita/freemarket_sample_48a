@@ -49,14 +49,6 @@ ActiveRecord::Schema.define(version: 2019_08_04_092128) do
     t.index ["ancestry"], name: "index_product_categories_on_ancestry"
   end
 
-  create_table "product_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image", null: false
-    t.bigint "product_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["product_id"], name: "index_product_images_on_product_id"
-  end
-
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
