@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load',function() {
+$(function(){
   $('.input-price').on('input',function(){
     var price = $(this).val();
     var fee = Math.floor(price * 0.1);
