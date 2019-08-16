@@ -1,6 +1,26 @@
 .search{
-  width: 1000px;
-  
+  width: 550px;
+  margin: 50px auto;
+
   &__images{
+    vertical-align: bottom;
+    position: relative;
+    &__name{
+      background: white;
+      height: 120px;
+      color: black;
+      margin-bottom: 50px;
+      font-size: 18px;
+      font-weight: lighter;
+      padding: 25px 20px 0;
+      &__price{
+        position: absolute;
+        bottom: 25px;
+        left: 16px;
+        font-weight: bolder;
+        display: flex;
+        }
+
+      }
+    }
   }
-}
