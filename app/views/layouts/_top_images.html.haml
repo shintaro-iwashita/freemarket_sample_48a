@@ -1,5 +1,5 @@
 .contents__container__item_title_itembox
-  - @ladies.each do |product|
+  - products.each do |product|
     .contents__container__item_title_itembox_images
       = link_to image_tag(product.images.slice(0), size: "215x250"), product_path(product.id)
       = link_to(product_path(product.id), class: 'links') do
