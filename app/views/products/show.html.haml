@@ -97,7 +97,7 @@
             = @product.description
         .item__content__container__change
     .item__content__change
-      = link_to "商品の編集", "" , class: "item__content__change__default"
+      = link_to "商品の編集", edit_product_path , class: "item__content__change__default"
       %p.item__content__change__center
         or
       %form{action: "", method: "POST" }
@@ -116,7 +116,7 @@
                 コメントする
 
     -# #TODO 出品者ではない時
-  - else 
+  - else
     .interim
       .interim__put
         .item__content__container__price
