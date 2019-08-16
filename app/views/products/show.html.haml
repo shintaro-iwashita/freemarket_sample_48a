@@ -21,7 +21,7 @@
               %th
                 出品者
               %td
-                = link_to @seller, ""
+                = link_to @product.seller.nickname, ""
                 %div
                   .item__content__container__main__detail__rank
                     %i.fas.fa-laugh.item__content__container__main__detail__rank__good
@@ -185,7 +185,7 @@
     .item__content__profile
       %section.item__content__profile__column.clearfix
         %h2.item__content__profile__column__head
-          = link_to  @seller + "さんのその他の出品", ""
+          = link_to  @product.seller.nickname + "さんのその他の出品", ""
         .item__content__profile__column__content.clearfix
           %section.item__content__profile__column__content__box
             = link_to "", ""
