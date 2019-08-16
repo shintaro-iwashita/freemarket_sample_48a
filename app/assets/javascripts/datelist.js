@@ -1,5 +1,4 @@
-
-$(document).on('turbolinks:load',function() {
+$(function(){
   function appendDays(){
   // その月の日数を決める
     year = $('#user_birthday_year').val(); // form_forは、変換される
@@ -37,9 +36,6 @@ $(document).on('turbolinks:load',function() {
       }
     $("#datelist").append(insert);
     
-    // $("#user_birthday_day").text(insert);
-    // te= $("#user_birthday_day").text();
-    // console.log(te);
     }
   
 
@@ -59,5 +55,5 @@ $(document).on('turbolinks:load',function() {
   $("#datelist").change(function() {
     appendToFormFor();
   })
-
 });
+
