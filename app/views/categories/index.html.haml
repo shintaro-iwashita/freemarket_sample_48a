@@ -18,3 +18,17 @@
           %h3#root_category-1
             %span
             = ptop.name
+        .categoryindex__pc__box__white__inner
+          %p
+            = link_to ProductCategory.find(ptop.id+2).name, category_path(ptop.id)
+          .categoryindex__pc__box__white__inner__name
+          - ptop.children.each do |ch|
+            .categoryindex__pc__box__white__inner__name__children
+              %p
+              = ch.name
+            - ch.children.each do |gc|
+              .categoryindex__pc__box__white__inner__name__children__grandchildren
+                %p
+                = gc.name
+  
+

@@ -65,8 +65,15 @@
             margin-bottom: 8px;
           }
           &__name{
-            padding-top: 15px;
+            color: #0099e8;
             padding-bottom: 5px;
+            &__children{
+              color: black;
+              padding-top:20px;
+              &__grandchildren{
+                color: #0099e8;
+              }
+            }
           }
           &__box{
             @include clearfix();
