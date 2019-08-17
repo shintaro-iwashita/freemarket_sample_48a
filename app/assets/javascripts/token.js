@@ -1,5 +1,5 @@
 $(function(){
-  $(document).on('click','.credit__content__card__link', function(e) {
+  $(document).on('click','#add__credit__card', function(e) {
     e.preventDefault();
     Payjp.setPublicKey('pk_test_6f8c0dbd80a304bd5dda8853');
     var card = {
