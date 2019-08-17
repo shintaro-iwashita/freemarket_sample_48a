@@ -21,7 +21,6 @@ $radius:6px;
       display:flex;
       position:relative;
       width: 100%;
-      // #TODO フレックスアイテムをフレックスコンテナーの領域に収めるために伸長・収縮させるかを指定する
       flex: 1;
       &__input{
         padding: 0 42px 0 10px;
@@ -49,7 +48,6 @@ $radius:6px;
       }
     }
   }
-  // #TODO カテゴリーから探す・ブランドから探す
   &__row2{
     height: 44px;
     margin: 8px 0 0;
@@ -101,10 +99,6 @@ $radius:6px;
               padding: 0 16px;
               line-height: 44px;
             }
-            h3 a:hover{
-              background: #ea352d;
-              color: #fff;
-            }
             a{
               overflow: hidden;
               text-overflow: ellipsis;
@@ -128,10 +122,6 @@ $radius:6px;
               }
             }
           }
-          
-        }
-        .header__row2__left__category__wrap:hover > ul .header__row2__left__category__wrap__stick{
-          display: block;
         }
         span{
           vertical-align: middle;
@@ -158,16 +148,11 @@ $radius:6px;
         color: #0099e8;
       }
     }
-      // #TODO ヘッダー右部分
       &__right{
          float: right;
          ul{
            list-style: none;
          }
-        .header__row2__right__nav>li:first-child{
-          padding-left: 0;
-        }
-        // #TODO いいね一覧・お知らせ・やることリスト・マイページ
         &__nav{
           &__liked{
             display:none;
@@ -177,6 +162,10 @@ $radius:6px;
               font-size: 0;
               color: #333;
               line-height: 32px;
+              span{
+                font-size:14px;
+                margin-left: 10px;
+              }
             }
             &__heart{
               font-size: 18px;
@@ -227,20 +216,6 @@ $radius:6px;
           line-height: 30px;
           border-radius: 4px;
         }
-      }
-      .header__row2__right__nav>li:last-child{
-        padding-right: 0;
-      }
-      .header__row2__right__login>li:first-child{
-        margin: 0;
-      }
-      .header__row2__right__login>li{
-        display: inline-block;
-        margin: 0 0 0 8px;
-      }
-      .header__row2__right__login__as:hover{
-        background: #0099e8;
-        color: #fff;
       }
     }
   }
