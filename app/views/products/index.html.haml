@@ -7,23 +7,25 @@
     .contents__container__item
       %h3.contents__container__item_title 
         レディース新着アイテム
-        = render partial: "layouts/top_images", locals: {products: @ladies}
+        .contents__container__item_title_itembox
+          = render partial: "layouts/top_images", collection: @ladies, as:"product"
 
     .contents__container__item
       %h3.contents__container__item_title
         メンズ新着アイテム
-        = render partial: "layouts/top_images", locals: {products: @men}
+        .contents__container__item_title_itembox
+          = render partial: "layouts/top_images", collection: @men, as:"product"
     
     .contents__container__item
       %h3.contents__container__item_title 
         ベビー・キッズ新着アイテム
-        = render partial: "layouts/top_images", locals: {products: @kids}
+        .contents__container__item_title_itembox
+          = render partial: "layouts/top_images", collection: @kids, as:"product"
 
     .contents__container__item
       %h3.contents__container__item_title 
         コスメ・香水・美容 新着アイテム
-        = render partial: "layouts/top_images", locals: {products: @cosme}
-
-
+        .contents__container__item_title_itembox
+          = render partial: "layouts/top_images", collection: @cosme, as:"product"
 
 = render partial: "layouts/footer"
