@@ -18,6 +18,7 @@ class PurchasesController < ApplicationController
     else
       flash[:alert] = "商品の購入に失敗しました…"
       redirect_to root_path
+    end
   end
 
 
