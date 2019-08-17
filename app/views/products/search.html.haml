@@ -2,7 +2,7 @@
 .search
   - @search_products.each do |product|
     .search__images
-      = link_to image_tag(product.images.slice(0), size: "550x550"), product_path(product.id)
+      = link_to image_tag(product.images.slice(0), size: "160x160"), product_path(product.id)
       = link_to(product_path(product.id), class: 'links') do
         .search__images__name
           = product.name
