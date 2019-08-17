@@ -1,11 +1,11 @@
 .contents__container__item_title_itembox
   - @ladies.each do |product|
     .contents__container__item_title_itembox_images
-      =link_to " ",product_path(product.id),class:"contents__container__item_title_itembox_images__link"
-      = image_tag product.product_images.first.image, size: "215x250"
-      .contents__container__item_title_itembox_image-title
-        = product.name
-        .contents__container__item_title_itembox_price
-          ¥
-          %p
-            = product.price
+      = link_to image_tag(product.images.slice(0), size: "215x250"), product_path(product.id)
+      = link_to(product_path(product.id), class: 'links') do
+        .contents__container__item_title_itembox_image-title
+          = product.name
+          .contents__container__item_title_itembox_price
+            ¥
+            %p
+              = product.price

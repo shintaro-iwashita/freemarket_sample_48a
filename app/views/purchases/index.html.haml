@@ -1,19 +1,19 @@
 = render partial: "layouts/sub-header"
-
 .main
   %h1 購入内容の確認
   %section.main__products
     .main__products__details
       .main__products__details__upper
         .main__products__details__upper_image
-          = image_tag(@image.image, size: "65x65")
+          = image_tag(@product.images.slice(0), size: "65x65")
         .main__products__details__upper_product-name
-          %span 
-          = @product.name
+          %p
+            = @product.name
       .main__products__details__price
         .main__products__details__price_product-price
-          %span ¥
-          = @product.price
+          %p
+            ¥
+            = @product.price
         .main__products__details__price_send-price
           %p 送料込み
       .main__products__details__point
@@ -24,10 +24,11 @@
           %p 
             支払い金額
         .main__products__details__total-price_japan-yen
-          %span  ¥
-          = @product.price
+          %p
+            ¥ 
+            = @product.price
     .main__products__btn
-      = link_to "", method:"", class: "purchace-btn" do
+      = link_to product_purchases_path(@product), method: "post", class: "purchace-btn" do
         %span 購入する
   %section.main__deliverly
     .main__deliverly__rows
