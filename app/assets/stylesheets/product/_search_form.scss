@@ -1,24 +1,25 @@
 .search{
-  width: 550px;
+  width: 800px;
   margin: 50px auto;
-
+  display: flex;
+  flex-wrap: wrap;
   &__images{
     vertical-align: bottom;
-    position: relative;
+    padding: 0 18px;
     &__name{
       background: white;
-      height: 120px;
+      height: 80px;
       color: black;
       margin-bottom: 50px;
       font-size: 18px;
       font-weight: lighter;
       padding: 25px 20px 0;
       &__price{
-        position: absolute;
-        bottom: 25px;
+        background: white;
         left: 16px;
         font-weight: bolder;
         display: flex;
+        padding-top: 30px;
         }
 
       }
