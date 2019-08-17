@@ -6,7 +6,7 @@ class PurchasesController < ApplicationController
 
   def create
     @product = Product.find(params[:product_id])
-    if @product.seller.id != current_user.id && @product.buyer.id == nil
+    if @product.seller.id != current_user.id && @product.buyer_id == nil
       pay(@product)
       if @product.update(buyer_id: current_user.id)
         flash[:notice] = "商品を購入しました！"
