@@ -15,7 +15,7 @@ class Product < ApplicationRecord
   validates :name, {presence: true, length: {maximum: 40}}
   validates :description, {presence: true, length: {maximum: 1000}}
   validates :product_category_id, presence: true
-
+  validates :price, numericality: {greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
 
 
   belongs_to_active_hash :prefecture, optional: true
