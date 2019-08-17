@@ -3,229 +3,248 @@ $radius:6px;
   background-color: white;
   z-index:10;
   width:100%;
-  margin:0 auto;
+  &__inter{
+    width: 700px;
+    margin: 0 auto;
+    padding: 8px 0 0;
+    @media screen and (min-width: 1068px){
+      width: 1020px;
+    }
+  }
   &__row1{
-    width:100%;
-    height:50px;
-    font-size:23px;
-    display:flex;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    position:relative;
-    margin-bottom:10px;
-    &__titles{
-      display:flex;
-      align-items: center;
-      width:20%;
-      padding: 8px 0 0 150px;
-      margin: 0 auto;
-    }
-    .serch-btn{
-      padding: 9px 0;
-      font-size: 13px;
-    }
     &__forms{
-      margin-right: 150px;
-      border-radius: 10px;
+      height: 40px;
+      margin-left: 45px;
       display:flex;
-      align-items: center;
-      height:70%;
-      width:80%;
       position:relative;
+      width: 100%;
+      // #TODO フレックスアイテムをフレックスコンテナーの領域に収めるために伸長・収縮させるかを指定する
+      flex: 1;
       &__input{
-        margin-top: 8px;
-        padding-left: 10px;
+        padding: 0 42px 0 10px;
         height: 40px;
-        border-top-left-radius: $radius;
-        border-bottom-left-radius: $radius;
-        width:97%;
-        font-size:70%;
+        width: 100%;
         background-color: #F5F5F5;
+        border-radius: 4px;
+        transition: all ease-out .3s;
+        border: 1px solid #ccc;
+        font-size: 16px;
       }
-      &__button{
-        margin: 4px 7px 0 0;
-        color:white;
-        right:0;
-        height:44px;
-        line-height: 41px;
-        text-align:center;
-        width:5%;
-        position:absolute;
-        background-color:gray;
-        border-top-right-radius: $radius;
-        border-bottom-right-radius: $radius;
+      .header__row1__forms__input:focus{
+        border-color: #0099e8;
+        outline: 0;
+      }
+      &__search{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
       }
     }
   }
+  // #TODO カテゴリーから探す・ブランドから探す
   &__row2{
-    height: 45px;
-    font-weight: bold;
-    display:flex;
-    position:relative;
-    .red{
-      color: red;
-    }
-    &__CategoryLists{
-      padding: 4px 0 0 170px;
-      z-index:1;
-      list-style:none;
-      line-height: 25px;
-      &__index:hover + &__lists{
-        visibility:visible;
-        color:black;
-        background-color:#ffffff;
-        
-      }
-      &__lists{
-        text-align:left;
-        visibility:hidden;
-        display:flex;
-        list-style:none;
-        z-index:1;
-        &__list1:hover{
-          visibility:visible;
+    height: 44px;
+    margin: 8px 0 0;
+    &__left{
+       float: left;
+       ul{
+         list-style: none;
+       }
+      &__category{
+        font-size: 0;
+        a{
+          color: black;
+          display: block;
         }
-      }
-    }
-    &__brandlists{
-      margin: 5px 0 10px 0;
-      line-height: 25px;
-      position:absolute;
-      left:325px;
-      &__lists{
-        visibility:hidden;
-      }
-      &__index:hover + &__lists{
-        z-index:-2;
-        background-color:white;
-        color:black;
-      }
-      &__lists li:nth-of-type(n):hover{
-        background-color:red;
-        color:white;
-        visibility:hidden;
-      }
-    }
-    
-    &__lists{
-      height: 70px;
-      display:flex;
-      position:absolute;
-      right:0;
-      padding-right: 150px;
-      &__general{
-        height:30px;
-        line-height:30px;
-        padding-left:10px;
-        padding-right:10px;
-        margin-right:10px;
+        a:hover{
+          opacity: 1;
+          text-decoration: none;
+        }
+        h2{
+          font-size: 14px;
+          line-height: 30px;
+          height: 45px;
+        }
+        &__parent{
+          font-weight: bold;
+        }
+        &__red{
+          color: #ea352d;
+          font-size: 12px;
+          margin-right: 4px;
+        }
+        &__wrap{
+          width: auto;
+          height: 616px;
+          position: absolute;
+          top: 44px;
+          left: -34px;
+          z-index: 1000;
+          background: #fff;
+          box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+          &__stick{
+            display: none;
+            width: 224px;
+            h3{
+              font-weight: 400;
+              font-size: 14px;
+            }
+           h3 a{
+              padding: 0 16px;
+              line-height: 44px;
+            }
+            h3 a:hover{
+              background: #ea352d;
+              color: #fff;
+            }
+            a{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 14px;
+            }
+            &__child{
+              position: absolute;
+              top: 0;
+              left: 224px;
+              bottom: 0;
+              background: #fff;
+              box-shadow: 1px 0 0 0 #eee inset;
+              &__candidate{
+                display: none;
+                width: 224px;
+              }
+              .header__row2__left__category__wrap__stick__child__candidate >a{
+                padding: 8px 16px;
+                line-height: unset;
+              }
+            }
+          }
+          
+        }
+        .header__row2__left__category__wrap:hover > ul .header__row2__left__category__wrap__stick{
+          display: block;
+        }
         span{
-          color:black;
-          font-weight:100;
-          padding-left:5px;
+          vertical-align: middle;
         }
-        i{
-          font-size:1.2rem;
-          color:#cccccc;
+        &__cat{
+          color: #ea352d;
+          font-size: 12px;
+          margin-right: 4px;
         }
       }
-      &__general:hover i {
-        color:#1A99E8;
+      .header__row2__left__category>li:first-child{
+        padding-left: 0;
       }
-      &__general:hover span {
-        color:#1A99E8;
+      .header__row2__left__category>li{
+        position: relative;
+        display: inline-block;
+        padding: 0 11px;
+        cursor: pointer;
       }
+      .header__row2__left__category> li:last-child{
+        padding-right: 0;
+      }
+      h2:hover{
+        color: #0099e8;
+      }
+    }
+      // #TODO ヘッダー右部分
+      &__right{
+         float: right;
+         ul{
+           list-style: none;
+         }
+        .header__row2__right__nav>li:first-child{
+          padding-left: 0;
+        }
+        // #TODO いいね一覧・お知らせ・やることリスト・マイページ
+        &__nav{
+          &__liked{
+            display:none;
+            &__menu{
+              position: relative;
+              display: block;
+              font-size: 0;
+              color: #333;
+              line-height: 32px;
+            }
+            &__heart{
+              font-size: 18px;
+              color: #ccc;
+            }
+            &__bell{
+              font-size: 20px;
+              color: #ccc;
+            }
+            &__check{
+              font-size: 16px;
+              color: #ccc;
+            }
+            span{
+              margin-left: 10px;
+              font-size: 14px;
+            }
+          }
+          figure{
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+          }
+        }
+        .header__row2__right__nav>li{
+          position: relative;
+          display: inline-block;
+          padding: 0 7px;
+          cursor: pointer;
+        }
+        // #TODO 新規会員登録とログインボタン
       &__login{
-        border:1px #1A99E8 solid;
-        border-radius: $radius;
-        height:30px;
-        line-height:30px;
-        padding-left:10px;
-        padding-right:10px;
-        margin-right:10px;
-        p{
-          color:#1A99E8;
+        &__new{
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          padding: 5px 10px;
+          line-height: 30px;
+          border-radius: 4px;
+        }
+        &__as{
+          display: block;
+          border: 1px solid #0099e8;
+          background: #fff;
+          color: #0099e8;
+          margin: 0;
+          padding: 0px 10px;
+          line-height: 30px;
+          border-radius: 4px;
         }
       }
-      &__newuser{
-          margin-right: 10px;
-          background-color:red;
-          border-radius: $radius;
-          height:30px;
-          line-height:30px;
-          padding-left:10px;
-          padding-right:10px;
+      .header__row2__right__nav>li:last-child{
+        padding-right: 0;
+      }
+      .header__row2__right__login>li:first-child{
+        margin: 0;
+      }
+      .header__row2__right__login>li{
+        display: inline-block;
+        margin: 0 0 0 8px;
+      }
+      .header__row2__right__login__as:hover{
+        background: #0099e8;
+        color: #fff;
       }
     }
   }
 }
-#list1:hover + #list2{
-  visibility:visible;
-  
-}
-#list1 p:nth-of-type(n):hover{
-  background-color:red;
-  color:white;
-  visibility:visible;
-}
-#list1 {
-  width:100%;
-  text-align:left;
-  border:  solid gray;
-  // visibility:visible;
-}
-#list2:hover {
-  visibility:visible;
-  
-}
-#list2:hover + #list3{
-  visibility:visible;
-}
-#list2 li:nth-of-type(n):hover{
-  background-color:red;
-  color:white;
-}
-#list2{
-  list-style:none;
-  background-color:white;
-  // width:100%;
-  text-align:left;
-  border:  solid gray;
-}
-#list3:hover {
-  visibility:visible;
-}
-#list3 li:nth-of-type(n):hover{
-  background-color:red;
-  color:white;
-}
-#list3{
-  list-style:none;
-  background-color:white;
-  // width:100%;
-  text-align:left;
-  border:  solid gray;
-}
-
-.notifications {
-  color: white;
-  text-align: center;  
-
-  .notice {
-    background: $font-blue;
-    padding: 10px;
-    letter-spacing: 0.1rem;
-    opacity: 0.8;
-  }
-
-  .alert {
-    background: $mercari-red;
-    padding: 10px;
-    letter-spacing: 0.1rem;
-    opacity: 0.8;
-  }
-}
-
-
 
 .contents {
   width: 100%;
@@ -245,7 +264,6 @@ $radius:6px;
 	&__container{
 		text-align: center;
     background-color: #f5f5f5;
-    width: 70%;
     margin: 0 auto;
     
 		&_title{
@@ -257,9 +275,6 @@ $radius:6px;
       width: 100%;
       margin: 0 auto;
       text-align: center;
-      &_link{
-        padding-left: 20px;
-      }
 			&_title{
 				margin: 30px 0;
 				font-size: 22px;
@@ -271,30 +286,20 @@ $radius:6px;
           margin: 0 auto;
           display: flex;
           padding-top: 30px;
-          &_price{
-            display: flex;
-            font-size: 18px;
-            font-weight: bolder;
-            margin: 35px 0 0 20px;
-          }
           &_images{
             margin: 0 auto;
             vertical-align: bottom;
-            
           }
             &_image-title{
               background-color: white;
               height: 90px;
               width: 215px;
               color: black;
-              padding-top: 30px;
-              font-size: 17px;
-              font-weight: lighter;
+              padding-top: 20px;
             }
         }
       }
       &_link{
-        width: 959px;
         display: block;
         padding: 20px 0 30px;
         text-align: right;
@@ -333,7 +338,6 @@ $radius:6px;
         font-size: 35px;
         color: #fff;
         padding: 70px 0 30px 0;
-    
       }
     }
   & .appstore{
@@ -342,7 +346,6 @@ $radius:6px;
   }
   & .google-play{
     padding: 0 5px 10px;
-
   }
   }
 }
@@ -422,12 +425,30 @@ $radius:6px;
       display: block;
       color: #fff;
       font-size: 70px;
-      margin: 10px auto 0;
+      margin: 30px auto 0;
     }
       .text{
         display: block;
         color: #fff;
         font-size: 23px;
-        margin: 30px auto 0;
+        margin: 10px auto 0;
       }
+  }
+  .notifications {
+    color: white;
+    text-align: center;  
+  
+    .notice {
+      background: $font-blue;
+      padding: 10px;
+      letter-spacing: 0.1rem;
+      opacity: 0.8;
+    }
+  
+    .alert {
+      background: $mercari-red;
+      padding: 10px;
+      letter-spacing: 0.1rem;
+      opacity: 0.8;
+    }
   }
