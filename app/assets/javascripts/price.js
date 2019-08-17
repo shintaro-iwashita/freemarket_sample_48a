@@ -2,7 +2,7 @@ $(function(){
   $('.input-price').on('input',function(){
     var price = $(this).val();
     if (price < 300 || price > 10000000){
-      $('#fee').text("-");
+      $('#fee').text('-');
       $('#profit').text('-');
     }else{
       var fee = Math.floor(price * 0.1);
