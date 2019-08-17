@@ -7,13 +7,17 @@ class PurchasesController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     if @product.seller.id != current_user.id && @product.buyer_id == nil
-      pay(@product)
-      if @product.update(buyer_id: current_user.id)
-        flash[:notice] = "商品を購入しました！"
-        redirect_to root_path
+      card = CreditCard.where(user_id: current_user.id).first
+      if card == nil then
+        redirect_to cards_path
       else
-        flash[:alert] = "商品の購入に失敗しました…"
-        redirect_to root_path
+        pay(@product)
+        if @product.update(buyer_id: current_user.id)
+          flash[:notice] = "商品を購入しました！"
+        else
+          flash[:alert] = "商品の購入に失敗しました…"
+          redirect_to root_path
+        end
       end
     else
       flash[:alert] = "商品の購入に失敗しました…"
@@ -31,7 +35,7 @@ class PurchasesController < ApplicationController
     :amount => product.price, #支払金額を入力（itemテーブル等に紐づけても良い）
     :customer => card.token_id, #顧客ID
     :currency => 'jpy', #日本円
-  )
+    )
   end
 end
 
