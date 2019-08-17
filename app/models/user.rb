@@ -4,10 +4,12 @@ class User < ApplicationRecord
 
   has_many :buyer_products, class_name: 'Product', :foreign_key => 'buyer_id'
   has_many :seller_products, class_name: 'Product', :foreign_key => 'seller_id'
+  has_many :creditCards
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,:omniauthable,
-         omniauth_providers: [:facebook, :google_oauth2]
+        :recoverable, :rememberable, :validatable,:omniauthable,
+        omniauth_providers: [:facebook, :google_oauth2]
+
 
   validates :nickname, presence: true, length: { maximum: 6 }
 
