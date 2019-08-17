@@ -3,12 +3,12 @@ class PurchasesController < ApplicationController
   def index
     @product = Product.find(params[:product_id])
   end
-  
+
   def create
     @product = Product.find(params[:product_id])
     pay(@product)
     @product.update(buyer_id: current_user.id)
-    redirect_to product_path(@product)
+    redirect_to product_path(@product.id)
   end
 
 
