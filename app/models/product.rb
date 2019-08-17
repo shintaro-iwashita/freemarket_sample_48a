@@ -11,14 +11,18 @@ class Product < ApplicationRecord
 
   enum delivery_day: [:in_two_days, :in_three_days, :in_seven_days]
 
+  validates :images, presence: true
+  validates :name, {presence: true, length: {maximum: 40}}
+  validates :description, {presence: true, length: {maximum: 1000}}
+  validates :product_category_id, presence: true
+
+
 
   belongs_to_active_hash :prefecture, optional: true
   belongs_to :product_category
   belongs_to_active_hash :prefecture
   has_many :product_images, dependent: :destroy
   has_many_attached :images
-  # 画像投稿機能完成後、以下のコメントアウト削除
-  # has_many :product_images, dependent: :destroy
   belongs_to :buyer, class_name: 'User', :foreign_key => 'buyer_id', optional: true
   belongs_to :seller, class_name: 'User', :foreign_key => 'seller_id', optional: true
 end
