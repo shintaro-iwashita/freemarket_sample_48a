@@ -6,11 +6,11 @@
       .credit 
         %h2.credit__head クレジットカード情報入力
         .credit__content
-          .credit__content__form
+          = form_with model: @card, url: cards_path, class: 'credit__content__form' do |f|
             .credit__content__form__group
               %label.credit__content__form__group__no カード番号
               %span.credit__content__form__group__require 必須
-              %input{maxlength: "16", type: "text", class: "number", id: "payment_card_no", placeholder: "半角数字のみ"}
+              =f.text_field :number, class:  "number", maxlength: "16", type: "text",  placeholder: "半角数字のみ"
               %ul.credit__content__form__group__list
                 %li.card
                   = image_tag "/images/card/visa.svg", width: "49", height: "20"
@@ -29,45 +29,20 @@
             .credit__content__form__group
               %label.credit__content__form__group__expire 有効期限
               %span.credit__content__form__group__require 必須
-              .credit__content__form__group__select
-                %select.credit__content__form__group__select__month>
-                  %option{value: "01"} 01
-                  %option{value: "02"} 02
-                  %option{value: "03"} 03
-                  %option{value: "04"} 04
-                  %option{value: "05"} 05
-                  %option{value: "06"} 06
-                  %option{value: "07"} 07
-                  %option{value: "08"} 08
-                  %option{value: "09"} 09
-                  %option{value: "10"} 10
-                  %option{value: "11"} 11
-                  %option{value: "12"} 12
+              .credit__content__form__group__date
+                .credit__content__form__group__date__select
+                = f.collection_select :exp_month, Month.all, :id, :name, {}, {class: 'credit__content__form__group__select__month'}
                 %span 月
-                %select.credit__content__form__group__select__year>
-                  %option{value: "19"} 19
-                  %option{value: "20"} 20
-                  %option{value: "21"} 21
-                  %option{value: "22"} 22
-                  %option{value: "23"} 23
-                  %option{value: "24"} 24
-                  %option{value: "25"} 25
-                  %option{value: "26"} 26
-                  %option{value: "27"} 27
-                  %option{value: "28"} 28
-                  %option{value: "29"} 29
+                .credit__content__form__group__date__select 
+                = f.collection_select :exp_year, Year.all, :id, :name, {}, {class: 'credit__content__form__group__select__year'}
                 %span 年
-
             .credit__content__form__group
               %label.credit__content__form__security セキュリティコード
               %span.credit__content__form__group__require 必須
-              %input{type: "text", class: "cvc", id: "payment_card_security_code", name: "cvc", placeholder: "カード背面4桁もしくは3桁の番号"}
+              =f.text_field :number, class: "cvc", type: "text",  placeholder: "カード背面4桁もしくは3桁の番号"
               .credit__content__form__group__help
                 %span.credit__content__form__group__help__icon ?
                 %span カード裏面の番号とは？
-
-            .credit__content__card__link
-              = link_to '#' do
-                %span 追加する
+              = f.submit "追加する" , class:'credit__content__card__link', id: 'add__credit__card'
 
 = render partial: "layouts/footer"
