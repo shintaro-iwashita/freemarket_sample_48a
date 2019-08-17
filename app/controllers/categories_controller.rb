@@ -21,11 +21,7 @@ class CategoriesController < ApplicationController
       @categoryname = cat.parent.name
     else
       @products = Product.where(product_category_id:params[:id])
-      @categoryname = cat.name
-    end
-    @images = []
-    @products.each do |p|
-      @images << ProductImage.find(p.id)
+      @categoryname = cat.name\
     end
   end
 
