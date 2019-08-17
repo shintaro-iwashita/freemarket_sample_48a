@@ -80,6 +80,7 @@ gem 'payjp'
 gem "gretel"
 gem 'devise'
 gem 'jquery-rails'
+gem 'pry-rails'
 gem 'ancestry'
 gem 'omniauth'
 gem 'omniauth-facebook'

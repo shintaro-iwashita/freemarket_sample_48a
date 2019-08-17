@@ -1,6 +1,12 @@
 ja:
   enums:
     product:
+      size_id:
+        sitei: "指定なし"
+        s: "S"
+        m: "M"
+        l: "L"
+
       condition_id:
         unused: "新品、未使用"
         like_new: "未使用に近い"
