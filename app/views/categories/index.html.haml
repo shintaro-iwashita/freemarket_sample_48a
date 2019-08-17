@@ -3,32 +3,25 @@
 = breadcrumbs separator: " &rsaquo; ", link_current: true
 
 .categoryindex
-  .categoryindex__pc
-    .categoryindex__pc__gray
-      %h2
-        カテゴリー一覧
-    .categoryindex__pc__list.clearfix
-      -@product_categories.each_with_index do |category,i|
-        = link_to category.name,"#root_category-" +(i+1).to_s,anchor:"root_category-", class:"categoryindex__pc__list__name"
-    
-    .categoryindex__pc__box
-    - @product_top.each do |ptop|
-      .categoryindex__pc__box__white.clearfix
-        .categoryindex__pc__box__white__name
-          %h3#root_category-1
-            %span
-            = ptop.name
-        .categoryindex__pc__box__white__inner
-          %p
-            = link_to ProductCategory.find(ptop.id+2).name, category_path(ptop.id)
-          .categoryindex__pc__box__white__inner__name
-          - ptop.children.each do |ch|
-            .categoryindex__pc__box__white__inner__name__children
-              %p
-              = ch.name
-            - ch.children.each do |gc|
-              .categoryindex__pc__box__white__inner__name__children__grandchildren
-                %p
-                = gc.name
+  .categoryindex__title
+    %p カテゴリー一覧
+  .categoryindex__index
+  - @product_categories.each_with_index do |category,i|
+    = link_to category.name,"#root_category-" +(i+1).to_s,anchor:"root_category-", class:"categoryindex__pc__list__name"
   
+  - @product_top.each do |ptop|
+    .categoryindex__red
+      %span
+        = ptop.name
 
+    .categoryindex__white
+      .categoryindex__white__all
+        %p
+        = link_to ProductCategory.find(ptop.id+2).name, category_path(ptop.id)
+    - ptop.children.each do |ch|
+      .categoryindex__white__child-title
+        %p
+        = ch.name
+      .categoryindex__white__childs
+      - ch.children.each_with_index do |gc,i|
+        = link_to gc.name,category_path(gc.id)
