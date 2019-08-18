@@ -5,9 +5,9 @@
 .categoryindex
   .categoryindex__title
     %p カテゴリー一覧
-  .categoryindex__index
+  .categoryindex__indexes
   - @product_categories.each_with_index do |category,i|
-    = link_to category.name,"#root_category-" +(i+1).to_s,anchor:"root_category-", class:"categoryindex__pc__list__name"
+    = link_to category.name,"#root_category-" +(i+1).to_s,class:"categoryindex__indexes__link"
   
   - @product_top.each do |ptop|
     .categoryindex__red
@@ -19,9 +19,20 @@
         %p
         = link_to ProductCategory.find(ptop.id+2).name, category_path(ptop.id)
     - ptop.children.each do |ch|
-      .categoryindex__white__child-title
-        %p
-        = ch.name
-      .categoryindex__white__childs
-      - ch.children.each_with_index do |gc,i|
-        = link_to gc.name,category_path(gc.id)
+      .categoryindex__white__children
+        .categoryindex__white__children__title
+          %p
+            = ch.name
+        .categoryindex__white__children__children
+          - ch.children.each_with_index do |gc,i|
+            - if i % 2 == 0 then
+              .categoryindex__white__children__children__child1
+                = link_to gc.name,category_path(gc.id)
+            - elsif i % 2 == 1 then
+              .categoryindex__white__children__children__child2
+                = link_to gc.name,category_path(gc.id)
+            // 0から始まるため
+            - if i == ch.children.length-1  then 
+              .categoryindex__white__children__children__child2
+                %p &nbsp;
+                          

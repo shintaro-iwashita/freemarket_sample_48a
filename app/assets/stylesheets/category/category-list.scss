@@ -1,3 +1,65 @@
 .categoryindex{
-
+  width:90%;
+  margin:0 auto;
+  box-sizing:border-box;
+  &__title{
+    font-size:1.3rem;
+    font-weight:bold;
+    margin:30px 0 10px 0;
+  }
+  &__indexes{
+    color:black;
+    text-decoration:none;
+    &__link{
+      color:black;
+      text-decoration:none;
+      padding:15px;
+      margin:5px;
+      background-color:white;
+      display:inline-block;
+      width:auto;
+      border-radius:5px;
+    }
+    &__link:hover{
+      background-color:red;
+      color:white;
+      text-decoration:none;
+    }
+  }
+  &__red{
+    background-color:red;
+    font-size:1.3rem;
+    font-weight:bold;
+    color:white;
+    border-radius:5px 5px 0 0;
+    width:100%;
+    margin:50px 0 0 0;
+    box-sizing:border-box;
+    padding:0 5%;
+  }
+  &__white{
+    width:100%;
+    font-size:1.1rem;
+    background-color:white;
+    &__all{
+      font-size:1.1rem;
+    }
+    &__children{
+      font-size:1.1rem;
+      &__title{
+        font-weight:bold;
+      }
+      &__children{
+        width:100%;
+        &__child1{
+          width:50%;
+          float:left;
+        }
+        &__child2{
+          width:50%;
+          float:right;
+        }
+      }
+    }
+  }
 }
