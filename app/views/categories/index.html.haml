@@ -6,11 +6,11 @@
   .categoryindex__title
     %p カテゴリー一覧
   .categoryindex__indexes
-  - @product_categories.each_with_index do |category,i|
-    = link_to category.name,"#root_category-" +(i+1).to_s,class:"categoryindex__indexes__link"
+  - @product_top.each_with_index do |ptop,i|
+    = link_to ptop.name,"#root_category-" +(i+1).to_s,class:"categoryindex__indexes__link"
   
-- @product_top.each do |ptop|
-  .categoryindex__parent.clearfix
+- @product_top.each_with_index do |ptop,i|
+  .categoryindex__parent.clearfix{id:"root_category-"+(i+1).to_s}
     .categoryindex__parent__red
       = ptop.name
     .categoryindex__parent__white
