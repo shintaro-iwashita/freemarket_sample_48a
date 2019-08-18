@@ -82,6 +82,9 @@
             text-align: center;
             background-color: $background-gray;
             font-size: 12px;
+            a {
+                cursor: pointer;
+            }
         }
     }
 
