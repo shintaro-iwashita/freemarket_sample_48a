@@ -26,40 +26,74 @@
       text-decoration:none;
     }
   }
-  &__red{
-    background-color:red;
-    font-size:1.3rem;
-    font-weight:bold;
-    color:white;
-    border-radius:5px 5px 0 0;
-    width:100%;
-    margin:50px 0 0 0;
-    box-sizing:border-box;
-    padding:0 5%;
-  }
-  &__white{
-    width:100%;
-    font-size:1.1rem;
-    background-color:white;
-    &__all{
-      font-size:1.1rem;
+  &__parent{
+    height:100%;
+    width:90%;
+    margin:0 auto;
+    &__red{
+      background-color:red;
+      font-size:1.3rem;
+      font-weight:bold;
+      color:white;
+      border-radius:5px 5px 0 0;
+      width:100%;
+      z-index:100;
+      // margin:50px 0 0 0;
+      box-sizing:border-box;
+      // padding:10px 10px;
     }
-    &__children{
+    &__white{
+      z-index:1;
+      width:100%;
       font-size:1.1rem;
-      &__title{
-        font-weight:bold;
+      background-color:white;
+      box-sizing:border-box;
+      // margin:0 0 0 0;
+      &__all{
+        font-size:1.1rem;
+        box-sizing:border-box;
+        // padding:20px 30px 0 30px;
+        background-color:white;
       }
-      &__children{
-        width:100%;
-        &__child1{
-          width:50%;
-          float:left;
+      &__child{
+        font-size:1.1rem;
+        box-sizing:border-box;
+        // padding:0 0 0 0;
+        background-color:white;
+        &__title{
+          font-weight:bold;
+          box-sizing:border-box;
+          // padding:20px 30px 0 30px;
+          // background-color:red;
         }
-        &__child2{
-          width:50%;
-          float:right;
+        &__grandchild{
+          width:100%;
+          box-sizing:border-box;
+          // padding:0 0 0 0;
+          &__1{
+            width:50%;
+            float:left;
+
+            // padding:10px 50px;
+            box-sizing:border-box;
+            background-color:white;
+          }
+          &__2{
+            width:50%;
+            float:right;
+
+            // padding:10px 0;
+            box-sizing:border-box;
+            background-color:white;
+          }
         }
       }
-    }
   }
+  
+  }
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
 }

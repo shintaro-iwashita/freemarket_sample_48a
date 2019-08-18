@@ -9,30 +9,27 @@
   - @product_categories.each_with_index do |category,i|
     = link_to category.name,"#root_category-" +(i+1).to_s,class:"categoryindex__indexes__link"
   
-  - @product_top.each do |ptop|
-    .categoryindex__red
-      %span
-        = ptop.name
-
-    .categoryindex__white
-      .categoryindex__white__all
-        %p
+- @product_top.each do |ptop|
+  .categoryindex__parent
+    .categoryindex__parent__red
+      = ptop.name
+    .categoryindex__parent__white
+      .categoryindex__parent__white__all
         = link_to ProductCategory.find(ptop.id+2).name, category_path(ptop.id)
-    - ptop.children.each do |ch|
-      .categoryindex__white__children
-        .categoryindex__white__children__title
-          %p
+      .categoryindex__parent__white__child
+        - ptop.children.each do |ch|
+          .categoryindex__parent__white__child__title
             = ch.name
-        .categoryindex__white__children__children
+          .categoryindex__parent__white__child__grandchild.clearfix
           - ch.children.each_with_index do |gc,i|
             - if i % 2 == 0 then
-              .categoryindex__white__children__children__child1
+              .categoryindex__parent__white__child__grandchild__1
                 = link_to gc.name,category_path(gc.id)
             - elsif i % 2 == 1 then
-              .categoryindex__white__children__children__child2
+              .categoryindex__parent__white__child__grandchild__2
                 = link_to gc.name,category_path(gc.id)
             // 0から始まるため
-            - if i == ch.children.length-1  then 
-              .categoryindex__white__children__children__child2
-                %p &nbsp;
+            - if i == ch.children.length-1 && ch.children.length % 2 == 1 then 
+              .categoryindex__parent__white__child__grandchild__2
+                &nbsp;
                           
