@@ -29,7 +29,7 @@
   &__parent{
     height:100%;
     width:90%;
-    margin:0 auto;
+    margin:20px auto;
     // padding:20px 0;
     &__red{
       background-color:red;
@@ -39,9 +39,10 @@
       border-radius:5px 5px 0 0;
       width:100%;
       z-index:100;
-      // margin:50px 0 0 0;
+      padding:0 0 0 20px;
       box-sizing:border-box;
-      padding:30px 10px;
+      height:40px;
+      line-height:40px;
     }
     &__white{
       z-index:1;
@@ -53,51 +54,44 @@
       &__all{
         font-size:1.1rem;
         box-sizing:border-box;
-        // padding:20px 30px 0 30px;
-        background-color:white;
+        height:60px;
+        line-height:60px;
+        padding:0 0 0 30px;
       }
       &__child{
         font-size:1.1rem;
         box-sizing:border-box;
         // padding:0 0 0 0;
-        background-color:white;
         &__title{
           font-weight:bold;
           box-sizing:border-box;
-          // padding:20px 30px 0 30px;
-          // background-color:red;
+          padding:0 0 0 30px;
+          margin:20px 0 0 0;
+          height:30px;
         }
         &__grandchild{
-          width:100%;
-          box-sizing:border-box;
-          content:"";
-          display:block;
           clear:both;
-          // padding:0 0 0 0;
           &__1{
             width:50%;
             float:left;
-
-            // padding:10px 50px;
+            height:30px;
             box-sizing:border-box;
-            background-color:white;
+            padding:0 0 0 60px;
           }
           &__2{
             width:50%;
-            // float:right;
-
-            // padding:10px 0;
-            box-sizing:border-box;
-            background-color:white;
+            float:right;
+            height:30px;
           }
+        
         }
       }
   }
   
   }
 }
-.clearfix{
-  content: "";
+.clearfix:after {
+  content: '';
   display: block;
   clear: both;
 }

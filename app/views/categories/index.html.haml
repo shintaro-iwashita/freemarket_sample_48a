@@ -10,7 +10,7 @@
     = link_to category.name,"#root_category-" +(i+1).to_s,class:"categoryindex__indexes__link"
   
 - @product_top.each do |ptop|
-  .categoryindex__parent
+  .categoryindex__parent.clearfix
     .categoryindex__parent__red
       = ptop.name
     .categoryindex__parent__white
@@ -21,15 +21,15 @@
           .categoryindex__parent__white__child__title
             = ch.name
           .categoryindex__parent__white__child__grandchild.clearfix
-          - ch.children.each_with_index do |gc,i|
-            - if i % 2 == 0 then
-              .categoryindex__parent__white__child__grandchild__1
-                = link_to gc.name,category_path(gc.id)
-            - elsif i % 2 == 1 then
-              .categoryindex__parent__white__child__grandchild__2
-                = link_to gc.name,category_path(gc.id)
-            // 0から始まるため
-            - if i == ch.children.length-1 && ch.children.length % 2 == 1 then 
-              .categoryindex__parent__white__child__grandchild__2
-                &nbsp;
+            - ch.children.each_with_index do |gc,i|
+              - if i % 2 == 0 then
+                .categoryindex__parent__white__child__grandchild__1
+                  = link_to gc.name,category_path(gc.id)
+              - elsif i % 2 == 1 then
+                .categoryindex__parent__white__child__grandchild__2
+                  = link_to gc.name,category_path(gc.id)
+              // 0から始まるため
+              - if i == ch.children.length-1 && ch.children.length % 2 == 1 then 
+                .categoryindex__parent__white__child__grandchild__2
+                  &nbsp;
                           
