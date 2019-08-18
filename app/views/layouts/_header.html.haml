@@ -16,8 +16,14 @@
                 %i.fas.fa-list-ul.header__row2__left__category__red
                 %span カテゴリーから探す
             %ul.header__row2__left__category__wrap{data:{mega:"1"}}
-              %li.header__row2__left__category__wrap__stick
-                %h3
+              - @product_categories.each do |procategory|
+                %li.header__row2__left__category__wrap__stick
+                  %h3
+                    = link_to procategory.name do
+                      - procategory.children.each do |children|
+                        %li.header__row2__left__category__wrap__stick
+                          %h3
+                            = link_to children.name, ''
           %li
             %h2
               = link_to root_path, class: "header__row2__left__category__brand" do
