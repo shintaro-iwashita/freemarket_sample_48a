@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   }
   
   root "products#index"
+  get 'search', to: 'products#search'
 
   resources :products, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :purchases, only: [:index, :create]
