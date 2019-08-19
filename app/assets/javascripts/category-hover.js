@@ -1,34 +1,37 @@
 $(function(){
+  $("ul li ul", this).css("display","none");
   $(".header__row2__left__category li").hover(
     function(){
       $("ul", this).show();
-      console.log(this);
       $("ul li ul", this).css("display","none");
-      console.log(this);
     },function(){
       $("ul", this).hide();
     }
   );
-  
-  $('.procategory-font').hover(function(){
-    $(this).css({
-      background: "#ea352d",
-      color: "#fff"
-    });
-  },function(){
-    $(this).css({
-      background: "",
-      color: ""
-    });
-  }
+
+  $(".header__row2__left__category__wrap li").hover(
+    function(){
+      $(".procategory-font",this).css("background", "#ea352d");
+      $(".procategory-font",this).css("color", "#fff");
+    },function(){
+      $(".procategory-font",this).css("background", "#fff");
+      $(".procategory-font",this).css("color","black");
+    }
   );
 
-  // $('.procategory-font').hover(function(){
-  //   $(".header__row2__left__category__wrap__stick__child__nav").css("display", "block");
-  //     console.log("たき");
-  // },function(){
-  //   $(".header__row2__left__category__wrap__stick__child__nav").css("display", "none");
-  //     console.log("たに");
-  //   }
-  // );
+  $(".header__row2__left__category__wrap__stick__nav li").hover(
+    function(){
+      $(".childcategory-font", this).css("background", "#eee");
+    },function(){
+      $(".childcategory-font", this).css("background", "#fff");
+    }
+  );
+
+  $(".header__row2__left__category__wrap__stick__nav__child__grand li").hover(
+    function(){
+      $(".grandchild-font", this).css("background", "#eee");
+    },function(){
+      $(".grandchild-font", this).css("background", "#fff");
+    }
+  )
 });
