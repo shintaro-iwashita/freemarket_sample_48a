@@ -4,10 +4,12 @@
       .header__row1__titles
         = link_to root_path, class:'links' do
           = image_tag("/images/m-logo.png",width:'170px',height:'50px',class:"header__row1__forms__mercari __image")
-      .header__row1__forms
+      %dl.searchbox
         = search_form_for(@search, url:search_path) do |f|
-          %input{type:"search",name: "keyword", placeholder:'何かお探しですか？',class: "header__row1__forms__input"}
-          %i.fas.fa-search.header__row1__forms__search
+          %dt= f.text_field :name_cont ,placeholder: '何かお探しですか？'
+          %dd
+            = button_tag type: "submit", class: "search-icon" do
+              %i.fa.fa-search
     .header__row2.clearfix
       %nav.header__row2__left
         %ul.header__row2__left__category
@@ -16,7 +18,7 @@
               %i.fas.fa-list-ul.header__row2__left__category__red
               %span カテゴリーから探す
             %ul.header__row2__left__category__wrap
-              - @product_categories.each do |procategory|
+              - @category_parent.each do |procategory|
                 %li.header__row2__left__category__wrap__stick
                   = link_to procategory.name, '', class: "procategory-font"
                   %ul.header__row2__left__category__wrap__stick__nav
