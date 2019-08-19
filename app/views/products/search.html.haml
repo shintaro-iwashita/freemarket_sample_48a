@@ -1,0 +1,15 @@
+= render partial: "layouts/header" 
+.search
+  - @search_products.each do |product|
+    .search__images
+      = link_to image_tag(product.images.slice(0), size: "160x160"), product_path(product.id)
+      = link_to(product_path(product.id), class: 'links') do
+        .search__images__box
+          .search__images__box__title
+            = product.name
+          .search__images__box__price
+            ¥
+            %p
+              = product.price
+
+= render partial: "layouts/footer"

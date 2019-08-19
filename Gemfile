@@ -93,3 +93,4 @@ gem 'rails-i18n'
 gem 'fog-aws'
 gem 'pry-byebug'
 gem 'aws-sdk-s3', require: false
+gem 'ransack'
