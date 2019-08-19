@@ -61,15 +61,8 @@ $radius:6px;
         a{
           color: black;
           display: block;
-        }
-        a:hover{
-          opacity: 1;
-          text-decoration: none;
-        }
-        h2{
           font-size: 14px;
-          line-height: 30px;
-          height: 45px;
+          line-height: 45px;
         }
         &__parent{
           font-weight: bold;
@@ -89,33 +82,37 @@ $radius:6px;
           box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
           &__stick{
             width: 224px;
-            display:none;
-            h3{
+            a{
               font-weight: 400;
+              padding: 0 16px;
+              line-height: 44px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
               font-size: 14px;
-              a{
-                padding: 0 16px;
-                line-height: 44px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                font-size: 14px;
-              }
             }
-            &__child{
+            a:hover{
+              text-decoration: none;
+            }
+            &__nav{
               position: absolute;
               top: 0;
               left: 224px;
               bottom: 0;
               background: #fff;
               box-shadow: 1px 0 0 0 #eee inset;
-              &__candidate{
-                display: none;
+              &__child{
                 width: 224px;
-              }
-              .header__row2__left__category__wrap__stick__child__candidate >a{
-                padding: 8px 16px;
-                line-height: unset;
+                >a{
+                  padding: 8px 16px;
+                }
+                a{
+                  font-size: 14px;
+                  color: #333;
+                  white-space: nowrap;
+                  line-height: 14px;
+                  box-sizing: border-box;
+                }
               }
             }
           }
