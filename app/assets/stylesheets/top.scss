@@ -64,8 +64,13 @@ $radius:6px;
           font-size: 14px;
           line-height: 45px;
         }
+        a:hover{
+          text-decoration: none;
+        }
         &__parent{
           font-weight: bold;
+          vertical-align: middle;
+
         }
         &__red{
           color: #ea352d;
@@ -131,7 +136,8 @@ $radius:6px;
             }
           }
         }
-        span{
+        &__brand{
+          font-weight: bold;
           vertical-align: middle;
         }
         &__cat{

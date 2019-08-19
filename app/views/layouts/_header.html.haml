@@ -28,10 +28,9 @@
                               = link_to grandchild.name.delete("すべて"), '',class: "grandchild-font"
 
           %li
-            %h2
-              = link_to root_path, class: "header__row2__left__category__brand" do
-                %i.fas.fa-tag.header__row2__left__category__cat
-                %span ブランドから探す
+            = link_to root_path, class: "header__row2__left__category__brand" do
+              %i.fas.fa-tag.header__row2__left__category__cat
+              %span ブランドから探す
       .header__row2__right
         -if user_signed_in?
           %ul.header__row2__right__nav
