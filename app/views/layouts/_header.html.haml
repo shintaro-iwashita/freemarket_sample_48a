@@ -5,8 +5,9 @@
         = link_to root_path, class:'links' do
           = image_tag("/images/m-logo.png",width:'170px',height:'50px',class:"header__row1__forms__mercari __image")
       .header__row1__forms
-        %input{type:"search",name: "keyword", placeholder:'何かお探しですか？',class: "header__row1__forms__input"}
-        %i.fas.fa-search.header__row1__forms__search
+        = search_form_for(@search, url:search_path) do |f|
+          %input{type:"search",name: "keyword", placeholder:'何かお探しですか？',class: "header__row1__forms__input"}
+          %i.fas.fa-search.header__row1__forms__search
     .header__row2.clearfix
       %nav.header__row2__left
         %ul.header__row2__left__category
@@ -26,7 +27,6 @@
                           - child.children.each do |grandchild|
                             %li.header__row2__left__category__wrap__stick__nav__child__grand__order
                               = link_to grandchild.name.delete("すべて"), '',class: "grandchild-font"
-
           %li
             = link_to root_path, class: "header__row2__left__category__brand" do
               %i.fas.fa-tag.header__row2__left__category__cat

@@ -94,3 +94,4 @@ gem 'fog-aws'
 gem 'pry-byebug'
 gem 'aws-sdk-s3', require: false
 gem 'pry-byebug'
+gem 'ransack'
