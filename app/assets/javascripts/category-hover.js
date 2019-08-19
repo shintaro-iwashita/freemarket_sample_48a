@@ -1,20 +1,34 @@
 $(function(){
-  $(".category-search").hover(
+  $(".header__row2__left__category li").hover(
     function(){
-      $(".header__row2__left__category__wrap__stick").css("display","block");
-      console.log("ヤマ");
-    },
-    function(){
-      $(".header__row2__left__category__wrap__stick").css("display","none");
-      console.log('かわ');
+      $("ul", this).show();
+      console.log(this);
+      $("ul li ul", this).css("display","none");
+      console.log(this);
+    },function(){
+      $("ul", this).hide();
     }
   );
-
-  $('.header__row2__left__category__wrap__stick').hover(function(){
-    $(this).css("background","red");
+  
+  $('.procategory-font').hover(function(){
+    $(this).css({
+      background: "#ea352d",
+      color: "#fff"
+    });
   },function(){
-    $(this).css("background","white");
+    $(this).css({
+      background: "",
+      color: ""
+    });
   }
-  )
+  );
 
+  // $('.procategory-font').hover(function(){
+  //   $(".header__row2__left__category__wrap__stick__child__nav").css("display", "block");
+  //     console.log("たき");
+  // },function(){
+  //   $(".header__row2__left__category__wrap__stick__child__nav").css("display", "none");
+  //     console.log("たに");
+  //   }
+  // );
 });
