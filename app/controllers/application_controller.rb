@@ -2,6 +2,13 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :basic_auth, if: :production?
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_search
+
+def set_search
+  @search = Product.ransack(params[:q])
+  @search_products = @search.result(distinct: true)
+end
+
   protect_from_forgery with: :null_session
 
   protected

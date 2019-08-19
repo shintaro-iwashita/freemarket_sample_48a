@@ -82,6 +82,9 @@
             text-align: center;
             background-color: $background-gray;
             font-size: 12px;
+            a {
+                cursor: pointer;
+            }
         }
     }
 
@@ -248,7 +251,7 @@ div {
 
     .l-right.price {
         height: 100%;
-        width: 50px;
+        width: 100px;
         line-height: 50px;
         font-size: 26px;
         text-align: right;
@@ -256,6 +259,7 @@ div {
 
     .l-right.price.bold {
         font-weight: bold;
+        text-align: right;
     }
 
     .l-left.price {

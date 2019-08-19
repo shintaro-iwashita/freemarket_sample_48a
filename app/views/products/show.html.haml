@@ -128,7 +128,11 @@
             (税込)
           %span.item__content__container__price__fee
             送料込み
-          = link_to "購入画面へ進む", product_purchases_path(@product), class: "item__content__container__price__buy",data:{client:"hidden"}
+        .item__content__container__btn  
+          -if @product.buyer_id.present? 
+            %span.item__content__container__price__btn 売り切れました
+          -else
+            = link_to "購入画面へ進む", product_purchases_path(@product), class: "item__content__container__price__buy",data:{client:"hidden"}
         .item__content__container__description
           %p.item__content__container__description__inner
             = @product.description

@@ -1,0 +1,33 @@
+.search{
+  width: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  &__images{
+    vertical-align: bottom;
+    padding: 0 18px;
+    &__box{
+      background: white;
+      height: 70px;
+      color: black;
+      margin-bottom: 50px;
+      font-size: 18px;
+      font-weight: lighter;
+      padding: 7px 20px 10px;
+      width: 120px;
+      word-wrap:break-word;
+      position: relative;
+      &__title{
+        height: 53px;
+      }
+      &__price{
+        background: white;
+        left: 16px;
+        font-weight: bolder;
+        display: flex;
+        position: absolute;
+        }
+
+      }
+    }
+  }
