@@ -11,19 +11,20 @@
       %nav.header__row2__left
         %ul.header__row2__left__category
           %li.category-search
-            %h2
-              = link_to categories_path , class: "header__row2__left__category__parent" do
-                %i.fas.fa-list-ul.header__row2__left__category__red
-                %span カテゴリーから探す
-            %ul.header__row2__left__category__wrap{data:{mega:"1"}}
+            = link_to categories_path , class: "header__row2__left__category__parent" do
+              %i.fas.fa-list-ul.header__row2__left__category__red
+              %span カテゴリーから探す
+            %ul.header__row2__left__category__wrap
               - @product_categories.each do |procategory|
                 %li.header__row2__left__category__wrap__stick
-                  %h3
-                    = link_to procategory.name do
-                      - procategory.children.each do |children|
-                        %li.header__row2__left__category__wrap__stick
-                          %h3
-                            = link_to children.name, ''
+                  = link_to procategory.name, '', class: "procategory-font"
+                  %ul.header__row2__left__category__wrap__stick__nav
+                    - procategory.children.each do |child|
+                      %li.header__row2__left__category__wrap__stick__nav__child
+                        = link_to child.name, '' , class: "childcategory-font"
+                        %ul.header__row2__left__category__wrap__stick__nav__child__grand
+                          %li.header__row2__left__category__wrap__stick__nav__child__grand__order
+
           %li
             %h2
               = link_to root_path, class: "header__row2__left__category__brand" do
