@@ -12,7 +12,8 @@ class ProductsController < ApplicationController
     @men = Product.active(@mencategory.subtree).sorted
     @kids = Product.active(@kidscategory.subtree).sorted
     @cosme = Product.active(@cosmecategory.subtree).sorted
-    @product_categories = ProductCategory.order("ancestry ASC").limit(13)
+    @product_categories = ProductCategory.where(ancestry: nil)
+    # binding.pry
   end
 
 
