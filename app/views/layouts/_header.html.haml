@@ -23,7 +23,9 @@
                       %li.header__row2__left__category__wrap__stick__nav__child
                         = link_to child.name, '' , class: "childcategory-font"
                         %ul.header__row2__left__category__wrap__stick__nav__child__grand
-                          %li.header__row2__left__category__wrap__stick__nav__child__grand__order
+                          - child.children.each do |grandchild|
+                            %li.header__row2__left__category__wrap__stick__nav__child__grand__order
+                              = link_to grandchild.name.delete("すべて"), '',class: "grandchild-font"
 
           %li
             %h2
