@@ -113,6 +113,20 @@ $radius:6px;
                   line-height: 14px;
                   box-sizing: border-box;
                 }
+                &__grand{
+                  position: absolute;
+                  top: 0;
+                  left: 224px;
+                  bottom: 0;
+                  background: #fff;
+                  box-shadow: 1px 0 0 0 #eee inset;
+                  &__order{
+                    width: 320px;
+                    >a{
+                      padding: 8px 16px;
+                    }
+                  }
+                }
               }
             }
           }
