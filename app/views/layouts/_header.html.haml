@@ -28,7 +28,7 @@
                         %ul.header__row2__left__category__wrap__stick__nav__child__grand
                           - child.children.each do |grandchild|
                             %li.header__row2__left__category__wrap__stick__nav__child__grand__order
-                              = link_to grandchild.name.delete("すべて"), '',class: "grandchild-font"
+                              = link_to grandchild.name, '',class: "grandchild-font"
           %li
             = link_to root_path, class: "header__row2__left__category__brand" do
               %i.fas.fa-tag.header__row2__left__category__cat
