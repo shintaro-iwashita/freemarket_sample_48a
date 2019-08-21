@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 def set_search
   @search = Product.ransack(params[:q])
   @search_products = @search.result(distinct: true)
+  @category_parent = ProductCategory.where(ancestry: nil)
 end
 
   protect_from_forgery with: :null_session

@@ -34,14 +34,16 @@
       }
       &__string:hover{
         text-decoration:none;
+      a{
+        color:#fff;
+      }
+      a:hover{
+        text-decoration: none;
       }
       .links{
         display:block;
         width:100%;
         text-align:center;
-      a {
-        color: white;
-      }
     }
   }
 }

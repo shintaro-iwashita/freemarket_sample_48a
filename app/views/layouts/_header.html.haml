@@ -1,68 +1,62 @@
 .header
-  .header__row1
-    .header__row1__titles
-      = link_to root_path, class:'links' do
-        = image_tag("/images/m-logo.png",width:'170px',height:'50px',class:"header__row1__forms__mercari __image")
-    %dl.searchbox
-      = search_form_for(@search, url:search_path) do |f|
-        %dt= f.text_field :name_cont ,placeholder: '何かお探しですか？'
-        %dd
-          = button_tag type: "submit", class: "search-icon" do
-            %i.fa.fa-search
-
-  .header__row2
-    .header__row2__CategoryLists
-      .header__row2__CategoryLists__index
-        %i.fas.fa-list-ul.red
-        = link_to categories_path , class: 'links-black' do
-          カテゴリーから探す
-      .header__row2__CategoryLists__lists
-        .header__row2__CategoryLists__lists__list1#list1
-          %p aaaaa
-          %p aaaaaaa
-        .header__row2__CategoryLists__lists__list2#list2
-          %p aaa
-          %p aaaaaaaaa
-        .header__row2__CategoryLists__lists__list3#list3
-          %p  aaa
-          %p  aaaddddddddd
-    .header__row2__brandlists
-      .header__row2__brandlists__index
-        %i.fas.fa-tag.red
-          = link_to root_path, class: 'links-black' do
-            ブランドから探す
-      .header__row2__brandlists__lists
-        %p ブランド1
-        %p ブランド2
-    .header__row2__lists
-      - if user_signed_in?
-        .header__row2__lists__general
-          %i.far.fa-heart
-          = link_to "",class: 'links' do
-            %span いいね！一覧
-        .header__row2__lists__general
-          %i.far.fa-bell
-          = link_to "#",class: 'links' do
-            %span お知らせ
-        .header__row2__lists__general
-          %i.fas.fa-check.gray
-          = link_to "#",class: 'links' do
-            %span やることリスト
-        .header__row2__lists__general
-          %i.far.fa-smile-beam.gray
-          = link_to users_path, class: 'links' do
-            %span マイページ
-      - else
-        .header__row2__lists__newuser
-          = link_to new_user_path, class: 'links' do
-            %p 新規会員登録
-        .header__row2__lists__login
-          = link_to new_user_session_path,class: 'links' do
-            %p ログイン
-  .notifications
-    - flash.each do |key, value|
-      = content_tag(:div, value, class: key)
-
-
-
-
+  .header__inter
+    .header__row1
+      .header__row1__titles
+        = link_to root_path, class:'links' do
+          = image_tag("/images/m-logo.png",width:'170px',height:'50px',class:"header__row1__forms__mercari __image")
+      %dl.searchbox
+        = search_form_for(@search, url:search_path) do |f|
+          %dt= f.text_field :name_cont ,placeholder: '何かお探しですか？'
+          %dd
+            = button_tag type: "submit", class: "search-icon" do
+              %i.fa.fa-search
+    .header__row2.clearfix
+      %nav.header__row2__left
+        %ul.header__row2__left__category
+          %li.category-search
+            = link_to categories_path , class: "header__row2__left__category__parent" do
+              %i.fas.fa-list-ul.header__row2__left__category__red
+              %span カテゴリーから探す
+            %ul.header__row2__left__category__wrap
+              - @category_parent.each do |procategory|
+                %li.header__row2__left__category__wrap__stick
+                  = link_to procategory.name, '', class: "procategory-font"
+                  %ul.header__row2__left__category__wrap__stick__nav
+                    - procategory.children.each do |child|
+                      %li.header__row2__left__category__wrap__stick__nav__child
+                        = link_to child.name, '' , class: "childcategory-font"
+                        %ul.header__row2__left__category__wrap__stick__nav__child__grand
+                          - child.children.each do |grandchild|
+                            %li.header__row2__left__category__wrap__stick__nav__child__grand__order
+                              = link_to grandchild.name, '',class: "grandchild-font"
+          %li
+            = link_to root_path, class: "header__row2__left__category__brand" do
+              %i.fas.fa-tag.header__row2__left__category__cat
+              %span ブランドから探す
+      .header__row2__right
+        -if user_signed_in?
+          %ul.header__row2__right__nav
+            %li.header__row2__right__nav__liked{data:{id: "pc-header-user-nav",key: "notification_list",url: ""}}
+              = link_to "","", class: "header__row2__right__nav__liked__menu"
+              %i.far.fa-bell.header__row2__right__nav__liked__bell
+              %span お知らせ
+              .header__row2__right__nav__liked__count
+              %ul.header__row2__right__nav__liked__notification.mypage-item-list{data:{id:"pc-header-user-items"}}
+            %li{data:{id:"pc-header-user-nav",key:"todo_list",url:""}}
+              = link_to "", "", class: "header__row2__right__nav__liked__menu"
+              %i.fas.fa-check.header__row2__right__nav__liked__check
+              %span やることリスト
+              %ul.header__row2__right__nav__liked__todo.mypage-item-list
+            %li
+              = link_to users_path, class: "header__row2__right__nav__liked__menu" do
+                %figure
+                %span マイページ
+        - else
+          %ul.header__row2__right__login
+            %li
+              = link_to '新規会員登録',new_user_path, class: "header__row2__right__login__new"
+            %li
+              = link_to 'ログイン',new_user_session_path, class: "header__row2__right__login__as"
+.notifications
+  - flash.each do |key, value|
+    = content_tag(:div, value, class: key)

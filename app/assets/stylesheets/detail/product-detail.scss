@@ -148,8 +148,8 @@
            margin: 0;
          }
          .fa-chevron-right{
-display:flex;
-           color: #0099e8;
+          display:flex;
+          color: #0099e8;
          }
        }
      }
@@ -319,7 +319,7 @@ display:flex;
        font-size: 16px;
        text-align: center;
      }
-&__gray{
+    &__gray{
        margin: 16px 0 16px 0;
        background: #aaa;
        border: 1px solid #aaa;
@@ -632,9 +632,9 @@ line-height: 44px;
              position: relative;
              width: 100%;
              height: 0;
-@media screen and (min-width: 768px){
-               width: 220px;
-               height: 220px;
+              @media screen and (min-width: 768px){
+                width: 220px;
+                height: 220px;
              }
              &__lazy{
                position: absolute;
