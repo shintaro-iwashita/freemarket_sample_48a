@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
     @product_top = ProductCategory.where(ancestry:nil)
     @product_child = ProductCategory.where.not("ancestry LIKE ?", "%/%")
     @product_grandchild = ProductCategory.where("ancestry LIKE ?", "%/%")
+    @product_categories = ProductCategory.order("ancestry ASC").limit(13)
   end
 
   def show
