@@ -22,6 +22,7 @@ $(function(){
   $(".header__row2__left__category__wrap__stick__nav li").hover(
     function(){
       $(".childcategory-font", this).css("background", "#eee");
+      $(".childcategory-font", this).css("box-shadow", "1px 0 0 0 #eee inset");
     },function(){
       $(".childcategory-font", this).css("background", "#fff");
     }
@@ -30,6 +31,7 @@ $(function(){
   $(".header__row2__left__category__wrap__stick__nav__child__grand li").hover(
     function(){
       $(".grandchild-font", this).css("background", "#eee");
+      $(".grandchild-font", this).css("box-shadow", "1px 0 0 0 #eee inset");
     },function(){
       $(".grandchild-font", this).css("background", "#fff");
     }
