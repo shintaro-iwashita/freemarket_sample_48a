@@ -12,8 +12,8 @@ class ProductsController < ApplicationController
     @men = Product.active(@mencategory.subtree).sorted
     @kids = Product.active(@kidscategory.subtree).sorted
     @cosme = Product.active(@cosmecategory.subtree).sorted
+    @category_parent = ProductCategory.where(ancestry: nil)
   end
-
 
   def show
     @product = Product.find(params[:id])
