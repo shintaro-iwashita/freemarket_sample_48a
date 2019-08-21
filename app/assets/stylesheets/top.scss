@@ -273,6 +273,9 @@ $radius:6px;
           line-height: 30px;
           border-radius: 4px;
         }
+        a:hover{
+          text-decoration: none;
+        }
         &__as{
           display: block;
           border: 1px solid #0099e8;
