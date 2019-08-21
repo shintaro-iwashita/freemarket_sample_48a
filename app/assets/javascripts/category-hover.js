@@ -1,5 +1,5 @@
 $(function(){
-  $("ul li ul", this).css("display","none");
+  $(".header__row2__left__category__wrap").css("display","none");
   $(".header__row2__left__category li").hover(
     function(){
       $("ul", this).show();
