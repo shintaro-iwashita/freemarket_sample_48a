@@ -25,6 +25,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      a{
+        color:#fff;
+      }
+      a:hover{
+        text-decoration: none;
+      }
       .links{
         display:block;
         width:100%;
