@@ -56,8 +56,16 @@
             %h3
               =link_to "過去の取引", "#mypage-tab-transaction-old",data:{toggle: "tab"}
         .tab-content
-          %ul{id: "mypage-tab-transaction-now", class: "mypage-item-belong tab-pane active"}
-            %li.mypage-item-not-found.bold 取引中の商品がありません
+          %ul.mypage-item-belong.tab-pane.active
+            %li
+              .mypage-item-link
+                %figure
+                .mypage-item-body
+                  .mypage-item-text
+                    %span
+                  .mypge-item-status
+            %li.mypage-go-list
+              = link_to "一覧を見る",""
           %ul{id: "mypage-tab-transaction-old", class: "mypage-item-belong tab-pane"}
             %li
               .mypage-item-link
@@ -71,6 +79,6 @@
                     取引完了
                   %i.fa.fa-chevron-right.right-arrow
             %li.mypage-go-list
-              = link_to " 一覧を見る","/jp/mypage/purchased"
+              = link_to " 一覧を見る",""
   %footer
 = render partial: "layouts/footer"
