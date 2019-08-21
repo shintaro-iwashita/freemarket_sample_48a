@@ -170,6 +170,7 @@ $radius:6px;
                   bottom: 0;
                   background: #fff;
                   box-shadow: 1px 0 0 0 #eee inset;
+                  overflow: scroll;
                   &__order{
                     width: 320px;
                     >a{
