@@ -1,18 +1,25 @@
 $(function(){
 
+  var slideImage =  $('.contents__top__image__box');
+
   $('#arrow-left').click(function(){
-    $('.contents__top__image__box').animate({left: 0}, 800);
+    slideImage.animate({left: 0}, 800)
+    setTimeout(function(){
+      slideImage.css('overflow', 'hidden');
+    },1000);
   })
   $('#arrow-right').click(function(){
     screenWidth = $(window).width();
-    $('.contents__top__image__box').animate({left: -screenWidth}, 800).css('overflow', 'visible');
+    slideImage.animate({left: -screenWidth}, 800).css('overflow', 'visible');
   })
-
 
   $('#dot-first').hover(
     function() {
       $(this).css('color', '#757575');
-      $('.contents__top__image__box').animate({left: 0}, 800);
+      slideImage.animate({left: 0}, 800);
+      setTimeout(function(){
+        slideImage.css('overflow', 'hidden');
+      },1000);
     },
     function() {
       $(this).css('color', 'white');
@@ -22,7 +29,7 @@ $(function(){
     function() {
       $(this).css('color', '#757575');
       screenWidth = $(window).width();
-      $('.contents__top__image__box').animate({left: -screenWidth}, 800).css('overflow', 'visible');
+      slideImage.animate({left: -screenWidth}, 800).css('overflow', 'visible');
     },
     function() {
       $(this).css('color', 'white');
