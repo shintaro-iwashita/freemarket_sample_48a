@@ -1,7 +1,20 @@
 = render partial: "layouts/header" 
 = breadcrumbs separator: " &rsaquo; ", link_current: true
 .contents
-  .contents__top__image-box
+  .contents__top__image
+    .contents__top__image__box
+      %img#slide-first{alt: "", src: "/images/m-banner.jpg"}
+      %img#slide-second{alt: "", src: "/images/banner-summer-fes.jpg"}
+    .contents__top__image__arrows
+      .contents__top__image__arrow#arrow-left
+        %i.fas.fa-chevron-left
+      .contents__top__image__arrow#arrow-right
+        %i.fas.fa-chevron-right
+    .contents__top__image__dots 
+      .contents__top__image__dot#dot-first
+        %span ●
+      .contents__top__image__dot#dot-second
+        %span ●
   .contents__container
     %h2.contents__container_title ピックアップカテゴリー
     .contents__container__item
