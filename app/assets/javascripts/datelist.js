@@ -1,8 +1,8 @@
 $(function(){
   function appendDays(){
   // その月の日数を決める
-    year = $('#user_birthday_year').val(); // form_forは、変換される
-    month = $("#user_birthday_month").val();
+    year = $('#yearlist').val(); // form_forは、変換される
+    month = $("#monthlist").val();
     if (month == 2) { // うるう年を計算する。
       if(year == "--"){
         days = 0;
@@ -33,27 +33,19 @@ $(function(){
           j=i
         }
         insert = insert  + "<option>" + j + "</option>";
-      }
-    $("#datelist").append(insert);
+      };
     
-    }
-  
+    $("#datelist").append(insert);
+  };
+
 
 // ここより先、別関数
   $("#monthlist").change(function() {
     appendDays();
-  })
+  });
   $("#yearlist").change(function() {
     appendDays();
-  })
+  });
 
-  function appendToFormFor(){
-    insertedDay=$("#datelist").val();
-    $("#user_birthday_day").val(insertedDay);
-  };
-
-  $("#datelist").change(function() {
-    appendToFormFor();
-  })
+  
 });
-
