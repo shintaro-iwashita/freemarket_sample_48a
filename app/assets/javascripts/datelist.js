@@ -37,8 +37,7 @@ $(function(){
     
     $("#datelist").append(insert);
   };
-
-
+  
 // ここより先、別関数
   $("#monthlist").change(function() {
     appendDays();
@@ -46,6 +45,4 @@ $(function(){
   $("#yearlist").change(function() {
     appendDays();
   });
-
-  
 });
