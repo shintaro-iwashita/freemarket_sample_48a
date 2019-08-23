@@ -1,0 +1,74 @@
+.categoryPage{
+  box-sizing:border-box;
+  width:80%;
+  height:100%;
+  margin:0 auto;
+  &__title{
+    font-size:1.3rem;
+    font-weight:bold;
+    margin:2% 0;
+  }
+  &__list{
+    display:block;
+    float:left;
+    list-style:none;
+    font-size:1.05rem;
+    background-color:white;
+    width:19%;
+    height:340px;
+    margin:4% 0.5%;
+    z-index:0;
+    position:relative;
+    &__link{
+      z-index:2;
+      width:100%;
+      height:100%;
+      display:block;
+      position:absolute;
+      top:0;
+    }
+    &__image{
+      height:240px;
+      width:100%;
+      &__tag{
+        height:95%;
+        width:100%;
+      }
+    }
+    &__texts{
+      word-wrap: break-word;
+      $padding:10%;
+      width:100%;
+      position:relative;
+      height:100px;
+      &__name{
+        height:70px;
+        padding-left:$padding;
+        padding-right:$padding;
+        background-color:white;
+      }
+      &__details{
+        display:flex;
+        font-weight:bold;
+        position:relative;
+        height:30px;
+        background-color:white;
+        &__price{
+          position:absolute;
+          left:$padding;
+        }
+        &__favorite{
+          text-align:right;
+          position:absolute;
+          right:$padding;
+        }
+      }
+    }
+  }
+}
+.span:lang(ja){
+  font-family:"ＭＳ Ｐ明朝"
+}
+.span:lang(en){
+  font-family:"ＭＳ Ｐ明朝"
+}

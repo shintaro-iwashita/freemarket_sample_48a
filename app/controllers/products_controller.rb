@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   before_action :set_product, except:[:index, :new, :create, :show, :search,:get_category_children, :get_category_grandchildren]
   
 
+
   def index
     @ladycategory = ProductCategory.find_by(name: 'レディース')
     @mencategory = ProductCategory.find_by(name: 'メンズ')
@@ -20,11 +21,13 @@ class ProductsController < ApplicationController
     grandchild_category_id = @product.product_category_id
     @grandchild = ProductCategory.find(grandchild_category_id)
     @child = @grandchild.parent
-    @parent = @child.parent
+    @parent = @child.parent 
+
   end
 
 
   def new
+    redirect_to new_user_session_path unless user_signed_in?
     @product = Product.new
     @category_parent_array = ProductCategory.where(ancestry: nil)
   end

@@ -15,9 +15,9 @@
           .mypage-content__setting-profile__image-box__form
             .mypage-content__setting-profile__image-box__form__icon
               %figure
-                = image_tag "pika.png", size: "60x60"
+                = image_tag current_user.avatar, size: "60x60"
             .mypage-content__setting-profile__image-box__form__name
-              %input.input-default{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: "Haruka"}/
+              %input.input-default{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value:current_user.nickname}
         .mypage-content__setting-profile__content
           = text_area :page, :content, class: "introduction", dirname: "ltr"
           .mypage-content__setting-profile__content_btn

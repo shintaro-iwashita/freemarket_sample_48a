@@ -41,7 +41,7 @@ crumb :profile do
 end
 
 crumb :confirm do
-  link "本人情報の登録", edit_user_confirm_path
+  link "本人情報の登録", edit_confirm_path
   parent :mypage
 end
 
