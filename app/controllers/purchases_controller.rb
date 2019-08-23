@@ -32,7 +32,7 @@ class PurchasesController < ApplicationController
   
   def pay(product)
     card = CreditCard.where(user_id: current_user.id).first
-    Payjp.api_key = 'sk_test_7841bdccba9b357aa48f99c7'
+    Payjp.api_key = 'sk_test_8e0230c63b87b2a6b6c8b38f'
     Payjp::Charge.create(
     :amount => product.price, #支払金額を入力（itemテーブル等に紐づけても良い）
     :customer => card.token_id, #顧客ID
