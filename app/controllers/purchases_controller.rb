@@ -8,7 +8,7 @@ class PurchasesController < ApplicationController
     @product = Product.find(params[:product_id])
     if @product.seller.id != current_user.id && @product.buyer_id == nil
       card = CreditCard.where(user_id: current_user.id).first
-      if card == nil then
+      if card == nil
         redirect_to cards_path
       else
         pay(@product)
