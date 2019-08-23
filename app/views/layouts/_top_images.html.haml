@@ -1,5 +1,9 @@
 .contents__container__item_title_itembox_images
   = link_to image_tag(product.images.slice(0), size: "215x250"), product_path(product.id)
+  -if product.buyer_id.present? 
+    .items-box_photo__sold
+      .items-box_photo__sold__inner
+        SOLD
   = link_to(product_path(product.id), class: 'links') do
     .contents__container__item_title_itembox_image-title
       = product.name
@@ -7,3 +11,6 @@
         %p
           ¥
           = product.price
+
+
+

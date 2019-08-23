@@ -6,20 +6,26 @@
   &__images{
     vertical-align: bottom;
     padding: 0 18px;
-    &__name{
+    &__box{
       background: white;
-      height: 80px;
+      height: 70px;
       color: black;
       margin-bottom: 50px;
       font-size: 18px;
       font-weight: lighter;
-      padding: 25px 20px 0;
+      padding: 7px 20px 10px;
+      width: 120px;
+      word-wrap:break-word;
+      position: relative;
+      &__title{
+        height: 53px;
+      }
       &__price{
         background: white;
         left: 16px;
         font-weight: bolder;
         display: flex;
-        padding-top: 30px;
+        position: absolute;
         }
 
       }

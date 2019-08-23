@@ -148,8 +148,8 @@
            margin: 0;
          }
          .fa-chevron-right{
-display:flex;
-           color: #0099e8;
+          display:flex;
+          color: #0099e8;
          }
        }
      }
@@ -190,6 +190,22 @@ display:flex;
          }
        }
      }
+     &__btn{
+      display: block;
+      height: 56px;
+      margin: 16px 0 0;
+      background-color: #aaa;
+      color: #fff;
+      line-height: 56px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      @media screen and (min-width: 768px){
+        height: 60px;
+        line-height: 60px;
+        font-size: 24px;
+      }
+    }
      &__description{
        padding: 24px 0 0;
        line-height: 1.5;
@@ -303,7 +319,7 @@ display:flex;
        font-size: 16px;
        text-align: center;
      }
-&__gray{
+    &__gray{
        margin: 16px 0 16px 0;
        background: #aaa;
        border: 1px solid #aaa;
@@ -616,9 +632,9 @@ line-height: 44px;
              position: relative;
              width: 100%;
              height: 0;
-@media screen and (min-width: 768px){
-               width: 220px;
-               height: 220px;
+              @media screen and (min-width: 768px){
+                width: 220px;
+                height: 220px;
              }
              &__lazy{
                position: absolute;
