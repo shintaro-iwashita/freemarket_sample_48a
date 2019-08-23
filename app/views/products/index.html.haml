@@ -3,8 +3,8 @@
 .contents
   .contents__top__image
     .contents__top__image__box
-      %img#slide-first{alt: "", src: "/images/m-banner.jpg"}
-      %img#slide-second{alt: "", src: "/images/banner-summer-fes.jpg"}
+      = image_tag "/images/m-banner.jpg", id: "slide-first"
+      = image_tag "/images/banner-summer-fes.jpg", id: "slide-second"
     .contents__top__image__arrows
       .contents__top__image__arrow#arrow-left
         %i.fas.fa-chevron-left
