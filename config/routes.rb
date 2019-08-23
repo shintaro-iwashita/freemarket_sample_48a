@@ -14,12 +14,11 @@ Rails.application.routes.draw do
       get 'get_category_grandchildren', defaults: {format: 'json'}
     end
   end
-  resources :users, only: [:index, :new, :edit,] do
-    resources :confirms, only: [:edit]
-  end
   
-  resources :categories, only: [:index]
+  resources :users, only: [:index, :new, :edit,]
+  resources :confirms, only: [:edit]
   
+  resources :categories, only: [:index,:show]
   # 新規会員登録画面お届け先住所
   resources :addresses, only: [:new, :create] 
   # 新規会員登録完了画面

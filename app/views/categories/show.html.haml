@@ -1,0 +1,27 @@
+= render partial: "layouts/header"
+- breadcrumb :categories
+= breadcrumbs separator: " &rsaquo; ", link_current: true
+
+.categoryPage
+  .categoryPage__title
+    %span 
+    = @categoryname
+    の商品一覧
+    %ul
+    - @products.each do |p|
+      %li.categoryPage__list
+        = link_to " ", product_path(p.id),class:"categoryPage__list__link"
+        .categoryPage__list__image
+          = image_tag p.images.slice(0),class:"categoryPage__list__image__tag"
+        .categoryPage__list__texts
+          .categoryPage__list__texts__name
+            %p
+              = p.name
+          .categoryPage__list__texts__details
+            .categoryPage__list__texts__details__price
+              %span{lang:"en"} ￥
+              = p.price
+            .categoryPage__list__texts__details__favorite
+              %i.far.fa-heart
+              %span 0
+

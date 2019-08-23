@@ -290,7 +290,69 @@ $radius:6px;
     }
   }
 }
+#list1:hover + #list2{
+  visibility:visible;
+  
+}
+#list1 p:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+  visibility:visible;
+}
+#list1 {
+  width:100%;
+  text-align:left;
+  border:  solid gray;
+}
+#list2:hover {
+  visibility:visible;
+  
+}
+#list2:hover + #list3{
+  visibility:visible;
+}
+#list2 li:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+}
+#list2{
+  list-style:none;
+  background-color:white;
+  text-align:left;
+  border:  solid gray;
+}
+#list3:hover {
+  visibility:visible;
+}
+#list3 li:nth-of-type(n):hover{
+  background-color:red;
+  color:white;
+}
+#list3{
+  list-style:none;
+  background-color:white;
+  text-align:left;
+  border:  solid gray;
+}
 
+.notifications {
+  color: white;
+  text-align: center;  
+
+  .notice {
+    background: $font-blue;
+    padding: 10px;
+    letter-spacing: 0.1rem;
+    opacity: 0.8;
+  }
+
+  .alert {
+    background: $mercari-red;
+    padding: 10px;
+    letter-spacing: 0.1rem;
+    opacity: 0.8;
+  }
+}
 .contents {
   width: 100%;
   & .top-images{
@@ -364,21 +426,42 @@ $radius:6px;
       width: 100%;
       margin: 0 auto;
       text-align: center;
+      z-index:0;
+      &_link{
+        padding-left: 20px;
+        z-index:0;
+      }
 			&_title{
 				margin: 30px 0;
 				font-size: 22px;
 				display: block;
 				color: $font-blue;
         font-weight: bold;
+        z-index:0;
         &_itembox{
           width: 990px;
           margin: 0 auto;
           display: flex;
           padding-top: 30px;
+          z-index:0;
+          &_price{
+            display: flex;
+            font-size: 18px;
+            font-weight: bolder;
+            margin: 35px 0 0 20px;
+          }
           &_images{
             margin: 0 auto;
             vertical-align: bottom;
-            position: relative;
+            position:relative;
+            &__link{
+              display:block;
+              width:100%;
+              height:100%;
+              z-index:2;
+              position:absolute;
+              top:0;
+            }
             .items-box_photo__sold{
               width: 0;
               height: 0;
