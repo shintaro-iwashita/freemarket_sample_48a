@@ -20,15 +20,15 @@
             %ul.header__row2__left__category__wrap
               - @category_parent.each do |procategory|
                 %li.header__row2__left__category__wrap__stick
-                  = link_to procategory.name, '', class: "procategory-font"
+                  = link_to procategory.name,category_path(procategory.id),class: "procategory-font"
                   %ul.header__row2__left__category__wrap__stick__nav
                     - procategory.children.each do |child|
                       %li.header__row2__left__category__wrap__stick__nav__child
-                        = link_to child.name, '' , class: "childcategory-font"
+                        = link_to child.name,category_path(child.id),class: "childcategory-font"
                         %ul.header__row2__left__category__wrap__stick__nav__child__grand
                           - child.children.each do |grandchild|
                             %li.header__row2__left__category__wrap__stick__nav__child__grand__order
-                              = link_to grandchild.name, '',class: "grandchild-font"
+                              = link_to grandchild.name,category_path(grandchild.id),class: "grandchild-font"
           %li
             = link_to root_path, class: "header__row2__left__category__brand" do
               %i.fas.fa-tag.header__row2__left__category__cat
