@@ -95,3 +95,4 @@ gem 'pry-byebug'
 gem 'aws-sdk-s3', require: false
 gem 'pry-byebug'
 gem 'ransack'
+gem 'nokogiri', ">= 1.10.4"
