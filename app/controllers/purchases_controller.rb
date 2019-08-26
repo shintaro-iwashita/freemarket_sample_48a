@@ -14,6 +14,7 @@ class PurchasesController < ApplicationController
         pay(@product)
         if @product.update(buyer_id: current_user.id)
           flash[:notice] = "商品を購入しました！"
+          redirect_to root_path
         else
           flash[:alert] = "商品の購入に失敗しました…"
           redirect_to root_path
@@ -37,7 +38,7 @@ class PurchasesController < ApplicationController
   
   def pay(product)
     card = CreditCard.where(user_id: current_user.id).first
-    Payjp.api_key = ENV["PAYJP_SECRET_ACCESS_KEY"]
+    Payjp.api_key = ENV["PAYJP_SECRET_ACCESS_KEY2"]
     Payjp::Charge.create(
     amount:product.price, #支払金額を入力（itemテーブル等に紐づけても良い）
     customer:card.token_id, #顧客ID
