@@ -1,7 +1,6 @@
 $(function(){
   $(document).on('click','#add__credit__card', function(e) {
     e.preventDefault();
-    // Payjp.setPublicKey('pk_test_6f8c0dbd80a304bd5dda8853');
     Payjp.setPublicKey('pk_test_60a58b48a454416110aeec4d');
     var card = {
       number: parseInt($(".number").val()),
