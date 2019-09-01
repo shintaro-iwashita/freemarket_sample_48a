@@ -5,54 +5,18 @@
 |Column|Type|Options|
 |------|----|-------|
 |avatar|text||
-|nickname|string|null: false,length:{maximu:20}|
-|e-mail|text|null: false, unique: true|
+|nickname|string|null: false,length:{maximum:6}|
+|email|text|null: false, unique: true|
 |password|string|null: false|
-|self_introduction|text||
-|evaluation|integer|null: false|
 |family_name|string|null: false|
 |first_name|string|null: false|
 |family_name_kana|string|null: false|
 |first_name_kana|string|null: false|
-|data_of_birth|date||
-|how_to_pay|string|null: false|
-|gender|string|null: false, foreign_key: true|
 
 ### Association
 - has_many :products, dependent: :destroy
-- has_many :comments  
-- has_many :likes
-- has_many :delivery_address, dependent: :destroy
-- has_one :user_address, dependent: :destroy
+- has_many :creditCards
 
-## user_addressテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|postal_number|string|false,length:{maximu:8}|
-|prefectures|integer||
-|city|string||
-|address|string||
-|building_name|string||
-|user_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-
-## delivery_addressesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|postal_number|string|false,length:{maximu:8}|
-|prefectures|string|null: false|
-|city|string|null: false|
-|address|string|null: false|
-|building_name|string||
-|phone_number|string||
-|user_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
 
 ## productsテーブル
 
@@ -63,7 +27,6 @@
 |size_id|integer|
 |condition_id|integer|null:false|
 |price|integer|null:false|
-|profit|integer||null:false|
 |product_category_id|references|
 |delivery_responsibility|integer||null:false|
 |delivery_method|integer||null:false|
@@ -74,59 +37,8 @@
 
 ### Association
 - belongs_to :user
-- has_many :comments, dependent: :destroy
-- has_many :product_images, dependent: :destroy
+- has_many_attached :images
 - belongs_to :product_category
-- has_one :product_brand, dependent: :destroy
-- has_many :likes
-
-## commentsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|comment|string|
-|user_id|references|null: false, foreign_key: true|
-|product_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :product
-
-
-## likesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|like|string|null:false|
-|user_id|references|null: false, foreign_key: true|
-|product_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :product
-
-
-## product_imagesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|image|string|null:false|
-|product_id|references|
-
-### Association
-- belongs_to :product
-
-## shippingsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|shipping_charges|string|null:false|
-|delivery_source_area|string|null: false|
-|days_to_delivery|string|null: false|
-|product_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :product
 
 
 ## product_categoriesテーブル
@@ -134,31 +46,41 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|ansestry|string|
+|ansestry|integer|
 
 ### Association
 - has_many :products
 
 
-## product_brandテーブル
+## credit_cardsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false|
-|parent_id|reference|null: false|
-|product_id|reference|null: false|
+|user_id|integer|null:false|
+|token_id|integer|null:false|
 
 ### Association
-- belongs_to :product
-- belongs_to :parent, class_name: :product_brand
-- has_many :children, class_name: product_brand :, foreign_key: :parent_id
+- belongs_to :user
 
-## newsテーブル
+
+## active_storage_blobs テーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|news|string|null:false|
-|content|string|null: false|
+|key|string|null: false, index:true, unique:true|
+|filename|string|null: false|
+|content_type|string|null: false|
+|metadata|text|
+|byte_size|bigint|null:false|
+|checksum|string|null: false|
 
-### Association
-- nothing
+
+## active_storage_attachments テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, index:true, unique:true|
+|record_type|string|null: false, index:true, unique:true|
+|record_id|references|null: false|
+|blob_id|references|
+
