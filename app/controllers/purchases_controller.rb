@@ -6,10 +6,11 @@ class PurchasesController < ApplicationController
 
   def create
     @product = Product.find(params[:product_id])
+    @card = 
     if @product.seller.id != current_user.id && @product.buyer_id == nil
       card = CreditCard.where(user_id: current_user.id).first
       if card == nil
-        redirect_to cards_path
+        redirect_to new_card_path
       else
         pay(@product)
         if @product.update(buyer_id: current_user.id)
